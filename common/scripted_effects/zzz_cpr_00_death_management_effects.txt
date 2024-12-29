@@ -1,0 +1,20 @@
+﻿silent_disappearance_effect = {
+	hidden_effect = {
+		# CPR Track disappearance of prostitutes from chariot_race.3040
+		if = {
+			limit = {
+				scope:prostitute ?= this
+				has_variable = cpr_origin
+			}
+			cpr_debug_log_effect = { MSG = cpr_debug_msg_removing_prostitute }
+		}
+
+		if = {
+			limit = { is_alive = yes }
+
+			death = {
+		 		death_reason = death_disappearance
+		 	}
+		}
+	}
+}

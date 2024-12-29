@@ -1,0 +1,34 @@
+﻿#Used to make sure that a character used for a quirk has one
+#Utilises assign_quirk_effect, and must always be placed in the same file, after that one.
+get_quirk_character_effect = {
+	if = {
+		limit = {
+			root = { is_ai = no }
+		}
+		if = {
+			limit = {
+				has_variable = my_quirk
+			}
+			save_scope_as = quirk_character
+		}
+		else = {
+			assign_quirk_effect = yes
+			save_scope_as = quirk_character
+		}
+	}
+
+	# CPR Make brothel_worker from tour_travel.3140 a proper prostitute
+	hidden_effect = {
+		if = {
+			limit = {
+				scope:brothel_worker ?= this
+				carn_can_be_prostitute_trigger = yes
+			}
+			cpr_set_origin_effect = { ORIGIN = tour_travel_3140 }
+			cpr_debug_log_effect = { MSG = cpr_debug_msg_creating_prostitute }
+			carn_start_working_as_prostitute_effect = yes
+			cpr_prostitute_contract_std_effect = yes
+			cpr_prevent_pruning_effect = yes
+		}
+	}
+}

@@ -31,7 +31,7 @@
 		short_term_gold >= minor_gold_value
 		is_eunuch_trigger = no
 		NOT = { has_trait = celibate }
-		# CPR
+		# CPR Check Carnalitas trigger
 		carn_can_have_sex_trigger = yes
 	}
 
@@ -49,7 +49,7 @@
 			value = yes
 		}
 
-		# CPR: Use CPR on_action if allowed by game rules, otherwise use vanilla on_action
+		# CPR Use CPR on_action if allowed by game rules, otherwise use vanilla on_action
 		if = {
 			limit = { cpr_can_find_prostitute_trigger = yes }
 			trigger_event = {

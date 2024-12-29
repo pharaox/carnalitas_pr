@@ -31,14 +31,54 @@
 			save_temporary_scope_as = new_character
 		}
 		scope:new_character = {
-			cpr_debug_log_effect = { MSG = cpr_debug_msg_creating_prostitute }
 			cpr_set_prostitute_sexuality_effect = { CHARACTER = $CHARACTER$ }
-			carn_start_working_as_prostitute_effect = yes
-			cpr_prostitute_contract_std_effect = yes
-			set_variable = { name = last_visited_ruler value = dummy_female days = 1825 } # Prevent pruning
 			save_scope_as = $PROSTITUTE$
 		}
 	}
+}
+
+cpr_add_prostitute_traits_effect = {
+	# Lifestyle Prostitute / XP
+	add_trait = lifestyle_prostitute
+	add_trait_xp = {
+		trait = lifestyle_prostitute
+		value = {
+			integer_range = {
+				min = small_lifestyle_random_xp_low
+				max = small_lifestyle_random_xp_high
+			}
+		}
+	}
+
+	# Fornicator
+	add_trait = fornicator
+
+	# Poet
+	random = {
+		chance = 1
+		modifier = {
+			add = 10
+			culture = { has_cultural_parameter = poet_trait_more_common }
+		}
+		add_trait = poet
+	}
+
+	# Lifestyle Reveler XP
+	if = {
+		limit = { has_trait = lifestyle_reveler }
+		add_trait_xp = {
+			trait = lifestyle_reveler
+			value = {
+				integer_range = {
+					min = small_lifestyle_random_xp_low
+					max = small_lifestyle_random_xp_high
+				}
+			}
+		}
+	}
+
+	# Loyal / Disloyal, weight
+	set_interesting_traits_and_modifiers_effect = yes
 }
 
 cpr_set_prostitute_sexuality_effect = {
@@ -80,15 +120,28 @@ cpr_set_prostitute_sexuality_effect = {
 }
 
 cpr_prostitute_contract_std_effect = {
-	if = {
-		limit = {
-			NOT = { has_game_rule = carn_std_disabled }
+	random_list = {
+		94 = {}
+		5 = {
+			contract_disease_notify_effect = { DISEASE = lovers_pox }
 		}
-		random_list = {
-			95 = {}
-			5 = {
-				contract_disease_notify_effect = { DISEASE = lovers_pox }
-			}
+		1 = {
+			contract_disease_notify_effect = { DISEASE = great_pox }
 		}
+	}
+}
+
+cpr_prevent_pruning_effect = {
+	set_variable = {
+		name = last_visited_ruler
+		value = dummy_female
+		days = 1825
+	}
+}
+
+cpr_set_origin_effect = {
+	set_variable = {
+		name = cpr_origin
+		value = flag:$ORIGIN$
 	}
 }

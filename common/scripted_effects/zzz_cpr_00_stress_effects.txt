@@ -1,5 +1,5 @@
 ﻿rakish_brothel_night_effect = {
-	# CPR: Use CPR effect if allowed by game rules, otherwise use vanilla effect
+	# CPR Use CPR effect if allowed by game rules, otherwise use vanilla effect
 	if = {
 		limit = { cpr_can_find_prostitute_trigger = yes }
 		cpr_debug_log_1_effect = {

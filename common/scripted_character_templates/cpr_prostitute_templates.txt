@@ -5,76 +5,43 @@
 	culture = root.culture
 	faith = root.faith
 
-	intrigue = { min_template_average_skill max_template_average_skill }
+	diplomacy = {
+		min_template_average_skill
+		max_template_average_skill
+	}
+	intrigue = {
+		min_template_average_skill
+		max_template_decent_skill
+	}
 
 	random_traits = yes
 	random_traits_list = {
-		education_diplomacy_1 = { weight = { base = 20 } }
-		education_diplomacy_2 = { weight = { base = 20 } }
-		education_diplomacy_3 = { weight = { base = 10 } }
-		education_diplomacy_4 = { weight = { base = 5 } }
-		education_intrigue_1 = { weight = { base = 20 } }
-		education_intrigue_2 = { weight = { base = 20 } }
-		education_intrigue_3 = { weight = { base = 10 } }
-		education_intrigue_4 = { weight = { base = 5 } }
-	}
-	random_traits_list = {
-		count = { 0 1 }
+		count = { 0 2 }
 		# Diplomacy / Intrigue / Attraction
+		lustful = { weight = { base = 10 } }
 		gregarious = { weight = { base = 10 } }
 		deceitful = { weight = { base = 10 } }
-		beauty_good_1 = { weight = { base = 20 } } # Buffed
-		beauty_good_2 = { weight = { base = 10 } } # Buffed
-		beauty_good_3 = { weight = { base = 5 } } # Buffed
+		arbitrary = { weight = { base = 5 } }
+		cynical = { weight = { base = 5 } }
+		fickle = { weight = { base = 5 } }
+		beauty_good_1 = { weight = { base = 20 } }
+		beauty_good_2 = { weight = { base = 10 } }
+		beauty_good_3 = { weight = { base = 5 } }
 		diplomat = { weight = { base = 5 } }
-		seducer = { weight = { base = 10 } } # Buffed
+		seducer = { weight = { base = 5 } }
 		lifestyle_reveler = { weight = { base = 5 } }
 	}
 
 	after_creation = {
-		# Lifestyle Prostitute / XP
-		add_trait = lifestyle_prostitute
-		add_trait_xp = {
-			trait = lifestyle_prostitute
-			value = {
-				integer_range = {
-					min = small_lifestyle_random_xp_low
-					max = small_lifestyle_random_xp_high
-				}
-			}
-		}
-
-		# Fornicator
-		add_trait = fornicator
-
-		# Poet
-		random = {
-			chance = 1
-			modifier = {
-				add = 10
-				culture = { has_cultural_parameter = poet_trait_more_common }
-			}
-			add_trait = poet
-		}
-
-		# Lifestyle Reveler XP
 		if = {
-			limit = { has_trait = lifestyle_reveler }
-			add_trait_xp = {
-				trait = lifestyle_reveler
-				value = {
-					integer_range = {
-						min = small_lifestyle_random_xp_low
-						max = small_lifestyle_random_xp_high
-					}
-				}
-			}
+			limit = { carn_can_be_prostitute_trigger = yes }
+			cpr_set_origin_effect = { ORIGIN = generic }
+			cpr_debug_log_effect = { MSG = cpr_debug_msg_creating_prostitute }
+			cpr_add_prostitute_traits_effect = yes
+			cpr_set_prostitute_sexuality_effect = { CHARACTER = root }
+			carn_start_working_as_prostitute_effect = yes
+			cpr_prostitute_contract_std_effect = yes
+			cpr_prevent_pruning_effect = yes
 		}
-
-		# Loyal / Disloyal, weight
-		set_interesting_traits_and_modifiers_effect = yes
-
-		# Sexuality
-		cpr_set_prostitute_sexuality_effect = { CHARACTER = root }
 	}
 }

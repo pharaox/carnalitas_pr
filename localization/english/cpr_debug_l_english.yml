@@ -13,15 +13,17 @@
  # Health
  cpr_debug_msg_prostitute_got_std: "$cpr_debug_prefix_2$: Prostitute got STD, disease_type: [THIS.Var('disease_type').GetFlagName]"
 
- # Events
+ # Stress coping events
  cpr_debug_msg_stress_trait_coping_decisions_2001_fired: "$cpr_debug_prefix_2$: $stress_trait_coping_decisions.2001.t$ event fired"
  cpr_debug_msg_stress_trait_coping_decisions_2002_fired: "$cpr_debug_prefix_2$: $stress_trait_coping_decisions.2002.t$ event fired"
- cpr_debug_msg_vanilla_stress_trait_coping_decisions_2001_fired: "$cpr_debug_prefix_2$: $stress_trait_coping_decisions.2001.t$ vanilla event fired"
- cpr_debug_msg_vanilla_stress_trait_coping_decisions_2002_fired: "$cpr_debug_prefix_2$: $stress_trait_coping_decisions.2002.t$ vanilla event fired"
+
+ # Carnalitas events
+ cpr_debug_msg_prostitution_random_events_0010_fired: "$cpr_debug_prefix_2$: cpr_prostitution_random_events.0010 event fired, client: [THIS.Var('client').Char.GetFullNameNoTooltip] ([THIS.Var('client').Char.GetID])"
 
  # Effects
  cpr_debug_msg_using_cpr_rakish_brothel_night_effect: "$cpr_debug_prefix_2$: Using cpr_rakish_brothel_night_effect, from_stress_loss_decision: [Select_CString(THIS.Var('from_stress_loss_decision').IsSet, 'yes', 'no')]"
  cpr_debug_msg_using_vanilla_rakish_brothel_night_effect: "$cpr_debug_prefix_2$: Using vanilla_rakish_brothel_night_effect, from_stress_loss_decision: [Select_CString(THIS.Var('from_stress_loss_decision').IsSet, 'yes', 'no')]"
 
- # Character creation
- cpr_debug_msg_creating_prostitute: "$cpr_debug_prefix_2$: Creating prostitute"
+ # Character creation and removal
+ cpr_debug_msg_creating_prostitute: "$cpr_debug_prefix_2$: Creating prostitute, origin: [THIS.Var('cpr_origin').GetFlagName]"
+ cpr_debug_msg_removing_prostitute: "$cpr_debug_prefix_2$: Removing prostitute, origin: [THIS.Var('cpr_origin').GetFlagName]"

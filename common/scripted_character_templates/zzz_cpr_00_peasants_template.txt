@@ -1,0 +1,34 @@
+﻿beautiful_peasant_character = {
+	age = { 18 35 }
+	random_traits_list = {
+		count = 1
+		beauty_good_1 = {} # CPR
+		beauty_good_2 = {}
+		beauty_good_3 = {}
+	}
+	dynasty = none
+	random_traits = yes
+	faith = this.faith
+	culture = this.culture
+	diplomacy = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+
+	# CPR Make prostitute_scope from tour_travel.3007 a proper prostitute
+	after_creation = {
+		if = {
+			limit = {
+				scope:prostitute_scope ?= this
+				carn_can_be_prostitute_trigger = yes
+			}
+			cpr_set_origin_effect = { ORIGIN = tour_travel_3007 }
+			cpr_debug_log_effect = { MSG = cpr_debug_msg_creating_prostitute }
+			cpr_add_prostitute_traits_effect = yes
+			cpr_set_prostitute_sexuality_effect = { CHARACTER = root }
+			carn_start_working_as_prostitute_effect = yes
+			cpr_prostitute_contract_std_effect = yes
+			cpr_prevent_pruning_effect = yes
+		}
+	}
+}

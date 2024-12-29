@@ -1,0 +1,41 @@
+﻿carn_can_be_prostitute_trigger = {
+	is_adult = yes
+	OR = {
+		has_game_rule = carn_prostitution_content_any_gender
+		AND = {
+			is_male = yes
+			has_game_rule = carn_prostitution_content_male_only
+		}
+		AND = {
+			is_female = yes
+			has_game_rule = carn_prostitution_content_female_only
+		}
+	}
+	# CPR Use trigger_if appropriately
+	trigger_if = {
+		limit = {
+			any_relation = {
+				type = slave_owner
+				exists = this
+			}
+		}
+		any_relation = {
+			type = slave_owner
+			carn_legal_prostitution_trigger = yes
+		}
+	}
+	trigger_else = {
+		carn_legal_prostitution_trigger = yes
+	}
+	NOR = {
+		has_character_flag = carn_cannot_be_prostitute
+		has_trait_with_flag = carn_cannot_be_prostitute
+	}
+	# CPR Disallow clergy, devoted, celibate, and incapable characters
+	NOR = {
+		is_clergy = yes
+		has_trait = devoted
+		has_trait = celibate
+		has_trait = incapable
+	}
+}
