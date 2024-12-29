@@ -1,0 +1,17 @@
+﻿cpr_can_find_prostitute_trigger = {
+	trigger_if = {
+		limit = { has_game_rule = carn_prostitution_content_any_gender }
+		always = yes
+	}
+	trigger_else_if = {
+		limit = { has_game_rule = carn_prostitution_content_female_only }
+		is_attracted_to_women = yes
+	}
+	trigger_else_if = {
+		limit = { has_game_rule = carn_prostitution_content_male_only }
+		is_attracted_to_men = yes
+	}
+	trigger_else = {
+		always = no
+	}
+}

@@ -1,0 +1,37 @@
+﻿carn_on_sex_v2 = {
+	on_actions = { cpr_on_sex_v2 }
+}
+
+cpr_on_sex_v2 = {
+	trigger = {
+		debug_only = yes
+		scope:carn_sex_partner = {
+			carn_is_working_as_prostitute_trigger = yes
+		}
+	}
+
+	effect = {
+		cpr_debug_log_1_effect = {
+			MSG = cpr_debug_msg_character_had_sex_with_prostitute
+			NAME1 = carn_sex_partner TYPE1 = flag:character
+		}
+	}
+}
+
+carn_on_pregnancy = {
+	on_actions = { cpr_on_pregnancy }
+}
+
+cpr_on_pregnancy = {
+	trigger = {
+		debug_only = yes
+		carn_is_working_as_prostitute_trigger = yes
+	}
+
+	effect = {
+		cpr_debug_log_1_effect = {
+			MSG = cpr_debug_msg_prostitute_got_pregnant
+			NAME1 = father TYPE1 = flag:character
+		}
+	}
+}

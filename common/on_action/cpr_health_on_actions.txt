@@ -1,0 +1,22 @@
+﻿on_contract_disease = {
+	on_actions = { cpr_on_contract_disease }
+}
+
+cpr_on_contract_disease = {
+	trigger = {
+		debug_only = yes
+		carn_is_working_as_prostitute_trigger = yes
+		OR = {
+			scope:disease_type = flag:lovers_pox
+			scope:disease_type = flag:early_great_pox
+			scope:disease_type = flag:great_pox
+		}
+	}
+
+	effect = {
+		cpr_debug_log_1_effect = {
+			MSG = cpr_debug_msg_prostitute_got_std
+			NAME1 = disease_type TYPE1 = flag:flag
+		}
+	}
+}

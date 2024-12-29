@@ -1,0 +1,17 @@
+﻿cpr_attraction_based_female_chance = {
+	if = {
+		limit = { has_game_rule = carn_prostitution_content_any_gender }
+		value = scope_attraction_based_female_chance
+	}
+	else_if = {
+		limit = { has_game_rule = carn_prostitution_content_female_only }
+		value = 100
+	}
+	else_if = {
+		limit = { has_game_rule = carn_prostitution_content_male_only }
+		value = 0
+	}
+	else = {
+		value = 50
+	}
+}

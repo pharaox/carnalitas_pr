@@ -1,0 +1,47 @@
+﻿# Applies the effects of a one-night debauchery spree in a brothel.
+cpr_rakish_brothel_night_effect = {
+	if = {
+		limit = {
+			NOT = { exists = scope:prostitute }
+		}
+
+		# Use vanilla effect as tooltip to prevent errors
+		show_as_tooltip = {
+			vanilla_rakish_brothel_night_effect = yes
+		}
+
+		hidden_effect_new_object = {
+			# Find prostitute
+			save_temporary_scope_as = character
+			cpr_get_prostitute_effect = {
+				LOCATION = scope:character.location
+				CHARACTER = scope:character
+				PROSTITUTE = prostitute
+			}
+
+			cpr_rakish_brothel_night_prostitute_effect = yes
+		}
+	}
+	else = {
+		cpr_rakish_brothel_night_prostitute_effect = yes
+	}
+}
+
+cpr_rakish_brothel_night_prostitute_effect = {
+	# Warn about possible negative consequences
+	custom_tooltip = stress_threshold.1011.rakish.tt
+
+	# Use Carnalitas sex effect w/o pregnancy for prostitute, stress, and memory
+	carn_sex_scene_no_memory_effect = yes
+	carn_had_sex_with_effect = {
+		CHARACTER_1 = root
+		CHARACTER_2 = scope:prostitute
+		C1_PREGNANCY_CHANCE = pregnancy_chance
+		C2_PREGNANCY_CHANCE = 0
+		STRESS_EFFECTS = no
+		DRAMA = yes
+	}
+
+	# Lose stress
+	add_stress = major_stress_impact_loss
+}

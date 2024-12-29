@@ -1,0 +1,42 @@
+﻿cpr_debug_log_effect = {
+	if = {
+		limit = { debug_only = yes }
+		debug_log = $MSG$
+	}
+}
+
+cpr_debug_log_1_effect = {
+	if = {
+		limit = { debug_only = yes }
+
+		cpr_debug_set_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+
+		debug_log = $MSG$
+
+		cpr_debug_remove_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+	}
+}
+
+cpr_debug_set_scope_variable_effect = {
+	if = {
+		limit = {
+			NOT = { $TYPE$ = flag:variable }
+			exists = scope:$NAME$
+			trigger_if = {
+				limit = { $TYPE$ = flag:boolean }
+				scope:$NAME$ = yes
+			}
+		}
+		set_variable = { name = $NAME$ value = scope:$NAME$ }
+	}
+}
+
+cpr_debug_remove_scope_variable_effect = {
+	if = {
+		limit = {
+			NOT = { $TYPE$ = flag:variable }
+			has_variable = $NAME$
+		}
+		remove_variable = $NAME$
+	}
+}

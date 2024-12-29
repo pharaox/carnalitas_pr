@@ -1,0 +1,27 @@
+﻿carn_on_start_working_as_prostitute = {
+	on_actions = { cpr_on_start_working_as_prostitute }
+}
+
+cpr_on_start_working_as_prostitute = {
+	trigger = {
+		debug_only = yes
+	}
+
+	effect = {
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_character_started_working_as_prostitute }
+	}
+}
+
+carn_on_stop_working_as_prostitute = {
+	on_actions = { cpr_on_stop_working_as_prostitute }
+}
+
+cpr_on_stop_working_as_prostitute = {
+	trigger = {
+		debug_only = yes
+	}
+
+	effect = {
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_character_stopped_working_as_prostitute }
+	}
+}

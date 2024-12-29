@@ -1,0 +1,6 @@
+﻿cpr_stress_loss_rakish = {
+	random_events = {
+		95 = cpr_stress_trait_coping_decisions.2001
+		 5 = cpr_stress_trait_coping_decisions.2002
+	}
+}

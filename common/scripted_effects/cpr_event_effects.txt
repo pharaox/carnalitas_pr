@@ -1,0 +1,94 @@
+﻿cpr_get_prostitute_effect = {
+	# Find an existing prostitute character
+	random_pool_character = {
+		province = $LOCATION$
+		limit = {
+			carn_is_prostitute_trigger = yes
+			carn_is_working_as_prostitute_trigger = yes
+			carn_can_have_sex_trigger = yes
+			$CHARACTER$ = {
+				is_attracted_to_gender_of = prev
+			}
+		}
+		save_scope_as = $PROSTITUTE$
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:$PROSTITUTE$ }
+		}
+
+		# Create a new prostitute character
+		$CHARACTER$ = {
+			save_temporary_scope_as = attraction_check
+		}
+		create_character = {
+			template = cpr_prostitute_character_template
+			location = $LOCATION$
+			gender_female_chance = cpr_attraction_based_female_chance
+			dynasty = none
+			culture = $LOCATION$.culture
+			faith = $LOCATION$.faith
+			save_temporary_scope_as = new_character
+		}
+		scope:new_character = {
+			cpr_debug_log_effect = { MSG = cpr_debug_msg_creating_prostitute }
+			cpr_set_prostitute_sexuality_effect = { CHARACTER = $CHARACTER$ }
+			carn_start_working_as_prostitute_effect = yes
+			cpr_prostitute_contract_std_effect = yes
+			set_variable = { name = last_visited_ruler value = dummy_female days = 1825 } # Prevent pruning
+			save_scope_as = $PROSTITUTE$
+		}
+	}
+}
+
+cpr_set_prostitute_sexuality_effect = {
+	random_list = {
+		5 = {
+			set_sexuality = bisexual
+		}
+		5 = {
+			trigger = {
+				OR = {
+					AND = {
+						is_female = yes
+						$CHARACTER$ = { is_female = yes }
+					}
+					AND = {
+						is_male = yes
+						$CHARACTER$ = { is_male = yes }
+					}
+				}
+			}
+			set_sexuality = homosexual
+		}
+		10 = {
+			trigger = {
+				OR = {
+					AND = {
+						is_female = no
+						$CHARACTER$ = { is_female = yes }
+					}
+					AND = {
+						is_male = no
+						$CHARACTER$ = { is_male = yes }
+					}
+				}
+			}
+			set_sexuality = heterosexual
+		}
+	}
+}
+
+cpr_prostitute_contract_std_effect = {
+	if = {
+		limit = {
+			NOT = { has_game_rule = carn_std_disabled }
+		}
+		random_list = {
+			95 = {}
+			5 = {
+				contract_disease_notify_effect = { DISEASE = lovers_pox }
+			}
+		}
+	}
+}

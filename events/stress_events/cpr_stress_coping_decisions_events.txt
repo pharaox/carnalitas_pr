@@ -1,0 +1,285 @@
+﻿namespace = cpr_stress_trait_coping_decisions
+
+# Rakish stress coping decision event.
+# Rewrite of stress_trait_coping_decisions.2001.
+cpr_stress_trait_coping_decisions.2001 = {
+	type = character_event
+	title = stress_trait_coping_decisions.2001.t
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = stress_trait_coping_decisions.2001.desc_woman
+			}
+			desc = stress_trait_coping_decisions.2001.desc_man
+		}
+		desc = stress_trait_coping_decisions.2001.desc_ending
+	}
+
+	theme = mental_break
+	override_background = { reference = tavern }
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:prostitute
+		animation = flirtation_left
+	}
+
+	trigger = {
+		is_available_adult = yes
+		short_term_gold >= minor_gold_value
+		is_eunuch_trigger = no
+		NOT = { has_trait = celibate }
+		carn_can_have_sex_trigger = yes
+		OR = {
+			exists = scope:from_stress_loss_decision
+			has_trait = lustful
+		}
+	}
+
+	immediate = {
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_stress_trait_coping_decisions_2001_fired }
+
+		hidden_effect_new_object = {
+			# Find prostitute
+			cpr_get_prostitute_effect = {
+				LOCATION = root.capital_province
+				CHARACTER = root
+				PROSTITUTE = prostitute
+			}
+
+			# Avoid incorrect tooltip from had_sex_with_effect
+			add_character_flag = no_sex_stress_loss
+
+			# Undress characters
+			add_character_flag = is_naked
+			scope:prostitute = {
+				add_character_flag = is_naked
+			}
+		}
+	}
+
+	option = {
+		name = stress_trait_coping_decisions.2001.a
+
+		trigger = {
+			has_trait = rakish
+		}
+		trait = rakish
+
+		rakish_brothel_night_effect = yes
+		pay_short_term_gold = {
+			target = scope:prostitute
+			gold = minor_gold_value
+		}
+	}
+
+	option = {
+		name = stress_trait_coping_decisions.2001.a
+
+		trigger = {
+			has_trait = lustful
+			NOT = { has_trait = rakish }
+		}
+		trait = lustful
+
+		rakish_brothel_night_effect = yes
+		pay_short_term_gold = {
+			target = scope:prostitute
+			gold = minor_gold_value
+		}
+	}
+
+	after = {
+		remove_character_flag = no_sex_stress_loss
+
+		# Dress characters
+		remove_character_flag = is_naked
+		scope:prostitute = {
+			remove_character_flag = is_naked
+		}
+	}
+}
+
+
+# Your stuff got stolen by a person in a brothel!
+# Rewrite of stress_trait_coping_decisions.2002.
+cpr_stress_trait_coping_decisions.2002 = {
+	type = character_event
+	title = stress_trait_coping_decisions.2002.t
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = stress_trait_coping_decisions.2002.desc_woman
+			}
+			desc = stress_trait_coping_decisions.2002.desc_man
+		}
+		desc = stress_trait_coping_decisions.2002.desc
+		desc = {
+			first_valid = {
+				triggered_desc = {
+					trigger = { exists = scope:rival }
+					desc = stress_trait_coping_decisions.2002.desc_ending_rival
+				}
+				desc = stress_trait_coping_decisions.2002.desc_ending
+			}
+		}
+	}
+
+	theme = mental_break
+	override_background = { reference = tavern }
+
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:prostitute
+		animation = scheme
+	}
+	lower_center_portrait = {
+		trigger = { exists = scope:rival }
+		character = scope:rival
+		animation = schadenfreude
+	}
+
+	trigger = {
+		is_available_adult = yes
+		short_term_gold >= 20
+		is_eunuch_trigger = no
+		NOT = { has_trait = celibate }
+		carn_can_have_sex_trigger = yes
+		OR = {
+			exists = scope:from_stress_loss_decision
+			has_trait = lustful
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = { # More likely if you have a rival and it's triggered from the yearly pulse
+			add = 2
+			NOT = { exists = scope:from_stress_loss_decision }
+			any_relation = {
+				type = rival
+				is_ai = yes
+			}
+		}
+	}
+
+	immediate = {
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_stress_trait_coping_decisions_2002_fired }
+
+		# Find rival
+		if = {
+			limit = {
+				any_relation = {
+					type = rival
+					is_ai = yes
+				}
+			}
+			random_relation = {
+				type = rival
+				limit = {
+					is_ai = yes
+				}
+				save_scope_as = rival
+			}
+		}
+
+		hidden_effect_new_object = {
+			# Find prostitute
+			cpr_get_prostitute_effect = {
+				LOCATION = root.capital_province
+				CHARACTER = root
+				PROSTITUTE = prostitute
+			}
+
+			# Avoid incorrect tooltip from had_sex_with_effect
+			add_character_flag = no_sex_stress_loss
+
+			# Undress characters
+			add_character_flag = is_naked
+			scope:prostitute = {
+				add_character_flag = is_naked
+			}
+		}
+	}
+
+	option = {
+		name = stress_trait_coping_decisions.2002.a
+
+		trigger = {
+			has_trait = rakish
+			NOT = { exists = scope:rival }
+		}
+		trait = rakish
+
+		rakish_brothel_night_effect = yes
+		pay_short_term_gold = {
+			target = scope:prostitute
+			gold = {
+				value = minor_gold_value
+				multiply = 2
+			}
+		}
+		add_prestige = minor_prestige_loss
+	}
+
+	option = {
+		name = stress_trait_coping_decisions.2002.a
+
+		trigger = {
+			has_trait = lustful
+			NOR = {
+				exists = scope:rival
+				has_trait = rakish
+			}
+		}
+		trait = lustful
+
+		rakish_brothel_night_effect = yes
+		pay_short_term_gold = {
+			target = scope:prostitute
+			gold = {
+				value = minor_gold_value
+				multiply = 2
+			}
+		}
+		add_prestige = minor_prestige_loss
+	}
+
+	option = {
+		name = stress_trait_coping_decisions.2002.b
+
+		trigger = {
+			exists = scope:rival
+		}
+
+		rakish_brothel_night_effect = yes
+		pay_short_term_gold = {
+			target = scope:prostitute
+			gold = {
+				value = minor_gold_value
+				multiply = 2
+			}
+		}
+		add_prestige = minor_prestige_loss
+	}
+
+	after = {
+		remove_character_flag = no_sex_stress_loss
+
+		# Dress characters
+		remove_character_flag = is_naked
+		scope:prostitute = {
+			remove_character_flag = is_naked
+		}
+	}
+}

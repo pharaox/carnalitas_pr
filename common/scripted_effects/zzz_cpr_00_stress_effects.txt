@@ -1,0 +1,121 @@
+﻿rakish_brothel_night_effect = {
+	# CPR: Use CPR effect if allowed by game rules, otherwise use vanilla effect
+	if = {
+		limit = { cpr_can_find_prostitute_trigger = yes }
+		cpr_debug_log_1_effect = {
+			MSG = cpr_debug_msg_using_cpr_rakish_brothel_night_effect
+			NAME1 = from_stress_loss_decision TYPE1 = flag:boolean
+		}
+		cpr_rakish_brothel_night_effect = yes
+	}
+	else = {
+		cpr_debug_log_1_effect = {
+			MSG = cpr_debug_msg_using_vanilla_rakish_brothel_night_effect
+			NAME1 = from_stress_loss_decision TYPE1 = flag:boolean
+		}
+		vanilla_rakish_brothel_night_effect = yes
+	}
+}
+
+# Applies the effects of a one-night debauchery spree in a brothel.
+# (Does not use "had_sex_with_unknown_effect" since we want a higher risk of STDs)
+vanilla_rakish_brothel_night_effect = {
+	# Warn the character about possible negative consequences.
+	custom_tooltip = stress_threshold.1011.rakish.tt
+
+	# Negative consequences of the night.
+	random_list = {
+		50 = {
+			trigger = {
+				is_attracted_to_men = yes
+			}
+			set_variable = {
+				name = had_recent_sex
+				value = flag:male
+			}
+			give_homosexual_secret_or_nothing_with_target_effect = { CHARACTER = dummy_male }
+		}
+		50 = {
+			trigger = {
+				is_attracted_to_women = yes
+			}
+			set_variable = {
+				name = had_recent_sex
+				value = flag:female
+			}
+		}
+	}
+	hidden_effect = {
+		#Adultery suspicion
+		random = {
+			chance = 5
+			random_spouse = {
+				limit = { is_ai = no }
+				alternative_limit = { always = yes }
+				trigger_event = adultery.0001
+			}
+		}
+
+		# Possible STD transmission
+		random_list = {
+			75 = {
+				#Nothing
+			}
+			20 = {
+				contract_disease_notify_effect = { DISEASE = lovers_pox }
+			}
+			5 = {
+				contract_disease_notify_effect = { DISEASE = great_pox }
+			}
+		}
+
+		#Possibility to start peasant story cycle
+		random = {
+			chance = 5
+			if = {
+				limit = {
+					NOT = { has_character_flag = had_story_cycle_peasant_affair }
+					is_ruler = yes
+				}
+				create_character = {
+					location = root.capital_province
+					template = beautiful_peasant_character
+					gender_female_chance = root_attraction_based_female_chance
+					faith = root.faith
+					culture = root.culture
+					save_scope_as = beautiful_peasant
+				}
+				scope:beautiful_peasant = {
+					set_sexuality = bisexual
+				}
+				if = {
+					limit = {
+						is_male = yes
+						exists = scope:beautiful_peasant
+						scope:beautiful_peasant = {
+							age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
+						}
+					}
+					random = {
+						chance = pregnancy_chance
+						add_character_flag = {
+							flag = peasant_is_pregnant
+							days = 560
+						}
+					}
+				}
+				set_variable = {
+					name = story_peasant_affair_target
+					value = scope:beautiful_peasant
+				}
+				set_variable = { #To save how you met
+					name = rakish_night
+					value = 0
+				}
+				create_story = story_peasant_affair
+			}
+		}
+	}
+
+	add_stress = major_stress_impact_loss
+}

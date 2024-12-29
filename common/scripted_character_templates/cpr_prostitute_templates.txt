@@ -1,0 +1,80 @@
+﻿cpr_prostitute_character_template = {
+	age = { 18 30 }
+	gender_female_chance = root_attraction_based_female_chance
+	dynasty = none
+	culture = root.culture
+	faith = root.faith
+
+	intrigue = { min_template_average_skill max_template_average_skill }
+
+	random_traits = yes
+	random_traits_list = {
+		education_diplomacy_1 = { weight = { base = 20 } }
+		education_diplomacy_2 = { weight = { base = 20 } }
+		education_diplomacy_3 = { weight = { base = 10 } }
+		education_diplomacy_4 = { weight = { base = 5 } }
+		education_intrigue_1 = { weight = { base = 20 } }
+		education_intrigue_2 = { weight = { base = 20 } }
+		education_intrigue_3 = { weight = { base = 10 } }
+		education_intrigue_4 = { weight = { base = 5 } }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		# Diplomacy / Intrigue / Attraction
+		gregarious = { weight = { base = 10 } }
+		deceitful = { weight = { base = 10 } }
+		beauty_good_1 = { weight = { base = 20 } } # Buffed
+		beauty_good_2 = { weight = { base = 10 } } # Buffed
+		beauty_good_3 = { weight = { base = 5 } } # Buffed
+		diplomat = { weight = { base = 5 } }
+		seducer = { weight = { base = 10 } } # Buffed
+		lifestyle_reveler = { weight = { base = 5 } }
+	}
+
+	after_creation = {
+		# Lifestyle Prostitute / XP
+		add_trait = lifestyle_prostitute
+		add_trait_xp = {
+			trait = lifestyle_prostitute
+			value = {
+				integer_range = {
+					min = small_lifestyle_random_xp_low
+					max = small_lifestyle_random_xp_high
+				}
+			}
+		}
+
+		# Fornicator
+		add_trait = fornicator
+
+		# Poet
+		random = {
+			chance = 1
+			modifier = {
+				add = 10
+				culture = { has_cultural_parameter = poet_trait_more_common }
+			}
+			add_trait = poet
+		}
+
+		# Lifestyle Reveler XP
+		if = {
+			limit = { has_trait = lifestyle_reveler }
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = {
+					integer_range = {
+						min = small_lifestyle_random_xp_low
+						max = small_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+
+		# Loyal / Disloyal, weight
+		set_interesting_traits_and_modifiers_effect = yes
+
+		# Sexuality
+		cpr_set_prostitute_sexuality_effect = { CHARACTER = root }
+	}
+}
