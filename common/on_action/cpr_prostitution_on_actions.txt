@@ -8,7 +8,10 @@ cpr_on_start_working_as_prostitute = {
 	}
 
 	effect = {
-		cpr_debug_log_effect = { MSG = cpr_debug_msg_character_started_working_as_prostitute }
+		cpr_debug_log_1_effect = {
+			MSG = cpr_debug_msg_character_started_working_as_prostitute
+			NAME1 = cpr_event TYPE1 = flag:flag
+		}
 	}
 }
 
@@ -22,6 +25,9 @@ cpr_on_stop_working_as_prostitute = {
 	}
 
 	effect = {
-		cpr_debug_log_effect = { MSG = cpr_debug_msg_character_stopped_working_as_prostitute }
+		cpr_debug_log_1_effect = {
+			MSG = cpr_debug_msg_character_stopped_working_as_prostitute
+			NAME1 = cpr_event TYPE1 = flag:flag
+		}
 	}
 }

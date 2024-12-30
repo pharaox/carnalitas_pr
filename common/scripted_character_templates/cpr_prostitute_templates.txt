@@ -35,6 +35,7 @@
 	after_creation = {
 		if = {
 			limit = { carn_can_be_prostitute_trigger = yes }
+			save_scope_value_as = { name = cpr_event value = flag:after_creation }
 			cpr_set_origin_effect = { ORIGIN = generic }
 			cpr_debug_log_effect = { MSG = cpr_debug_msg_creating_prostitute }
 			cpr_add_prostitute_traits_effect = yes

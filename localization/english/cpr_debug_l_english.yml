@@ -3,8 +3,8 @@
  cpr_debug_prefix_2: "[GetCurrentDate.GetStringShort]: [THIS.Char.GetFullNameNoTooltip] ([THIS.Char.GetID], [Select_CString(THIS.Char.IsFemale, 'female', 'male')])"
 
  # Prostitution
- cpr_debug_msg_character_started_working_as_prostitute: "$cpr_debug_prefix_2$: Character started working as prostitute"
- cpr_debug_msg_character_stopped_working_as_prostitute: "$cpr_debug_prefix_2$: Character stopped working as prostitute"
+ cpr_debug_msg_character_started_working_as_prostitute: "$cpr_debug_prefix_2$: Character started working as prostitute, cpr_event: [THIS.Var('cpr_event').GetFlagName]"
+ cpr_debug_msg_character_stopped_working_as_prostitute: "$cpr_debug_prefix_2$: Character stopped working as prostitute, cpr_event: [THIS.Var('cpr_event').GetFlagName]"
 
  # Sex
  cpr_debug_msg_character_had_sex_with_prostitute: "$cpr_debug_prefix_2$: Character had sex with prostitute, carn_sex_partner: [THIS.Var('carn_sex_partner').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_partner').Char.GetID], [Select_CString(THIS.Var('carn_sex_partner').Char.IsFemale, 'female', 'male')])"
@@ -27,3 +27,8 @@
  # Character creation and removal
  cpr_debug_msg_creating_prostitute: "$cpr_debug_prefix_2$: Creating prostitute, origin: [THIS.Var('cpr_origin').GetFlagName]"
  cpr_debug_msg_removing_prostitute: "$cpr_debug_prefix_2$: Removing prostitute, origin: [THIS.Var('cpr_origin').GetFlagName]"
+
+ # Starting and stopping working as prostitute
+ cpr_debug_msg_can_no_longer_work_as_prostitute: "$cpr_debug_prefix_2$: Character can no longer work as prostitute"
+ cpr_debug_msg_decided_to_start_working_as_prostitute: "$cpr_debug_prefix_2$: Character decided to start working as prostitute"
+ cpr_debug_msg_decided_to_stop_working_as_prostitute: "$cpr_debug_prefix_2$: Character decided to stop working as prostitute"

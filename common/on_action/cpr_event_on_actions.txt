@@ -1,0 +1,186 @@
+﻿# Characters getting married
+# root = Major partner of the marriage
+# scope:spouse = Minor partner of the marriage
+on_marriage = {
+	on_actions = { cpr_on_marriage }
+}
+
+cpr_on_marriage = {
+	effect = {
+		save_scope_value_as = { name = cpr_event value = flag:on_marriage }
+		cpr_start_or_stop_working_as_prostitute_effect = { FORCE = yes }
+		scope:spouse = {
+			cpr_start_or_stop_working_as_prostitute_effect = { FORCE = yes }
+		}
+	}
+}
+
+# Characters get divorced in any way
+# root = character initiating the divorce
+# scope:spouse = the divorced spouse
+# scope:reason = flag:script or flag:faith
+on_divorce = {
+	on_actions = { cpr_on_divorce }
+}
+
+cpr_on_divorce = {
+	effect = {
+		save_scope_value_as = { name = cpr_event value = flag:on_divorce }
+		cpr_start_or_stop_working_as_prostitute_effect = { FORCE = yes }
+		scope:spouse = {
+			cpr_start_or_stop_working_as_prostitute_effect = { FORCE = yes }
+		}
+	}
+}
+
+# Character becomes another's concubine
+# root = the concubinist
+# scope:concubine = the concubine
+on_concubinage = {
+	on_actions = { cpr_on_concubinage }
+}
+
+cpr_on_concubinage = {
+	effect = {
+		save_scope_value_as = { name = cpr_event value = flag:on_concubinage }
+		cpr_start_or_stop_working_as_prostitute_effect = { FORCE = yes }
+		scope:concubine = {
+			cpr_start_or_stop_working_as_prostitute_effect = { FORCE = yes }
+		}
+	}
+}
+
+# Character ceases to be another's concubine
+# root = the concubinist
+# scope:concubine = the concubine
+# scope:reason = flag:death, flag:faith, or flag:script
+on_concubinage_end = {
+	on_actions = { cpr_on_concubinage_end }
+}
+
+cpr_on_concubinage_end = {
+	effect = {
+		save_scope_value_as = { name = cpr_event value = flag:on_concubinage_end }
+		cpr_start_or_stop_working_as_prostitute_effect = { FORCE = yes }
+		scope:concubine = {
+			cpr_start_or_stop_working_as_prostitute_effect = { FORCE = yes }
+		}
+	}
+}
+
+# Fires when a character joins a court. Not fired for just generated characters
+# Root is the character
+# scope:new_employer is their new employer
+# scope:old_employer is their old employer (if they had one; otherwise unset)
+on_join_court = {
+	on_actions = { cpr_on_join_court }
+}
+
+cpr_on_join_court = {
+	effect = {
+		save_scope_value_as = { name = cpr_event value = flag:on_join_court }
+		cpr_start_or_stop_working_as_prostitute_effect = { FORCE = yes }
+	}
+}
+
+# Fires when a character leaves a court. Not fired when leaving due to death or similar
+# Will still fire even if on_join_court is firing (fires just before it)
+# Root is the character
+# scope:old_employer is their old employer
+on_leave_court = {
+	on_actions = { cpr_on_leave_court }
+}
+
+cpr_on_leave_court = {
+	effect = {
+		save_scope_value_as = { name = cpr_event value = flag:on_leave_court }
+		cpr_start_or_stop_working_as_prostitute_effect = { FORCE = yes }
+	}
+}
+
+# Code on-action: character being imprisoned in root scope
+# imprisoning character set as scope:imprisoner
+on_imprison = {
+	on_actions = { cpr_on_imprison }
+}
+
+cpr_on_imprison = {
+	effect = {
+		save_scope_value_as = { name = cpr_event value = flag:on_imprison }
+		cpr_start_or_stop_working_as_prostitute_effect = { FORCE = yes }
+	}
+}
+
+# Code on-action: character released from prison in root scope. Does not fire when "released" due to dying
+# imprisoning character set as scope:imprisoner
+on_release_from_prison = {
+	on_actions = { cpr_on_release_from_prison }
+}
+
+cpr_on_release_from_prison = {
+	effect = {
+		save_scope_value_as = { name = cpr_event value = flag:on_release_from_prison }
+		cpr_start_or_stop_working_as_prostitute_effect = { FORCE = yes }
+	}
+}
+
+# A title is transferred to a new character
+# root = the new holder
+# scope:title = the title that changes hands
+# scope:previous_holder = previous holder. Might be dead
+on_title_gain = {
+	on_actions = { cpr_on_title_gain }
+}
+
+cpr_on_title_gain = {
+	effect = {
+		save_scope_value_as = { name = cpr_event value = flag:on_title_gain }
+		if = {
+			limit = {
+				any_held_title = { count = 1 }
+			}
+			save_scope_value_as = { name = force value = yes }
+		}
+		else = {
+			save_scope_value_as = { name = force value = no }
+		}
+		cpr_start_or_stop_working_as_prostitute_effect = { FORCE = scope:force }
+	}
+}
+
+# A title is lost by a character
+# root = the old holder
+# scope:title = the title that changes hands
+# scope:new_holder = new holder.
+on_title_lost = {
+	on_actions = { cpr_on_title_lost }
+}
+
+cpr_on_title_lost = {
+	effect = {
+		save_scope_value_as = { name = cpr_event value = flag:on_title_lost }
+		if = {
+			limit = {
+				any_held_title = { count = 0 }
+			}
+			save_scope_value_as = { name = force value = yes }
+		}
+		else = {
+			save_scope_value_as = { name = force value = no }
+		}
+		cpr_start_or_stop_working_as_prostitute_effect = { FORCE = scope:force }
+	}
+}
+
+# Called from code once a year for all characters, at a random point that year (individually for each character)
+# Root is the character
+random_yearly_everyone_pulse = {
+	on_actions = { cpr_random_yearly_everyone_pulse }
+}
+
+cpr_random_yearly_everyone_pulse = {
+	effect = {
+		save_scope_value_as = { name = cpr_event value = flag:yearly_pulse }
+		cpr_start_or_stop_working_as_prostitute_effect = { FORCE = no }
+	}
+}

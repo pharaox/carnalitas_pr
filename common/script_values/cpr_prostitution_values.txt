@@ -1,4 +1,14 @@
-﻿cpr_attraction_based_female_chance = {
+﻿cpr_start_working_as_prostitute_ai_will_do_value = {
+	# TODO
+	value = 0
+}
+
+cpr_stop_working_as_prostitute_ai_will_do_value = {
+	# TODO
+	value = 0
+}
+
+cpr_attraction_based_female_chance = {
 	if = {
 		limit = { has_game_rule = carn_prostitution_content_any_gender }
 		value = scope_attraction_based_female_chance

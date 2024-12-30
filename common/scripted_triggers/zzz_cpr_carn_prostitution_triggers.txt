@@ -26,16 +26,21 @@
 	}
 	trigger_else = {
 		carn_legal_prostitution_trigger = yes
+		trigger_if = {
+			limit = { exists = liege }
+			liege = {
+				carn_legal_prostitution_trigger = yes
+			}
+		}
+		trigger_if = {
+			limit = { exists = host }
+			host = {
+				carn_legal_prostitution_trigger = yes
+			}
+		}
 	}
 	NOR = {
 		has_character_flag = carn_cannot_be_prostitute
 		has_trait_with_flag = carn_cannot_be_prostitute
-	}
-	# CPR Disallow clergy, devoted, celibate, and incapable characters
-	NOR = {
-		is_clergy = yes
-		has_trait = devoted
-		has_trait = celibate
-		has_trait = incapable
 	}
 }

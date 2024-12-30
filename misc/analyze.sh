@@ -7,6 +7,21 @@ echo "Character started working as prostitute: $(grep -a "Character started work
 echo "Character stopped working as prostitute: $(grep -a "Character stopped working as prostitute" $LOGFILE | wc -l)"
 echo
 
+# Events
+echo "after_creation: $(grep -a "cpr_event: after_creation" $LOGFILE | uniq | wc -l)"
+echo "on_marriage: $(grep -a "cpr_event: on_marriage" $LOGFILE | uniq | wc -l)"
+echo "on_divorce: $(grep -a "cpr_event: on_divorce" $LOGFILE | uniq | wc -l)"
+echo "on_concubinage: $(grep -a "cpr_event: on_concubinage" $LOGFILE | uniq | wc -l)"
+echo "on_concubinage_end: $(grep -a "cpr_event: on_concubinage_end" $LOGFILE | uniq | wc -l)"
+echo "on_join_court: $(grep -a "cpr_event: on_join_court" $LOGFILE | uniq | wc -l)"
+echo "on_leave_court: $(grep -a "cpr_event: on_leave_court" $LOGFILE | uniq | wc -l)"
+echo "on_imprison: $(grep -a "cpr_event: on_imprison" $LOGFILE | uniq | wc -l)"
+echo "on_release_from_prison: $(grep -a "cpr_event: on_release_from_prison" $LOGFILE | uniq | wc -l)"
+echo "on_title_gain: $(grep -a "cpr_event: on_title_gain" $LOGFILE | uniq | wc -l)"
+echo "on_title_lost: $(grep -a "cpr_event: on_title_lost" $LOGFILE | uniq | wc -l)"
+echo "yearly_pulse: $(grep -a "cpr_event: yearly_pulse" $LOGFILE | uniq | wc -l)"
+echo
+
 # Sex
 echo "Character had sex with prostitute: $(grep -a "Character had sex with prostitute" $LOGFILE | wc -l)"
 echo "Prostitute got pregnant: $(grep -a "Prostitute got pregnant" $LOGFILE | wc -l)"
@@ -44,4 +59,10 @@ echo "- tour_travel_3007: $(grep -a "Creating prostitute, origin: tour_travel_30
 echo "- tour_travel_3140: $(grep -a "Creating prostitute, origin: tour_travel_3140" $LOGFILE | wc -l)"
 echo "Removing prostitute: $(grep -a "Removing prostitute" $LOGFILE | wc -l)"
 echo "- chariot_race_4030: $(grep -a "Removing prostitute, origin: chariot_race_4030" $LOGFILE | wc -l)"
+echo
+
+# Starting and stopping working as prostitute
+echo "Character can no longer work as prostitute: $(grep -a "Character can no longer work as prostitute" $LOGFILE | wc -l)"
+echo "Character decided to start working as prostitute: $(grep -a "Character decided to start working as prostitute" $LOGFILE | wc -l)"
+echo "Character decided to stop working as prostitute: $(grep -a "Character decided to stop working as prostitute" $LOGFILE | wc -l)"
 echo

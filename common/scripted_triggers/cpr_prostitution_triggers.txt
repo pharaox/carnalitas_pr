@@ -1,4 +1,44 @@
-﻿cpr_can_find_prostitute_trigger = {
+﻿cpr_can_work_as_prostitute_trigger = {
+	# Can have sex
+	carn_can_have_sex_trigger = yes
+
+	# Is young enough
+	effective_age < carn_prostitution_age_cutoff
+
+	# Not clergy or devoted
+	NOR = {
+		is_clergy = yes
+		has_trait = devoted
+	}
+
+	# All spouses accept prostitution if married,
+	trigger_if = {
+		limit = { is_married = yes }
+		NOT = {
+			any_spouse = {
+				carn_accepts_prostitution_trigger = no
+			}
+		}
+	}
+
+	# Concubinist accept prostitution if concubine
+	trigger_if = {
+		limit = { is_concubine = yes }
+		concubinist = {
+			carn_accepts_prostitution_trigger = yes
+		}
+	}
+
+	# Liege accepts prostitution if courtier
+	trigger_if = {
+		limit = { is_courtier = yes }
+		liege = {
+			carn_accepts_prostitution_trigger = yes
+		}
+	}
+}
+
+cpr_can_find_prostitute_trigger = {
 	trigger_if = {
 		limit = { has_game_rule = carn_prostitution_content_any_gender }
 		always = yes

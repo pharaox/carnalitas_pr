@@ -24,6 +24,7 @@ get_quirk_character_effect = {
 				scope:brothel_worker ?= this
 				carn_can_be_prostitute_trigger = yes
 			}
+			save_scope_value_as = { name = cpr_event value = flag:after_creation }
 			cpr_set_origin_effect = { ORIGIN = tour_travel_3140 }
 			cpr_debug_log_effect = { MSG = cpr_debug_msg_creating_prostitute }
 			carn_start_working_as_prostitute_effect = yes

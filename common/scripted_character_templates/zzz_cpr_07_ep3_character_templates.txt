@@ -33,6 +33,7 @@
 				scope:prostitute ?= this
 				carn_can_be_prostitute_trigger = yes
 			}
+			save_scope_value_as = { name = cpr_event value = flag:after_creation }
 			cpr_set_origin_effect = { ORIGIN = chariot_race_4030 }
 			cpr_debug_log_effect = { MSG = cpr_debug_msg_creating_prostitute }
 			cpr_add_prostitute_traits_effect = yes
