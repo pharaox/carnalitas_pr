@@ -30,5 +30,5 @@
 
  # Starting and stopping working as prostitute
  cpr_debug_msg_can_no_longer_work_as_prostitute: "$cpr_debug_prefix_2$: Character can no longer work as prostitute"
- cpr_debug_msg_decided_to_start_working_as_prostitute: "$cpr_debug_prefix_2$: Character decided to start working as prostitute"
- cpr_debug_msg_decided_to_stop_working_as_prostitute: "$cpr_debug_prefix_2$: Character decided to stop working as prostitute"
+ cpr_debug_msg_decided_to_start_working_as_prostitute: "$cpr_debug_prefix_2$: Character decided to start working as prostitute, work_as_prostitute_ai_willingness: [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
+ cpr_debug_msg_decided_to_stop_working_as_prostitute: "$cpr_debug_prefix_2$: Character decided to stop working as prostitute, work_as_prostitute_ai_willingness: [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"

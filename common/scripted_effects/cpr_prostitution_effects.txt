@@ -1,57 +1,60 @@
-﻿cpr_start_or_stop_working_as_prostitute_effect = {
+﻿# The scoped character stops working as prostitute if they are not allowed to do it.
+cpr_potentially_stop_working_as_prostitute_effect = {
 	if = {
 		limit = {
-			carn_is_working_as_prostitute_trigger = yes
 			OR = {
 				carn_can_be_prostitute_trigger = no
 				cpr_can_work_as_prostitute_trigger = no
 			}
 		}
 
-		# Character can no longer work as prostitute
 		cpr_debug_log_effect = { MSG = cpr_debug_msg_can_no_longer_work_as_prostitute }
 		cpr_stop_working_as_prostitute_notify_effect = yes
 
-		# Remove decision cooldown flag
 		remove_character_flag = cpr_decision_cooldown
 	}
-	else_if = {
+}
+
+# The scoped AI character decides if they should start or stop working as prostitute
+# if they are allowed to do it, based on cpr_work_as_prostitute_ai_willingness_value
+cpr_start_or_stop_working_as_prostitute_effect = {
+	if = {
 		limit = {
 			is_ai = yes
 			NOT = { has_trait = slave }
-			trigger_if = {
-				limit = { $FORCE$ = no }
-				is_playable_character = no
-				NOT = { has_character_flag = cpr_decision_cooldown }
-			}
+			NOT = { has_character_flag = cpr_decision_cooldown }
 			carn_can_be_prostitute_trigger = yes
 			cpr_can_work_as_prostitute_trigger = yes
 		}
 
-		# Character decides if they should start or stop working as prostitute
-		if = {
-			limit = { carn_is_working_as_prostitute_trigger = no }
-			random = {
-				chance = 0
-				modifier = {
-					add = cpr_start_working_as_prostitute_ai_will_do_value
-				}
-				cpr_debug_log_effect = { MSG = cpr_debug_msg_decided_to_start_working_as_prostitute }
-				cpr_start_working_as_prostitute_notify_effect = yes
-			}
-		}
-		else = {
-			random = {
-				chance = 0
-				modifier = {
-					add = cpr_stop_working_as_prostitute_ai_will_do_value
-				}
-				cpr_debug_log_effect = { MSG = cpr_debug_msg_decided_to_stop_working_as_prostitute }
-				cpr_stop_working_as_prostitute_notify_effect = yes
-			}
+		save_scope_value_as = {
+			name = work_as_prostitute_ai_willingness
+			value = cpr_work_as_prostitute_ai_willingness_value
 		}
 
-		# Add decision cooldown flag
+		if = {
+			limit = {
+				carn_is_working_as_prostitute_trigger = no
+				scope:work_as_prostitute_ai_willingness > 0
+			}
+			cpr_debug_log_1_effect = {
+				MSG = cpr_debug_msg_decided_to_start_working_as_prostitute
+				NAME1 = work_as_prostitute_ai_willingness TYPE1 = flag:value
+			}
+			cpr_start_working_as_prostitute_notify_effect = yes
+		}
+		else_if = {
+			limit = {
+				carn_is_working_as_prostitute_trigger = yes
+				scope:work_as_prostitute_ai_willingness <= 0
+			}
+			cpr_debug_log_1_effect = {
+				MSG = cpr_debug_msg_decided_to_stop_working_as_prostitute
+				NAME1 = work_as_prostitute_ai_willingness TYPE1 = flag:value
+			}
+			cpr_stop_working_as_prostitute_notify_effect = yes
+		}
+
 		add_character_flag = {
 			flag = cpr_decision_cooldown
 			years = 5

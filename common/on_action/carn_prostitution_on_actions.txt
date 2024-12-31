@@ -1,9 +1,9 @@
-﻿random_yearly_everyone_pulse = {
-	on_actions = {
-		delay = { days = 1 } # CPR
-		carn_prostitution_yearly_maintenance_pulse
-	}
-}
+﻿# CPR Handled by cpr_random_yearly_everyone_pulse
+#random_yearly_everyone_pulse = {
+#	on_actions = {
+#		carn_prostitution_yearly_maintenance_pulse
+#	}
+#}
 
 carn_prostitution_yearly_maintenance_pulse = {
 	trigger = {

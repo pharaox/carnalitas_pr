@@ -11,7 +11,7 @@
 	}
 	intrigue = {
 		min_template_average_skill
-		max_template_decent_skill
+		max_template_medium_skill
 	}
 
 	random_traits = yes
@@ -19,8 +19,9 @@
 		count = { 0 2 }
 		# Diplomacy / Intrigue / Attraction
 		lustful = { weight = { base = 10 } }
-		gregarious = { weight = { base = 10 } }
-		deceitful = { weight = { base = 10 } }
+		greedy = { weight = { base = 10 } }
+		gregarious = { weight = { base = 5 } }
+		deceitful = { weight = { base = 5 } }
 		arbitrary = { weight = { base = 5 } }
 		cynical = { weight = { base = 5 } }
 		fickle = { weight = { base = 5 } }
@@ -29,6 +30,7 @@
 		beauty_good_3 = { weight = { base = 5 } }
 		diplomat = { weight = { base = 5 } }
 		seducer = { weight = { base = 5 } }
+		deviant = { weight = { base = 2 } }
 		lifestyle_reveler = { weight = { base = 5 } }
 	}
 

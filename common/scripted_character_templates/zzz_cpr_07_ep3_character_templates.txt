@@ -8,6 +8,7 @@
 
 		# CPR Add more traits to reduce chance for beauty
 		lustful = {}
+		greedy = {}
 		gregarious = {}
 		deceitful = {}
 		arbitrary = {}

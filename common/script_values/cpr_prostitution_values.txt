@@ -1,11 +1,117 @@
-﻿cpr_start_working_as_prostitute_ai_will_do_value = {
-	# TODO
+﻿cpr_work_as_prostitute_ai_willingness_value = {
 	value = 0
-}
+	if = {
+		limit = { carn_accepts_prostitution_trigger = no }
+		add = -20
+	}
 
-cpr_stop_working_as_prostitute_ai_will_do_value = {
-	# TODO
-	value = 0
+	# AI values
+	# Greed (-20 to 20 depending on greed)
+	add = {
+		value = ai_greed
+		multiply = 0.2
+	}
+	# Honor (-20 to 20 depending on honor)
+	add = {
+		value = ai_honor
+		multiply = -0.2
+	}
+	# Sociability (-20 to 20 depending on sociability)
+	add = {
+		value = ai_sociability
+		multiply = 0.2
+	}
+	# Zeal, if prostitution is not accepted (-20 to 20 depending on zeal)
+	if = {
+		limit = { carn_accepts_prostitution_trigger = no }
+		add = {
+			value = ai_zeal
+			multiply = -0.2
+		}
+	}
+
+	# Lust traits
+	if = {
+		limit = { has_trait = lustful }
+		add = 20
+	}
+	else_if = {
+		limit = { has_trait = chaste }
+		add = -20
+	}
+	if = {
+		limit = { has_trait = deviant }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = seducer }
+		add = 10
+	}
+
+	# Prostitution lifestyle trait (0 to 50)
+	if = {
+		limit = { has_trait = lifestyle_prostitute }
+		add = {
+			value = "has_trait_xp(lifestyle_prostitute)"
+			multiply = 0.5
+		}
+	}
+
+	# Skills (-20 to 20+)
+	add = {
+		value = diplomacy
+		subtract = 10
+	}
+	add = {
+		value = intrigue
+		subtract = 10
+	}
+
+	# Attraction (-15 to 15)
+	add = {
+		value = attraction
+		multiply = 0.5
+	}
+
+	# Age (-10 to 20)
+	add = {
+		value = 35
+		subtract = age
+	}
+
+	# Health (-20 to 20)
+	add = {
+		value = health # 0-7
+		subtract = define:NCharacter|BASE_HEALTH # 5
+		add = 1
+		multiply = 5
+	}
+
+	# Personal circumstances: married or concubine
+	if = {
+		limit = { is_married = yes }
+		add = -50
+	}
+	else_if = {
+		limit = { is_concubine = yes }
+		add = -20
+	}
+
+	# Personal circumstances: ruler, courtier, or guest
+	if = {
+		limit = { is_ruler = yes }
+		add = -50
+	}
+	else_if = {
+		limit = { is_courtier = yes }
+		add = -20
+	}
+	else_if = {
+		limit = { is_pool_guest = yes }
+		add = -10
+	}
+
+	round = yes
 }
 
 cpr_attraction_based_female_chance = {

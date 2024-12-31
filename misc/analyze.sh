@@ -4,22 +4,15 @@ LOGFILE=debug.log
 
 # Prostitution
 echo "Character started working as prostitute: $(grep -a "Character started working as prostitute" $LOGFILE | wc -l)"
+echo "- after_creation: $(grep -a "Character started working as prostitute, cpr_event: after_creation" $LOGFILE | uniq | wc -l)"
+echo "- yearly_pulse: $(grep -a "Character started working as prostitute, cpr_event: yearly_pulse" $LOGFILE | uniq | wc -l)"
 echo "Character stopped working as prostitute: $(grep -a "Character stopped working as prostitute" $LOGFILE | wc -l)"
-echo
-
-# Events
-echo "after_creation: $(grep -a "cpr_event: after_creation" $LOGFILE | uniq | wc -l)"
-echo "on_marriage: $(grep -a "cpr_event: on_marriage" $LOGFILE | uniq | wc -l)"
-echo "on_divorce: $(grep -a "cpr_event: on_divorce" $LOGFILE | uniq | wc -l)"
-echo "on_concubinage: $(grep -a "cpr_event: on_concubinage" $LOGFILE | uniq | wc -l)"
-echo "on_concubinage_end: $(grep -a "cpr_event: on_concubinage_end" $LOGFILE | uniq | wc -l)"
-echo "on_join_court: $(grep -a "cpr_event: on_join_court" $LOGFILE | uniq | wc -l)"
-echo "on_leave_court: $(grep -a "cpr_event: on_leave_court" $LOGFILE | uniq | wc -l)"
-echo "on_imprison: $(grep -a "cpr_event: on_imprison" $LOGFILE | uniq | wc -l)"
-echo "on_release_from_prison: $(grep -a "cpr_event: on_release_from_prison" $LOGFILE | uniq | wc -l)"
-echo "on_title_gain: $(grep -a "cpr_event: on_title_gain" $LOGFILE | uniq | wc -l)"
-echo "on_title_lost: $(grep -a "cpr_event: on_title_lost" $LOGFILE | uniq | wc -l)"
-echo "yearly_pulse: $(grep -a "cpr_event: yearly_pulse" $LOGFILE | uniq | wc -l)"
+echo "- on_marriage: $(grep -a "Character stopped working as prostitute, cpr_event: on_marriage" $LOGFILE | uniq | wc -l)"
+echo "- on_concubinage: $(grep -a "Character stopped working as prostitute, cpr_event: on_concubinage" $LOGFILE | uniq | wc -l)"
+echo "- on_join_court: $(grep -a "Character stopped working as prostitute, cpr_event: on_join_court" $LOGFILE | uniq | wc -l)"
+echo "- on_imprison: $(grep -a "Character stopped working as prostitute, cpr_event: on_imprison" $LOGFILE | uniq | wc -l)"
+echo "- on_title_gain: $(grep -a "Character stopped working as prostitute, cpr_event: on_title_gain" $LOGFILE | uniq | wc -l)"
+echo "- yearly_pulse: $(grep -a "Character stopped working as prostitute, cpr_event: yearly_pulse" $LOGFILE | uniq | wc -l)"
 echo
 
 # Sex
