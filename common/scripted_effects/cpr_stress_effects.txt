@@ -2,7 +2,10 @@
 cpr_rakish_brothel_night_effect = {
 	if = {
 		limit = {
-			NOT = { exists = scope:prostitute }
+			NAND = {
+				exists = scope:prostitute
+				exists = scope:from_stress_loss_decision
+			}
 		}
 
 		# Use vanilla effect as tooltip to prevent errors
@@ -11,10 +14,21 @@ cpr_rakish_brothel_night_effect = {
 		}
 
 		hidden_effect_new_object = {
+			# Determine prostitute location
+			location = {
+				if = {
+					limit = { is_sea_province = no }
+					save_temporary_scope_as = location
+				}
+				else = {
+					cpr_get_closest_land_province_effect = { PROVINCE = location }
+				}
+			}
+
 			# Find prostitute
 			save_temporary_scope_as = character
 			cpr_get_prostitute_effect = {
-				LOCATION = scope:character.location
+				LOCATION = scope:location
 				CHARACTER = scope:character
 				PROSTITUTE = prostitute
 			}
@@ -44,4 +58,53 @@ cpr_rakish_brothel_night_prostitute_effect = {
 
 	# Lose stress
 	add_stress = major_stress_impact_loss
+}
+
+cpr_get_closest_land_province_effect = {
+	save_temporary_scope_as = origin
+	ordered_neighboring_province = {
+		limit = { exists = county }
+		alternative_limit = {
+			any_neighboring_province = { exists = county }
+		}
+		alternative_limit = {
+			any_neighboring_province = {
+				any_neighboring_province = { exists = county }
+			}
+		}
+		order_by = {
+			value = 0
+			subtract = "squared_distance(scope:origin)"
+		}
+		if = {
+			limit = { exists = county }
+			save_temporary_scope_as = $PROVINCE$
+		}
+		else = {
+			ordered_neighboring_province = {
+				limit = { exists = county }
+				alternative_limit = {
+					any_neighboring_province = { exists = county }
+				}
+				order_by = {
+					value = 0
+					subtract = "squared_distance(scope:origin)"
+				}
+				if = {
+					limit = { exists = county }
+					save_temporary_scope_as = $PROVINCE$
+				}
+				else = {
+					ordered_neighboring_province = {
+						limit = { exists = county }
+						order_by = {
+							value = 0
+							subtract = "squared_distance(scope:origin)"
+						}
+						save_temporary_scope_as = $PROVINCE$
+					}
+				}
+			}
+		}
+	}
 }
