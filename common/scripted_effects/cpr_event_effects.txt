@@ -1,5 +1,6 @@
 ﻿cpr_get_prostitute_effect = {
 	# Find an existing prostitute character
+	clear_saved_scope = $PROSTITUTE$
 	random_pool_character = {
 		province = $LOCATION$
 		limit = {
@@ -34,6 +35,47 @@
 			cpr_set_prostitute_sexuality_effect = { CHARACTER = $CHARACTER$ }
 			save_scope_as = $PROSTITUTE$
 		}
+	}
+}
+
+# Makes the scoped character a proper prostitute, to be used in after_creation or
+# right after character creation
+cpr_make_prostitute_effect = {
+	# Set event for carn_on_start_working_as_prostitute
+	save_scope_value_as = { name = cpr_event value = flag:after_creation }
+
+	# Set origin for debugging
+	set_variable = {
+		name = cpr_origin
+		value = flag:$ORIGIN$
+	}
+
+	# Output debug message
+	cpr_debug_log_effect = { MSG = cpr_debug_msg_creating_prostitute }
+
+	# Add traits
+	cpr_add_prostitute_traits_effect = yes
+
+	# Set sexuality
+	cpr_set_prostitute_sexuality_effect = { CHARACTER = root }
+
+	# Start working as prostitute
+	carn_start_working_as_prostitute_effect = yes
+
+	# Potentially contract STD
+	cpr_prostitute_contract_std_effect = yes
+
+	# Prevent pruning
+	set_variable = {
+		name = last_visited_ruler
+		value = dummy_female
+		days = 1825
+	}
+
+	# Set decision cooldown
+	add_character_flag = {
+		flag = cpr_decision_cooldown
+		years = 5
 	}
 }
 
@@ -131,17 +173,3 @@ cpr_prostitute_contract_std_effect = {
 	}
 }
 
-cpr_prevent_pruning_effect = {
-	set_variable = {
-		name = last_visited_ruler
-		value = dummy_female
-		days = 1825
-	}
-}
-
-cpr_set_origin_effect = {
-	set_variable = {
-		name = cpr_origin
-		value = flag:$ORIGIN$
-	}
-}
