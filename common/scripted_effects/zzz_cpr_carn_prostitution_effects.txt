@@ -1,0 +1,22 @@
+﻿carn_upgrade_lifestyle_prostitute_effect = {
+	if = {
+		limit = { NOT = { has_trait = lifestyle_prostitute } }
+		add_trait = lifestyle_prostitute
+	}
+	add_trait_xp = {
+		trait = lifestyle_prostitute
+		# CPR Use random integer range
+		value = {
+			integer_range = {
+				min = small_lifestyle_random_xp_low
+				max = small_lifestyle_random_xp_high
+			}
+		}
+	}
+	hidden_effect = {
+		if = {
+			limit = { carn_is_working_as_prostitute_trigger = yes }
+			carn_update_working_as_prostitute_modifier_effect = yes
+		}
+	}
+}
