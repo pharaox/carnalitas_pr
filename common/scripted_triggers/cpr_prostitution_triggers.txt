@@ -21,7 +21,7 @@
 		}
 	}
 
-	# Concubinist accept prostitution if concubine
+	# Concubinist accepts prostitution if concubine
 	trigger_if = {
 		limit = { is_concubine = yes }
 		concubinist = {
@@ -29,11 +29,36 @@
 		}
 	}
 
-	# Liege accepts prostitution if courtier
+	# Liege or warden accept prostitution if not courtier or hostage and not slave
 	trigger_if = {
-		limit = { is_courtier = yes }
-		liege = {
+		limit = { cpr_is_slave_trigger = no }
+
+		# Liege accepts prostitution if courtier
+		trigger_if = {
+			limit = { is_courtier = yes }
+			liege = {
+				carn_accepts_prostitution_trigger = yes
+			}
+		}
+
+		# Host is not required to accept prostitution if guest
+
+		# Warden accepts prostitution if hostage
+		trigger_if = {
+			limit = { is_hostage = yes }
+			warden = {
+				carn_accepts_prostitution_trigger = yes
+			}
+		}
+	}
+
+	# Accepts prostitution, or decided explicitly if ruler
+	trigger_if = {
+		limit = { is_ruler = yes }
+		OR = {
 			carn_accepts_prostitution_trigger = yes
+			has_character_flag = cpr_work_as_prostitute_decision
+			exists = scope:work_as_prostitute_decision
 		}
 	}
 }
@@ -53,5 +78,12 @@ cpr_can_find_prostitute_trigger = {
 	}
 	trigger_else = {
 		always = no
+	}
+}
+
+cpr_is_slave_trigger = {
+	any_relation = {
+		type = slave_owner
+		exists = this
 	}
 }

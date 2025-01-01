@@ -11,14 +11,9 @@
 			has_game_rule = carn_prostitution_content_female_only
 		}
 	}
-	# CPR Use trigger_if appropriately
+	# CPR Add conditions for liege, warden, and host
 	trigger_if = {
-		limit = {
-			any_relation = {
-				type = slave_owner
-				exists = this
-			}
-		}
+		limit = { cpr_is_slave_trigger = yes }
 		any_relation = {
 			type = slave_owner
 			carn_legal_prostitution_trigger = yes
@@ -35,6 +30,12 @@
 		trigger_if = {
 			limit = { exists = host }
 			host = {
+				carn_legal_prostitution_trigger = yes
+			}
+		}
+		trigger_if = {
+			limit = { exists = warden }
+			warden = {
 				carn_legal_prostitution_trigger = yes
 			}
 		}

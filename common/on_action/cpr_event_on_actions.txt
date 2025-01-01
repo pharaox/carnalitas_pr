@@ -102,10 +102,12 @@ cpr_on_title_gain = {
 }
 
 # TODO
+# on_hostage_taken
 # on_guest_arrived_from_pool
 # on_character_faith_change
 # on_character_culture_change
 # on_birthday
+# on_contract_disease
 
 # Called from code once a year for all characters, at a random point that year (individually for each character)
 # Root is the character
@@ -118,14 +120,18 @@ cpr_random_yearly_everyone_pulse = {
 		carn_is_prostitute_trigger = yes
 	}
 	effect = {
-		# Start or stop working as prostitute
 		save_scope_value_as = { name = cpr_event value = flag:yearly_pulse }
+
+		# Stop working as prostitute if they can no longer do it
 		if = {
 			limit = { carn_is_working_as_prostitute_trigger = yes }
 			cpr_potentially_stop_working_as_prostitute_effect = yes
 		}
+
+		# Decide if they should start or stop working as prostitute if they are not a ruler
+		# Rulers use the Carnalitas decisions instead
 		if = {
-			limit = { is_playable_character = no }
+			limit = { is_ruler = no }
 			cpr_start_or_stop_working_as_prostitute_effect = yes
 		}
 

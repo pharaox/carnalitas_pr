@@ -59,3 +59,8 @@ echo "Character can no longer work as prostitute: $(grep -a "Character can no lo
 echo "Character decided to start working as prostitute: $(grep -a "Character decided to start working as prostitute" $LOGFILE | wc -l)"
 echo "Character decided to stop working as prostitute: $(grep -a "Character decided to stop working as prostitute" $LOGFILE | wc -l)"
 echo
+
+# Carnalitas decisions
+echo "Moonlight as a Prostitute decision made: $(grep -a "Moonlight as a Prostitute decision made" $LOGFILE | wc -l)"
+echo "Stop Moonlighting as a Prostitute decision made: $(grep -a "Stop Moonlighting as a Prostitute decision made" $LOGFILE | wc -l)"
+echo

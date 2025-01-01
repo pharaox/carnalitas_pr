@@ -1,0 +1,197 @@
+﻿# Overridden from Carnalitas
+# * Added more validity conditions
+# * Added cost
+# * Reworked stress impact
+# * Improved AI
+# * Added logging
+carn_work_as_prostitute_decision = {
+	desc = carn_work_as_prostitute_decision_desc
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_carn_prostitution.dds"
+	}
+	selection_tooltip = carn_work_as_prostitute_decision_tooltip
+
+	is_shown = {
+		carn_can_be_prostitute_trigger = yes
+		carn_is_working_as_prostitute_trigger = no
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		save_temporary_scope_as = work_as_prostitute_decision
+		cpr_can_work_as_prostitute_trigger = yes
+	}
+
+	is_valid = {
+		custom_description = {
+			text = "carn_effective_age_under_value_cutoff"
+			value = carn_prostitution_age_cutoff
+			effective_age < carn_prostitution_age_cutoff
+		}
+	}
+
+	cost = {
+		piety = medium_piety_value
+		prestige = minor_prestige_value
+	}
+
+	effect = {
+		save_scope_value_as = {
+			name = work_as_prostitute_ai_willingness
+			value = cpr_work_as_prostitute_ai_willingness_value
+		}
+		cpr_debug_log_1_effect = {
+			MSG = cpr_debug_msg_work_as_prostitute_decision_made
+			NAME1 = work_as_prostitute_ai_willingness TYPE1 = flag:value
+		}
+
+		# Lose piety if prostitution is not accepted
+		if = {
+			limit = {
+				carn_is_prostitute_trigger = no
+				carn_accepts_prostitution_trigger = no
+			}
+			add_piety_level = -1
+		}
+
+		# Start working as prostitute
+		send_interface_toast = {
+			type = event_toast_effect_neutral
+			title = msg_carn_started_working_as_prostitute
+			left_icon = root
+			carn_start_working_as_prostitute_effect = yes
+		}
+
+		# Stress impact
+		stress_impact = {
+			chaste = major_stress_impact_gain
+			generous = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
+			rakish = medium_stress_impact_loss
+			deviant = medium_stress_impact_loss
+			greedy = minor_stress_impact_loss
+		}
+		if = {
+			limit = { carn_accepts_prostitution_trigger = no }
+			stress_impact = {
+				zealous = medium_stress_impact_gain
+				cynical = minor_stress_impact_loss
+			}
+		}
+
+		add_character_flag = cpr_work_as_prostitute_decision
+	}
+
+	ai_check_interval = 60
+
+	ai_potential = {
+		OR = {
+			carn_is_prostitute_trigger = yes
+			carn_accepts_prostitution_trigger = yes
+			AND = {
+				OR = {
+					has_trait = lustful
+					has_trait = rakish
+					has_trait = deviant
+					has_trait = greedy
+					has_trait = cynical
+				}
+				NOR = {
+					has_trait = chaste
+					has_trait = generous
+					has_trait = zealous
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			cpr_work_as_prostitute_ai_willingness_value > 0
+			add = 100
+		}
+	}
+}
+
+# Overridden from Carnalitas
+# * Added cost
+# * Reworked stress impact
+# * Added AI
+# * Added logging
+carn_stop_work_as_prostitute_decision = {
+	desc = carn_stop_work_as_prostitute_decision_desc
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_carn_prostitution.dds"
+	}
+	selection_tooltip = carn_stop_work_as_prostitute_decision_tooltip
+
+	is_shown = {
+		carn_is_working_as_prostitute_trigger = yes
+		NOR = {
+			has_character_flag = carn_cannot_stop_work_as_prostitute
+			has_trait_with_flag = carn_cannot_stop_work_as_prostitute
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		piety = medium_piety_value
+		prestige = minor_prestige_value
+	}
+
+	effect = {
+		save_scope_value_as = {
+			name = work_as_prostitute_ai_willingness
+			value = cpr_work_as_prostitute_ai_willingness_value
+		}
+		cpr_debug_log_1_effect = {
+			MSG = cpr_debug_msg_stop_work_as_prostitute_decision_made
+			NAME1 = work_as_prostitute_ai_willingness TYPE1 = flag:value
+		}
+
+		# Stop working as prostitute
+		send_interface_toast = {
+			type = event_toast_effect_neutral
+			title = msg_carn_stopped_working_as_prostitute
+			left_icon = root
+			carn_stop_working_as_prostitute_effect = yes
+		}
+
+		# Stress impact
+		stress_impact = {
+			lustful = medium_stress_impact_gain
+			rakish = medium_stress_impact_gain
+			deviant = medium_stress_impact_gain
+			greedy = medium_stress_impact_gain
+			chaste = minor_stress_impact_loss
+			generous = minor_stress_impact_loss
+		}
+		if = {
+			limit = { carn_accepts_prostitution_trigger = no }
+			stress_impact = {
+				cynical = medium_stress_impact_gain
+				zealous = minor_stress_impact_loss
+			}
+		}
+
+		remove_character_flag = cpr_work_as_prostitute_decision
+	}
+
+	ai_check_interval = 60
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			cpr_work_as_prostitute_ai_willingness_value <= 0
+			add = 100
+		}
+	}
+}

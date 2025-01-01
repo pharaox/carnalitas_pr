@@ -11,15 +11,15 @@
 		value = ai_greed
 		multiply = 0.2
 	}
-	# Honor (-20 to 20 depending on honor)
+	# Honor (-10 to 10 depending on honor)
 	add = {
 		value = ai_honor
-		multiply = -0.2
+		multiply = -0.1
 	}
-	# Sociability (-20 to 20 depending on sociability)
+	# Sociability (-10 to 10 depending on sociability)
 	add = {
 		value = ai_sociability
-		multiply = 0.2
+		multiply = 0.1
 	}
 	# Zeal, if prostitution is not accepted (-20 to 20 depending on zeal)
 	if = {
@@ -40,12 +40,12 @@
 		add = -20
 	}
 	if = {
-		limit = { has_trait = deviant }
+		limit = { has_trait = rakish }
 		add = 20
 	}
 	if = {
-		limit = { has_trait = seducer }
-		add = 10
+		limit = { has_trait = deviant }
+		add = 20
 	}
 
 	# Prostitution lifestyle trait (0 to 50)
@@ -57,14 +57,16 @@
 		}
 	}
 
-	# Skills (-20 to 20+)
+	# Skills (-10 to 10+)
 	add = {
 		value = diplomacy
 		subtract = 10
+		multiply = 0.5
 	}
 	add = {
 		value = intrigue
 		subtract = 10
+		multiply = 0.5
 	}
 
 	# Attraction (-15 to 15)
@@ -73,42 +75,57 @@
 		multiply = 0.5
 	}
 
-	# Age (-10 to 20)
+	# Age (-7 to 7)
 	add = {
-		value = 35
+		value = 30
 		subtract = age
+		multiply = 0.5
 	}
 
-	# Health (-20 to 20)
-	add = {
-		value = health # 0-7
-		subtract = define:NCharacter|BASE_HEALTH # 5
-		add = 1
+	# Health (-15 to 0)
+	if = {
+		limit = { health < fine_health }
+		value = health
+		subtract = fine_health
 		multiply = 5
+	}
+
+	# Highborn
+	if = {
+		limit = { is_lowborn = no }
+		add = -10
 	}
 
 	# Personal circumstances: married or concubine
 	if = {
 		limit = { is_married = yes }
-		add = -50
+		add = -20
 	}
 	else_if = {
 		limit = { is_concubine = yes }
-		add = -20
+		add = -10
+	}
+
+	# Personal circumstances: children
+	if = {
+		limit = {
+			any_child = { count > 0 }
+		}
+		add = -10
 	}
 
 	# Personal circumstances: ruler, courtier, or guest
 	if = {
 		limit = { is_ruler = yes }
-		add = -50
-	}
-	else_if = {
-		limit = { is_courtier = yes }
 		add = -20
 	}
 	else_if = {
-		limit = { is_pool_guest = yes }
+		limit = { is_courtier = yes }
 		add = -10
+	}
+	else_if = {
+		limit = { is_pool_guest = yes }
+		add = -5
 	}
 
 	round = yes

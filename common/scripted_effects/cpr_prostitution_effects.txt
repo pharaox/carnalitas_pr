@@ -12,6 +12,7 @@ cpr_potentially_stop_working_as_prostitute_effect = {
 		cpr_stop_working_as_prostitute_notify_effect = yes
 
 		remove_character_flag = cpr_decision_cooldown
+		remove_character_flag = cpr_work_as_prostitute_decision
 	}
 }
 
@@ -21,7 +22,7 @@ cpr_start_or_stop_working_as_prostitute_effect = {
 	if = {
 		limit = {
 			is_ai = yes
-			NOT = { has_trait = slave }
+			cpr_is_slave_trigger = no
 			NOT = { has_character_flag = cpr_decision_cooldown }
 			carn_can_be_prostitute_trigger = yes
 			cpr_can_work_as_prostitute_trigger = yes
@@ -94,14 +95,21 @@ cpr_stop_working_as_prostitute_notify_effect = {
 
 cpr_get_message_recipient_effect = {
 	if = {
-		limit = {
-			any_relation = {
-				type = slave_owner
-				exists = this
-			}
-		}
+		limit = { cpr_is_slave_trigger = yes }
 		random_relation = {
 			type = slave_owner
+			save_temporary_scope_as = message_recipient
+		}
+	}
+	else_if = {
+		limit = { is_hostage = yes }
+		warden = {
+			save_temporary_scope_as = message_recipient
+		}
+	}
+	else_if = {
+		limit = { is_foreign_court_or_pool_guest = yes }
+		host = {
 			save_temporary_scope_as = message_recipient
 		}
 	}
