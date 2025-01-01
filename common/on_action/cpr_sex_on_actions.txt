@@ -5,15 +5,27 @@
 cpr_on_sex_v2 = {
 	trigger = {
 		debug_only = yes
-		scope:carn_sex_partner = {
+		OR = {
 			carn_is_working_as_prostitute_trigger = yes
+			scope:carn_sex_partner = {
+				carn_is_working_as_prostitute_trigger = yes
+			}
 		}
 	}
 
 	effect = {
-		cpr_debug_log_1_effect = {
-			MSG = cpr_debug_msg_character_had_sex_with_prostitute
-			NAME1 = carn_sex_partner TYPE1 = flag:character
+		if = {
+			limit = { carn_is_working_as_prostitute_trigger = yes }
+			cpr_debug_log_1_effect = {
+				MSG = cpr_debug_msg_prostitute_had_sex_with_character
+				NAME1 = carn_sex_partner TYPE1 = flag:character
+			}
+		}
+		else = {
+			cpr_debug_log_1_effect = {
+				MSG = cpr_debug_msg_character_had_sex_with_prostitute
+				NAME1 = carn_sex_partner TYPE1 = flag:character
+			}
 		}
 	}
 }

@@ -78,7 +78,7 @@
 	# Age (-7 to 7)
 	add = {
 		value = 30
-		subtract = age
+		subtract = effective_age
 		multiply = 0.5
 	}
 

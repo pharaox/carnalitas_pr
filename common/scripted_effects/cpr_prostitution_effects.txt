@@ -103,21 +103,15 @@ cpr_get_message_recipient_effect = {
 	}
 	else_if = {
 		limit = { is_hostage = yes }
-		warden = {
-			save_temporary_scope_as = message_recipient
-		}
+		warden = { save_temporary_scope_as = message_recipient }
 	}
 	else_if = {
 		limit = { is_foreign_court_or_pool_guest = yes }
-		host = {
-			save_temporary_scope_as = message_recipient
-		}
+		host = { save_temporary_scope_as = message_recipient }
 	}
 	else_if = {
 		limit = { is_courtier = yes }
-		liege = {
-			save_temporary_scope_as = message_recipient
-		}
+		liege = { save_temporary_scope_as = message_recipient }
 	}
 	else = {
 		save_temporary_scope_as = message_recipient

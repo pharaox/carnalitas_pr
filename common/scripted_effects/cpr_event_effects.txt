@@ -65,6 +65,12 @@ cpr_make_prostitute_effect = {
 	# Potentially contract STD
 	cpr_prostitute_contract_std_effect = yes
 
+	# Lose piety level if prostitution is not accepted
+	if = {
+		limit = { carn_accepts_prostitution_trigger = no }
+		add_piety_level = -1
+	}
+
 	# Prevent pruning
 	set_variable = {
 		name = last_visited_ruler
@@ -173,3 +179,29 @@ cpr_prostitute_contract_std_effect = {
 	}
 }
 
+cpr_get_relevant_ruler_effect = {
+	clear_saved_scope = $RULER$
+	if = {
+		limit = { is_ruler = yes }
+		save_scope_as = $RULER$
+	}
+	else_if = {
+		limit = { is_hostage = yes }
+		warden = { save_scope_as = $RULER$ }
+	}
+	else_if = {
+		limit = { is_foreign_court_or_pool_guest = yes }
+		host = { save_scope_as = $RULER$ }
+	}
+	else_if = {
+		limit = { is_courtier = yes }
+		liege = { save_scope_as = $RULER$ }
+	}
+	else_if = {
+		limit = {
+			exists = location
+			exists = location.county
+		}
+		location.county.holder ?= { save_scope_as = $RULER$ }
+	}
+}

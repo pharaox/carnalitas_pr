@@ -17,6 +17,7 @@ echo
 
 # Sex
 echo "Character had sex with prostitute: $(grep -a "Character had sex with prostitute" $LOGFILE | wc -l)"
+echo "Prostitute had sex with character: $(grep -a "Prostitute had sex with character" $LOGFILE | wc -l)"
 echo "Prostitute got pregnant: $(grep -a "Prostitute got pregnant" $LOGFILE | wc -l)"
 echo
 
@@ -33,8 +34,16 @@ echo "Stress Coping: The Price of Passion event fired: $(grep -a "Stress Coping:
 echo
 
 # Carnalitas events
-echo "cpr_prostitution_random_events.0010 event fired: $(grep -a "cpr_prostitution_random_events.0010 event fired" $LOGFILE | wc -l)"
-echo "- client: $(grep -a "cpr_prostitution_random_events.0010 event fired, client: [^ ]" $LOGFILE | wc -l)"
+echo "Improved Skills event fired: $(grep -a "Improved Skills event fired" $LOGFILE | wc -l)"
+echo "Rivals Slander You event fired: $(grep -a "Rivals Slander You event fired" $LOGFILE | wc -l)"
+echo "Priests Condemn You event fired: $(grep -a "Priests Condemn You event fired" $LOGFILE | wc -l)"
+echo "Got STD event fired: $(grep -a "Got STD event fired" $LOGFILE | wc -l)"
+echo "Client Tips High event fired: $(grep -a "Client Tips High event fired" $LOGFILE | wc -l)"
+echo "An Alluring Proposition setup event fired: $(grep -a "An Alluring Proposition setup event fired" $LOGFILE | wc -l)"
+echo "An Alluring Proposition event fired: $(grep -a "An Alluring Proposition event fired" $LOGFILE | wc -l)"
+echo "- option a: $(grep -a "An Alluring Proposition option a chosen" $LOGFILE | wc -l)"
+echo "- option b: $(grep -a "An Alluring Proposition option b chosen" $LOGFILE | wc -l)"
+echo "- option c: $(grep -a "An Alluring Proposition option c chosen" $LOGFILE | wc -l)"
 echo
 
 # Effects

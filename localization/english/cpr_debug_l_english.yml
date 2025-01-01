@@ -8,6 +8,7 @@
 
  # Sex
  cpr_debug_msg_character_had_sex_with_prostitute: "$cpr_debug_prefix_2$: Character had sex with prostitute, carn_sex_partner: [THIS.Var('carn_sex_partner').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_partner').Char.GetID], [Select_CString(THIS.Var('carn_sex_partner').Char.IsFemale, 'female', 'male')])"
+ cpr_debug_msg_prostitute_had_sex_with_character: "$cpr_debug_prefix_2$: Prostitute had sex with character, carn_sex_partner: [THIS.Var('carn_sex_partner').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_partner').Char.GetID], [Select_CString(THIS.Var('carn_sex_partner').Char.IsFemale, 'female', 'male')])"
  cpr_debug_msg_prostitute_got_pregnant: "$cpr_debug_prefix_2$: Prostitute got pregnant, father: [THIS.Var('father').Char.GetFullNameNoTooltip] ([THIS.Var('father').Char.GetID]), carn_pregnancy_chance: [THIS.Var('carn_pregnancy_chance').GetValue]"
 
  # Health
@@ -18,7 +19,16 @@
  cpr_debug_msg_stress_trait_coping_decisions_2002_fired: "$cpr_debug_prefix_2$: $stress_trait_coping_decisions.2002.t$ event fired"
 
  # Carnalitas events
- cpr_debug_msg_prostitution_random_events_0010_fired: "$cpr_debug_prefix_2$: cpr_prostitution_random_events.0010 event fired, client: [THIS.Var('client').Char.GetFullNameNoTooltip] ([THIS.Var('client').Char.GetID])"
+ cpr_debug_msg_prostitution_random_events_0001_fired: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0001.notification$ event fired"
+ cpr_debug_msg_prostitution_random_events_0002_fired: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0002.notification$ event fired"
+ cpr_debug_msg_prostitution_random_events_0003_fired: "$cpr_debug_prefix_2$: Priests Condemn You event fired"
+ cpr_debug_msg_prostitution_random_events_0004_fired: "$cpr_debug_prefix_2$: Got STD event fired"
+ cpr_debug_msg_prostitution_random_events_0005_fired: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0005.notification$ event fired"
+ cpr_debug_msg_prostitution_random_events_0010_fired: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0011.t$ setup event fired"
+ cpr_debug_msg_prostitution_random_events_0011_fired: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0011.t$ event fired, client: [THIS.Var('client').Char.GetFullNameNoTooltip] ([THIS.Var('client').Char.GetID])"
+ cpr_debug_msg_prostitution_random_events_0011_option_a_chosen: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0011.t$ option a chosen"
+ cpr_debug_msg_prostitution_random_events_0011_option_b_chosen: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0011.t$ option b chosen"
+ cpr_debug_msg_prostitution_random_events_0011_option_c_chosen: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0011.t$ option c chosen"
 
  # Effects
  cpr_debug_msg_using_cpr_rakish_brothel_night_effect: "$cpr_debug_prefix_2$: Using cpr_rakish_brothel_night_effect, from_stress_loss_decision: [Select_CString(THIS.Var('from_stress_loss_decision').IsSet, 'yes', 'no')]"
@@ -33,6 +43,6 @@
  cpr_debug_msg_decided_to_start_working_as_prostitute: "$cpr_debug_prefix_2$: Character decided to start working as prostitute, work_as_prostitute_ai_willingness: [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
  cpr_debug_msg_decided_to_stop_working_as_prostitute: "$cpr_debug_prefix_2$: Character decided to stop working as prostitute, work_as_prostitute_ai_willingness: [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
 
- # Decisions
+ # Carnalitas decisions
  cpr_debug_msg_work_as_prostitute_decision_made: "$cpr_debug_prefix_2$: $carn_work_as_prostitute_decision$ decision made, work_as_prostitute_ai_willingness: [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
  cpr_debug_msg_stop_work_as_prostitute_decision_made: "$cpr_debug_prefix_2$: $carn_stop_work_as_prostitute_decision$ decision made, work_as_prostitute_ai_willingness: [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"

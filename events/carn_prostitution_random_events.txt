@@ -1,0 +1,434 @@
+﻿namespace = carn_prostitution_random_events
+
+# Prostitution: Improved Skills
+# Overridden from Carnalitas
+carn_prostitution_random_events.0001 = {
+	hidden = yes
+
+	trigger = {
+		carn_is_working_as_prostitute_trigger = yes
+		has_trait_xp = { trait = lifestyle_prostitute value < 100 }
+	}
+
+	weight_multiplier = {
+		base = 1
+		carn_prostitution_rank_up_chance_modifier = yes
+	}
+
+	immediate = {
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_prostitution_random_events_0001_fired }
+		send_interface_message = {
+			title = carn_prostitution_random_events.0001.notification
+			type = carn_prostitute_random_event_good
+			right_icon = this
+			carn_upgrade_lifestyle_prostitute_effect = yes
+		}
+	}
+}
+
+# Prostitution: Rivals Slander You
+# Overridden from Carnalitas
+# * Increased prestige loss
+carn_prostitution_random_events.0002 = {
+	hidden = yes
+
+	trigger = {
+		carn_is_working_as_prostitute_trigger = yes
+	}
+
+	weight_multiplier = {
+		base = 1
+		carn_prostitution_bad_event_modifier = yes
+	}
+
+	immediate = {
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_prostitution_random_events_0002_fired }
+		send_interface_message = {
+			title = carn_prostitution_random_events.0002.notification
+			type = carn_prostitute_random_event_bad
+			right_icon = this
+			add_prestige = medium_prestige_loss
+		}
+	}
+}
+
+# Prostitution: Priests Condemn You
+# Overridden from Carnalitas
+# * Increased piety loss
+carn_prostitution_random_events.0003 = {
+	hidden = yes
+
+	trigger = {
+		carn_is_working_as_prostitute_trigger = yes
+		carn_accepts_prostitution_trigger = no
+	}
+
+	weight_multiplier = {
+		base = 1
+		carn_prostitution_bad_event_modifier = yes
+	}
+
+	immediate = {
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_prostitution_random_events_0003_fired }
+		send_interface_message = {
+			title = carn_prostitution_random_events.0003.notification
+			type = carn_prostitute_random_event_bad
+			right_icon = this
+			add_piety = major_piety_loss
+		}
+	}
+}
+
+# Got STD
+# Overridden from Carnalitas
+carn_prostitution_random_events.0004 = {
+	hidden = yes
+
+	trigger = {
+		carn_is_working_as_prostitute_trigger = yes
+		NOT = { has_game_rule = carn_std_disabled }
+	}
+
+	weight_multiplier = {
+		base = 1
+		carn_prostitution_bad_event_modifier = yes
+	}
+
+	immediate = {
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_prostitution_random_events_0004_fired }
+		random_list = {
+			20 = {
+				contract_disease_notify_effect = { DISEASE = lovers_pox }
+			}
+			5 = {
+				contract_disease_notify_effect = { DISEASE = great_pox }
+			}
+		}
+	}
+}
+
+# Prostitution: Client Tips High
+# Overridden from Carnalitas
+carn_prostitution_random_events.0005 = {
+	hidden = yes
+
+	trigger = {
+		carn_is_working_as_prostitute_trigger = yes
+	}
+
+	weight_multiplier = {
+		base = 1
+		carn_prostitution_good_event_modifier = yes
+	}
+
+	immediate = {
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_prostitution_random_events_0005_fired }
+		send_interface_message = {
+			title = carn_prostitution_random_events.0005.notification
+			type = carn_prostitute_random_event_good
+			right_icon = this
+			add_gold = minor_gold_value
+		}
+	}
+}
+
+scripted_trigger carn_possible_prostitute_random_events_0010_client_trigger = {
+	# Available and adult
+	is_available_ai_adult = yes
+
+	# Can have sex
+	carn_can_have_sex_trigger = yes
+
+	# Interested in each other (in having an affair)
+	possibly_interested_in_character_trigger = { CHARACTER = root }
+	root = {
+		possibly_interested_in_character_trigger = { CHARACTER = prev }
+	}
+
+	# Has enough money
+	short_term_gold >= minor_gold_value
+
+	# Not root or someone closely related
+	NOR = {
+		this = root
+		is_consort_of = root
+		has_relation_lover = root
+		has_relation_rival = root
+		is_at_war_with = root
+	}
+
+	# Might cheat and not afraid of sodomy consequences
+	might_cheat_on_every_partner_trigger = yes
+	freely_accepts_sodomy_with_trigger = { CHARACTER = root }
+}
+
+# Prostitution: An Alluring Proposition (setup)
+# Overridden from Carnalitas
+# * Reworked client selection
+carn_prostitution_random_events.0010 = {
+	hidden = yes
+
+	trigger = {
+		is_available_adult = yes
+		carn_is_working_as_prostitute_trigger = yes
+	}
+
+	weight_multiplier = {
+		base = 1
+		carn_prostitution_good_event_modifier = yes
+	}
+
+	immediate = {
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_prostitution_random_events_0010_fired }
+
+		# Determine relevant ruler
+		cpr_get_relevant_ruler_effect = { RULER = ruler }
+
+		# Determine potential clients
+		scope:ruler ?= {
+			# The ruler themselves
+			add_to_temporary_list = potential_clients
+
+			# Vassals
+			every_vassal = {
+				add_to_temporary_list = potential_clients
+			}
+
+			# Liege and peer vassals
+			liege ?= {
+				add_to_temporary_list = potential_clients
+				every_vassal = {
+					add_to_temporary_list = potential_clients
+				}
+			}
+
+			# Neighboring same rank rulers if count or above
+			if = {
+				limit = { highest_held_title_tier >= tier_county }
+				every_neighboring_and_across_water_realm_same_rank_owner = {
+					add_to_temporary_list = potential_clients
+				}
+			}
+		}
+
+		# Determine client
+		random_in_list = {
+			list = potential_clients
+			limit = {
+				carn_possible_prostitute_random_events_0010_client_trigger = yes
+			}
+			weight = {
+				base = 10
+				modifier = {
+					has_trait = lustful
+					add = 10
+				}
+				modifier = {
+					has_trait = rakish
+					add = 10
+				}
+				modifier = {
+					has_trait = deviant
+					add = 10
+				}
+			}
+			save_scope_as = client
+		}
+
+		if = {
+			limit = { exists = scope:client }
+			trigger_event = carn_prostitution_random_events.0011
+		}
+	}
+}
+
+# Prostitution: An Alluring Proposition
+# Overridden from Carnalitas
+# * Reworked sex scene / effect
+# * Added AI chances
+carn_prostitution_random_events.0011 = {
+	type = character_event
+	title = carn_prostitution_random_events.0011.t
+	desc = carn_prostitution_random_events.0011.desc
+
+	theme = seduction
+	override_background = {
+		reference = bedchamber
+	}
+
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:client
+		animation = flirtation
+	}
+
+	immediate = {
+		cpr_debug_log_1_effect = {
+			MSG = cpr_debug_msg_prostitution_random_events_0011_fired
+			NAME1 = client TYPE1 = flag:character
+		}
+	}
+
+	# Accept
+	option = {
+		name = carn_prostitution_random_events.0011.a
+
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_prostitution_random_events_0011_option_a_chosen }
+
+		scope:client = {
+			pay_short_term_gold = {
+				target = root
+				gold = minor_gold_value
+			}
+		}
+
+		show_as_tooltip = {
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = root
+				CHARACTER_2 = scope:client
+				C1_PREGNANCY_CHANCE = 0
+				C2_PREGNANCY_CHANCE = pregnancy_chance
+				STRESS_EFFECTS = yes
+				DRAMA = yes
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				# Fire a sex scene for players
+				carn_sex_scene_no_memory_effect = yes
+				carn_sex_scene_character_is_giving_player_effect = yes
+				carn_sex_scene_is_consensual_effect = yes
+				carn_sex_scene_is_vaginal_effect = yes
+				carn_sex_scene_is_cum_inside_effect = yes
+				carn_sex_scene_effect = {
+					PLAYER = root
+					TARGET = scope:client
+					STRESS_EFFECTS = yes
+					DRAMA = yes
+				}
+			}
+			else = {
+				# Use Carnalitas sex effect for AI
+				carn_sex_scene_no_memory_effect = yes
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = root
+					CHARACTER_2 = scope:client
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = yes
+					DRAMA = yes
+				}
+			}
+		}
+
+		add_prestige = minor_prestige_gain
+		reverse_add_opinion = {
+			target = scope:client
+			modifier = impressed_opinion
+			opinion = 10
+		}
+
+		ai_chance = {
+			base = 50
+			opinion_modifier = {
+				opinion_target = scope:client
+				multiplier = 0.5
+			}
+			modifier = {
+				has_trait = lustful
+				add = 20
+			}
+			modifier = {
+				has_trait = chaste
+				add = -20
+			}
+			ai_value_modifier = {
+				ai_greed = 0.2
+			}
+		}
+	}
+
+	# Decline
+	option = {
+		name = carn_prostitution_random_events.0011.b
+
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_prostitution_random_events_0011_option_b_chosen }
+
+		add_prestige = minor_prestige_loss
+		reverse_add_opinion = {
+			target = scope:client
+			modifier = disappointed_opinion
+			opinion = -10
+		}
+		stress_impact = {
+			lustful = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Ruin their reputation
+	option = {
+		name = carn_prostitution_random_events.0011.c
+
+		trigger = {
+			NOT = { has_relation_friend = scope:client }
+			scope:client = {
+				OR = {
+					AND = {
+						is_married = yes
+						trait_is_shunned_or_criminal_in_my_or_lieges_faith_trigger = { TRAIT = adulterer GENDER_CHARACTER = root }
+					}
+					relation_with_character_is_sodomy_in_my_or_lieges_faith_trigger = { CHARACTER = root }
+				}
+			}
+		}
+
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_prostitution_random_events_0011_option_c_chosen }
+
+		scope:client = {
+			extramarital_sex_attempt_exposure_consequences_with_target_effect = {
+				TARGET = root
+				SPOUSE_EVENT = yes
+			}
+		}
+
+		scope:client = {
+			add_opinion = {
+				modifier = humiliated_opinion
+				target = root
+				opinion = -30
+			}
+			progress_towards_rival_effect = {
+				REASON = rival_humiliated
+				CHARACTER = root
+				OPINION = 0
+			}
+		}
+
+		ai_chance = {
+			base = 50
+			opinion_modifier = {
+				opinion_target = scope:client
+				multiplier = -0.5
+			}
+			modifier = {
+				has_trait = lustful
+				add = -20
+			}
+			modifier = {
+				has_trait = chaste
+				add = 20
+			}
+			ai_value_modifier = {
+				ai_greed = -0.2
+			}
+		}
+	}
+}
