@@ -1,0 +1,7 @@
+common/decisions/90_minor_decisions.txt
+common/scripted_character_templates/zzz_cpr_00_peasants_template.txt
+common/scripted_character_templates/zzz_cpr_07_ep3_character_templates.txt
+common/scripted_effects/zzz_cpr_00_death_management_effects.txt
+common/scripted_effects/zzz_cpr_00_personal_details_effects.txt
+common/scripted_effects/zzz_cpr_00_scripted_effects.txt
+common/scripted_effects/zzz_cpr_00_stress_effects.txt

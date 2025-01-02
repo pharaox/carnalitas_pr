@@ -1,0 +1,7 @@
+common/decisions/carn_prostitution_decisions.txt
+common/on_action/carn_prostitution_on_actions.txt
+common/scripted_modifiers/carn_prostitution_bad_event_modifier.txt
+common/scripted_modifiers/carn_prostitution_good_event_modifier.txt
+common/scripted_modifiers/carn_prostitution_rank_up_chance_modifier.txt
+common/scripted_triggers/carn_prostitution_triggers.txt
+events/carn_prostitution_random_events.txt
