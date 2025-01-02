@@ -68,7 +68,6 @@ cpr_start_working_as_prostitute_notify_effect = {
 	cpr_get_message_recipient_effect = yes
 	scope:message_recipient = {
 		send_interface_message = {
-			type = event_generic_neutral
 			title = msg_carn_started_working_as_prostitute
 			right_icon = scope:prostitute
 			scope:prostitute = {
@@ -83,7 +82,6 @@ cpr_stop_working_as_prostitute_notify_effect = {
 	cpr_get_message_recipient_effect = yes
 	scope:message_recipient = {
 		send_interface_message = {
-			type = event_generic_neutral
 			title = msg_carn_stopped_working_as_prostitute
 			right_icon = scope:prostitute
 			scope:prostitute = {
@@ -135,6 +133,159 @@ cpr_upgrade_lifestyle_prostitute_effect = {
 		if = {
 			limit = { carn_is_working_as_prostitute_trigger = yes }
 			carn_update_working_as_prostitute_modifier_effect = yes
+		}
+	}
+}
+
+# Forces $SLAVE$ to start working as prostitute, also incurs opinion, piety, and stress effects.
+# Sends interface messages.
+cpr_force_start_prostitution_interaction_effect = {
+	send_interface_message = {
+		title = msg_carn_started_working_as_prostitute
+		right_icon = $SLAVE$
+		cpr_force_start_prostitution_effect = { SLAVE = $SLAVE$ }
+	}
+}
+
+# Forces $SLAVE$ to stop working as prostitute, also incurs piety and stress effects.
+# Sends interface messages.
+cpr_force_stop_prostitution_interaction_effect = {
+	send_interface_message = {
+		title = msg_carn_stopped_working_as_prostitute
+		right_icon = $SLAVE$
+		cpr_force_stop_prostitution_effect = { SLAVE = $SLAVE$ }
+	}
+}
+
+# Forces $SLAVE$ to start working as prostitute, also incurs opinion, piety, and stress effects.
+cpr_force_start_prostitution_effect = {
+	save_temporary_scope_as = owner
+
+	$SLAVE$ = {
+		# Lose opinion of owner if not already a prostitute
+		if = {
+			limit = {
+				carn_is_prostitute_trigger = no
+				NOT = {
+					carn_has_fetish_trigger = { FETISH = submission }
+				}
+			}
+			add_opinion = {
+				target = scope:owner
+				modifier = carn_forced_me_into_prostitution_opinion
+			}
+		}
+
+		# Start working as prostitute
+		carn_start_working_as_prostitute_effect = yes
+	}
+
+	# Lose piety level if prostitution is illegal, or just piety if it's not accepted
+	if = {
+		limit = { carn_legal_prostitution_trigger = no }
+		add_piety_level = -1
+		add_piety = massive_piety_loss
+	}
+	else_if = {
+		limit = { carn_accepts_prostitution_trigger = no }
+		add_piety = major_piety_loss
+	}
+
+	# Stress impact
+	stress_impact = {
+		generous = medium_stress_impact_gain
+		compassionate = minor_stress_impact_gain
+		greedy = minor_stress_impact_loss
+		sadistic = miniscule_stress_impact_loss
+		callous = miniscule_stress_impact_loss
+	}
+	if = { # Rival
+		limit = { has_relation_rival = $SLAVE$ }
+		stress_impact = {
+			base = minor_stress_impact_loss
+			forgiving = medium_stress_impact_gain
+			vengeful = minor_stress_impact_loss
+		}
+	}
+	else_if = { # Friend, lover, or child
+		limit = {
+			OR = {
+				has_relation_friend = $SLAVE$
+				has_relation_lover = $SLAVE$
+				$SLAVE$ = {
+					is_child_of = scope:owner
+				}
+			}
+		}
+		stress_impact = {
+			base = minor_stress_impact_gain
+			compassionate = medium_stress_impact_gain
+		}
+	}
+	if = {
+		limit = { carn_accepts_prostitution_trigger = no }
+		stress_impact = {
+			zealous = medium_stress_impact_gain
+			cynical = minor_stress_impact_loss
+		}
+	}
+}
+
+# Forces $SLAVE$ to stop working as prostitute, also incurs piety and stress effects.
+cpr_force_stop_prostitution_effect = {
+	save_temporary_scope_as = owner
+
+	$SLAVE$ = {
+		# Stop working as prostitute
+		carn_stop_working_as_prostitute_effect = yes
+	}
+
+	# Lose piety level if prostitution is illegal, or just piety if it's not accepted
+	if = {
+		limit = { carn_legal_prostitution_trigger = no }
+		add_piety = medium_piety_gain
+	}
+	else_if = {
+		limit = { carn_accepts_prostitution_trigger = no }
+		add_piety = minor_piety_gain
+	}
+
+	# Stress impact
+	stress_impact = {
+		greedy = medium_stress_impact_gain
+		sadistic = minor_stress_impact_gain
+		callous = minor_stress_impact_gain
+		generous = minor_stress_impact_loss
+		compassionate = miniscule_stress_impact_loss
+	}
+	if = { # Rival
+		limit = { has_relation_rival = $SLAVE$ }
+		stress_impact = {
+			base = minor_stress_impact_gain
+			vengeful = medium_stress_impact_gain
+			forgiving = minor_stress_impact_loss
+		}
+	}
+	else_if = { # Friend, lover, or child
+		limit = {
+			OR = {
+				has_relation_friend = $SLAVE$
+				has_relation_lover = $SLAVE$
+				$SLAVE$ = {
+					is_child_of = scope:owner
+				}
+			}
+		}
+		stress_impact = {
+			base = minor_stress_impact_loss
+			compassionate = minor_stress_impact_loss
+		}
+	}
+	if = {
+		limit = { carn_accepts_prostitution_trigger = no }
+		stress_impact = {
+			cynical = medium_stress_impact_gain
+			zealous = minor_stress_impact_loss
 		}
 	}
 }

@@ -83,6 +83,19 @@ cpr_can_find_prostitute_trigger = {
 	}
 }
 
+cpr_can_start_interaction_trigger = {
+	is_busy_in_events_localised = yes
+	is_imprisoned = no
+}
+
+cpr_slave_has_pending_transaction = {
+	OR = {
+		has_variable = carnx_buyer
+		has_variable = carnx_payer
+		has_variable = carnx_new_owner
+	}
+}
+
 cpr_is_slave_trigger = {
 	any_relation = {
 		type = slave_owner

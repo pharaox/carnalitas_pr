@@ -163,11 +163,11 @@ carn_stop_work_as_prostitute_decision = {
 
 		# Stress impact
 		stress_impact = {
-			lustful = medium_stress_impact_gain
-			rakish = medium_stress_impact_gain
-			deviant = medium_stress_impact_gain
+			lustful = major_stress_impact_gain
+			rakish = major_stress_impact_gain
+			deviant = major_stress_impact_gain
 			greedy = medium_stress_impact_gain
-			chaste = minor_stress_impact_loss
+			chaste = medium_stress_impact_loss
 			generous = minor_stress_impact_loss
 		}
 		if = {

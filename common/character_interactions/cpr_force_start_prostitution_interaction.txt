@@ -1,0 +1,65 @@
+﻿# Force one of your slaves to start working as a prostitute.
+# Overridden from Carnalitas
+carn_force_start_prostitution_interaction = {
+	category = interaction_category_uncategorized
+	desc = carn_force_start_prostitution_interaction_desc
+	interface_priority = 100
+	common_interaction = yes
+	icon = cpr_prostitution
+
+	is_shown = {
+		NOT = { has_game_rule = carn_slavery_content_disabled }
+		scope:actor = {
+			has_relation_slave = scope:recipient
+			carn_legal_prostitution_trigger = yes
+		}
+		scope:recipient = {
+			cpr_is_slave_trigger = yes
+			carn_can_be_prostitute_trigger = yes
+			carn_is_working_as_prostitute_trigger = no
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			cpr_can_start_interaction_trigger = yes
+			custom_description = {
+				text = "carn_cannot_have_max_number_of_slave_prostitutes"
+				any_relation = {
+					type = slave
+					carn_is_working_as_prostitute_trigger = yes
+					count < carn_max_slave_prostitutes_per_owner
+				}
+			}
+		}
+		scope:recipient = {
+			cpr_can_work_as_prostitute_trigger = yes
+			cpr_slave_has_pending_transaction = no
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			cpr_force_start_prostitution_interaction_effect = { SLAVE = scope:recipient }
+		}
+	}
+
+	auto_accept = yes
+
+	ai_min_reply_days = 0
+	ai_max_reply_days = 0
+
+	ai_targets = {
+		ai_recipients = scripted_relations
+	}
+
+	ai_frequency = 24
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 0 # TODO
+	}
+}
