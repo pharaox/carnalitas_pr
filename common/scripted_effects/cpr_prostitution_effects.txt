@@ -13,6 +13,7 @@ cpr_potentially_stop_working_as_prostitute_effect = {
 
 		remove_character_flag = cpr_decision_cooldown
 		remove_character_flag = cpr_work_as_prostitute_decision
+		remove_variable = cpr_forced_by_owner
 	}
 }
 
@@ -162,6 +163,13 @@ cpr_force_start_prostitution_effect = {
 	save_temporary_scope_as = owner
 
 	$SLAVE$ = {
+		scope:recipient = {
+			set_variable = {
+				name = cpr_forced_by_owner
+				value = scope:owner
+			}
+		}
+
 		# Lose opinion of owner if not already a prostitute
 		if = {
 			limit = {
@@ -177,6 +185,7 @@ cpr_force_start_prostitution_effect = {
 		}
 
 		# Start working as prostitute
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_forced_to_start_working_as_prostitute }
 		carn_start_working_as_prostitute_effect = yes
 	}
 
@@ -237,7 +246,10 @@ cpr_force_stop_prostitution_effect = {
 
 	$SLAVE$ = {
 		# Stop working as prostitute
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_forced_to_stop_working_as_prostitute }
 		carn_stop_working_as_prostitute_effect = yes
+
+		remove_variable = cpr_forced_by_owner
 	}
 
 	# Lose piety level if prostitution is illegal, or just piety if it's not accepted

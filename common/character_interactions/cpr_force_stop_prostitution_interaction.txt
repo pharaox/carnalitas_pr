@@ -28,6 +28,7 @@ carn_force_stop_prostitution_interaction = {
 	}
 
 	on_accept = {
+		save_scope_value_as = { name = cpr_event value = flag:interaction }
 		scope:actor = {
 			cpr_force_stop_prostitution_interaction_effect = { SLAVE = scope:recipient }
 		}

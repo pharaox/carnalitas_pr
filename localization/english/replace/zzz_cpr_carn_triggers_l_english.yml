@@ -16,3 +16,5 @@
  carn_not_they_accepts_prostitution_trigger: "Prostitution is #bold not#! accepted by [CHARACTER.GetShortUINamePossessive|U] faith or culture"
  carn_accepts_prostitution_trigger: "Prostitution is accepted by faith or culture"
  carn_not_accepts_prostitution_trigger: "Prostitution is  #bold not#! accepted by faith or culture"
+
+ cpr_empty_tooltip: ""

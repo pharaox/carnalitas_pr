@@ -33,12 +33,14 @@ carn_force_start_prostitution_interaction = {
 			}
 		}
 		scope:recipient = {
+			save_temporary_scope_as = force_start_prostitution_interaction
 			cpr_can_work_as_prostitute_trigger = yes
 			cpr_slave_has_pending_transaction = no
 		}
 	}
 
 	on_accept = {
+		save_scope_value_as = { name = cpr_event value = flag:interaction }
 		scope:actor = {
 			cpr_force_start_prostitution_interaction_effect = { SLAVE = scope:recipient }
 		}

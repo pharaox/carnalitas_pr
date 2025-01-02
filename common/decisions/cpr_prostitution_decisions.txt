@@ -45,6 +45,9 @@ carn_work_as_prostitute_decision = {
 			NAME1 = work_as_prostitute_ai_willingness TYPE1 = flag:value
 		}
 
+		# Set event for carn_on_start_working_as_prostitute
+		save_scope_value_as = { name = cpr_event value = flag:decision }
+
 		# Lose piety if prostitution is not accepted
 		if = {
 			limit = {
@@ -152,6 +155,9 @@ carn_stop_work_as_prostitute_decision = {
 			MSG = cpr_debug_msg_stop_work_as_prostitute_decision_made
 			NAME1 = work_as_prostitute_ai_willingness TYPE1 = flag:value
 		}
+
+		# Set event for carn_on_stop_working_as_prostitute
+		save_scope_value_as = { name = cpr_event value = flag:decision }
 
 		# Stop working as prostitute
 		send_interface_toast = {

@@ -101,6 +101,32 @@ cpr_on_title_gain = {
 	}
 }
 
+on_remove_relation_slave = {
+	on_actions = { cpr_on_remove_relation_slave_relay }
+}
+
+cpr_on_remove_relation_slave_relay = {
+	effect = {
+		scope:target = {
+			trigger_event = { on_action = cpr_on_slave_owner_removed }
+		}
+	}
+}
+
+on_remove_relation_slave_owner = {
+	on_actions = { cpr_on_slave_owner_removed }
+}
+
+cpr_on_slave_owner_removed = {
+	trigger = {
+		carn_is_working_as_prostitute_trigger = yes
+	}
+	effect = {
+		save_scope_value_as = { name = cpr_event value = flag:on_slave_owner_removed }
+		cpr_potentially_stop_working_as_prostitute_effect = yes
+	}
+}
+
 # TODO
 # on_hostage_taken
 # on_guest_arrived_from_pool

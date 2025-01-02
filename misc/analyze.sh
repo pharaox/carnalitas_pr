@@ -6,13 +6,18 @@ LOGFILE=debug.log
 echo "Character started working as prostitute: $(grep -a "Character started working as prostitute" $LOGFILE | wc -l)"
 echo "- after_creation: $(grep -a "Character started working as prostitute, cpr_event: after_creation" $LOGFILE | uniq | wc -l)"
 echo "- yearly_pulse: $(grep -a "Character started working as prostitute, cpr_event: yearly_pulse" $LOGFILE | uniq | wc -l)"
+echo "- decision: $(grep -a "Character started working as prostitute, cpr_event: decision" $LOGFILE | uniq | wc -l)"
+echo "- interaction: $(grep -a "Character started working as prostitute, cpr_event: interaction" $LOGFILE | uniq | wc -l)"
 echo "Character stopped working as prostitute: $(grep -a "Character stopped working as prostitute" $LOGFILE | wc -l)"
 echo "- on_marriage: $(grep -a "Character stopped working as prostitute, cpr_event: on_marriage" $LOGFILE | uniq | wc -l)"
 echo "- on_concubinage: $(grep -a "Character stopped working as prostitute, cpr_event: on_concubinage" $LOGFILE | uniq | wc -l)"
 echo "- on_join_court: $(grep -a "Character stopped working as prostitute, cpr_event: on_join_court" $LOGFILE | uniq | wc -l)"
 echo "- on_imprison: $(grep -a "Character stopped working as prostitute, cpr_event: on_imprison" $LOGFILE | uniq | wc -l)"
 echo "- on_title_gain: $(grep -a "Character stopped working as prostitute, cpr_event: on_title_gain" $LOGFILE | uniq | wc -l)"
+echo "- on_slave_owner_removed: $(grep -a "Character stopped working as prostitute, cpr_event: on_slave_owner_removed" $LOGFILE | uniq | wc -l)"
 echo "- yearly_pulse: $(grep -a "Character stopped working as prostitute, cpr_event: yearly_pulse" $LOGFILE | uniq | wc -l)"
+echo "- decision: $(grep -a "Character started working as prostitute, cpr_event: decision" $LOGFILE | uniq | wc -l)"
+echo "- interaction: $(grep -a "Character started working as prostitute, cpr_event: interaction" $LOGFILE | uniq | wc -l)"
 echo
 
 # Sex
@@ -67,6 +72,8 @@ echo
 echo "Character can no longer work as prostitute: $(grep -a "Character can no longer work as prostitute" $LOGFILE | wc -l)"
 echo "Character decided to start working as prostitute: $(grep -a "Character decided to start working as prostitute" $LOGFILE | wc -l)"
 echo "Character decided to stop working as prostitute: $(grep -a "Character decided to stop working as prostitute" $LOGFILE | wc -l)"
+echo "Character was forced to start working as prostitute: $(grep -a "Character was forced to start working as prostitute" $LOGFILE | wc -l)"
+echo "Character was forced to stop working as prostitute: $(grep -a "Character was forced to stop working as prostitute" $LOGFILE | wc -l)"
 echo
 
 # Carnalitas decisions
