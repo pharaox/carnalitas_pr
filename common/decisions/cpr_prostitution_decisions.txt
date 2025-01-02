@@ -92,7 +92,7 @@ carn_work_as_prostitute_decision = {
 				OR = {
 					has_trait = lustful
 					has_trait = rakish
-					has_trait = deviant
+					is_deviant_trigger = yes
 					has_trait = greedy
 					has_trait = cynical
 				}

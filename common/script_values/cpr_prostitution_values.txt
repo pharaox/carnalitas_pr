@@ -44,7 +44,7 @@
 		add = 20
 	}
 	if = {
-		limit = { has_trait = deviant }
+		limit = { is_deviant_trigger = yes }
 		add = 20
 	}
 

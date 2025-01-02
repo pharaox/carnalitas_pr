@@ -1,0 +1,184 @@
+﻿# Overridden from Carnalitas
+carn_prostitution_bad_event_modifier = {
+	# base is 1
+
+	# Skills (-0.4 to 0.4+)
+	modifier = {
+		add = {
+			value = diplomacy
+			add = -10
+			multiply = -0.02
+		}
+	}
+	modifier = {
+		add = {
+			value = intrigue
+			add = -10
+			multiply = -0.02
+		}
+	}
+
+	# Attraction (-0.6 to 0.6)
+	modifier = {
+		add = {
+			value = attraction
+			multiply = -0.02
+		}
+	}
+
+	# Lifestyle Prostitute XP
+	modifier = {
+		has_trait_xp = {
+			trait = lifestyle_prostitute
+			value >= 50
+		}
+		factor = 0.8
+	}
+	modifier = {
+		has_trait_xp = {
+			trait = lifestyle_prostitute
+			value >= 100
+		}
+		factor = 0.8
+	}
+}
+
+# Overridden from Carnalitas
+carn_prostitution_good_event_modifier = {
+	# base is 1
+
+	# Skills (-0.4 to 0.4+)
+	modifier = {
+		add = {
+			value = diplomacy
+			add = -10
+			multiply = 0.02
+		}
+	}
+	modifier = {
+		add = {
+			value = intrigue
+			add = -10
+			multiply = 0.02
+		}
+	}
+
+	# Attraction (-0.6 to 0.6)
+	modifier = {
+		add = {
+			value = attraction
+			multiply = 0.02
+		}
+	}
+
+	# Lifestyle Prostitute XP
+	modifier = {
+		has_trait_xp = {
+			trait = lifestyle_prostitute
+			value >= 50
+		}
+		factor = 1.2
+	}
+	modifier = {
+		has_trait_xp = {
+			trait = lifestyle_prostitute
+			value >= 100
+		}
+		factor = 1.2
+	}
+
+	# Cultural parameters
+	modifier = {
+		culture = {
+			has_cultural_parameter = carn_more_good_prostitution_events
+		}
+		factor = 2
+	}
+}
+
+# Overridden from Carnalitas
+carn_prostitution_rank_up_chance_modifier = {
+	# base is 1
+
+	# Skills (-0.4 to 0.4+)
+	modifier = {
+		add = {
+			value = diplomacy
+			add = -10
+			multiply = 0.02
+		}
+	}
+	modifier = {
+		add = {
+			value = intrigue
+			add = -10
+			multiply = 0.02
+		}
+	}
+
+	# Attraction (-0.6 to 0.6)
+	modifier = {
+		add = {
+			value = attraction
+			multiply = 0.02
+		}
+	}
+
+	# Age (-0.3 to 0.3)
+	modifier = {
+		add = {
+			value = effective_age
+			add = -30
+			multiply = -0.02
+		}
+	}
+
+	# Traits
+	modifier = {
+		has_trait = lustful
+		factor = 1.1
+	}
+	modifier = {
+		has_trait = diligent
+		factor = 1.1
+	}
+	modifier = {
+		has_trait = gregarious
+		factor = 1.1
+	}
+	modifier = {
+		has_trait = chaste
+		factor = 0.9
+	}
+	modifier = {
+		has_trait = lazy
+		factor = 0.9
+	}
+	modifier = {
+		has_trait = shy
+		factor = 0.9
+	}
+
+	# Lifestyle Prostitute XP
+	modifier = {
+		has_trait_xp = {
+			trait = lifestyle_prostitute
+			value >= 50
+		}
+		factor = 0.5
+	}
+	modifier = {
+		has_trait_xp = {
+			trait = lifestyle_prostitute
+			value >= 100
+		}
+		factor = 0
+	}
+
+	modifier = {
+		culture = {
+			has_cultural_parameter = carn_more_good_prostitution_events
+		}
+		factor = 2
+	}
+}

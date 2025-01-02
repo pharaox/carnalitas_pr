@@ -2,6 +2,7 @@
 
 # Prostitution: Improved Skills
 # Overridden from Carnalitas
+# * Use random trait XP via cpr_upgrade_lifestyle_prostitute_effect
 carn_prostitution_random_events.0001 = {
 	hidden = yes
 
@@ -16,12 +17,26 @@ carn_prostitution_random_events.0001 = {
 	}
 
 	immediate = {
-		cpr_debug_log_effect = { MSG = cpr_debug_msg_prostitution_random_events_0001_fired }
+		save_scope_value_as = {
+			name = trait_xp
+			value = {
+				integer_range = {
+					min = small_lifestyle_random_xp_low
+					max = small_lifestyle_random_xp_high
+				}
+			}
+		}
+
+		cpr_debug_log_1_effect = {
+			MSG = cpr_debug_msg_prostitution_random_events_0001_fired
+			NAME1 = trait_xp TYPE1 = flag:value
+		}
+
 		send_interface_message = {
 			title = carn_prostitution_random_events.0001.notification
 			type = carn_prostitute_random_event_good
 			right_icon = this
-			carn_upgrade_lifestyle_prostitute_effect = yes
+			cpr_upgrade_lifestyle_prostitute_effect = { XP = scope:trait_xp }
 		}
 	}
 }
@@ -216,6 +231,13 @@ carn_prostitution_random_events.0010 = {
 			list = potential_clients
 			limit = {
 				carn_possible_prostitute_random_events_0010_client_trigger = yes
+				OR = {
+					has_trait = lustful
+					has_trait = rakish
+					is_deviant_trigger = yes
+					has_trait = seducer
+					has_focus = intrigue_temptation_focus
+				}
 			}
 			weight = {
 				base = 10
@@ -228,7 +250,7 @@ carn_prostitution_random_events.0010 = {
 					add = 10
 				}
 				modifier = {
-					has_trait = deviant
+					is_deviant_trigger = yes
 					add = 10
 				}
 			}
@@ -325,7 +347,6 @@ carn_prostitution_random_events.0011 = {
 			}
 		}
 
-		add_prestige = minor_prestige_gain
 		reverse_add_opinion = {
 			target = scope:client
 			modifier = impressed_opinion

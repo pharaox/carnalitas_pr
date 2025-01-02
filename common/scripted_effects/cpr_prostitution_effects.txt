@@ -117,3 +117,24 @@ cpr_get_message_recipient_effect = {
 		save_temporary_scope_as = message_recipient
 	}
 }
+
+# Upgrade lifestyle_prostitute trait with the given XP amount
+# Replaces carn_upgrade_lifestyle_prostitute_effect
+cpr_upgrade_lifestyle_prostitute_effect = {
+	if = {
+		limit = {
+			NOT = { has_trait = lifestyle_prostitute }
+		}
+		add_trait = lifestyle_prostitute
+	}
+	add_trait_xp = {
+		trait = lifestyle_prostitute
+		value = $XP$
+	}
+	hidden_effect = {
+		if = {
+			limit = { carn_is_working_as_prostitute_trigger = yes }
+			carn_update_working_as_prostitute_modifier_effect = yes
+		}
+	}
+}

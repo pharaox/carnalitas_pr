@@ -136,6 +136,6 @@ cpr_random_yearly_everyone_pulse = {
 		}
 
 		# Trigger Carnalitas events
-		trigger_event = { on_action = carn_prostitution_random_events_pulse }
+		trigger_event = { on_action = carn_prostitution_yearly_maintenance_pulse }
 	}
 }
