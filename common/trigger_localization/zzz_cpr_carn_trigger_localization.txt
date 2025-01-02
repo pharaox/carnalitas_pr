@@ -1,0 +1,31 @@
+﻿carn_cannot_have_max_number_of_slave_prostitutes = {
+	first_not = carn_cannot_have_max_number_of_slave_prostitutes # CPR
+	third_not = carn_cannot_have_max_number_of_slave_prostitutes # CPR
+}
+
+carn_effective_age_under_value_cutoff = {
+	first = carn_effective_age_under_value_cutoff
+	first_not = carn_not_effective_age_under_value_cutoff # CPR
+	third = carn_effective_age_under_value_cutoff
+	third_not = carn_not_effective_age_under_value_cutoff # CPR
+}
+
+# CPR
+carn_can_have_sex_trigger = {
+	first = carn_i_can_have_sex_trigger
+	first_not = carn_not_i_can_have_sex_trigger
+	third = carn_they_can_have_sex_trigger
+	third_not = carn_not_they_can_have_sex_trigger
+	global = carn_can_have_sex_trigger
+	global_not = carn_not_can_have_sex_trigger
+}
+
+# CPR
+carn_accepts_prostitution_trigger = {
+	first = carn_i_accepts_prostitution_trigger
+	first_not = carn_not_i_accepts_prostitution_trigger
+	third = carn_they_accepts_prostitution_trigger
+	third_not = carn_not_they_accepts_prostitution_trigger
+	global = carn_accepts_prostitution_trigger
+	global_not = carn_not_accepts_prostitution_trigger
+}

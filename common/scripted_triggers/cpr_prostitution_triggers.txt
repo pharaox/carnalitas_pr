@@ -3,7 +3,11 @@
 	carn_can_have_sex_trigger = yes
 
 	# Is young enough
-	effective_age < carn_prostitution_age_cutoff
+	custom_description = {
+		text = "carn_effective_age_under_value_cutoff"
+		value = carn_prostitution_age_cutoff
+		effective_age < carn_prostitution_age_cutoff
+	}
 
 	# Not clergy or devoted
 	NOR = {
@@ -14,10 +18,8 @@
 	# All spouses accept prostitution if married,
 	trigger_if = {
 		limit = { is_married = yes }
-		NOT = {
-			any_spouse = {
-				carn_accepts_prostitution_trigger = no
-			}
+		primary_spouse = {
+			carn_accepts_prostitution_trigger = yes
 		}
 	}
 
