@@ -16,8 +16,8 @@ echo "- on_imprison: $(grep -a "Character stopped working as prostitute, cpr_eve
 echo "- on_title_gain: $(grep -a "Character stopped working as prostitute, cpr_event: on_title_gain" $LOGFILE | uniq | wc -l)"
 echo "- on_slave_owner_removed: $(grep -a "Character stopped working as prostitute, cpr_event: on_slave_owner_removed" $LOGFILE | uniq | wc -l)"
 echo "- yearly_pulse: $(grep -a "Character stopped working as prostitute, cpr_event: yearly_pulse" $LOGFILE | uniq | wc -l)"
-echo "- decision: $(grep -a "Character started working as prostitute, cpr_event: decision" $LOGFILE | uniq | wc -l)"
-echo "- interaction: $(grep -a "Character started working as prostitute, cpr_event: interaction" $LOGFILE | uniq | wc -l)"
+echo "- decision: $(grep -a "Character stopped working as prostitute, cpr_event: decision" $LOGFILE | uniq | wc -l)"
+echo "- interaction: $(grep -a "Character stopped working as prostitute, cpr_event: interaction" $LOGFILE | uniq | wc -l)"
 echo
 
 # Sex

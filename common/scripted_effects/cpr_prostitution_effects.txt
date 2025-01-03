@@ -204,39 +204,33 @@ cpr_force_start_prostitution_effect = {
 	stress_impact = {
 		generous = medium_stress_impact_gain
 		compassionate = minor_stress_impact_gain
-		greedy = minor_stress_impact_loss
-		sadistic = miniscule_stress_impact_loss
-		callous = miniscule_stress_impact_loss
-	}
-	if = { # Rival
-		limit = { has_relation_rival = $SLAVE$ }
-		stress_impact = {
-			base = minor_stress_impact_loss
-			forgiving = medium_stress_impact_gain
-			vengeful = minor_stress_impact_loss
-		}
-	}
-	else_if = { # Friend, lover, or child
-		limit = {
-			OR = {
-				has_relation_friend = $SLAVE$
-				has_relation_lover = $SLAVE$
-				$SLAVE$ = {
-					is_child_of = scope:owner
-				}
-			}
-		}
-		stress_impact = {
-			base = minor_stress_impact_gain
-			compassionate = medium_stress_impact_gain
-		}
+		greedy = medium_stress_impact_loss
+		sadistic = minor_stress_impact_loss
+		callous = minor_stress_impact_loss
 	}
 	if = {
 		limit = { carn_accepts_prostitution_trigger = no }
 		stress_impact = {
 			zealous = medium_stress_impact_gain
-			cynical = minor_stress_impact_loss
+			cynical = medium_stress_impact_loss
 		}
+	}
+
+	# Stress impact from family, dynasty, and relations
+	cpr_family_or_dynasty_stress_impact_effect = {
+		CHARACTER = $SLAVE$
+		TYPE = gain
+		NOT_TYPE = loss
+	}
+	cpr_friend_or_lover_stress_impact_effect = {
+		CHARACTER = $SLAVE$
+		TYPE = gain
+		NOT_TYPE = loss
+	}
+	cpr_rival_stress_impact_effect = {
+		CHARACTER = $SLAVE$
+		TYPE = loss
+		NOT_TYPE = gain
 	}
 }
 
@@ -267,37 +261,116 @@ cpr_force_stop_prostitution_effect = {
 		greedy = medium_stress_impact_gain
 		sadistic = minor_stress_impact_gain
 		callous = minor_stress_impact_gain
-		generous = minor_stress_impact_loss
-		compassionate = miniscule_stress_impact_loss
-	}
-	if = { # Rival
-		limit = { has_relation_rival = $SLAVE$ }
-		stress_impact = {
-			base = minor_stress_impact_gain
-			vengeful = medium_stress_impact_gain
-			forgiving = minor_stress_impact_loss
-		}
-	}
-	else_if = { # Friend, lover, or child
-		limit = {
-			OR = {
-				has_relation_friend = $SLAVE$
-				has_relation_lover = $SLAVE$
-				$SLAVE$ = {
-					is_child_of = scope:owner
-				}
-			}
-		}
-		stress_impact = {
-			base = minor_stress_impact_loss
-			compassionate = minor_stress_impact_loss
-		}
+		generous = medium_stress_impact_loss
+		compassionate = minor_stress_impact_loss
 	}
 	if = {
 		limit = { carn_accepts_prostitution_trigger = no }
 		stress_impact = {
 			cynical = medium_stress_impact_gain
-			zealous = minor_stress_impact_loss
+			zealous = medium_stress_impact_loss
+		}
+	}
+
+	# Stress impact from family, dynasty, and relations
+	cpr_family_or_dynasty_stress_impact_effect = {
+		CHARACTER = $SLAVE$
+		TYPE = loss
+		NOT_TYPE = gain
+	}
+	cpr_friend_or_lover_stress_impact_effect = {
+		CHARACTER = $SLAVE$
+		TYPE = loss
+		NOT_TYPE = gain
+	}
+	cpr_rival_stress_impact_effect = {
+		CHARACTER = $SLAVE$
+		TYPE = gain
+		NOT_TYPE = loss
+	}
+}
+
+cpr_family_or_dynasty_stress_impact_effect = {
+	if = {
+		limit = { is_parent_of = $CHARACTER$ }
+		stress_impact = {
+			base = major_stress_impact_$TYPE$
+			compassionate = medium_stress_impact_$TYPE$
+			sadistic = medium_stress_impact_$NOT_TYPE$
+			callous = medium_stress_impact_$NOT_TYPE$
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_close_family_of = $CHARACTER$
+				is_spouse_of = $CHARACTER$
+			}
+		}
+		stress_impact = {
+			base = medium_stress_impact_$TYPE$
+			compassionate = minor_stress_impact_$TYPE$
+			sadistic = minor_stress_impact_$NOT_TYPE$
+			callous = minor_stress_impact_$NOT_TYPE$
+		}
+	}
+	else_if = {
+		limit = { is_extended_family_of = $CHARACTER$ }
+		stress_impact = {
+			base = minor_stress_impact_$TYPE$
+			compassionate = miniscule_stress_impact_$TYPE$
+			sadistic = miniscule_stress_impact_$NOT_TYPE$
+			callous = miniscule_stress_impact_$NOT_TYPE$
+		}
+	}
+}
+
+cpr_friend_or_lover_stress_impact_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_relation_best_friend = $CHARACTER$
+				has_relation_soulmate = $CHARACTER$
+			}
+		}
+		stress_impact = {
+			base = major_stress_impact_$TYPE$
+			compassionate = medium_stress_impact_$TYPE$
+			sadistic = medium_stress_impact_$NOT_TYPE$
+			callous = medium_stress_impact_$NOT_TYPE$
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_relation_friend = $CHARACTER$
+				has_relation_lover = $CHARACTER$
+			}
+		}
+		stress_impact = {
+			base = medium_stress_impact_$TYPE$
+			compassionate = minor_stress_impact_$TYPE$
+			sadistic = minor_stress_impact_$NOT_TYPE$
+			callous = minor_stress_impact_$NOT_TYPE$
+		}
+	}
+}
+
+cpr_rival_stress_impact_effect = {
+	if = {
+		limit = { has_relation_nemesis = $CHARACTER$ }
+		stress_impact = {
+			base = major_stress_impact_$TYPE$
+			vengeful = medium_stress_impact_$TYPE$
+			forgiving = medium_stress_impact_$NOT_TYPE$
+		}
+	}
+	else_if = {
+		limit = { has_relation_rival = $CHARACTER$ }
+		stress_impact = {
+			base = medium_stress_impact_$TYPE$
+			vengeful = minor_stress_impact_$TYPE$
+			forgiving = minor_stress_impact_$NOT_TYPE$
 		}
 	}
 }

@@ -117,3 +117,40 @@ cpr_is_slave_trigger = {
 		exists = this
 	}
 }
+
+cpr_is_same_dynasty_trigger = {
+	is_lowborn = no
+	$CHARACTER$ = { is_lowborn = no }
+	dynasty = $CHARACTER$.dynasty
+}
+
+cpr_has_important_role_trigger = {
+	any_relation = {
+		type = ward
+		OR = {
+			this = $RULER$
+			is_close_family_of = $RULER$
+		}
+	}
+	any_relation = {
+		type = guardian
+		OR = {
+			this = $RULER$
+			is_close_family_of = $RULER$
+		}
+	}
+	any_relation = {
+		type = mentor
+		OR = {
+			this = $RULER$
+			is_close_family_of = $RULER$
+		}
+	}
+	any_relation = {
+		type = student
+		OR = {
+			this = $RULER$
+			is_close_family_of = $RULER$
+		}
+	}
+}

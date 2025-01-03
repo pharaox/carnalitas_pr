@@ -182,3 +182,118 @@ carn_prostitution_rank_up_chance_modifier = {
 		factor = 2
 	}
 }
+
+cpr_family_or_dynasty_modifier = {
+	modifier = {
+		exists = $CHARACTER$
+		OR = {
+			is_close_or_extended_family_of = $CHARACTER$
+			is_spouse_of = $CHARACTER$
+			cpr_is_same_dynasty_trigger = { CHARACTER = $CHARACTER$ }
+		}
+		add = {
+			value = $BASE$
+			if = {
+				limit = { is_parent_of = $CHARACTER$ }
+				multiply = 4
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_close_family_of = $CHARACTER$
+						is_spouse_of = $CHARACTER$
+					}
+				}
+				multiply = 2
+			}
+			else_if = {
+				limit = { is_extended_family_of = $CHARACTER$ }
+				multiply = 1
+			}
+			else = {
+				multiply = 0.5
+			}
+			multiply = { # -50% to +50% depending on compassion
+				value = ai_compassion
+				multiply = 0.005
+				add = 1
+			}
+			round = yes
+		}
+	}
+}
+
+cpr_friend_or_lover_modifier = {
+	modifier = {
+		exists = $CHARACTER$
+		OR = {
+			has_relation_friend = $CHARACTER$
+			has_relation_lover = $CHARACTER$
+		}
+		add = {
+			value = $BASE$
+			if = {
+				limit = {
+					OR = {
+						has_relation_best_friend = $CHARACTER$
+						has_relation_soulmate = $CHARACTER$
+					}
+				}
+				multiply = 2
+			}
+			multiply = { # -50% to +50% depending on compassion
+				value = ai_compassion
+				multiply = 0.005
+				add = 1
+			}
+		}
+	}
+}
+
+cpr_rival_modifier = {
+	modifier = {
+		exists = $CHARACTER$
+		has_relation_rival = $CHARACTER$
+		add = {
+			value = $BASE$
+			if = {
+				limit = { has_relation_nemesis = $CHARACTER$ }
+				multiply = 2
+			}
+			multiply = { # -50% to +50% depending on vengefulness
+				value = ai_vengefulness
+				multiply = 0.005
+				add = 1
+			}
+		}
+	}
+}
+
+cpr_employed_modifier = {
+	modifier = {
+		exists = $CHARACTER$
+		$CHARACTER$ = {
+			OR = {
+				is_councillor_of = $RULER$
+				any_court_position_employer = { this = $RULER$ }
+				is_knight_of = $RULER$
+				is_commanding_army = yes
+				cpr_has_important_role_trigger = { RULER = $RULER$ }
+			}
+		}
+		add = {
+			value = $BASE$
+			if = {
+				limit = {
+					$CHARACTER$ = {
+						OR = {
+							is_councillor_of = $RULER$
+							any_court_position_employer = { this = $RULER$ }
+						}
+					}
+				}
+				multiply = 2
+			}
+		}
+	}
+}

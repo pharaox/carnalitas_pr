@@ -67,18 +67,18 @@ carn_work_as_prostitute_decision = {
 
 		# Stress impact
 		stress_impact = {
-			chaste = major_stress_impact_gain
+			chaste = medium_stress_impact_gain
 			generous = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
 			rakish = medium_stress_impact_loss
 			deviant = medium_stress_impact_loss
-			greedy = minor_stress_impact_loss
+			greedy = medium_stress_impact_loss
 		}
 		if = {
 			limit = { carn_accepts_prostitution_trigger = no }
 			stress_impact = {
 				zealous = medium_stress_impact_gain
-				cynical = minor_stress_impact_loss
+				cynical = medium_stress_impact_loss
 			}
 		}
 
@@ -169,18 +169,18 @@ carn_stop_work_as_prostitute_decision = {
 
 		# Stress impact
 		stress_impact = {
-			lustful = major_stress_impact_gain
-			rakish = major_stress_impact_gain
-			deviant = major_stress_impact_gain
+			lustful = medium_stress_impact_gain
+			rakish = medium_stress_impact_gain
+			deviant = medium_stress_impact_gain
 			greedy = medium_stress_impact_gain
 			chaste = medium_stress_impact_loss
-			generous = minor_stress_impact_loss
+			generous = medium_stress_impact_loss
 		}
 		if = {
 			limit = { carn_accepts_prostitution_trigger = no }
 			stress_impact = {
 				cynical = medium_stress_impact_gain
-				zealous = minor_stress_impact_loss
+				zealous = medium_stress_impact_loss
 			}
 		}
 

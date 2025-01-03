@@ -63,5 +63,104 @@ carn_force_start_prostitution_interaction = {
 
 	ai_will_do = {
 		base = 0 # TODO
+
+		# Opinion of slave (-25 to 25 depending on opinion)
+		opinion_modifier = {
+			trigger = {
+				NOT = { scope:actor = scope:recipient }
+			}
+			opinion_target = scope:recipient
+			multiplier = -0.25
+		}
+
+		# Greed (-25 to 25 depending on greed)
+		modifier = {
+			ai_greed = 0.25
+		}
+
+		# Compassion (-25 to 25 depending on compassion)
+		ai_value_modifier = {
+			ai_compassion = -0.25
+		}
+
+		# Honor (-10 to 10 depending on honor)
+		ai_value_modifier = {
+			ai_compassion = -0.10
+		}
+
+		# Zeal (-50 to 0 depending on zeal if prostitution is not accepted)
+		modifier = {
+			carn_accepts_prostitution_trigger = no
+			add = {
+				value = ai_zeal
+				multiply = 0.01
+				add = 1
+				multiply = -25
+			}
+		}
+
+		# Family or dynasty (-50, x4 for children, x2 for close family, x0.5 for just dynasty, modified by compassion)
+		# Reluctant to prostitute family or dynasty
+		cpr_family_or_dynasty_modifier = {
+			CHARACTER = scope:recipient
+			BASE = -50
+		}
+
+		# Friend or lover (-100, doubled for best friend / soulmate, modified by compassion)
+		# Reluctant to prostitute friends or lover
+		cpr_friend_or_lover_modifier = {
+			CHARACTER = scope:recipient
+			BASE = -100
+		}
+
+		# Rival (50, doubled for nemesis, modified by vengefulness)
+		cpr_rival_modifier = {
+			CHARACTER = scope:recipient
+			BASE = 50
+		}
+
+		# Already employed (-25, doubled for council / court positions)
+		cpr_employed_modifier = {
+			CHARACTER = scope:recipient
+			RULER = scope:actor
+			BASE = -25
+		}
+
+		# Already a prostitute (0 to 25 depending on trait XP)
+		modifier = {
+			scope:recipient = {
+				carn_is_prostitute_trigger = yes
+			}
+			add = {
+				scope:recipient = {
+					value = "has_trait_xp(lifestyle_prostitute)"
+					multiply = 0.25
+				}
+			}
+		}
+
+		# Skills (-5 to 5+)
+		modifier = {
+			add = {
+				value = scope:recipient.diplomacy
+				subtract = 10
+				multiply = 0.25
+			}
+		}
+		modifier = {
+			add = {
+				value = scope:recipient.intrigue
+				subtract = 10
+				multiply = 0.25
+			}
+		}
+
+		# Attraction (-7 to 7)
+		modifier = {
+			add = {
+				value = scope:recipient.attraction
+				multiply = 0.25
+			}
+		}
 	}
 }

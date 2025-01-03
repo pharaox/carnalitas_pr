@@ -1,9 +1,5 @@
 ﻿cpr_work_as_prostitute_ai_willingness_value = {
 	value = 0
-	if = {
-		limit = { carn_accepts_prostitution_trigger = no }
-		add = -20
-	}
 
 	# AI values
 	# Greed (-20 to 20 depending on greed)
@@ -21,12 +17,14 @@
 		value = ai_sociability
 		multiply = 0.1
 	}
-	# Zeal, if prostitution is not accepted (-20 to 20 depending on zeal)
+	# Zeal, if prostitution is not accepted (-40 to 0 depending on zeal)
 	if = {
 		limit = { carn_accepts_prostitution_trigger = no }
 		add = {
 			value = ai_zeal
-			multiply = -0.2
+			multiply = 0.01
+			add = 1
+			multiply = -20
 		}
 	}
 
@@ -82,7 +80,7 @@
 		multiply = 0.5
 	}
 
-	# Health (-15 to 0)
+	# Health (-15 to 0 if poor health)
 	if = {
 		limit = { health < fine_health }
 		value = health
