@@ -1,0 +1,52 @@
+﻿namespace = carn_slave_prostitution
+
+# Earnings from Slave Prostitution
+# Overridden from Carnalitas
+carn_slave_prostitution.0001 = {
+	hidden = yes
+
+	trigger = {
+		NOT = { has_game_rule = carn_slavery_content_disabled }
+		any_relation = {
+			type = slave
+			carn_is_working_as_prostitute_trigger = yes
+		}
+	}
+
+	immediate = {
+		save_scope_value_as = {
+			name = total_income
+			value = cpr_slave_prostitution_total_income_value
+		}
+		save_scope_value_as = {
+			name = total_piety_loss
+			value = cpr_slave_prostitution_total_piety_loss_value
+		}
+
+		# Slave prostitutes actually pay gold to their owner
+		every_relation = {
+			type = slave
+			limit = { carn_is_working_as_prostitute_trigger = yes }
+			pay_short_term_gold = {
+				target = root
+				gold = carn_slave_prostitution_income_value
+			}
+		}
+
+		send_interface_message = {
+			type = carn_prostitute_random_event_good
+			title = carn_slave_prostitution.0001.t
+
+			show_as_tooltip = {
+				add_gold = scope:total_income
+			}
+			add_piety = scope:total_piety_loss
+		}
+
+		cpr_debug_log_2_effect = {
+			MSG = cpr_debug_msg_slave_prostitution_0001_fired
+			NAME1 = total_income TYPE1 = flag:value
+			NAME2 = total_piety_loss TYPE2 = flag:value
+		}
+	}
+}

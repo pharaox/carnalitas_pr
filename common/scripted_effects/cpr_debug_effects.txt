@@ -17,6 +17,20 @@ cpr_debug_log_1_effect = {
 	}
 }
 
+cpr_debug_log_2_effect = {
+	if = {
+		limit = { debug_only = yes }
+
+		cpr_debug_set_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+		cpr_debug_set_scope_variable_effect = { NAME = $NAME2$ TYPE = $TYPE2$ }
+
+		debug_log = $MSG$
+
+		cpr_debug_remove_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+		cpr_debug_remove_scope_variable_effect = { NAME = $NAME2$ TYPE = $TYPE2$ }
+	}
+}
+
 cpr_debug_set_scope_variable_effect = {
 	if = {
 		limit = {

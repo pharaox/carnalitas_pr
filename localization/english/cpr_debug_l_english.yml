@@ -30,6 +30,8 @@
  cpr_debug_msg_prostitution_random_events_0011_option_b_chosen: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0011.t$ option b chosen"
  cpr_debug_msg_prostitution_random_events_0011_option_c_chosen: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0011.t$ option c chosen"
 
+ cpr_debug_msg_slave_prostitution_0001_fired: "$cpr_debug_prefix_2$: $carn_slave_prostitution.0001.t$ event fired, total_income: [THIS.Var('total_income').GetValue], total_piety_loss: [THIS.Var('total_piety_loss').GetValue]"
+
  # Effects
  cpr_debug_msg_using_cpr_rakish_brothel_night_effect: "$cpr_debug_prefix_2$: Using cpr_rakish_brothel_night_effect, from_stress_loss_decision: [Select_CString(THIS.Var('from_stress_loss_decision').IsSet, 'yes', 'no')]"
  cpr_debug_msg_using_vanilla_rakish_brothel_night_effect: "$cpr_debug_prefix_2$: Using vanilla_rakish_brothel_night_effect, from_stress_loss_decision: [Select_CString(THIS.Var('from_stress_loss_decision').IsSet, 'yes', 'no')]"

@@ -50,6 +50,8 @@ echo "- option a: $(grep -a "An Alluring Proposition option a chosen" $LOGFILE |
 echo "- option b: $(grep -a "An Alluring Proposition option b chosen" $LOGFILE | wc -l)"
 echo "- option c: $(grep -a "An Alluring Proposition option c chosen" $LOGFILE | wc -l)"
 echo
+echo "Earnings from Slave Prostitution event fired: $(grep -a "Earnings from Slave Prostitution event fired" $LOGFILE | wc -l)"
+echo
 
 # Effects
 echo "Using cpr_rakish_brothel_night_effect: $(grep -a "Using cpr_rakish_brothel_night_effect" $LOGFILE | wc -l)"

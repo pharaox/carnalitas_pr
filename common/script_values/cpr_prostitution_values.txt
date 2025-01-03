@@ -146,3 +146,39 @@ cpr_attraction_based_female_chance = {
 		value = 50
 	}
 }
+
+cpr_slave_prostitution_total_income_value = {
+	value = 0
+	every_relation = {
+		type = slave
+		limit = {
+			carn_is_working_as_prostitute_trigger = yes
+		}
+		add = carn_slave_prostitution_income_value
+	}
+}
+
+cpr_slave_prostitution_total_piety_loss_value = {
+	value = 0
+	every_relation = {
+		type = slave
+		limit = {
+			carn_is_working_as_prostitute_trigger = yes
+		}
+		add = prev.cpr_slave_prostitution_piety_loss_value
+	}
+}
+
+cpr_slave_prostitution_piety_loss_value = {
+	if = {
+		limit = { carn_legal_prostitution_trigger = no }
+		value = minor_piety_loss
+	}
+	else_if = {
+		limit = { carn_accepts_prostitution_trigger = no }
+		value = miniscule_piety_loss
+	}
+	else = {
+		value = 0
+	}
+}
