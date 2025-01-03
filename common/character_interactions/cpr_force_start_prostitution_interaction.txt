@@ -62,7 +62,7 @@ carn_force_start_prostitution_interaction = {
 	}
 
 	ai_will_do = {
-		base = 0 # TODO
+		base = -5
 
 		# Opinion of slave (-25 to 25 depending on opinion)
 		opinion_modifier = {
@@ -85,7 +85,7 @@ carn_force_start_prostitution_interaction = {
 
 		# Honor (-10 to 10 depending on honor)
 		ai_value_modifier = {
-			ai_compassion = -0.10
+			ai_honor = -0.10
 		}
 
 		# Zeal (-50 to 0 depending on zeal if prostitution is not accepted)
