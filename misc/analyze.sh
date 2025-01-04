@@ -82,3 +82,8 @@ echo
 echo "Moonlight as a Prostitute decision made: $(grep -a "Moonlight as a Prostitute decision made" $LOGFILE | wc -l)"
 echo "Stop Moonlighting as a Prostitute decision made: $(grep -a "Stop Moonlighting as a Prostitute decision made" $LOGFILE | wc -l)"
 echo
+
+# Carnalitas interactions
+echo "Start Prostitution interaction accepted: $(grep -a "Start Prostitution interaction accepted" $LOGFILE | wc -l)"
+echo "Stop Prostitution interaction accepted: $(grep -a "Stop Prostitution interaction accepted" $LOGFILE | wc -l)"
+echo

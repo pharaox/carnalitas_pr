@@ -50,3 +50,26 @@
  # Carnalitas decisions
  cpr_debug_msg_work_as_prostitute_decision_made: "$cpr_debug_prefix_2$: $carn_work_as_prostitute_decision$ decision made, work_as_prostitute_ai_willingness: [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
  cpr_debug_msg_stop_work_as_prostitute_decision_made: "$cpr_debug_prefix_2$: $carn_stop_work_as_prostitute_decision$ decision made, work_as_prostitute_ai_willingness: [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
+
+ # Carnalitas interactions
+ cpr_debug_msg_force_start_prostitution_interaction_accepted: "$cpr_debug_prefix_2$: $carn_force_start_prostitution_interaction$ interaction accepted, force_prostitution_ai_willingness: [THIS.Var('force_prostitution_ai_willingness').GetValue]"
+ cpr_debug_msg_force_stop_prostitution_interaction_accepted: "$cpr_debug_prefix_2$: $carn_force_stop_prostitution_interaction$ interaction accepted, force_prostitution_ai_willingness: [THIS.Var('force_prostitution_ai_willingness').GetValue]"
+
+ # Tooltips
+ cpr_debug_force_prostitution_ai_willingness_tooltip: "Force prostitution AI willingness: [GuiScope.SetRoot(actor.MakeScope).AddScope('actor', actor.MakeScope).AddScope('recipient', recipient.MakeScope).ScriptValue('cpr_force_prostitution_ai_willingness_value')]\n[GuiScope.SetRoot(actor.MakeScope).AddScope('actor', actor.MakeScope).AddScope('recipient', recipient.MakeScope).GetScriptValueDesc('cpr_force_prostitution_ai_willingness_value')]"
+
+ # Value descriptions
+ cpr_debug_value_base_desc: "Base"
+ cpr_debug_value_opinion_desc: "Opinion"
+ cpr_debug_value_greed_desc: "Greed"
+ cpr_debug_value_compassion_desc: "Compassion"
+ cpr_debug_value_honor_desc: "Honor"
+ cpr_debug_value_zeal_desc: "Zeal"
+ cpr_debug_value_family_dynasty_desc: "Family / Dynasty"
+ cpr_debug_value_friend_lover_desc: "Friend / Lover"
+ cpr_debug_value_rival_desc: "Rival"
+ cpr_debug_value_employed_desc: "Employed"
+ cpr_debug_value_trait_xp_desc: "Trait XP"
+ cpr_debug_value_diplomacy_desc: "Diplomacy"
+ cpr_debug_value_intrigue_desc: "Intrigue"
+ cpr_debug_value_attraction_desc: "Attraction"

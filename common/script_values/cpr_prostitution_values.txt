@@ -129,6 +129,207 @@
 	round = yes
 }
 
+cpr_force_prostitution_ai_willingness_value = {
+	add = {
+		value = -25
+		desc = cpr_debug_value_base_desc
+	}
+
+	# Opinion of recipient (-25 to 25 depending on opinion)
+	add = {
+		value = "opinion(scope:recipient)"
+		multiply = -0.25
+		floor = yes
+		desc = cpr_debug_value_opinion_desc
+	}
+
+	# Greed (-25 to 25 depending on greed)
+	add = {
+		value = ai_greed
+		multiply = 0.25
+		desc = cpr_debug_value_greed_desc
+	}
+
+	# Compassion (-25 to 25 depending on compassion)
+	add = {
+		value = ai_compassion
+		multiply = -0.25
+		desc = cpr_debug_value_compassion_desc
+	}
+
+	# Honor (-10 to 10 depending on honor)
+	add = {
+		value = ai_honor
+		multiply = -0.10
+		desc = cpr_debug_value_honor_desc
+	}
+
+	# Zeal, if prostitution is not accepted (-50 to 0 depending on zeal)
+	if = {
+		limit = { carn_accepts_prostitution_trigger = no }
+		add = {
+			value = ai_zeal
+			multiply = 0.01
+			add = 1
+			multiply = -25
+			desc = cpr_debug_value_zeal_desc
+		}
+	}
+
+	# Family or dynasty (-50, x4 for children, x2 for close family, x0.5 for just dynasty, modified by compassion)
+	if = {
+		limit = {
+			OR = {
+				is_close_or_extended_family_of = scope:recipient
+				is_spouse_of = scope:recipient
+				cpr_is_same_dynasty_trigger = { CHARACTER = scope:recipient }
+			}
+		}
+		add = {
+			value = -50
+			if = {
+				limit = { is_parent_of = scope:recipient }
+				multiply = 4
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_close_family_of = scope:recipient
+						is_spouse_of = scope:recipient
+					}
+				}
+				multiply = 2
+			}
+			else_if = {
+				limit = { is_extended_family_of = scope:recipient }
+				multiply = 1
+			}
+			else = {
+				multiply = 0.5
+			}
+			multiply = { # -50% to +50% depending on compassion
+				value = ai_compassion
+				multiply = 0.005
+				add = 1
+			}
+			desc = cpr_debug_value_family_dynasty_desc
+		}
+	}
+
+	# Friend or lover (-100, doubled for best friend / soulmate, modified by compassion)
+	if = {
+		limit = {
+			OR = {
+				has_relation_friend = scope:recipient
+				has_relation_lover = scope:recipient
+			}
+		}
+		add = {
+			value = -100
+			if = {
+				limit = {
+					OR = {
+						has_relation_best_friend = scope:recipient
+						has_relation_soulmate = scope:recipient
+					}
+				}
+				multiply = 2
+			}
+			multiply = { # -50% to +50% depending on compassion
+				value = ai_compassion
+				multiply = 0.005
+				add = 1
+			}
+			desc = cpr_debug_value_friend_lover_desc
+		}
+	}
+
+	# Rival (50, doubled for nemesis, modified by vengefulness)
+	if = {
+		limit = { has_relation_rival = scope:recipient }
+		add = {
+			value = 50
+			if = {
+				limit = { has_relation_nemesis = scope:recipient }
+				multiply = 2
+			}
+			multiply = { # -50% to +50% depending on vengefulness
+				value = ai_vengefulness
+				multiply = 0.005
+				add = 1
+			}
+			desc = cpr_debug_value_rival_desc
+		}
+	}
+
+	# Already employed (-25, doubled for council / court positions)
+	if = {
+		limit = {
+			scope:recipient = {
+				OR = {
+					is_councillor_of = scope:actor
+					any_court_position_employer = { this = scope:actor }
+					is_knight_of = scope:actor
+					is_commanding_army = yes
+					cpr_has_important_role_trigger = { RULER = scope:actor }
+				}
+			}
+		}
+		add = {
+			value = -25
+			if = {
+				limit = {
+					scope:recipient = {
+						OR = {
+							is_councillor_of = scope:actor
+							any_court_position_employer = { this = scope:actor }
+						}
+					}
+				}
+				multiply = 2
+			}
+			desc = cpr_debug_value_employed_desc
+		}
+	}
+
+	# Already a prostitute (0 to 25 depending on trait XP)
+	if = {
+		limit = {
+			scope:recipient = {
+				has_trait = lifestyle_prostitute
+			}
+		}
+		add = {
+			scope:recipient = {
+				value = "scope:recipient.has_trait_xp(lifestyle_prostitute)"
+				multiply = 0.25
+			}
+			desc = cpr_debug_value_trait_xp_desc
+		}
+	}
+
+	# Skills (-5 to 5+)
+	add = {
+		value = scope:recipient.diplomacy
+		subtract = 10
+		multiply = 0.25
+		desc = cpr_debug_value_diplomacy_desc
+	}
+	add = {
+		value = scope:recipient.intrigue
+		subtract = 10
+		multiply = 0.25
+		desc = cpr_debug_value_intrigue_desc
+	}
+
+	# Attraction (-7 to 7)
+	add = {
+		value = scope:recipient.attraction
+		multiply = 0.25
+		desc = cpr_debug_value_attraction_desc
+	}
+}
+
 cpr_attraction_based_female_chance = {
 	if = {
 		limit = { has_game_rule = carn_prostitution_content_any_gender }
