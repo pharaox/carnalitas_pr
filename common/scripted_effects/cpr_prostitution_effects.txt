@@ -202,17 +202,17 @@ cpr_force_start_prostitution_effect = {
 
 	# Stress impact
 	stress_impact = {
-		generous = medium_stress_impact_gain
-		compassionate = minor_stress_impact_gain
-		greedy = medium_stress_impact_loss
-		sadistic = minor_stress_impact_loss
-		callous = minor_stress_impact_loss
+		generous = minor_stress_impact_gain
+		compassionate = miniscule_stress_impact_gain
+		greedy = minor_stress_impact_loss
+		sadistic = miniscule_stress_impact_loss
+		callous = miniscule_stress_impact_loss
 	}
 	if = {
 		limit = { carn_accepts_prostitution_trigger = no }
 		stress_impact = {
-			zealous = medium_stress_impact_gain
-			cynical = medium_stress_impact_loss
+			zealous = minor_stress_impact_gain
+			cynical = minor_stress_impact_loss
 		}
 	}
 
@@ -258,17 +258,17 @@ cpr_force_stop_prostitution_effect = {
 
 	# Stress impact
 	stress_impact = {
-		greedy = medium_stress_impact_gain
-		sadistic = minor_stress_impact_gain
-		callous = minor_stress_impact_gain
-		generous = medium_stress_impact_loss
-		compassionate = minor_stress_impact_loss
+		greedy = minor_stress_impact_gain
+		sadistic = miniscule_stress_impact_gain
+		callous = miniscule_stress_impact_gain
+		generous = minor_stress_impact_loss
+		compassionate = miniscule_stress_impact_loss
 	}
 	if = {
 		limit = { carn_accepts_prostitution_trigger = no }
 		stress_impact = {
-			cynical = medium_stress_impact_gain
-			zealous = medium_stress_impact_loss
+			cynical = minor_stress_impact_gain
+			zealous = minor_stress_impact_loss
 		}
 	}
 
