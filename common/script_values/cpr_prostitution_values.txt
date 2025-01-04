@@ -431,3 +431,33 @@ cpr_slave_prostitution_piety_loss_value = {
 		value = 0
 	}
 }
+
+# Overridden from Carnalitas
+carn_prostitute_sex_interaction_price_value = {
+	value = minor_gold_value
+	if = {
+		limit = { has_trait = lifestyle_prostitute }
+		multiply = {
+			value = "has_trait_xp(lifestyle_prostitute)"
+			multiply = 0.01
+			add = 1
+		}
+	}
+}
+
+# Overridden from CLR
+carnx_sex_interaction_stress_loss_value = {
+	value = minor_stress_impact_loss
+	if = {
+		limit = {
+			scope:recipient = {
+				has_trait = lifestyle_prostitute
+			}
+		}
+		multiply = {
+			value = "scope:recipient.has_trait_xp(lifestyle_prostitute)"
+			multiply = 0.01
+			add = 1
+		}
+	}
+}

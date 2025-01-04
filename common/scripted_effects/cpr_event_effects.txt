@@ -182,7 +182,7 @@ cpr_prostitute_contract_std_effect = {
 cpr_get_relevant_ruler_effect = {
 	clear_saved_scope = $RULER$
 	if = {
-		limit = { is_ruler = yes }
+		limit = { is_landed = yes }
 		save_scope_as = $RULER$
 	}
 	else_if = {
