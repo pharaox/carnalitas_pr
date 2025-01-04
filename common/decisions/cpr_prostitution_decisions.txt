@@ -36,13 +36,19 @@ carn_work_as_prostitute_decision = {
 	}
 
 	effect = {
-		save_scope_value_as = {
-			name = work_as_prostitute_ai_willingness
-			value = cpr_work_as_prostitute_ai_willingness_value
-		}
-		cpr_debug_log_1_effect = {
-			MSG = cpr_debug_msg_work_as_prostitute_decision_made
-			NAME1 = work_as_prostitute_ai_willingness TYPE1 = flag:value
+		if = {
+			limit = { debug_only = yes }
+
+			save_scope_value_as = {
+				name = work_as_prostitute_ai_willingness
+				value = cpr_work_as_prostitute_ai_willingness_value
+			}
+			cpr_debug_log_1_effect = {
+				MSG = cpr_debug_msg_work_as_prostitute_decision_made
+				NAME1 = work_as_prostitute_ai_willingness TYPE1 = flag:value
+			}
+
+			custom_tooltip = cpr_debug_work_as_prostitute_ai_willingness_tooltip
 		}
 
 		# Set event for carn_on_start_working_as_prostitute
@@ -147,13 +153,19 @@ carn_stop_work_as_prostitute_decision = {
 	}
 
 	effect = {
-		save_scope_value_as = {
-			name = work_as_prostitute_ai_willingness
-			value = cpr_work_as_prostitute_ai_willingness_value
-		}
-		cpr_debug_log_1_effect = {
-			MSG = cpr_debug_msg_stop_work_as_prostitute_decision_made
-			NAME1 = work_as_prostitute_ai_willingness TYPE1 = flag:value
+		if = {
+			limit = { debug_only = yes }
+
+			save_scope_value_as = {
+				name = work_as_prostitute_ai_willingness
+				value = cpr_work_as_prostitute_ai_willingness_value
+			}
+			cpr_debug_log_1_effect = {
+				MSG = cpr_debug_msg_stop_work_as_prostitute_decision_made
+				NAME1 = work_as_prostitute_ai_willingness TYPE1 = flag:value
+			}
+
+			custom_tooltip = cpr_debug_work_as_prostitute_ai_willingness_tooltip
 		}
 
 		# Set event for carn_on_stop_working_as_prostitute

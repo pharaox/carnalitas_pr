@@ -56,6 +56,7 @@
  cpr_debug_msg_force_stop_prostitution_interaction_accepted: "$cpr_debug_prefix_2$: $carn_force_stop_prostitution_interaction$ interaction accepted, force_prostitution_ai_willingness: [THIS.Var('force_prostitution_ai_willingness').GetValue]"
 
  # Tooltips
+ cpr_debug_work_as_prostitute_ai_willingness_tooltip: "Work as prostitute AI willingness: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('cpr_work_as_prostitute_ai_willingness_value')]\n[GuiScope.SetRoot(GetPlayer.MakeScope).GetScriptValueDesc('cpr_work_as_prostitute_ai_willingness_value')]"
  cpr_debug_force_prostitution_ai_willingness_tooltip: "Force prostitution AI willingness: [GuiScope.SetRoot(actor.MakeScope).AddScope('actor', actor.MakeScope).AddScope('recipient', recipient.MakeScope).ScriptValue('cpr_force_prostitution_ai_willingness_value')]\n[GuiScope.SetRoot(actor.MakeScope).AddScope('actor', actor.MakeScope).AddScope('recipient', recipient.MakeScope).GetScriptValueDesc('cpr_force_prostitution_ai_willingness_value')]"
 
  # Value descriptions
@@ -65,6 +66,7 @@
  cpr_debug_value_compassion_desc: "Compassion"
  cpr_debug_value_honor_desc: "Honor"
  cpr_debug_value_zeal_desc: "Zeal"
+ cpr_debug_value_sociability_desc: "Sociability"
  cpr_debug_value_family_dynasty_desc: "Family / Dynasty"
  cpr_debug_value_friend_lover_desc: "Friend / Lover"
  cpr_debug_value_rival_desc: "Rival"
@@ -73,3 +75,16 @@
  cpr_debug_value_diplomacy_desc: "Diplomacy"
  cpr_debug_value_intrigue_desc: "Intrigue"
  cpr_debug_value_attraction_desc: "Attraction"
+ cpr_debug_value_lustful_desc: "Lustful"
+ cpr_debug_value_chaste_desc: "Chaste"
+ cpr_debug_value_rakish_desc: "Rakish"
+ cpr_debug_value_deviant_desc: "Deviant"
+ cpr_debug_value_age_desc: "Age"
+ cpr_debug_value_health_desc: "Health"
+ cpr_debug_value_highborn_desc: "Highborn"
+ cpr_debug_value_married_desc: "Married"
+ cpr_debug_value_concubine_desc: "Concubine"
+ cpr_debug_value_children_desc: "Children"
+ cpr_debug_value_ruler_desc: "Ruler"
+ cpr_debug_value_courtier_desc: "Courtier"
+ cpr_debug_value_guest_desc: "Guest"

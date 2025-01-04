@@ -1,49 +1,70 @@
 ﻿cpr_work_as_prostitute_ai_willingness_value = {
-	value = 0
+	add = {
+		value = 0
+		desc = cpr_debug_value_base_desc
+	}
 
-	# AI values
-	# Greed (-20 to 20 depending on greed)
+	# Greed (-25 to 25 depending on greed)
 	add = {
 		value = ai_greed
-		multiply = 0.2
+		multiply = 0.25
+		desc = cpr_debug_value_greed_desc
 	}
+
 	# Honor (-10 to 10 depending on honor)
 	add = {
 		value = ai_honor
-		multiply = -0.1
+		multiply = -0.10
+		desc = cpr_debug_value_honor_desc
 	}
+
 	# Sociability (-10 to 10 depending on sociability)
 	add = {
 		value = ai_sociability
-		multiply = 0.1
+		multiply = 0.10
+		desc = cpr_debug_value_sociability_desc
 	}
-	# Zeal, if prostitution is not accepted (-40 to 0 depending on zeal)
+
+	# Zeal, if prostitution is not accepted (-50 to 0 depending on zeal)
 	if = {
 		limit = { carn_accepts_prostitution_trigger = no }
 		add = {
 			value = ai_zeal
 			multiply = 0.01
 			add = 1
-			multiply = -20
+			multiply = -25
+			desc = cpr_debug_value_zeal_desc
 		}
 	}
 
 	# Lust traits
 	if = {
 		limit = { has_trait = lustful }
-		add = 20
+		add = {
+			value = 25
+			desc = cpr_debug_value_lustful_desc
+		}
 	}
 	else_if = {
 		limit = { has_trait = chaste }
-		add = -20
+		add = {
+			value = -25
+			desc = cpr_debug_value_chaste_desc
+		}
 	}
 	if = {
 		limit = { has_trait = rakish }
-		add = 20
+		add = {
+			value = 25
+			desc = cpr_debug_value_rakish_desc
+		}
 	}
 	if = {
 		limit = { is_deviant_trigger = yes }
-		add = 20
+		add = {
+			value = 25
+			desc = cpr_debug_value_deviant_desc
+		}
 	}
 
 	# Prostitution lifestyle trait (0 to 50)
@@ -52,6 +73,7 @@
 		add = {
 			value = "has_trait_xp(lifestyle_prostitute)"
 			multiply = 0.5
+			desc = cpr_debug_value_trait_xp_desc
 		}
 	}
 
@@ -60,17 +82,20 @@
 		value = diplomacy
 		subtract = 10
 		multiply = 0.5
+		desc = cpr_debug_value_diplomacy_desc
 	}
 	add = {
 		value = intrigue
 		subtract = 10
 		multiply = 0.5
+		desc = cpr_debug_value_intrigue_desc
 	}
 
 	# Attraction (-15 to 15)
 	add = {
 		value = attraction
 		multiply = 0.5
+		desc = cpr_debug_value_attraction_desc
 	}
 
 	# Age (-7 to 7)
@@ -78,30 +103,43 @@
 		value = 30
 		subtract = effective_age
 		multiply = 0.5
+		desc = cpr_debug_value_age_desc
 	}
 
 	# Health (-15 to 0 if poor health)
 	if = {
 		limit = { health < fine_health }
-		value = health
-		subtract = fine_health
-		multiply = 5
+		add = {
+			value = health
+			subtract = fine_health
+			multiply = 5
+			desc = cpr_debug_value_health_desc
+		}
 	}
 
 	# Highborn
 	if = {
 		limit = { is_lowborn = no }
-		add = -10
+		add = {
+			value = -10
+			desc = cpr_debug_value_highborn_desc
+		}
 	}
 
 	# Personal circumstances: married or concubine
 	if = {
 		limit = { is_married = yes }
-		add = -20
+		add = {
+			value = -25
+			desc = cpr_debug_value_married_desc
+		}
 	}
 	else_if = {
 		limit = { is_concubine = yes }
-		add = -10
+		add = {
+			value = -10
+			desc = cpr_debug_value_concubine_desc
+		}
 	}
 
 	# Personal circumstances: children
@@ -109,24 +147,34 @@
 		limit = {
 			any_child = { count > 0 }
 		}
-		add = -10
+		add = {
+			value = -10
+			desc = cpr_debug_value_children_desc
+		}
 	}
 
 	# Personal circumstances: ruler, courtier, or guest
 	if = {
 		limit = { is_ruler = yes }
-		add = -20
+		add = {
+			value = -25
+			desc = cpr_debug_value_ruler_desc
+		}
 	}
 	else_if = {
 		limit = { is_courtier = yes }
-		add = -10
+		add = {
+			value = -10
+			desc = cpr_debug_value_courtier_desc
+		}
 	}
 	else_if = {
 		limit = { is_pool_guest = yes }
-		add = -5
+		add = {
+			value = -5
+			desc = cpr_debug_value_guest_desc
+		}
 	}
-
-	round = yes
 }
 
 cpr_force_prostitution_ai_willingness_value = {
