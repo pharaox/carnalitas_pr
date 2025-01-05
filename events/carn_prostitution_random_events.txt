@@ -62,7 +62,7 @@ carn_prostitution_random_events.0002 = {
 			title = carn_prostitution_random_events.0002.notification
 			type = carn_prostitute_random_event_bad
 			right_icon = this
-			add_prestige = medium_prestige_loss
+			add_prestige = minor_prestige_loss
 		}
 	}
 }
@@ -89,7 +89,7 @@ carn_prostitution_random_events.0003 = {
 			title = carn_prostitution_random_events.0003.notification
 			type = carn_prostitute_random_event_bad
 			right_icon = this
-			add_piety = major_piety_loss
+			add_piety = medium_piety_loss
 		}
 	}
 }
@@ -156,9 +156,6 @@ scripted_trigger carn_possible_prostitute_random_events_0010_client_trigger = {
 
 	# Interested in each other (in having an affair)
 	possibly_interested_in_character_trigger = { CHARACTER = root }
-	root = {
-		possibly_interested_in_character_trigger = { CHARACTER = prev }
-	}
 
 	# Has enough money
 	short_term_gold >= root.carn_prostitute_sex_interaction_price_value
@@ -172,8 +169,22 @@ scripted_trigger carn_possible_prostitute_random_events_0010_client_trigger = {
 		is_at_war_with = root
 	}
 
+	# Is lustful, has temptation focus, or at least might cheat
+	OR = {
+		has_trait = lustful
+		has_trait = rakish
+		is_deviant_trigger = yes
+		has_trait = seducer
+		has_focus = intrigue_temptation_focus
+		might_cheat_on_every_partner_trigger = yes
+	}
+
+	# Is not chaste
+	NOR = {
+		has_trait = chaste
+	}
+
 	# Might cheat and not afraid of sodomy consequences
-	might_cheat_on_every_partner_trigger = yes
 	freely_accepts_sodomy_with_trigger = { CHARACTER = root }
 }
 
@@ -231,13 +242,6 @@ carn_prostitution_random_events.0010 = {
 			list = potential_clients
 			limit = {
 				carn_possible_prostitute_random_events_0010_client_trigger = yes
-				OR = {
-					has_trait = lustful
-					has_trait = rakish
-					is_deviant_trigger = yes
-					has_trait = seducer
-					has_focus = intrigue_temptation_focus
-				}
 			}
 			weight = {
 				base = 10
@@ -311,7 +315,7 @@ carn_prostitution_random_events.0011 = {
 			carn_had_sex_with_effect = {
 				CHARACTER_1 = root
 				CHARACTER_2 = scope:client
-				C1_PREGNANCY_CHANCE = 0
+				C1_PREGNANCY_CHANCE = pregnancy_chance
 				C2_PREGNANCY_CHANCE = pregnancy_chance
 				STRESS_EFFECTS = yes
 				DRAMA = yes
@@ -339,8 +343,8 @@ carn_prostitution_random_events.0011 = {
 				carn_had_sex_with_effect = {
 					CHARACTER_1 = root
 					CHARACTER_2 = scope:client
-					C1_PREGNANCY_CHANCE = 0
-					C2_PREGNANCY_CHANCE = pregnancy_chance
+					C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+					C2_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
 					STRESS_EFFECTS = yes
 					DRAMA = yes
 				}

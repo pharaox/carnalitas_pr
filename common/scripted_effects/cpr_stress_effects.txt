@@ -45,13 +45,13 @@ cpr_rakish_brothel_night_prostitute_effect = {
 	# Warn about possible negative consequences
 	custom_tooltip = stress_threshold.1011.rakish.tt
 
-	# Use Carnalitas sex effect w/o pregnancy for prostitute, stress, and memory
+	# Use Carnalitas sex effect w/o stress and memory
 	carn_sex_scene_no_memory_effect = yes
 	carn_had_sex_with_effect = {
 		CHARACTER_1 = root
 		CHARACTER_2 = scope:prostitute
-		C1_PREGNANCY_CHANCE = pregnancy_chance
-		C2_PREGNANCY_CHANCE = 0
+		C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+		C2_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
 		STRESS_EFFECTS = no
 		DRAMA = yes
 	}

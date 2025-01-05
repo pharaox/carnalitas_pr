@@ -1,0 +1,3 @@
+﻿carnx_pregnancy_chance_value = {
+	value = 5
+}

@@ -1,0 +1,33 @@
+﻿had_sex_with_effect = {
+	# Use carn_had_sex_with_effect to be able to set the pregnancy chances,
+	# since some vanilla events that use this effect use custom pregnancy chances
+	save_temporary_scope_as = carn_had_sex_with_effect_character
+
+	# CPR Disable memories and use CLR pregnancy chance if a prostitute is involved
+	if = {
+		limit = {
+			$CHARACTER$ = {
+				carn_is_working_as_prostitute_trigger = yes
+			}
+		}
+		carn_sex_scene_no_memory_effect = yes
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_had_sex_with_effect_character
+			CHARACTER_2 = $CHARACTER$
+			C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+			C2_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+	}
+	else = {
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_had_sex_with_effect_character
+			CHARACTER_2 = $CHARACTER$
+			C1_PREGNANCY_CHANCE = $PREGNANCY_CHANCE$
+			C2_PREGNANCY_CHANCE = $PREGNANCY_CHANCE$
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+	}
+}
