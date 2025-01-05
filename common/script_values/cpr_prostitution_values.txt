@@ -1,6 +1,6 @@
 ﻿cpr_work_as_prostitute_ai_willingness_value = {
 	add = {
-		value = 0
+		value = 5
 		desc = cpr_debug_value_base_desc
 	}
 
@@ -179,7 +179,7 @@
 
 cpr_force_prostitution_ai_willingness_value = {
 	add = {
-		value = -25
+		value = -30
 		desc = cpr_debug_value_base_desc
 	}
 

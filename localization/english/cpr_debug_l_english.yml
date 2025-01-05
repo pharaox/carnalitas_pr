@@ -56,7 +56,7 @@
  cpr_debug_msg_force_stop_prostitution_interaction_accepted: "$cpr_debug_prefix_2$: $carn_force_stop_prostitution_interaction$ interaction accepted, force_prostitution_ai_willingness: [THIS.Var('force_prostitution_ai_willingness').GetValue]"
 
  # Tooltips
- cpr_debug_work_as_prostitute_ai_willingness_tooltip: "Work as prostitute AI willingness: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('cpr_work_as_prostitute_ai_willingness_value')]\n[GuiScope.SetRoot(GetPlayer.MakeScope).GetScriptValueDesc('cpr_work_as_prostitute_ai_willingness_value')]"
+ cpr_debug_work_as_prostitute_ai_willingness_tooltip: "Work as prostitute AI willingness: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('cpr_work_as_prostitute_ai_willingness_value')]\n[GuiScope.SetRoot(GetPlayer.MakeScope).GetScriptValueDesc('cpr_work_as_prostitute_ai_willingness_value')]\n"
  cpr_debug_force_prostitution_ai_willingness_tooltip: "Force prostitution AI willingness: [GuiScope.SetRoot(actor.MakeScope).AddScope('actor', actor.MakeScope).AddScope('recipient', recipient.MakeScope).ScriptValue('cpr_force_prostitution_ai_willingness_value')]\n[GuiScope.SetRoot(actor.MakeScope).AddScope('actor', actor.MakeScope).AddScope('recipient', recipient.MakeScope).GetScriptValueDesc('cpr_force_prostitution_ai_willingness_value')]"
 
  # Value descriptions
