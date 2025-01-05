@@ -30,7 +30,6 @@
 		beauty_good_3 = { weight = { base = 5 } }
 		diplomat = { weight = { base = 5 } }
 		seducer = { weight = { base = 5 } }
-		deviant = { weight = { base = 2 } }
 		lifestyle_reveler = { weight = { base = 5 } }
 	}
 

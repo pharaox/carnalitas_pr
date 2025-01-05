@@ -27,8 +27,8 @@
 		max_template_decent_skill
 	}
 	after_creation = {
-		add_trait = fornicator
 		# CPR Make prostitute from chariot_race.4030 a proper prostitute
+		#add_trait = fornicator
 		if = {
 			limit = {
 				scope:prostitute ?= this
