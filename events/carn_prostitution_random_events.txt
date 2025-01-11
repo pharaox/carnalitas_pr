@@ -21,7 +21,7 @@ carn_prostitution_random_events.0001 = {
 			name = trait_xp
 			value = {
 				integer_range = {
-					min = small_lifestyle_random_xp_low
+					min = small_lifestyle_random_xp_mid
 					max = small_lifestyle_random_xp_high
 				}
 			}
