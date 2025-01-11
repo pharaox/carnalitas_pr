@@ -461,3 +461,31 @@ carnx_sex_interaction_stress_loss_value = {
 		}
 	}
 }
+
+cpr_major_piety_loss_value = {
+	if = {
+		limit = {
+			scope:slave = {
+				has_no_particular_noble_roots_trigger = yes
+			}
+		}
+		value = medium_piety_loss
+	}
+	else = {
+		value = major_piety_loss
+	}
+}
+
+cpr_massive_piety_loss_value = {
+	if = {
+		limit = {
+			scope:slave = {
+				has_no_particular_noble_roots_trigger = yes
+			}
+		}
+		value = major_piety_loss
+	}
+	else = {
+		value = massive_piety_loss
+	}
+}

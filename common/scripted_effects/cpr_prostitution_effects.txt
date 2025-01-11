@@ -163,6 +163,7 @@ cpr_force_start_prostitution_effect = {
 	save_temporary_scope_as = owner
 
 	$SLAVE$ = {
+		save_temporary_scope_as = slave
 		scope:recipient = {
 			set_variable = {
 				name = cpr_forced_by_owner
@@ -193,11 +194,11 @@ cpr_force_start_prostitution_effect = {
 	if = {
 		limit = { carn_legal_prostitution_trigger = no }
 		add_piety_level = -1
-		add_piety = massive_piety_loss
+		add_piety = cpr_massive_piety_loss_value
 	}
 	else_if = {
 		limit = { carn_accepts_prostitution_trigger = no }
-		add_piety = major_piety_loss
+		add_piety = cpr_major_piety_loss_value
 	}
 
 	# Stress impact
