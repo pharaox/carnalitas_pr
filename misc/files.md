@@ -23,11 +23,19 @@
 
 ### Explicit
 
+* `common/character_interactions/carn_force_start_prostitution_interaction.txt`
+  * `carn_force_start_prostitution_interaction`
+* `common/character_interactions/carn_force_stop_prostitution_interaction.txt`
+  * `carn_force_stop_prostitution_interaction`
 * `common/decisions/carn_prostitution_decisions.txt`
   * `carn_work_as_prostitute_decision`
   * `carn_stop_work_as_prostitute_decision`
 * `common/on_action/carn_prostitution_on_actions.txt`
   * Entire file
+* `common/script_values/carn_prostitution_values.txt`
+  * `carn_prostitute_sex_interaction_price_value`
+* `common/scripted_effects/zzz_carn_00_romance_effects_overwrite.txt`
+  * `had_sex_with_effect`
 * `common/scripted_modifiers/carn_prostitution_bad_event_modifier.txt`
   * `carn_prostitution_bad_event_modifier`
 * `common/scripted_modifiers/carn_prostitution_good_event_modifier.txt`
@@ -36,5 +44,10 @@
   * `carn_prostitution_rank_up_chance_modifier`
 * `common/scripted_triggers/carn_prostitution_triggers.txt`
   * `carn_can_be_prostitute_trigger`
+* `common/trigger_localization/carn_trigger_localization.txt`
+  * `carn_cannot_have_max_number_of_slave_prostitutes`
+  * `carn_effective_age_under_value_cutoff`
 * `events/carn_prostitution_random_events.txt`
+  * Entire file
+* `events/carn_slave_prostitution_events.txt`
   * Entire file
