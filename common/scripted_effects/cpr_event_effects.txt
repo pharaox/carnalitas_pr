@@ -98,6 +98,9 @@ cpr_add_prostitute_traits_effect = {
 		}
 	}
 
+	# Fornicator
+	add_fornicator_trait_or_nothing_effect = yes
+
 	# Poet
 	random = {
 		chance = 1
