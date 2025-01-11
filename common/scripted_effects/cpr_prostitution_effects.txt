@@ -247,16 +247,6 @@ cpr_force_stop_prostitution_effect = {
 		remove_variable = cpr_forced_by_owner
 	}
 
-	# Lose piety level if prostitution is illegal, or just piety if it's not accepted
-	if = {
-		limit = { carn_legal_prostitution_trigger = no }
-		add_piety = medium_piety_gain
-	}
-	else_if = {
-		limit = { carn_accepts_prostitution_trigger = no }
-		add_piety = minor_piety_gain
-	}
-
 	# Stress impact
 	stress_impact = {
 		greedy = minor_stress_impact_gain
