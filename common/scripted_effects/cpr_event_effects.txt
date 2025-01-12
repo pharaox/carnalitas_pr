@@ -1,6 +1,5 @@
 ﻿cpr_get_prostitute_effect = {
 	# Find an existing prostitute character
-	clear_saved_scope = $PROSTITUTE$
 	random_pool_character = {
 		province = $LOCATION$
 		limit = {

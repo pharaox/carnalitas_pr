@@ -2,10 +2,7 @@
 cpr_rakish_brothel_night_effect = {
 	if = {
 		limit = {
-			NAND = {
-				exists = scope:prostitute
-				exists = scope:from_stress_loss_decision
-			}
+			NOT = { exists = scope:prostitute }
 		}
 
 		# Use vanilla effect as tooltip to prevent errors
@@ -34,6 +31,10 @@ cpr_rakish_brothel_night_effect = {
 			}
 
 			cpr_rakish_brothel_night_prostitute_effect = yes
+
+			# Clear scope:prostitute to prevent scope pollution
+			# since this effect is used in a chain of recurring events
+			clear_saved_scope = prostitute
 		}
 	}
 	else = {
