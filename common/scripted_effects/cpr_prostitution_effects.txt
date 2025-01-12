@@ -192,13 +192,15 @@ cpr_force_start_prostitution_effect = {
 
 	# Lose piety level if prostitution is illegal, or just piety if it's not accepted
 	if = {
-		limit = { carn_legal_prostitution_trigger = no }
-		add_piety_level = -1
-		add_piety = cpr_massive_piety_loss_value
-	}
-	else_if = {
-		limit = { carn_accepts_prostitution_trigger = no }
-		add_piety = cpr_major_piety_loss_value
+		limit = { carn_is_prostitute_trigger = no }
+		if = {
+			limit = { carn_legal_prostitution_trigger = no }
+			add_piety_level = -1
+		}
+		else_if = {
+			limit = { carn_accepts_prostitution_trigger = no }
+			add_piety = cpr_major_piety_loss_value
+		}
 	}
 
 	# Stress impact

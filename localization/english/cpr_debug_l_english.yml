@@ -61,6 +61,7 @@
 
  # Value descriptions
  cpr_debug_value_base_desc: "Base"
+ cpr_debug_value_prostitution_crime: "Prostitution is Crime"
  cpr_debug_value_opinion_desc: "Opinion"
  cpr_debug_value_greed_desc: "Greed"
  cpr_debug_value_compassion_desc: "Compassion"

@@ -72,7 +72,7 @@ As in Carnalitas, rulers may decide to start or stop working as a prostitute via
 
 #### Piety and Stress Impact
 
-Starting to work as a prostitute via *Moonlight as a Prostitute* costs a piety level, not just piety, if prostitution is shunned by the ruler's faith. Becoming a prostitute is considered more sinful for a ruler than forcing or coercing others. This penalty applies only if the ruler is not already a prostitute (have the *Prostitute* trait). If prostitution is considered a crime, these decisions are not available at all.
+Starting to work as a prostitute via *Moonlight as a Prostitute* costs a piety level, not just piety, if prostitution is shunned or criminal by the ruler's faith. Becoming a prostitute is considered more sinful for a ruler than forcing or coercing others. This penalty applies only if the ruler is not already a prostitute (have the *Prostitute* trait).
 
 Both decisions may also cause major stress gain or loss to rulers having certain traits such as *Lustful*, *Greedy*, or *Cynical*.
 
@@ -94,7 +94,7 @@ As in Carnalitas, slaves can be forced to either start or stop working as prosti
 
 #### Piety and Stress Impact
 
-Unlike Carnalitas, forcing slaves into prostitution costs just piety, not a piety level, if prostitution is shunned by the ruler's faith. This penalty applies only if the slave is not already a prostitute (have the *Prostitute* trait). If prostitution is considered a crime, these interactions are not available at all.
+Unlike Carnalitas, forcing slaves into prostitution costs just piety, not a piety level, if prostitution is shunned by the ruler's faith. This penalty applies only if the slave is not already a prostitute (have the *Prostitute* trait). If prostitution is criminal, forcing slaves into prostitution costs a piety level as before.
 
 Both interactions may also cause stress gain or loss to rulers having certain traits such as *Greedy*, *Callous*, or *Cynical*, or if the slave happens to be their family or relation. This stress impact is more consistent and hopefully better balanced than in Carnalitas.
 
@@ -146,7 +146,6 @@ A *Prostitute* character may start or stop working as a prostitute in either of 
 In order to start working as a prostitute, a character must fulfill certain conditions, such as:
 
 * Prostitution must be allowed for their gender by the Carnalitas *Prostitution System* game rule.
-* Prostitution must not be considered a crime by their faith (or their owner's faith if they are a slave), or by the faith of their liege, host, or warden, if they have one.
 * Must be able to have sex (adult, not imprisoned, no serious wounds or diseases, and not incapable or celibate).
 * Must be younger than 45 years.
 * Must not be clergy or a monk.

@@ -11,7 +11,6 @@ carn_force_start_prostitution_interaction = {
 		NOT = { has_game_rule = carn_slavery_content_disabled }
 		scope:actor = {
 			has_relation_slave = scope:recipient
-			carn_legal_prostitution_trigger = yes
 		}
 		scope:recipient = {
 			cpr_is_slave_trigger = yes

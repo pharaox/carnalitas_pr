@@ -89,7 +89,14 @@ carn_prostitution_random_events.0003 = {
 			title = carn_prostitution_random_events.0003.notification
 			type = carn_prostitute_random_event_bad
 			right_icon = this
-			add_piety = medium_piety_loss
+			if = {
+				limit = { carn_legal_prostitution_trigger = no }
+				add_piety = major_piety_loss
+			}
+			else_if = {
+				limit = { carn_accepts_prostitution_trigger = no }
+				add_piety = medium_piety_loss
+			}
 		}
 	}
 }

@@ -4,6 +4,15 @@
 		desc = cpr_debug_value_base_desc
 	}
 
+	# Prostitution is crime
+	if = {
+		limit = { carn_legal_prostitution_trigger = no }
+		add = {
+			value = -50
+			desc = cpr_debug_value_prostitution_crime
+		}
+	}
+
 	# Greed (-25 to 25 depending on greed)
 	add = {
 		value = ai_greed
@@ -181,6 +190,15 @@ cpr_force_prostitution_ai_willingness_value = {
 	add = {
 		value = -25
 		desc = cpr_debug_value_base_desc
+	}
+
+	# Prostitution is crime
+	if = {
+		limit = { carn_legal_prostitution_trigger = no }
+		add = {
+			value = -50
+			desc = cpr_debug_value_prostitution_crime
+		}
 	}
 
 	# Opinion of recipient (-25 to 25 depending on opinion)
@@ -473,19 +491,5 @@ cpr_major_piety_loss_value = {
 	}
 	else = {
 		value = major_piety_loss
-	}
-}
-
-cpr_massive_piety_loss_value = {
-	if = {
-		limit = {
-			scope:slave = {
-				has_no_particular_noble_roots_trigger = yes
-			}
-		}
-		value = major_piety_loss
-	}
-	else = {
-		value = massive_piety_loss
 	}
 }
