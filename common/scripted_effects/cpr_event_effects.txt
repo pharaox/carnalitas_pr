@@ -1,39 +1,121 @@
-﻿cpr_get_prostitute_effect = {
-	# Find an existing prostitute character
-	random_pool_character = {
+﻿# Spawns an appropriate number of prostitutes in every major location with brothels.
+cpr_spawn_prostitutes_effect = {
+	cpr_debug_log_effect = { MSG = cpr_debug_msg_spawning_prostitutes }
+
+	# Select a dummy gender character
+	random_living_character = {
+		limit = {
+			is_adult = yes
+			is_male = yes
+			has_sexuality = bisexual
+		}
+		save_temporary_scope_as = gender_character
+	}
+
+	every_province = {
+		limit = { cpr_province_is_major_location_trigger = yes }
+
+		# Ensure the province has at least 1 prostitute
+		random = {
+			chance = 50
+			modifier = {
+				cpr_num_prostitutes_value > 1
+				add = 50
+			}
+			save_temporary_scope_as = spawn_location
+			cpr_get_prostitutes_effect = {
+				LOCATION = scope:spawn_location
+				CHARACTER = scope:gender_character
+				MIN = 1
+			}
+		}
+
+		# Clear prostitutes list
+		every_in_list = {
+			list = prostitutes
+			remove_from_list = prostitutes
+		}
+	}
+}
+
+# Returns a random prostitute in the given location appropriate for the given character as client,
+# creating a new one if needed
+cpr_get_prostitute_effect = {
+	# Get all prostitutes in the given location, creating a new one if needed
+	cpr_get_prostitutes_effect = {
+		LOCATION = $LOCATION$
+		CHARACTER = $CHARACTER$
+		MIN = 1
+	}
+
+	# Select the most skilled prostitute from all available ones
+	ordered_in_list = {
+		list = prostitutes
+		limit = { has_std_trigger = no }
+		alternative_limit = { always = yes }
+		order_by = "has_trait_xp(lifestyle_prostitute)"
+		save_scope_as = $PROSTITUTE$
+	}
+}
+
+# Returns all prostitutes in the given location appropriate for the given character as client,
+# creating new ones if needed to reach the given minimum number
+cpr_get_prostitutes_effect = {
+	# Get existing pool prostitutes
+	every_pool_character = {
 		province = $LOCATION$
 		limit = {
-			carn_is_prostitute_trigger = yes
 			carn_is_working_as_prostitute_trigger = yes
 			carn_can_have_sex_trigger = yes
 			$CHARACTER$ = {
 				is_attracted_to_gender_of = prev
 			}
 		}
-		save_scope_as = $PROSTITUTE$
+		add_to_temporary_list = prostitutes
 	}
-	if = {
-		limit = {
-			NOT = { exists = scope:$PROSTITUTE$ }
-		}
 
-		# Create a new prostitute character
-		$CHARACTER$ = {
-			save_temporary_scope_as = attraction_check
+	# Get existing slave or ruler prostitutes
+	$LOCATION$ = {
+		every_character_in_location = {
+			limit = {
+				NOT = { is_in_list = prostitutes }
+				carn_is_working_as_prostitute_trigger = yes
+				carn_can_have_sex_trigger = yes
+				$CHARACTER$ = {
+					is_attracted_to_gender_of = prev
+				}
+			}
+			add_to_temporary_list = prostitutes
 		}
-		create_character = {
-			template = cpr_prostitute_character_template
-			location = $LOCATION$
-			gender_female_chance = cpr_attraction_based_female_chance
-			dynasty = none
-			culture = $LOCATION$.culture
-			faith = $LOCATION$.faith
-			save_temporary_scope_as = new_character
+	}
+
+	# Create new prostitutes if needed
+	while = {
+		limit = { list_size:prostitutes < $MIN$ }
+
+		cpr_create_prostitute_effect = {
+			LOCATION = $LOCATION$
+			CHARACTER = $CHARACTER$
 		}
 		scope:new_character = {
-			cpr_set_prostitute_sexuality_effect = { CHARACTER = $CHARACTER$ }
-			save_scope_as = $PROSTITUTE$
+			add_to_temporary_list = prostitutes
 		}
+	}
+}
+
+# Creates a new prostitute character in the given location appropriate for the given character as client
+cpr_create_prostitute_effect = {
+	$CHARACTER$ = {
+		save_temporary_scope_as = attraction_check
+	}
+	create_character = {
+		template = cpr_prostitute_character_template
+		location = $LOCATION$
+		gender_female_chance = cpr_attraction_based_female_chance
+		dynasty = none
+		culture = $LOCATION$.culture
+		faith = $LOCATION$.faith
+		save_temporary_scope_as = new_character
 	}
 }
 
@@ -44,9 +126,18 @@ cpr_make_prostitute_effect = {
 	save_scope_value_as = { name = cpr_event value = flag:after_creation }
 
 	# Set origin for debugging
-	set_variable = {
-		name = cpr_origin
-		value = flag:$ORIGIN$
+	if = {
+		limit = { exists = scope:spawn_location }
+		set_variable = {
+			name = cpr_origin
+			value = flag:spawn
+		}
+	}
+	else = {
+		set_variable = {
+			name = cpr_origin
+			value = flag:$ORIGIN$
+		}
 	}
 
 	# Output debug message
@@ -56,7 +147,14 @@ cpr_make_prostitute_effect = {
 	cpr_add_prostitute_traits_effect = yes
 
 	# Set sexuality
-	cpr_set_prostitute_sexuality_effect = { CHARACTER = root }
+	if = {
+		limit = { exists = scope:attraction_check }
+		cpr_set_prostitute_sexuality_effect = { CHARACTER = scope:attraction_check }
+	}
+	else_if = {
+		limit = { exists = root }
+		cpr_set_prostitute_sexuality_effect = { CHARACTER = root }
+	}
 
 	# Start working as prostitute
 	carn_start_working_as_prostitute_effect = yes

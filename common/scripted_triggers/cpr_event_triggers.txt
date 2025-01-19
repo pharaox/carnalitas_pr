@@ -1,0 +1,67 @@
+﻿cpr_province_has_brothels_trigger = {
+	# Has a holding
+	has_holding = yes
+
+	# Has the minimum development level, a relevant building, a major capital, or a major holy site
+	OR = {
+		county ?= { development_level >= 10 }
+
+		has_building_or_higher = common_tradeport_01
+		has_building_or_higher = caravanserai_01
+		has_building_or_higher = market_villages_01
+		has_special_building = yes
+
+		cpr_province_is_capital_trigger = { TIER = tier_duchy }
+		cpr_province_is_holy_site_trigger = { FOLLOWERS = 20 }
+	}
+}
+
+cpr_province_is_major_location_trigger = {
+	is_county_capital = yes
+	has_holding = yes
+	trigger_if = {
+		limit = {
+			county = { development_level >= 50 }
+		}
+		always = yes
+	}
+	trigger_else_if = {
+		limit = {
+			county = { development_level >= 20 }
+		}
+		OR = {
+			cpr_province_is_capital_trigger = { TIER = tier_duchy }
+			cpr_province_is_holy_site_trigger = { FOLLOWERS = 20 }
+		}
+	}
+	trigger_else_if = {
+		limit = {
+			county = { development_level >= 10 }
+		}
+		OR = {
+			cpr_province_is_capital_trigger = { TIER = tier_kingdom }
+			cpr_province_is_holy_site_trigger = { FOLLOWERS = 50 }
+		}
+	}
+	trigger_else = {
+		always = no
+	}
+}
+
+cpr_province_is_capital_trigger = {
+	is_county_capital = yes
+	province_owner ?= {
+		capital_province ?= prev
+		highest_held_title_tier >= $TIER$
+	}
+}
+
+cpr_province_is_holy_site_trigger = {
+	save_temporary_scope_as = province
+	any_religion_global = {
+		any_faith = {
+			num_county_followers >= $FOLLOWERS$
+			scope:province.barony = { is_holy_site_of = prev }
+		}
+	}
+}

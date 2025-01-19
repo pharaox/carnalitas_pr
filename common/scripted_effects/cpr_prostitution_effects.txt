@@ -367,3 +367,32 @@ cpr_rival_stress_impact_effect = {
 		}
 	}
 }
+
+cpr_move_to_major_location_effect = {
+	if = {
+		limit = {
+			location = {
+				cpr_province_is_major_location_trigger = no
+			}
+		}
+
+		# Determine the closest major location as destination
+		location = { save_temporary_scope_as = origin }
+		ordered_province = {
+			limit = { cpr_province_is_major_location_trigger = yes }
+			order_by = {
+				value = "squared_distance(scope:origin)"
+				multiply = -1
+			}
+			save_temporary_scope_as = destination
+		}
+
+		# Teleport to destination
+		cpr_debug_log_2_effect = {
+			MSG = cpr_debug_msg_moving_prostitute
+			NAME1 = origin TYPE1 = flag:province
+			NAME2 = destination TYPE2 = flag:province
+		}
+		set_location = scope:destination
+	}
+}

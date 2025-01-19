@@ -1,4 +1,30 @@
-﻿# Characters getting married
+﻿# Like on_game_start, except it is called once the host (or player, in single player) exits the lobby. Good for anything where you need to know who the players are, or what the game rules are
+on_game_start_after_lobby = {
+	on_actions = {
+		delay = { days = 1 }
+		cpr_on_game_start_after_lobby
+	}
+}
+
+cpr_on_game_start_after_lobby = {
+	effect = {
+		cpr_spawn_prostitutes_effect = yes
+	}
+}
+
+# Called every Jan 1st
+# Root does not exist
+yearly_global_pulse = {
+	on_actions = { cpr_yearly_global_pulse }
+}
+
+cpr_yearly_global_pulse = {
+	effect = {
+		cpr_spawn_prostitutes_effect = yes
+	}
+}
+
+# Characters getting married
 # root = Major partner of the marriage
 # scope:spouse = Minor partner of the marriage
 on_marriage = {
@@ -159,6 +185,20 @@ cpr_random_yearly_everyone_pulse = {
 		if = {
 			limit = { is_ruler = no }
 			cpr_start_or_stop_working_as_prostitute_effect = yes
+		}
+
+		# If working as prostitute, potentially move to a major location
+		if = {
+			limit = {
+				carn_is_working_as_prostitute_trigger = yes
+				is_pool_character = yes
+				cpr_is_slave_trigger = no
+				is_available_adult = yes
+			}
+			random = {
+				chance = 25
+				cpr_move_to_major_location_effect = yes
+			}
 		}
 
 		# Trigger Carnalitas events

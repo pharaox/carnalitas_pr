@@ -62,12 +62,14 @@ echo
 
 # Character creation and removal
 echo "Creating prostitute: $(grep -a "Creating prostitute" $LOGFILE | wc -l)"
+echo "- spawn: $(grep -a "Creating prostitute, origin: spawn" $LOGFILE | wc -l)"
 echo "- generic: $(grep -a "Creating prostitute, origin: generic" $LOGFILE | wc -l)"
 echo "- chariot_race_4030: $(grep -a "Creating prostitute, origin: chariot_race_4030" $LOGFILE | wc -l)"
 echo "- tour_travel_3007: $(grep -a "Creating prostitute, origin: tour_travel_3007" $LOGFILE | wc -l)"
 echo "- tour_travel_3140: $(grep -a "Creating prostitute, origin: tour_travel_3140" $LOGFILE | wc -l)"
 echo "Removing prostitute: $(grep -a "Removing prostitute" $LOGFILE | wc -l)"
 echo "- chariot_race_4030: $(grep -a "Removing prostitute, origin: chariot_race_4030" $LOGFILE | wc -l)"
+echo "Moving prostitute: $(grep -a "Moving prostitute" $LOGFILE | wc -l)"
 echo
 
 # Starting and stopping working as prostitute

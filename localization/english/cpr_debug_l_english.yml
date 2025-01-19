@@ -2,6 +2,9 @@
  cpr_debug_prefix: "[GetCurrentDate.GetStringShort]: [THIS.Char.GetFullNameNoTooltip] ([THIS.Char.GetID])"
  cpr_debug_prefix_2: "[GetCurrentDate.GetStringShort]: [THIS.Char.GetFullNameNoTooltip] ([THIS.Char.GetID], [Select_CString(THIS.Char.IsFemale, 'female', 'male')])"
 
+ # Yearly
+ cpr_debug_msg_spawning_prostitutes: "[GetCurrentDate.GetStringShort]: Spawning prostitutes"
+
  # Prostitution
  cpr_debug_msg_character_started_working_as_prostitute: "$cpr_debug_prefix_2$: Character started working as prostitute, cpr_event: [THIS.Var('cpr_event').GetFlagName]"
  cpr_debug_msg_character_stopped_working_as_prostitute: "$cpr_debug_prefix_2$: Character stopped working as prostitute, cpr_event: [THIS.Var('cpr_event').GetFlagName]"
@@ -39,6 +42,9 @@
  # Character creation and removal
  cpr_debug_msg_creating_prostitute: "$cpr_debug_prefix_2$: Creating prostitute, origin: [THIS.Var('cpr_origin').GetFlagName]"
  cpr_debug_msg_removing_prostitute: "$cpr_debug_prefix_2$: Removing prostitute, origin: [THIS.Var('cpr_origin').GetFlagName]"
+
+ # Moving characters
+ cpr_debug_msg_moving_prostitute: "$cpr_debug_prefix_2$: Moving prostitute, origin: [THIS.Var('origin').Province.GetNameNoTooltip], destination: [THIS.Var('destination').Province.GetNameNoTooltip]"
 
  # Starting and stopping working as prostitute
  cpr_debug_msg_can_no_longer_work_as_prostitute: "$cpr_debug_prefix_2$: Character can no longer work as prostitute"
