@@ -23,7 +23,7 @@ With this mod:
 * **AI rulers may also become prostitutes** depending on their personality, skills, and personal circumstances, or **force their slaves into prostitution**, depending on their personality, opinion of the slave, the slave's skills, etc. AI non-ruler characters that already have the *Prostitute* trait may decide to start or stop working as prostitutes on their own as well.
 * Forcing slaves into prostitution **costs just piety if prostitution is shunned**.
 * **Additional prostitutes** are spawned into the world via vanilla stress coping and other events, available for the player to *Make Love* or interact with in other ways.
-* There is a **lower chance for contracting STD** from vanilla events, and it depends on whether the prostitute is already infected or not.
+* There is a **lower chance for contracting STD** from Carnalitas and vanilla events.
 * Characters **stop working as prostitutes immediately when no longer able** (e.g. due to being imprisoned), not with some months delay.
 * **Prostitution prices** scale more gradually with the *Prostitute* trait XP, and so does **stress loss** from having sex with a prostitute.
 * **Prostitution doctrines** have consistent impact that better reflects their original meaning.
@@ -114,18 +114,19 @@ The above are balanced in such a way that the AI will be rather unlikely to forc
 
 #### Stress Coping Decisions and Events
 
-The most notable prostitution-related vanilla feature is the *Visit a Brothel* stress coping decision for *Rakish* characters and its related events *Stress Coping: Wanton Ways* (`stress_trait_coping_decisions.2001`) and *Stress Coping: The Price of Passion* (`stress_trait_coping_decisions.2002`). These events don't create an actual prostitute character, and also have a rather high chance of 25% for contracting STD, making this stress-coping approach quite dangerous for players.
+The most notable prostitution-related vanilla feature is the stress-coping event chain starting with the *Mental Break: Wanton Desires* (`stress_threshold.1011`) event. Choosing the "trip to the brothel" option gives the *Rakish* trait and enables the *Visit a Brothel* decision and its related events *Stress Coping: Wanton Ways* (`stress_trait_coping_decisions.2001`) and *Stress Coping: The Price of Passion* (`stress_trait_coping_decisions.2002`). All these events don't create an actual prostitute character, and also have a rather high chance of 25% for contracting STD, breaking the balance of this stress-coping approach.
 
-This mod replaces these events with new similar ones, with the following differences:
+This mod replaces the last 2 events with new similar ones, with the following differences:
 
-* An appropriate *Prostitute* character is created (or selected from the pool if available), with a gender that the ruler is attracted to and is allowed by the Carnalitas *Prostitution System* game rule. If this is not possible (e.g. the ruler is attracted only to men, and the game rule is set to *Female Only*), the original vanilla event fires.
+* An appropriate *Prostitute* character is created (or selected from the pool if available), with a gender that the ruler is attracted to and is allowed by the Carnalitas *Prostitution System* game rule. If this is not possible (e.g. the ruler is attracted only to men, and the game rule is set to *Female Only*), the original vanilla event fires (with a lower chance of STD, see below).
 * The ruler has sex with the prostitute, with all usual consequences such as potential pregnancy, etc.
-* The chance for contracting STD is the usual one for having sex, 50% if the partner is infected and 0% if not. Newly created prostitutes may be already infected, or they may contract STD later via [Carnalitas Prostitution Events](#carnalitas-prostitution-events), but on average contracting STD from these events is considerably less likely than in vanilla.
 * The price paid and the stress lost are unchanged.
+
+The chance for contracting STD from all these events is fixed at 12%, considerably lower than in vanilla, but still non-negligible. To ensure it's fair to the player, it doesn't depend on whether the prostitute is infected or not.
 
 #### Other Vanilla Events
 
-Besides the above, there are a few other vanilla events that involve prostitutes. All of them create or select an actual character for the ruler to have sex with. This mod does not replace these events, but just ensures that these characters have the *Prostitute* trait and are working as prostitutes (if allowed by Carnalitas game rules). They may also get additional traits (e.g. *Fornicator*) or contract STD. The following vanilla events are affected:
+Besides the above, there are a few other vanilla events that involve prostitutes. All of them create or select an actual character for the ruler to have sex with. This mod does not replace these events, but ensures that these characters have the *Prostitute* trait and are working as prostitutes (if allowed by Carnalitas game rules). The following vanilla events are affected:
 
 * *The Hippodrome's Refreshments* (`chariot_race.4030`): Have sex with a prostitute during a chariot race activity.
 * *Outside the Walls* (`tour_travel.3140`): Visit a brothel during a tour activity.
@@ -139,8 +140,8 @@ Once created in one way or another, characters having the *Prostitute* trait may
 
 A *Prostitute* character may start or stop working as a prostitute in either of the following ways:
 
-* If they are a ruler, they may decide on their own via the decisions mentioned in [Becoming a Prostitute as Ruler](#becoming-a-prostitute-as-ruler).
-* If they are a slave, they can be forced by their owner via the interactions mentioned in [Forcing Slaves into Prostitution](#forcing-slaves-into-prostitution).
+* If they are a ruler, they may decide on their own as mentioned in [Becoming a Prostitute as Ruler](#becoming-a-prostitute-as-ruler).
+* If they are a slave, they can be forced by their owner as mentioned in [Forcing Slaves into Prostitution](#forcing-slaves-into-prostitution).
 * If they are neither, they may decide on their own via a hidden event that fires for such characters every year, influenced by the factors mentioned in [AI Willingness](#ai-willingness) above.
 
 In order to start working as a prostitute, a character must fulfill certain conditions, such as:
@@ -173,6 +174,18 @@ The above events are changed in this mod in the following way:
 * The chance for good events is higher (and for bad events lower) with higher diplomacy and intrigue, attraction, and *Prostitute* trait XP. These modifiers exist also in Carnalitas but have issues, so this mod fixes them to work as intended.
 * The *Prostitution* trait XP improves more slowly.
 * The event *An Alluring Proposition* now works also for non-ruler prostitutes, considers an expanded range of potential clients, and ensures that finding a client is much more likely than before.
+
+### STD Chances
+
+The chances for contracting STD in various situations after changes by this mod are as follows:
+
+| Situation | Affects | Total | Lover's Pox | Great Pox |
+|---|---|---:|---:|---:|
+| Stress-coping events for *Rakish* characters | Clients | 12% | 10% | 2% |
+| Contract STD prostitution event (~5% chance every year) | Prostitutes | 100% | 80% | 20% |
+| Newly created prostitute characters | Prostitutes | 6% | 5% | 1% |
+| Sex with a partner with *Lover's Pox* | Both | 50% | 50% | - |
+| Sex with a partner with *Great Pox* | Both | 30% | - | 30% |
 
 ### Make Love Prices and Effects
 

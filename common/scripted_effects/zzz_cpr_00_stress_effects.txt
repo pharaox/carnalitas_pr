@@ -58,13 +58,14 @@ vanilla_rakish_brothel_night_effect = {
 
 		# Possible STD transmission
 		random_list = {
-			75 = {
+			# CPR Lowered chance for STD
+			88 = {
 				#Nothing
 			}
-			20 = {
+			10 = {
 				contract_disease_notify_effect = { DISEASE = lovers_pox }
 			}
-			5 = {
+			2 = {
 				contract_disease_notify_effect = { DISEASE = great_pox }
 			}
 		}

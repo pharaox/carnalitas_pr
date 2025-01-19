@@ -5,9 +5,10 @@ cpr_rakish_brothel_night_effect = {
 			NOT = { exists = scope:prostitute }
 		}
 
-		# Use vanilla effect as tooltip to prevent errors
+		# Use simple tooltip to prevent errors
 		show_as_tooltip = {
-			vanilla_rakish_brothel_night_effect = yes
+			custom_tooltip = stress_threshold.1011.rakish.tt
+			add_stress = major_stress_impact_loss
 		}
 
 		hidden_effect_new_object = {
@@ -46,8 +47,9 @@ cpr_rakish_brothel_night_prostitute_effect = {
 	# Warn about possible negative consequences
 	custom_tooltip = stress_threshold.1011.rakish.tt
 
-	# Use Carnalitas sex effect w/o stress and memory
+	# Use Carnalitas sex effect w/o stress, memory, and std
 	carn_sex_scene_no_memory_effect = yes
+	carn_sex_scene_no_std_effect = yes
 	carn_had_sex_with_effect = {
 		CHARACTER_1 = root
 		CHARACTER_2 = scope:prostitute
@@ -55,6 +57,19 @@ cpr_rakish_brothel_night_prostitute_effect = {
 		C2_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
 		STRESS_EFFECTS = no
 		DRAMA = yes
+	}
+
+	hidden_effect = {
+		# Potentially contract STD with a fixed chance
+		random_list = {
+			88 = {}
+			10 = {
+				contract_disease_notify_effect = { DISEASE = lovers_pox }
+			}
+			2 = {
+				contract_disease_notify_effect = { DISEASE = great_pox }
+			}
+		}
 	}
 
 	# Lose stress

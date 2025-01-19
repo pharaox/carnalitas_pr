@@ -1,0 +1,27 @@
+﻿#50% risk of herpes (if partner has it) and 30% risk of great pox (if partner has it). Added through event. Needs argument PARTNER
+risk_of_std_from_effect = {
+	# CPR Do nothing if STD is disabled for the sex scene / effect
+	if = {
+		limit = { carn_sex_scene_no_std_trigger = no }
+		random = {
+			chance = 50
+			modifier = {
+				add = -30
+				has_perk = wash_your_hands_perk
+			}
+			contract_lovers_pox_from = { PARTNER = $PARTNER$ }
+		}
+		random = {
+			chance = 30
+			modifier = {
+				add = -10
+				has_perk = wash_your_hands_perk
+			}
+			modifier = {
+				add = -30
+				has_character_flag = contraction_cooldown_great_pox
+			}
+			contract_great_pox_from = { PARTNER = $PARTNER$ }
+		}
+	}
+}
