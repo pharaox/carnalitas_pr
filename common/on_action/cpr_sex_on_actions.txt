@@ -4,7 +4,6 @@
 
 cpr_on_sex_v2 = {
 	trigger = {
-		debug_only = yes
 		OR = {
 			carn_is_working_as_prostitute_trigger = yes
 			scope:carn_sex_partner = {
@@ -27,6 +26,17 @@ cpr_on_sex_v2 = {
 				NAME1 = carn_sex_partner TYPE1 = flag:character
 			}
 		}
+
+		# Give secrets here, since this on_action is triggered before they are given
+		# TODO Fix this in Carnalitas
+		give_incest_secret_or_nothing_with_target_effect = { CHARACTER = scope:carn_sex_partner }
+		give_homosexual_secret_or_nothing_with_target_effect = { CHARACTER = scope:carn_sex_partner }
+		scope:carn_sex_partner = {
+			give_incest_secret_or_nothing_with_target_effect = { CHARACTER = scope:carn_sex_player }
+			give_homosexual_secret_or_nothing_with_target_effect = { CHARACTER = scope:carn_sex_player }
+		}
+
+		cpr_potentially_learn_secret_mutual_effect = { CHARACTER = scope:carn_sex_partner }
 	}
 }
 

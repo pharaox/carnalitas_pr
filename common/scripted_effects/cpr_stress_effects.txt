@@ -59,6 +59,11 @@ cpr_rakish_brothel_night_prostitute_effect = {
 		DRAMA = yes
 	}
 
+	# Warn about potentially learning secrets
+	show_as_tooltip = {
+		cpr_potentially_learn_secret_mutual_effect = { CHARACTER = scope:prostitute }
+	}
+
 	hidden_effect = {
 		# Potentially contract STD with a fixed chance
 		random_list = {

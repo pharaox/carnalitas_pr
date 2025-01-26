@@ -19,6 +19,9 @@
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
+		show_as_tooltip = {
+			cpr_potentially_learn_secret_mutual_effect = { CHARACTER = $CHARACTER$ }
+		}
 	}
 	else = {
 		carn_had_sex_with_effect = {

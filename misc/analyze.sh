@@ -24,6 +24,7 @@ echo
 echo "Character had sex with prostitute: $(grep -a "Character had sex with prostitute" $LOGFILE | wc -l)"
 echo "Prostitute had sex with character: $(grep -a "Prostitute had sex with character" $LOGFILE | wc -l)"
 echo "Prostitute got pregnant: $(grep -a "Prostitute got pregnant" $LOGFILE | wc -l)"
+echo "Character learned a secret: $(grep -a "Character learned a secret" $LOGFILE | wc -l)"
 echo
 
 # Health

@@ -1,0 +1,8 @@
+﻿carnx_sex_interaction_other_impact_effect = {
+	if = {
+		limit = { carn_is_working_as_prostitute_trigger = yes }
+		show_as_tooltip = {
+			cpr_potentially_learn_secret_mutual_effect = { CHARACTER = $PARTNER$ }
+		}
+	}
+}

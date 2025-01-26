@@ -17,4 +17,5 @@
  carn_accepts_prostitution_trigger: "Prostitution is accepted by faith or culture"
  carn_not_accepts_prostitution_trigger: "Prostitution is  #bold not#! accepted by faith or culture"
 
+ cpr_may_learn_secret_tooltip: "[secret_learner.GetShortUIName|U] may learn a secret from [secret_knower.GetShortUIName]"
  cpr_empty_tooltip: ""

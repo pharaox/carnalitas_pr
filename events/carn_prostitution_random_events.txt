@@ -327,6 +327,7 @@ carn_prostitution_random_events.0011 = {
 				STRESS_EFFECTS = yes
 				DRAMA = yes
 			}
+			cpr_potentially_learn_secret_mutual_effect = { CHARACTER = scope:client }
 		}
 		hidden_effect = {
 			if = {
