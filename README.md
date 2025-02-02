@@ -14,6 +14,7 @@ The latest version is compatible with CK3 1.14.x and Carnalitas 2.8.
 * Forcing slaves into prostitution if it's shunned costs a piety level. This penalty is too harsh, and also inconsistent with other similar penalties, e.g. for enslaving prisoners.
 * The vanilla game features a number of events that involve visiting brothels or having sex with prostitutes. However, they are not integrated with Carnalitas prostitution in any way.
 * The chance for contracting STD from both Carnalitas and vanilla events is too high.
+* Having sex with a prostitute via *Make Love* is hardly worth the money paid, since there are no benefits compared to free sex.
 * As a player prostitute, you don't get many opportunities to have sex wih clients. There is only one such event (*An Alluring Proposition*), but it's rather unlikely to fire.
 
 This mod does for prostitution what [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/) does for slavery. It improves and expands the original system, aiming to better integrate it with the existing vanilla content and other aspects of the game, make interacting with prostitutes more interesting and rewarding, enable more roleplaying options, and achieve a better game balance. It does this by reworking prostitution decisions, interactions, and events (including vanilla ones), introducing some new ones, and rebalancing or fixing some of the original effects and outcomes, while still maintaining compatibility with other Carnalitas features and other mods based on Carnalitas.
@@ -25,8 +26,8 @@ With this mod:
 * **Additional prostitutes** are spawned into the world via vanilla stress coping and other events, available for the player to *Make Love* or interact with in other ways.
 * There is a **lower chance for contracting STD** from Carnalitas and vanilla events.
 * Characters **stop working as prostitutes immediately when no longer able** (e.g. due to being imprisoned), not with some months delay.
-* **Prostitution prices** scale more gradually with the *Prostitute* trait XP, and so does **stress loss** from having sex with a prostitute.
-* **Prostitution doctrines** have consistent impact that better reflects their original meaning.
+* *Make Love* **prostitution prices** scale more gradually with the *Prostitute* trait XP, and so does **stress loss**.
+* Having sex with a prostitute may result in **secrets being learned** by either of the partners.
 * In future versions, there will be more **prostitution-related interactions, decisions, and events** for prostitutes to offer their services to clients, and for rulers to visit brothels during travel or while visiting holdings as landless adventurers.
 
 All taken together, prostitution is no longer a rarely used player-only feature, but instead a global social phenomenon that affects the gameplay in various ways. As a player, you can choose between many different ways to interact with the system to either roleplay or use it to your advantage.
@@ -132,6 +133,17 @@ Besides the above, there are a few other vanilla events that involve prostitutes
 * *Outside the Walls* (`tour_travel.3140`): Visit a brothel during a tour activity.
 * *House of Pleasure*, (`tour_travel.3007`): Get taken to a brothel during a tour activity.
 
+### Spawning Additional Prostitutes
+
+Besides the ways already described, additional prostitutes are spawned every year in major locations, such as capitals and holy sites. Every such location tends to have at least one working prostitute at any given moment. Existing prostitutes may decide to move to such a location, if not already in one. The exact criteria is as follows:
+
+| Development | Other Conditions |
+|---|---|
+| >= 50 | Always |
+| >= 20 | Capital of at least a duchy, or holy site of a faith with at least 20 counties |
+| >= 10 | Capital of at least a kingdom, or holy site of a faith with at least 50 counties |
+|  < 10 | Never |
+
 ### Prostitute Characters
 
 Once created in one way or another, characters having the *Prostitute* trait may be either working as prostitutes or not. If they are working, they can be targeted by the *Make Love* interaction and get the [Carnalitas Prostitution Events](#carnalitas-prostitution-events).
@@ -187,6 +199,16 @@ The chances for contracting STD in various situations after changes by this mod 
 | Sex with a partner with *Lover's Pox* | Both | 50% | 50% | - |
 | Sex with a partner with *Great Pox* | Both | 30% | - | 30% |
 
-### Make Love Prices and Effects
+### Having Sex with Prostitutes
 
-TODO
+#### Prices and Stress Effects
+
+The price for having sex with a prostitute via the Carnalitas *Make Love* interaction scales more gradually with the *Prostitute* trait XP, and the stress loss scales similarly. Having sex with a "masterful" prostitute (100 XP) is twice as expensive, and loses twice the amount of stress, compared with having sex with a "novice" prostitute (0 XP).
+
+Having sex with prostitutes in stress-coping and other events costs a fixed amount of gold and confers fixed benefits. The actual amount depends on the monthly income, with 15 as minimum.
+
+#### Learning Secrets
+
+When having sex with a prostitute, if one partner knows any secrets, the other may learn a random one of them if they win an intrigue duel. The secret is not revealed to anyone else.
+
+For players, this means that they may learn secrets by paying for sex with prostitutes, especially if they have high intrigue. Any secret they know may be learned as well by the prostitute, but the chance for negative consequences because of this is rather low.
