@@ -1,0 +1,21 @@
+﻿l_german:
+ carn_cannot_have_max_number_of_slave_prostitutes: "Cannot have more than [EmptyScope.ScriptValue('carn_max_slave_prostitutes_per_owner')|0] slaves working as prostitutes"
+
+ carn_not_effective_age_under_value_cutoff: "Age is not less than $VALUE|0$"
+
+ carn_i_can_have_sex_trigger: "You can have sex"
+ carn_not_i_can_have_sex_trigger: "You cannot have sex"
+ carn_they_can_have_sex_trigger: "[CHARACTER.GetShortUIName|U] can have sex"
+ carn_not_they_can_have_sex_trigger: "[CHARACTER.GetShortUIName|U] cannot have sex"
+ carn_can_have_sex_trigger: "Can have sex"
+ carn_not_can_have_sex_trigger: "Cannot have sex"
+
+ carn_i_accepts_prostitution_trigger: "Prostitution is accepted by your faith or culture"
+ carn_not_i_accepts_prostitution_trigger: "Prostitution is #bold not#! accepted by your faith or culture"
+ carn_they_accepts_prostitution_trigger: "Prostitution is accepted by [CHARACTER.GetShortUINamePossessive|U] faith or culture"
+ carn_not_they_accepts_prostitution_trigger: "Prostitution is #bold not#! accepted by [CHARACTER.GetShortUINamePossessive|U] faith or culture"
+ carn_accepts_prostitution_trigger: "Prostitution is accepted by faith or culture"
+ carn_not_accepts_prostitution_trigger: "Prostitution is  #bold not#! accepted by faith or culture"
+
+ cpr_may_learn_secret_tooltip: "[secret_learner.GetShortUIName|U] may learn a secret from [secret_knower.GetShortUIName]"
+ cpr_empty_tooltip: ""
