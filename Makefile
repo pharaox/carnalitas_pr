@@ -8,7 +8,7 @@ tiger:
 
 .PHONY: update-deps
 update-deps:
-	rsync -r --exclude=CHANGELOG.md --exclude=descriptor.mod --exclude=VERSION --exclude="localization/german" --exclude="localization/spanish" ../vls/* .
+	rsync -r --exclude=CHANGELOG.md --exclude=descriptor.mod --exclude=VERSION ../vls/* .
 
 .PHONY: build
 build: clean
