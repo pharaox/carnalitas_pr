@@ -48,7 +48,7 @@ carn_work_as_prostitute_decision = {
 				NAME1 = work_as_prostitute_ai_willingness TYPE1 = flag:value
 			}
 
-			custom_tooltip = cpr_debug_work_as_prostitute_ai_willingness_tooltip
+			#custom_tooltip = cpr_debug_work_as_prostitute_ai_willingness_tooltip
 		}
 
 		# Set event for carn_on_start_working_as_prostitute
@@ -165,7 +165,7 @@ carn_stop_work_as_prostitute_decision = {
 				NAME1 = work_as_prostitute_ai_willingness TYPE1 = flag:value
 			}
 
-			custom_tooltip = cpr_debug_work_as_prostitute_ai_willingness_tooltip
+			#custom_tooltip = cpr_debug_work_as_prostitute_ai_willingness_tooltip
 		}
 
 		# Set event for carn_on_stop_working_as_prostitute

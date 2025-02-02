@@ -53,7 +53,7 @@ carn_force_start_prostitution_interaction = {
 				}
 			}
 
-			custom_tooltip = cpr_debug_force_prostitution_ai_willingness_tooltip
+			#custom_tooltip = cpr_debug_force_prostitution_ai_willingness_tooltip
 		}
 
 		save_scope_value_as = { name = cpr_event value = flag:interaction }
