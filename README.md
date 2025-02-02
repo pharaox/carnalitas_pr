@@ -138,7 +138,7 @@ Besides the above, there are a few other vanilla events that involve prostitutes
 Besides the ways already described, additional prostitutes are spawned every year in major locations, such as capitals and holy sites. Every such location tends to have at least one working prostitute at any given moment. Existing prostitutes may decide to move to such a location, if not already in one. The exact criteria is as follows:
 
 | Development | Other Conditions |
-|---|---|
+|---:|:---|
 | >= 50 | Always |
 | >= 20 | Capital of at least a duchy, or holy site of a faith with at least 20 counties |
 | >= 10 | Capital of at least a kingdom, or holy site of a faith with at least 50 counties |
@@ -192,7 +192,7 @@ The above events are changed in this mod in the following way:
 The chances for contracting STD in various situations after changes by this mod are as follows:
 
 | Situation | Affects | Total | Lover's Pox | Great Pox |
-|---|---|---:|---:|---:|
+|:---|:---|---:|---:|---:|
 | Stress-coping events for *Rakish* characters | Clients | 12% | 10% | 2% |
 | Contract STD prostitution event (~5% chance every year) | Prostitutes | 100% | 80% | 20% |
 | Newly created prostitute characters | Prostitutes | 6% | 5% | 1% |
