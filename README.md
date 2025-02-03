@@ -1,6 +1,6 @@
 # Carnalitas Prostitution Reimagined
 
-[Download from LoversLab](?)
+[Download from LoversLab](https://www.loverslab.com/files/file/39623-carnalitas-prostitution-reimagined/)
 
 A comprehensive rework of the Carnalitas prostitution system aiming at improved balance and better integration with other aspects of the game.
 
@@ -15,7 +15,7 @@ The latest version is compatible with CK3 1.14.x and Carnalitas 2.8.
 * The vanilla game features a number of events that involve visiting brothels or having sex with prostitutes. However, they are not integrated with Carnalitas prostitution in any way.
 * The chance for contracting STD from both Carnalitas and vanilla events is too high.
 * Having sex with a prostitute via *Make Love* is hardly worth the money paid, since there are no benefits compared to free sex.
-* As a player prostitute, you don't get many opportunities to have sex wih clients. There is only one such event (*An Alluring Proposition*), but it's rather unlikely to fire.
+* As a player prostitute, you don't get many opportunities to have sex with clients. There is only one such event (*An Alluring Proposition*), but it's rather unlikely to fire.
 
 This mod does for prostitution what [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/) does for slavery. It improves and expands the original system, aiming to better integrate it with the existing vanilla content and other aspects of the game, make interacting with prostitutes more interesting and rewarding, enable more roleplaying options, and achieve a better game balance. It does this by reworking prostitution decisions, interactions, and events (including vanilla ones), introducing some new ones, and rebalancing or fixing some of the original effects and outcomes, while still maintaining compatibility with other Carnalitas features and other mods based on Carnalitas.
 
@@ -54,7 +54,7 @@ This mod is currently available in English. For other languages, it uses the ori
 
 ## Links
 
-* [LoversLab](?)
+* [LoversLab](https://www.loverslab.com/files/file/39623-carnalitas-prostitution-reimagined/)
 * [GitHub Repository](https://github.com/pharaox/carnalitas_pr)
 
 If you like this mod, you may also consider my other mods:
