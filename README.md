@@ -50,7 +50,7 @@ If you still want to try using CPR with a conversion mod, be prepared that some 
 
 ## Localization
 
-This mod is currently available in English. For other languages, it uses the original English text as a placeholder.
+This mod is currently available in English and Chinese (translated by [@Dark_Crow](https://www.loverslab.com/profile/10396935-dark_crow/)). For other languages, it uses the original English text as a placeholder.
 
 ## Links
 
