@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 0.1.1
+
+### Localization
+
+* Added Chinese translation by **@Dark_Crow**.
+
 ## Version 0.1.0
 
 ### Decisions
