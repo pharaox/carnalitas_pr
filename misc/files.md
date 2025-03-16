@@ -6,18 +6,23 @@
 
 * `common/decisions/90_minor_decisions.txt`
   * `stress_loss_rakish_decision`
-* `common/scripted_character_templates/zzz_cpr_00_peasants_template.txt`
+* `common/scripted_character_templates/00_peasants_template.txt`
   * `beautiful_peasant_character`
-* `common/scripted_character_templates/zzz_cpr_07_ep3_character_templates.txt`
+* `common/scripted_character_templates/07_ep3_character_templates.txt`
   * `ep3_prostitute_character`
-* `common/scripted_effects/zzz_cpr_00_death_management_effects.txt`
+* `common/scripted_effects/00_death_management_effects.txt`
   * `silent_disappearance_effect`
-* `common/scripted_effects/zzz_cpr_00_personal_details_effects.txt`
+* `common/scripted_effects/00_health_effects.txt`
+  * `risk_of_std_from_effect`
+* `common/scripted_effects/00_personal_details_effects.txt`
   * `get_quirk_character_effect`
-* `common/scripted_effects/zzz_cpr_00_scripted_effects.txt`
+* `common/scripted_effects/00_scripted_effects.txt`
   * `disease_data_save_contraction_effect`
-* `common/scripted_effects/zzz_cpr_00_stress_effects.txt`
+* `common/scripted_effects/00_stress_effects.txt`
   * `rakish_brothel_night_effect`
+* `events/stress_events/stress_trait_coping_decisions_events.txt`
+  * `stress_trait_coping_decisions.2001`
+  * `stress_trait_coping_decisions.2002`
 
 ## Carnalitas Files and Objects
 

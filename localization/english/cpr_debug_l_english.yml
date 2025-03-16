@@ -23,6 +23,9 @@
  cpr_debug_msg_stress_trait_coping_decisions_2001_fired: "$cpr_debug_prefix_2$: $stress_trait_coping_decisions.2001.t$ event fired"
  cpr_debug_msg_stress_trait_coping_decisions_2002_fired: "$cpr_debug_prefix_2$: $stress_trait_coping_decisions.2002.t$ event fired"
 
+ cpr_debug_msg_stress_trait_coping_decisions_2004_scheduled: "$cpr_debug_prefix_2$: $stress_trait_coping_decisions.2004.t$ event scheduled"
+ cpr_debug_msg_stress_trait_coping_decisions_2004_fired: "$cpr_debug_prefix_2$: $stress_trait_coping_decisions.2004.t$ event fired"
+
  # Carnalitas events
  cpr_debug_msg_prostitution_random_events_0001_fired: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0001.notification$ event fired, trait_xp: [THIS.Var('trait_xp').GetValue]"
  cpr_debug_msg_prostitution_random_events_0002_fired: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0002.notification$ event fired"

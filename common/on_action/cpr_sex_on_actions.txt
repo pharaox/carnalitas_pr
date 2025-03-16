@@ -46,7 +46,6 @@ carn_on_pregnancy = {
 
 cpr_on_pregnancy = {
 	trigger = {
-		debug_only = yes
 		carn_is_working_as_prostitute_trigger = yes
 	}
 
@@ -54,6 +53,21 @@ cpr_on_pregnancy = {
 		cpr_debug_log_1_effect = {
 			MSG = cpr_debug_msg_prostitute_got_pregnant
 			NAME1 = father TYPE1 = flag:character
+		}
+
+		if = {
+			limit = {
+				is_ai = yes
+				scope:father = { is_playable_character = yes }
+			}
+			save_scope_as = pregnant_prostitute
+			scope:father = {
+				cpr_debug_log_effect = { MSG = cpr_debug_msg_stress_trait_coping_decisions_2004_scheduled }
+				trigger_event = {
+					id = cpr_stress_trait_coping_decisions.2004
+					months = { 10 15 }
+				}
+			}
 		}
 	}
 }

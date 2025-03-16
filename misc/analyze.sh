@@ -37,6 +37,8 @@ echo
 # Stress coping events
 echo "Stress Coping: Wanton Ways event fired: $(grep -a "Stress Coping: Wanton Ways event fired" $LOGFILE | wc -l)"
 echo "Stress Coping: The Price of Passion event fired: $(grep -a "Stress Coping: The Price of Passion event fired" $LOGFILE | wc -l)"
+echo "Stress Coping: Consequences event scheduled: $(grep -a "Stress Coping: Consequences event scheduled" $LOGFILE | wc -l)"
+echo "Stress Coping: Consequences event fired: $(grep -a "Stress Coping: Consequences event fired" $LOGFILE | wc -l)"
 echo
 
 # Carnalitas events

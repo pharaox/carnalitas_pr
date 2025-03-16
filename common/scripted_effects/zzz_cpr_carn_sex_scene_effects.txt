@@ -1,7 +1,0 @@
-﻿# TODO Remove when available in Carnalitas
-carn_sex_scene_no_std_effect = {
-	add_to_variable_list = {
-		name = carn_sex_scene_option_flag_list
-		target = flag:no_std
-	}
-}

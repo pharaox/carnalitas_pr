@@ -283,3 +283,189 @@ cpr_stress_trait_coping_decisions.2002 = {
 		}
 	}
 }
+
+cpr_stress_trait_coping_decisions.2004 = {
+	type = character_event
+	title = stress_trait_coping_decisions.2004.t
+	desc = stress_trait_coping_decisions.2004.desc
+
+	cooldown = { years = 10 }
+
+	theme = mental_break
+	override_background = { reference = market }
+
+	left_portrait = { 
+		character = root
+		animation = stunned
+	}
+	right_portrait = {
+		character = scope:prostitute
+		animation = newborn
+	}
+	lower_center_portrait = scope:baby
+
+	trigger = {
+		scope:pregnant_prostitute ?= {
+			is_alive = yes
+			any_child = {
+				age < 1
+				real_father = root
+			}
+		}
+	}
+
+	immediate = {
+		cpr_debug_log_effect = { MSG = cpr_debug_msg_stress_trait_coping_decisions_2004_fired }
+
+		# Save pregnant prostitute as prostitute
+		scope:pregnant_prostitute = {
+			save_scope_as = prostitute
+		}
+
+		# Save characters who might be annoyed at your claiming a bastard
+		every_spouse = { 
+			add_to_list = insulted_list
+		}
+		every_child = {
+			limit = {
+				NOR = {
+					has_trait = bastard
+					has_trait = wild_oat
+				}
+			}
+			add_to_list = insulted_list
+		}
+		every_relation = {
+			type = lover
+			add_to_list = insulted_list
+		}
+
+		# Create a child of real father and prostitute
+		scope:prostitute = {
+			random_child = {
+				limit = {
+					age < 1
+					real_father = root
+				}
+				save_scope_as = baby
+			}
+		}
+
+		# Add bastardy trait to child
+		scope:baby = {
+			if = {
+				limit = {
+					faith = { has_doctrine = doctrine_bastardry_none }
+				}
+				add_trait = wild_oat
+			}
+			else = {
+				add_trait = bastard
+			}
+		}
+	}
+
+	option = { # Claim child as own
+		name = stress_trait_coping_decisions.2004.a
+
+		scope:baby = {
+			set_father = root
+			set_house = root.house
+		}
+
+		add_courtier = scope:baby
+		add_courtier = scope:prostitute
+
+		every_in_list = {
+			list = insulted_list
+			custom = stress_trait_coping_decisions_2004_a_custom
+			limit = {
+				NOR = {
+					this = scope:baby
+					this = scope:prostitute
+				}
+			}
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -25
+			}
+			add_opinion = {
+				target = scope:prostitute
+				modifier = angry_opinion
+				opinion = -50
+			}
+			add_opinion = {
+				target = scope:baby
+				modifier = angry_opinion
+				opinion = -50
+			}
+		}
+
+		add_legitimacy = major_legitimacy_loss
+
+		stress_impact = {
+			base = minor_stress_impact_gain
+			callous = medium_stress_impact_gain
+			paranoid = medium_stress_impact_gain
+			arrogant = medium_stress_impact_gain
+			humble = minor_stress_impact_loss
+			compassionate = medium_stress_impact_loss
+		}
+	}
+
+	option = { # Take child and mother into court, but don't acknowledge them as your own
+		name = stress_trait_coping_decisions.2004.b
+
+		add_piety = minor_piety_gain
+
+		add_courtier = scope:baby
+		add_courtier = scope:prostitute
+
+		every_in_list = {
+			list = insulted_list
+			custom = stress_trait_coping_decisions_2004_a_custom
+			limit = {
+				NOR = {
+					this = scope:baby
+					this = scope:prostitute
+				}
+			}
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -10
+			}
+			add_opinion = {
+				target = scope:prostitute
+				modifier = angry_opinion
+				opinion = -25
+			}
+			add_opinion = {
+				target = scope:baby
+				modifier = angry_opinion
+				opinion = -25
+			}
+		}
+
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
+			generous = medium_stress_impact_loss
+			compassionate = minor_stress_impact_loss
+		}
+	}
+
+	option = { # Reject child and mother
+		name = stress_trait_coping_decisions.2004.c
+
+		stress_impact = {
+			base = medium_stress_impact_gain
+			callous = minor_stress_impact_loss
+			compassionate = medium_stress_impact_gain
+			honest = medium_stress_impact_gain
+		}
+	}
+}
