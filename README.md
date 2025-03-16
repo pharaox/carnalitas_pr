@@ -4,7 +4,7 @@
 
 A comprehensive rework of the Carnalitas prostitution system aiming at improved balance and better integration with other aspects of the game.
 
-The latest version is compatible with CK3 1.14.x and Carnalitas 2.8.
+The latest version is compatible with CK3 1.15.x and Carnalitas 2.9. If you are still on CK3 1.14.x, download [version 0.1.1](https://github.com/pharaox/carnalitas_sex/releases/download/0.1.1/carnalitas_love_reimagined-0.1.1.zip) instead, and use it with Carnalitas 2.8.
 
 ## Overview
 
