@@ -98,5 +98,3 @@
  cpr_debug_value_concubine_desc: "Concubine"
  cpr_debug_value_children_desc: "Children"
  cpr_debug_value_ruler_desc: "Ruler"
- cpr_debug_value_courtier_desc: "Courtier"
- cpr_debug_value_guest_desc: "Guest"

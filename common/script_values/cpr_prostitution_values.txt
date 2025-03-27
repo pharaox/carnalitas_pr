@@ -162,26 +162,12 @@
 		}
 	}
 
-	# Personal circumstances: ruler, courtier, or guest
+	# Personal circumstances: ruler
 	if = {
 		limit = { is_ruler = yes }
 		add = {
-			value = -25
-			desc = cpr_debug_value_ruler_desc
-		}
-	}
-	else_if = {
-		limit = { is_courtier = yes }
-		add = {
 			value = -10
-			desc = cpr_debug_value_courtier_desc
-		}
-	}
-	else_if = {
-		limit = { is_pool_guest = yes }
-		add = {
-			value = -5
-			desc = cpr_debug_value_guest_desc
+			desc = cpr_debug_value_ruler_desc
 		}
 	}
 }
