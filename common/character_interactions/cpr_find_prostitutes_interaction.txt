@@ -1,0 +1,191 @@
+﻿# Find prostitutes.
+# Human player only.
+cpr_find_prostitutes_interaction = {
+	category = interaction_category_friendly
+	desc = cpr_find_prostitutes_interaction_desc
+	icon = cpr_prostitution
+	override_background = { reference = bedchamber }
+
+	populate_recipient_list = {
+		every_living_character = {
+			limit = {
+				is_ai = yes
+				cpr_in_diplo_range_trigger = { PARTY = scope:actor }
+				carn_is_working_as_prostitute_trigger = yes
+			}
+			add_to_list = characters
+		}
+	}
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+		}
+		scope:actor = scope:recipient
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			# Available
+			trigger_if = {
+				limit = { is_landless_adventurer = yes }
+				is_available_allow_travelling = yes
+			}
+			trigger_else = {
+				is_available = yes
+			}
+			is_busy_in_events_localised = yes
+		}
+	}
+
+	send_option = {
+		is_shown = {
+			exists = scope:secondary_recipient
+			scope:actor = {
+				is_character_interaction_shown = {
+					interaction = carn_sex_interaction
+					recipient = scope:secondary_recipient
+				}
+			}
+		}
+		is_valid = {
+			custom_tooltip = {
+				text = cpr_sex_interaction_not_valid_tt
+				scope:actor = {
+					is_character_interaction_valid = {
+						interaction = carn_sex_interaction
+						recipient = scope:secondary_recipient
+					}
+				}
+			}
+		}
+		flag = sex
+		localization = cpr_sex_option
+		current_description = {
+			desc = cpr_sex_option_desc
+		}
+	}
+
+	send_option = {
+		is_shown = {
+			exists = scope:secondary_recipient
+			scope:actor = {
+				is_landless_adventurer = no
+				is_character_interaction_shown = {
+					interaction = invite_to_court_interaction
+					recipient = scope:secondary_recipient
+				}
+			}
+		}
+		is_valid = {
+			custom_tooltip = {
+				text = cpr_invite_to_court_interaction_not_accepted_tt
+				scope:actor = {
+					is_character_interaction_potentially_accepted = {
+						interaction = invite_to_court_interaction
+						recipient = scope:secondary_recipient
+					}
+				}
+			}
+		}
+		flag = invite_to_court
+		localization = cpr_invite_to_court_option
+		current_description = {
+			desc = cpr_invite_to_court_option_desc
+		}
+	}
+
+	send_option = {
+		is_shown = {
+			exists = scope:secondary_recipient
+			scope:actor = {
+				is_character_interaction_shown = {
+					interaction = travl_invite_as_guest_interaction
+					recipient = scope:secondary_recipient
+				}
+			}
+		}
+		is_valid = {
+			custom_tooltip = {
+				text = cpr_invite_as_guest_interaction_not_accepted_tt
+				scope:actor = {
+					is_character_interaction_potentially_accepted = {
+						interaction = travl_invite_as_guest_interaction
+						recipient = scope:secondary_recipient
+					}
+				}
+			}
+		}
+		flag = invite_as_guest
+		localization = cpr_invite_as_guest_option
+		current_description = {
+			desc = cpr_invite_as_guest_option_desc
+		}
+	}
+
+	send_options_exclusive = yes
+
+	on_accept = {
+		switch = {
+			trigger = yes
+
+			scope:sex = {
+				scope:actor = {
+					custom_tooltip = cpr_sex_interaction_warning_tt
+				}
+				open_interaction_window = {
+					interaction = carn_sex_interaction
+					actor = scope:actor
+					recipient = scope:secondary_recipient
+				}
+			}
+
+			scope:invite_to_court = {
+				scope:actor = {
+					custom_tooltip = cpr_invite_to_court_interaction_warning_tt
+				}
+				show_as_tooltip = {
+					scope:secondary_recipient = {
+						every_traveling_family_member = {
+							scope:actor = {
+								add_courtier = prev
+							}
+						}
+					}
+					scope:actor = {
+						stress_impact = {
+							shy = minor_stress_impact_gain
+						}
+					}
+				}
+				open_interaction_window = {
+					interaction = invite_to_court_interaction
+					actor = scope:actor
+					recipient = scope:secondary_recipient
+				}
+			}
+
+			scope:invite_as_guest = {
+				scope:actor = {
+					custom_tooltip = cpr_invite_as_guest_interaction_warning_tt
+				}
+				show_as_tooltip = {
+					scope:secondary_recipient = {
+						every_traveling_family_member = {
+							scope:actor = {
+								add_visiting_courtier = prev
+							}
+						}
+					}
+				}
+				open_interaction_window = {
+					interaction = travl_invite_as_guest_interaction
+					actor = scope:actor
+					recipient = scope:secondary_recipient
+				}
+			}
+		}
+	}
+
+	auto_accept = yes
+}

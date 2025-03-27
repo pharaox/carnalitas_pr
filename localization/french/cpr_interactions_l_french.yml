@@ -1,0 +1,22 @@
+﻿l_french:
+ cpr_find_prostitutes_interaction: "Interact with Prostitute"
+ cpr_find_prostitutes_interaction_desc: "Find a working prostitute to have sex with or invite to court"
+
+ recipient_secondary_cpr_find_prostitutes_interaction: "Prostitute"
+
+ cpr_sex_option: "$carn_sex_interaction$"
+ cpr_sex_option_desc: "Open #EMP $carn_sex_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]"
+ cpr_invite_to_court_option: "Invite to Court"
+ cpr_invite_to_court_option_desc: "Open #EMP $invite_to_court_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]"
+ cpr_invite_as_guest_option: "$travl_invite_as_guest_interaction$"
+ cpr_invite_as_guest_option_desc: "Open #EMP $travl_invite_as_guest_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]"
+
+ cpr_sex_interaction_not_valid_tt: "$carn_sex_interaction$ is not valid for [secondary_recipient.GetShortUINameNoTooltip] at the moment."
+ cpr_invite_to_court_interaction_not_accepted_tt: "$invite_to_court_interaction$ is not valid for [secondary_recipient.GetShortUINameNoTooltip] or they will not accept it at the moment."
+ cpr_invite_as_guest_interaction_not_accepted_tt: "$travl_invite_as_guest_interaction$ is not valid for [secondary_recipient.GetShortUINameNoTooltip] or will not accept it at the moment."
+
+ cpr_sex_interaction_warning_tt: "#X Opens #EMP $carn_sex_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]#!"
+ cpr_invite_to_court_interaction_warning_tt: "#X Opens #EMP $invite_to_court_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]#!"
+ cpr_invite_as_guest_interaction_warning_tt: "#X Opens #EMP $travl_invite_as_guest_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]#!"
+
+ travl_invite_as_guest_interaction: "Invite as Guest"

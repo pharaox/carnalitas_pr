@@ -15,11 +15,14 @@
 		has_trait = devoted
 	}
 
-	# All spouses accept prostitution if married,
+	# Primary spouse accepts prostitution if married,
 	trigger_if = {
 		limit = { is_married = yes }
 		primary_spouse = {
-			carn_accepts_prostitution_trigger = yes
+			trigger_if = {
+				limit = { carn_is_prostitute_trigger = no }
+				carn_accepts_prostitution_trigger = yes
+			}
 		}
 	}
 
@@ -27,7 +30,10 @@
 	trigger_if = {
 		limit = { is_concubine = yes }
 		concubinist = {
-			carn_accepts_prostitution_trigger = yes
+			trigger_if = {
+				limit = { carn_is_prostitute_trigger = no }
+				carn_accepts_prostitution_trigger = yes
+			}
 		}
 	}
 
@@ -39,7 +45,10 @@
 		trigger_if = {
 			limit = { is_courtier = yes }
 			liege = {
-				carn_accepts_prostitution_trigger = yes
+				trigger_if = {
+					limit = { carn_is_prostitute_trigger = no }
+					carn_accepts_prostitution_trigger = yes
+				}
 			}
 		}
 
@@ -49,7 +58,10 @@
 		trigger_if = {
 			limit = { is_hostage = yes }
 			warden = {
-				carn_accepts_prostitution_trigger = yes
+				trigger_if = {
+					limit = { carn_is_prostitute_trigger = no }
+					carn_accepts_prostitution_trigger = yes
+				}
 			}
 		}
 	}
@@ -152,5 +164,23 @@ cpr_has_important_role_trigger = {
 			this = $RULER$
 			is_close_family_of = $RULER$
 		}
+	}
+}
+
+cpr_in_diplo_range_trigger = {
+	NOT = { this = $PARTY$ }
+	trigger_if = {
+		limit = {
+			$PARTY$ = { is_landless_adventurer = yes }
+		}
+		save_temporary_scope_as = character1
+		#Has to be used instead of diplo range checks in laamp to landed interactions
+		ep3_laamp_diplo_range_trigger = {
+			TARGET = scope:character1
+			LAAMP = $PARTY$
+		}
+	}
+	trigger_else = {
+		in_diplomatic_range = $PARTY$
 	}
 }

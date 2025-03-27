@@ -1,0 +1,13 @@
+﻿travl_invite_as_guest_interaction = {
+	category = interaction_category_vassal
+	icon = guest	
+	
+	is_shown = {
+		always = no
+	}
+
+	on_accept = {
+	}
+
+	auto_accept = yes
+}
