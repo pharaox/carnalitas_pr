@@ -6,4 +6,5 @@ common/scripted_effects/00_health_effects.txt
 common/scripted_effects/00_personal_details_effects.txt
 common/scripted_effects/00_scripted_effects.txt
 common/scripted_effects/00_stress_effects.txt
+common/scripted_triggers/00_task_contract_triggers.txt
 events/stress_events/stress_trait_coping_decisions_events.txt

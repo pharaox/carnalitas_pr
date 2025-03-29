@@ -1,0 +1,40 @@
+﻿#This should list _ALL_ laamp_contracts_diplomacy_group-contracts 
+can_create_diplomacy_contract_trigger = {
+	$LAAMP$ = {
+		OR = {
+			can_create_task_contract = { 
+				type_name = laamp_base_0001 
+				employer = $EMPLOYER$ 
+			}
+			can_create_task_contract = { 
+				type_name = laamp_base_0011 
+				employer = $EMPLOYER$ 
+			}
+			can_create_task_contract = { 
+				type_name = laamp_base_0021 
+				employer = $EMPLOYER$ 
+			}
+			can_create_task_contract = { 
+				type_name = laamp_base_0031 
+				employer = $EMPLOYER$ 
+			}
+			can_create_task_contract = { 
+				type_name = laamp_cultural_minority_contract 
+				employer = $EMPLOYER$ 
+			}
+			can_create_task_contract = { 
+				type_name = laamp_religious_minority_contract 
+				employer = $EMPLOYER$ 
+			}
+			can_create_task_contract = { 
+				type_name = laamp_boost_legitimacy_contract 
+				employer = $EMPLOYER$ 
+			}
+			# CPR Add task contracts
+			can_create_task_contract = { 
+				type_name = cpr_laamp_1000
+				employer = $EMPLOYER$ 
+			}
+		}
+	}
+}

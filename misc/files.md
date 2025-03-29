@@ -20,6 +20,8 @@
   * `disease_data_save_contraction_effect`
 * `common/scripted_effects/00_stress_effects.txt`
   * `rakish_brothel_night_effect`
+* `common/scripted_triggers/00_task_contract_triggers.txt`
+  * `can_create_diplomacy_contract_trigger`
 * `events/stress_events/stress_trait_coping_decisions_events.txt`
   * `stress_trait_coping_decisions.2001`
   * `stress_trait_coping_decisions.2002`

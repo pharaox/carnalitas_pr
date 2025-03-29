@@ -1,0 +1,2508 @@
+﻿namespace = cpr_laamp_contract_schemes
+
+scripted_trigger cpr_laamp_contract_schemes_1100_valid_follower_trigger = {
+	diplomacy >= very_high_skill_rating # 18
+	AND = {
+		has_trait = lifestyle_reveler
+		has_trait_xp = { trait = lifestyle_reveler value >= 50 }
+	}
+	is_available_allow_travelling = yes
+}
+
+scripted_trigger cpr_laamp_contract_schemes_1200_valid_follower_trigger = {
+	diplomacy >= very_high_skill_rating # 18
+	has_trait = poet
+	is_available_allow_travelling = yes
+}
+
+scripted_trigger cpr_laamp_contract_schemes_1300_valid_follower_trigger = {
+	diplomacy >= very_high_skill_rating # 18
+	AND = {
+		has_trait = lifestyle_reveler
+		has_trait_xp = { trait = lifestyle_reveler value >= 50 }
+	}
+	is_available_allow_travelling = yes
+}
+
+scripted_trigger cpr_laamp_contract_schemes_1400_valid_follower_trigger = {
+	diplomacy >= very_high_skill_rating # 18
+	AND = {
+		has_trait = lifestyle_prostitute
+		has_trait_xp = { trait = lifestyle_prostitute value >= 50 }
+	}
+	is_available_allow_travelling = yes
+	scope:employer = {
+		is_attracted_to_gender_of = prev
+	}
+	carn_can_have_sex_trigger = yes
+}
+
+scripted_trigger cpr_laamp_contract_schemes_1500_valid_follower_trigger = {
+	learning >= very_high_skill_rating # 18
+	AND = {
+		has_trait = lifestyle_mystic
+		has_trait_xp = { trait = lifestyle_mystic value >= 50 }
+	}
+	is_available_allow_travelling = yes
+}
+
+scripted_trigger cpr_laamp_contract_schemes_1600_valid_follower_trigger = {
+	intrigue >= very_high_skill_rating # 18
+	AND = {
+		has_trait = gallowsbait
+		has_trait_xp = { trait = gallowsbait track = trickster value >= 50 }
+	}
+	is_available_allow_travelling = yes
+}
+
+# Initial selection - player chooses entertainment type
+cpr_laamp_contract_schemes.1000 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1000.t
+	desc = cpr_laamp_contract_schemes.1000.desc
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = flirtation_left
+	}
+	override_background = {
+		reference = feast
+	}
+	
+	immediate = {
+		scope:employer = {
+			save_scope_as = bg_override_char
+		}
+	}
+
+	# Perform music
+	option = {
+		name = cpr_laamp_contract_schemes.1000.a
+		custom_tooltip = cpr_laamp_contract_schemes.1000.a.tt
+
+		trigger = {
+			OR = {
+				diplomacy >= decent_skill_rating
+				has_trait = lifestyle_reveler
+				any_courtier = {
+					cpr_laamp_contract_schemes_1100_valid_follower_trigger = yes
+				}
+			}
+		}
+
+		trigger_event = cpr_laamp_contract_schemes.1100
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = diplomacy
+					multiply = 2.5
+				}
+			}
+			modifier = {
+				add = {
+					value = intrigue
+					multiply = 2
+				}
+			}
+			modifier = {
+				has_trait = lifestyle_reveler
+				add = {
+					value = "has_trait_xp(lifestyle_reveler)"
+					multiply = 0.5
+				}
+			}
+			modifier = {
+				any_courtier = {
+					cpr_laamp_contract_schemes_1100_valid_follower_trigger = yes
+				}
+				add = 50
+			}
+			ai_value_modifier = {
+				ai_sociability = 0.5
+				ai_honor = -0.2
+			}
+		}
+	}
+
+	# Recite poetry
+	option = {
+		name = cpr_laamp_contract_schemes.1000.b
+		custom_tooltip = cpr_laamp_contract_schemes.1000.b.tt
+
+		trigger = {
+			OR = {
+				diplomacy >= decent_skill_rating
+				has_trait = poet
+				any_courtier = {
+					cpr_laamp_contract_schemes_1200_valid_follower_trigger = yes
+				}
+			}
+		}
+
+		trigger_event = cpr_laamp_contract_schemes.1200
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = diplomacy
+					multiply = 2.5
+				}
+			}
+			modifier = {
+				add = {
+					value = learning
+					multiply = 2
+				}
+			}
+			modifier = {
+				has_trait = poet
+				add = 50
+			}
+			modifier = {
+				any_courtier = {
+					cpr_laamp_contract_schemes_1200_valid_follower_trigger = yes
+				}
+				add = 50
+			}
+			ai_value_modifier = {
+				ai_sociability = 0.5
+				ai_rationality = 0.2
+			}
+		}
+	}
+
+	# Perform dance
+	option = {
+		name = cpr_laamp_contract_schemes.1000.c
+		custom_tooltip = cpr_laamp_contract_schemes.1000.c.tt
+
+		trigger = {
+			OR = {
+				diplomacy >= decent_skill_rating
+				has_trait = lifestyle_reveler
+				any_courtier = {
+					cpr_laamp_contract_schemes_1300_valid_follower_trigger = yes
+				}
+			}
+		}
+
+		trigger_event = cpr_laamp_contract_schemes.1300
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = diplomacy
+					multiply = 2.5
+				}
+			}
+			modifier = {
+				add = {
+					value = prowess
+					multiply = 2
+				}
+			}
+			modifier = {
+				has_trait = lifestyle_reveler
+				add = {
+					value = "has_trait_xp(lifestyle_reveler)"
+					multiply = 0.5
+				}
+			}
+			modifier = {
+				any_courtier = {
+					cpr_laamp_contract_schemes_1300_valid_follower_trigger = yes
+				}
+				add = 50
+			}
+			ai_value_modifier = {
+				ai_sociability = 0.5
+				ai_energy = 0.2
+			}
+		}
+	}
+
+	# Do astrology/fortune telling
+	option = {
+		name = cpr_laamp_contract_schemes.1000.e
+		custom_tooltip = cpr_laamp_contract_schemes.1000.e.tt
+
+		trigger = {
+			OR = {
+				learning >= decent_skill_rating
+				has_trait = lifestyle_mystic
+				any_courtier = {
+					cpr_laamp_contract_schemes_1500_valid_follower_trigger = yes
+				}
+			}
+		}
+
+		trigger_event = cpr_laamp_contract_schemes.1500
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = learning
+					multiply = 2.5
+				}
+			}
+			modifier = {
+				add = {
+					value = intrigue
+					multiply = 2
+				}
+			}
+			modifier = {
+				has_trait = lifestyle_mystic
+				add = {
+					value = "has_trait_xp(lifestyle_mystic)"
+					multiply = 0.5
+				}
+			}
+			modifier = {
+				any_courtier = {
+					cpr_laamp_contract_schemes_1500_valid_follower_trigger = yes
+				}
+				add = 50
+			}
+			ai_value_modifier = {
+				ai_rationality = -0.5
+				ai_honor = -0.5
+			}
+		}
+	}
+
+	# Perform illusions/deceptions
+	option = {
+		name = cpr_laamp_contract_schemes.1000.f
+		custom_tooltip = cpr_laamp_contract_schemes.1000.f.tt
+
+		trigger = {
+			OR = {
+				intrigue >= decent_skill_rating
+				has_trait = gallowsbait
+				any_courtier = {
+					cpr_laamp_contract_schemes_1600_valid_follower_trigger = yes
+				}
+			}
+		}
+
+		trigger_event = cpr_laamp_contract_schemes.1600
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = intrigue
+					multiply = 2.5
+				}
+			}
+			modifier = {
+				add = {
+					value = learning
+					multiply = 2
+				}
+			}
+			modifier = {
+				has_trait = gallowsbait
+				add = 20
+			}
+			modifier = {
+				any_courtier = {
+					cpr_laamp_contract_schemes_1600_valid_follower_trigger = yes
+				}
+				add = 50
+			}
+			ai_value_modifier = {
+				ai_honor = -0.5
+				ai_rationality = 0.2
+			}
+		}
+	}
+
+	# Provide intimate companionship
+	option = {
+		name = cpr_laamp_contract_schemes.1000.d
+		custom_tooltip = cpr_laamp_contract_schemes.1000.d.tt
+
+		trigger = {
+			scope:employer = {
+				carn_can_have_sex_trigger = yes
+			}
+			OR = {
+				AND = {
+					OR = {
+						has_trait = lifestyle_prostitute
+						has_trait = seducer
+					}
+					scope:employer = {
+						is_attracted_to_gender_of = root
+					}
+				}
+				custom_tooltip = {
+					text = "cpr_empty_tooltip"
+					any_courtier = {
+						cpr_laamp_contract_schemes_1400_valid_follower_trigger = yes
+					}
+				}
+			}
+		}
+
+		trigger_event = cpr_laamp_contract_schemes.1400
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = diplomacy
+					multiply = 2.5
+				}
+			}
+			modifier = {
+				add = {
+					value = intrigue
+					multiply = 2
+				}
+			}
+			modifier = {
+				has_trait = lifestyle_prostitute
+				add = {
+					value = "has_trait_xp(lifestyle_prostitute)"
+					multiply = 0.5
+				}
+			}
+			modifier = {
+				has_trait = seducer
+				add = 20
+			}
+			modifier = {
+				any_courtier = {
+					cpr_laamp_contract_schemes_1400_valid_follower_trigger = yes
+				}
+				add = 50
+			}
+			ai_value_modifier = {
+				ai_sociability = 0.5
+				ai_honor = -0.2
+			}
+		}
+	}
+
+	# Decline the contract
+	option = {
+		name = cpr_laamp_contract_schemes.1000.g
+		custom_tooltip = cpr_laamp_contract_schemes.1000.g.tt
+		
+		scope:task_contract = {
+			complete_task_contract = failure_standard
+		}
+		scope:employer = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -10
+			}
+		}		
+
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+scripted_effect cpr_laamp_contract_schemes_1000_critical_success_effect = {
+	scope:task_contract = {
+		complete_task_contract = success_critical
+	}
+	scope:employer = {
+		add_stress = medium_stress_loss
+		add_character_modifier = {
+			modifier = cpr_laamp_1000_success_employer_modifier
+			years = 2
+		}
+	}
+	stress_impact = {
+		humble = minor_stress_impact_gain
+		arrogant = minor_stress_impact_loss
+	}
+}
+
+scripted_effect cpr_laamp_contract_schemes_1000_standard_success_effect = {
+	scope:task_contract = {
+		complete_task_contract = success_standard
+	}
+	scope:employer = {
+		add_stress = minor_stress_loss
+		add_character_modifier = {
+			modifier = cpr_laamp_1000_success_employer_modifier
+			years = 1
+		}
+	}
+}
+
+scripted_effect cpr_laamp_contract_schemes_1000_follower_success_effect = {
+	scope:task_contract = {
+		complete_task_contract = success_follower
+	}
+	scope:employer = {
+		add_stress = minor_stress_loss
+		add_character_modifier = {
+			modifier = cpr_laamp_1000_success_employer_modifier
+			years = 1
+		}
+	}
+}
+
+scripted_effect cpr_laamp_contract_schemes_1000_deception_success_effect = {
+	scope:task_contract = {
+		complete_task_contract = success_deception
+	}
+	scope:employer = {
+		add_stress = medium_stress_loss
+		add_character_modifier = {
+			modifier = cpr_laamp_1000_deception_success_employer_modifier
+			years = 2
+		}
+	}
+	stress_impact = {
+		just = minor_stress_impact_gain
+		deceitful = minor_stress_impact_loss
+	}
+}
+
+scripted_effect cpr_laamp_contract_schemes_1000_standard_failure_effect = {
+	scope:task_contract = {
+		complete_task_contract = failure_standard
+	}
+	scope:employer = {
+		add_stress = minor_stress_gain
+		add_character_modifier = {
+			modifier = cpr_laamp_1000_failure_employer_modifier
+			years = 1
+		}
+	}
+	stress_impact = {
+		base = miniscule_stress_impact_gain
+		humble = minor_stress_impact_loss
+		arrogant = minor_stress_impact_gain
+	}
+}
+
+scripted_effect cpr_laamp_contract_schemes_1000_deception_failure_effect = {
+	scope:task_contract = {
+		complete_task_contract = failure_deception
+	}
+	scope:employer = {
+		add_stress = medium_stress_gain
+		add_character_modifier = {
+			modifier = cpr_laamp_1000_deception_failure_employer_modifier
+			years = 2
+		}
+	}
+	stress_impact = {
+		base = miniscule_stress_impact_gain
+		just = minor_stress_impact_loss
+		deceitful = minor_stress_impact_gain
+	}
+}
+
+scripted_effect cpr_laamp_contract_schemes_1000_primary_duel_effect = {
+	duel = {
+		skill = $SKILL$
+		value = high_skill_rating
+		# Victory!
+		50 = {
+			compare_modifier = {
+				value = scope:duel_value
+				multiplier = 3.5
+				min = -49
+			}
+			min = 5
+			desc = cpr_laamp_contract_schemes.1$N$00.a.tt.success
+			show_as_tooltip = {
+				random_list = {
+					50 = {
+						show_chance = no
+						desc = label_success_critical
+						cpr_laamp_contract_schemes_1000_critical_success_effect = yes
+					}
+					50 = {
+						show_chance = no
+						desc = label_success_standard
+						cpr_laamp_contract_schemes_1000_standard_success_effect = yes
+					}
+				}
+			}
+			hidden_effect = {
+				random_list = {
+					33 = {
+						trigger_event = cpr_laamp_contract_schemes.1$N$01
+					}
+					67 = {
+						trigger_event = cpr_laamp_contract_schemes.1$N$02
+					}
+				}
+			}
+		}
+		# Defeat
+		50 = {
+			compare_modifier = {
+				value = scope:duel_value
+				multiplier = -3.5
+				min = -49
+			}
+			min = 5
+			desc = cpr_laamp_contract_schemes.1$N$00.a.tt.failure
+			show_as_tooltip = {
+				cpr_laamp_contract_schemes_1000_standard_failure_effect = yes
+			}
+			hidden_effect = {
+				trigger_event = cpr_laamp_contract_schemes.1$N$05
+			}
+		}
+	}
+}
+
+scripted_effect cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
+	duel = {
+		skill = $SKILL$
+		value = {
+			value = scope:employer.$SKILL$
+			add = 10
+		}
+		# Victory!
+		50 = {
+			compare_modifier = {
+				value = scope:duel_value
+				multiplier = 3.5
+				min = -49
+			}
+			min = 5
+			desc = cpr_laamp_contract_schemes.1$N$00.b.tt.success
+			show_as_tooltip = {
+				cpr_laamp_contract_schemes_1000_$TYPE$_success_effect = yes
+			}
+			hidden_effect = {
+				trigger_event = cpr_laamp_contract_schemes.1$N$04
+			}
+		}
+		# Defeat
+		50 = {
+			compare_modifier = {
+				value = scope:duel_value
+				multiplier = -3.5
+				min = -49
+			}
+			min = 5
+			desc = cpr_laamp_contract_schemes.1$N$00.b.tt.failure
+			show_as_tooltip = {
+				cpr_laamp_contract_schemes_1000_$TYPE$_failure_effect = yes
+			}
+			hidden_effect = {
+				trigger_event = cpr_laamp_contract_schemes.1$N$06
+			}
+		}
+	}
+}
+
+scripted_effect cpr_laamp_contract_schemes_1000_follower_effect = {
+	custom_tooltip = cpr_laamp_contract_schemes.1$N$00.c.tt.success
+	show_as_tooltip = {
+		cpr_laamp_contract_schemes_1000_follower_success_effect = yes
+	}
+	hidden_effect = {
+		trigger_event = cpr_laamp_contract_schemes.1$N$03
+	}
+}
+
+# 1. Music Performance Contract
+cpr_laamp_contract_schemes.1100 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1100.t
+	desc = cpr_laamp_contract_schemes.1100.desc
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = lute_idle
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = flirtation_left
+	}
+	lower_left_portrait = scope:follower
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				cpr_laamp_contract_schemes_1100_valid_follower_trigger = yes
+			}
+			save_scope_as = follower
+		}
+		scope:employer = {
+			save_scope_as = bg_override_char
+		}
+	}
+
+	# Diplomacy duel
+	option = {
+		name = cpr_laamp_contract_schemes.1100.a
+
+		cpr_laamp_contract_schemes_1000_primary_duel_effect = {
+			SKILL = diplomacy
+			N = 1
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = diplomacy
+					multiply = 2.5
+				}
+			}
+			ai_value_modifier = {
+				ai_sociability = 0.5
+			}
+		}
+	}
+
+	# Intrigue duel
+	option = {
+		name = cpr_laamp_contract_schemes.1100.b
+
+		cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
+			SKILL = intrigue
+			TYPE = deception
+			N = 1
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = intrigue
+					multiply = 2
+				}
+			}
+			ai_value_modifier = {
+				ai_honor = -0.5
+			}
+		}
+	}
+
+	# Follower
+	option = {
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { exists = scope:follower }
+						desc = cpr_laamp_contract_schemes.1100.c
+					}
+					desc = cpr_laamp_contract_schemes.1100.c.no_follower
+				}
+			}
+		}
+
+		trigger = {
+			custom_tooltip = {
+				text = cpr_laamp_contract_schemes.1100.c.tt.no_follower
+				exists = scope:follower
+			}
+		}
+		show_as_unavailable = { always = yes }
+
+		cpr_laamp_contract_schemes_1000_follower_effect = { N = 1 }
+
+		ai_chance = {
+			base = 10000
+		}
+	}
+}
+
+# Exceptional Success (Diplomacy)
+cpr_laamp_contract_schemes.1101 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1101.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1101.desc
+		desc = cpr_laamp_contract_schemes.1101.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = lute_active
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = admiration
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_critical_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1101.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Success (Diplomacy)
+cpr_laamp_contract_schemes.1102 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1102.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1102.desc
+		desc = cpr_laamp_contract_schemes.1102.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = lute_active
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = throne_room_applaud_1
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_standard_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1102.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Follower Success
+cpr_laamp_contract_schemes.1103 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1103.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1103.desc
+		desc = cpr_laamp_contract_schemes.1103.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = scope:follower
+		animation = lute_active
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = throne_room_applaud_1
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_follower_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1103.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Success (Intrigue)
+cpr_laamp_contract_schemes.1104 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1104.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1104.desc
+		desc = cpr_laamp_contract_schemes.1104.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = lute_active
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = admiration
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_deception_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1104.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Failure (Diplomacy)
+cpr_laamp_contract_schemes.1105 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1105.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1105.desc
+		desc = cpr_laamp_contract_schemes.1105.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = lute_active
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = disappointed
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_standard_failure_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1105.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Failure (Intrigue)
+cpr_laamp_contract_schemes.1106 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1106.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1106.desc
+		desc = cpr_laamp_contract_schemes.1106.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = lute_active
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = disapproval
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_deception_failure_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1106.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# 2. Poetry Recitation Contract
+cpr_laamp_contract_schemes.1200 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1200.t
+	desc = cpr_laamp_contract_schemes.1200.desc
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = flirtation_left
+	}
+	lower_left_portrait = scope:follower
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				cpr_laamp_contract_schemes_1200_valid_follower_trigger = yes
+			}
+			save_scope_as = follower
+		}
+		scope:employer = {
+			save_scope_as = bg_override_char
+		}
+	}
+
+	# Diplomacy duel
+	option = {
+		name = cpr_laamp_contract_schemes.1200.a
+
+		cpr_laamp_contract_schemes_1000_primary_duel_effect = {
+			SKILL = diplomacy
+			N = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = diplomacy
+					multiply = 2.5
+				}
+			}
+			ai_value_modifier = {
+				ai_sociability = 0.5
+			}
+		}
+	}
+
+	# Learning duel
+	option = {
+		name = cpr_laamp_contract_schemes.1200.b
+
+		cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
+			SKILL = learning
+			TYPE = standard
+			N = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = learning
+					multiply = 2
+				}
+			}
+			ai_value_modifier = {
+				ai_rationality = 0.5
+			}
+		}
+	}
+
+	# Follower
+	option = {
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { exists = scope:follower }
+						desc = cpr_laamp_contract_schemes.1200.c
+					}
+					desc = cpr_laamp_contract_schemes.1200.c.no_follower
+				}
+			}
+		}
+
+		trigger = {
+			custom_tooltip = {
+				text = cpr_laamp_contract_schemes.1200.c.tt.no_follower
+				exists = scope:follower
+			}
+		}
+		show_as_unavailable = { always = yes }
+
+		cpr_laamp_contract_schemes_1000_follower_effect = { N = 2 }
+
+		ai_chance = {
+			base = 10000
+		}
+	}
+}
+
+# Exceptional Success (Diplomacy)
+cpr_laamp_contract_schemes.1201 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1201.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1201.desc
+		desc = cpr_laamp_contract_schemes.1201.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = storyteller
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = admiration
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_critical_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1201.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Success (Diplomacy)
+cpr_laamp_contract_schemes.1202 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1202.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1202.desc
+		desc = cpr_laamp_contract_schemes.1202.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = storyteller
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = throne_room_applaud_1
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_standard_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1202.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Follower Success
+cpr_laamp_contract_schemes.1203 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1203.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1203.desc
+		desc = cpr_laamp_contract_schemes.1203.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = scope:follower
+		animation = storyteller
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = throne_room_applaud_1
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_follower_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1203.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Success (Learning)
+cpr_laamp_contract_schemes.1204 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1204.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1204.desc
+		desc = cpr_laamp_contract_schemes.1204.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = storyteller
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = admiration
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_deception_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1204.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Failure (Diplomacy)
+cpr_laamp_contract_schemes.1205 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1205.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1205.desc
+		desc = cpr_laamp_contract_schemes.1205.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = storyteller
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = disappointed
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_standard_failure_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1205.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Failure (Learning)
+cpr_laamp_contract_schemes.1206 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1206.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1206.desc
+		desc = cpr_laamp_contract_schemes.1206.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = storyteller
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = boredom
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_deception_failure_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1206.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# 3. Dance Performance Contract
+cpr_laamp_contract_schemes.1300 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1300.t
+	desc = cpr_laamp_contract_schemes.1300.desc
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = flirtation_left
+	}
+	lower_left_portrait = scope:follower
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				cpr_laamp_contract_schemes_1300_valid_follower_trigger = yes
+			}
+			save_scope_as = follower
+		}
+		scope:employer = {
+			save_scope_as = bg_override_char
+		}
+	}
+
+	# Diplomacy duel
+	option = {
+		name = cpr_laamp_contract_schemes.1300.a
+
+		cpr_laamp_contract_schemes_1000_primary_duel_effect = {
+			SKILL = diplomacy
+			N = 3
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = diplomacy
+					multiply = 2.5
+				}
+			}
+			ai_value_modifier = {
+				ai_sociability = 0.5
+			}
+		}
+	}
+
+	# Prowess duel
+	option = {
+		name = cpr_laamp_contract_schemes.1300.b
+
+		cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
+			SKILL = prowess
+			TYPE = standard
+			N = 3
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = prowess
+					multiply = 2
+				}
+			}
+			ai_value_modifier = {
+				ai_energy = 0.5
+			}
+		}
+	}
+
+	# Follower
+	option = {
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { exists = scope:follower }
+						desc = cpr_laamp_contract_schemes.1300.c
+					}
+					desc = cpr_laamp_contract_schemes.1300.c.no_follower
+				}
+			}
+		}
+
+		trigger = {
+			custom_tooltip = {
+				text = cpr_laamp_contract_schemes.1300.c.tt.no_follower
+				exists = scope:follower
+			}
+		}
+		show_as_unavailable = { always = yes }
+
+		cpr_laamp_contract_schemes_1000_follower_effect = { N = 3 }
+
+		ai_chance = {
+			base = 10000
+		}
+	}
+}
+
+# Exceptional Success (Diplomacy)
+cpr_laamp_contract_schemes.1301 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1301.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1301.desc
+		desc = cpr_laamp_contract_schemes.1301.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = dancing
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = admiration
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_critical_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1301.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Success (Diplomacy)
+cpr_laamp_contract_schemes.1302 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1302.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1302.desc
+		desc = cpr_laamp_contract_schemes.1302.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = dancing
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = throne_room_applaud_1
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_standard_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1302.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Follower Success
+cpr_laamp_contract_schemes.1303 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1303.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1303.desc
+		desc = cpr_laamp_contract_schemes.1303.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = scope:follower
+		animation = dancing
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = throne_room_applaud_1
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_follower_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1303.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Success (Prowess)
+cpr_laamp_contract_schemes.1304 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1304.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1304.desc
+		desc = cpr_laamp_contract_schemes.1304.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = dancing
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = admiration
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_deception_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1304.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Failure (Diplomacy)
+cpr_laamp_contract_schemes.1305 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1305.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1305.desc
+		desc = cpr_laamp_contract_schemes.1305.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = dancing
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = disappointed
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_standard_failure_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1305.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Failure (Prowess)
+cpr_laamp_contract_schemes.1306 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1306.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1306.desc
+		desc = cpr_laamp_contract_schemes.1306.desc.outro
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = dancing
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = boredom
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_deception_failure_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1306.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# 4. Intimate Companionship Contract
+cpr_laamp_contract_schemes.1400 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1400.t
+	desc = cpr_laamp_contract_schemes.1400.desc
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = flirtation_left
+	}
+	lower_left_portrait = scope:follower
+	override_background = {
+		reference = bedchamber
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				cpr_laamp_contract_schemes_1400_valid_follower_trigger = yes
+			}
+			save_scope_as = follower
+		}
+		scope:employer = {
+			save_scope_as = bg_override_char
+		}
+	}
+
+	# Diplomacy duel
+	option = {
+		name = cpr_laamp_contract_schemes.1400.a
+
+		had_sex_with_effect = {
+			CHARACTER = scope:employer
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+		cpr_laamp_contract_schemes_1000_primary_duel_effect = {
+			SKILL = diplomacy
+			N = 4
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = diplomacy
+					multiply = 2.5
+				}
+			}
+			ai_value_modifier = {
+				ai_sociability = 0.5
+			}
+		}
+	}
+
+	# Intrigue duel
+	option = {
+		name = cpr_laamp_contract_schemes.1400.b
+
+		had_sex_with_effect = {
+			CHARACTER = scope:employer
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+		cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
+			SKILL = intrigue
+			TYPE = deception
+			N = 4
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = intrigue
+					multiply = 2
+				}
+			}
+			ai_value_modifier = {
+				ai_honor = -0.5
+			}
+		}
+	}
+
+	# Follower
+	option = {
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { exists = scope:follower }
+						desc = cpr_laamp_contract_schemes.1400.c
+					}
+					desc = cpr_laamp_contract_schemes.1400.c.no_follower
+				}
+			}
+		}
+
+		trigger = {
+			custom_tooltip = {
+				text = cpr_laamp_contract_schemes.1400.c.tt.no_follower
+				exists = scope:follower
+			}
+		}
+		show_as_unavailable = { always = yes }
+
+		scope:follower ?= {
+			had_sex_with_effect = {
+				CHARACTER = scope:employer
+				PREGNANCY_CHANCE = pregnancy_chance
+			}
+		}
+		cpr_laamp_contract_schemes_1000_follower_effect = { N = 4 }
+
+		ai_chance = {
+			base = 10000
+		}
+	}
+}
+
+# Exceptional Success (Diplomacy)
+cpr_laamp_contract_schemes.1401 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1401.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1401.desc
+		desc = cpr_laamp_contract_schemes.1401.desc.outro
+	}
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = love
+	}
+	override_background = {
+		reference = bedchamber
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_critical_success_effect = yes
+		carn_undress_character_effect = yes
+		scope:employer = {
+			carn_undress_character_effect = yes
+		}
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1401.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+
+	after = {
+		carn_dress_character_effect = yes
+		scope:employer = {
+			carn_dress_character_effect = yes
+		}
+	}
+}
+
+# Success (Diplomacy)
+cpr_laamp_contract_schemes.1402 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1402.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1402.desc
+		desc = cpr_laamp_contract_schemes.1402.desc.outro
+	}
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = flirtation_left
+	}
+	override_background = {
+		reference = bedchamber
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_standard_success_effect = yes
+		carn_undress_character_effect = yes
+		scope:employer = {
+			carn_undress_character_effect = yes
+		}
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1402.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+
+	after = {
+		carn_dress_character_effect = yes
+		scope:employer = {
+			carn_dress_character_effect = yes
+		}
+	}
+}
+
+# Follower Success
+cpr_laamp_contract_schemes.1403 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1403.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1403.desc
+		desc = cpr_laamp_contract_schemes.1403.desc.outro
+	}
+	theme = seduction
+	left_portrait = {
+		character = scope:follower
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = flirtation_left
+	}
+	override_background = {
+		reference = bedchamber
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_follower_success_effect = yes
+		scope:follower = {
+			carn_undress_character_effect = yes
+		}
+		scope:employer = {
+			carn_undress_character_effect = yes
+		}
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1403.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+
+	after = {
+		scope:follower = {
+			carn_dress_character_effect = yes
+		}
+		scope:employer = {
+			carn_dress_character_effect = yes
+		}
+	}
+}
+
+# Success (Intrigue)
+cpr_laamp_contract_schemes.1404 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1404.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1404.desc
+		desc = cpr_laamp_contract_schemes.1404.desc.outro
+	}
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = love
+	}
+	override_background = {
+		reference = bedchamber
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_deception_success_effect = yes
+		carn_undress_character_effect = yes
+		scope:employer = {
+			carn_undress_character_effect = yes
+		}
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1404.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+
+	after = {
+		carn_dress_character_effect = yes
+		scope:employer = {
+			carn_dress_character_effect = yes
+		}
+	}
+}
+
+# Failure (Diplomacy)
+cpr_laamp_contract_schemes.1405 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1405.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1405.desc
+		desc = cpr_laamp_contract_schemes.1405.desc.outro
+	}
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = boredom
+	}
+	override_background = {
+		reference = bedchamber
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_standard_failure_effect = yes
+		carn_undress_character_effect = yes
+		scope:employer = {
+			carn_undress_character_effect = yes
+		}
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1405.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+
+	after = {
+		carn_dress_character_effect = yes
+		scope:employer = {
+			carn_dress_character_effect = yes
+		}
+	}
+}
+
+# Failure (Intrigue)
+cpr_laamp_contract_schemes.1406 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1406.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1406.desc
+		desc = cpr_laamp_contract_schemes.1406.desc.outro
+	}
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = disapproval
+	}
+	override_background = {
+		reference = bedchamber
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_deception_failure_effect = yes
+		carn_undress_character_effect = yes
+		scope:employer = {
+			carn_undress_character_effect = yes
+		}
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1406.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+
+	after = {
+		carn_dress_character_effect = yes
+		scope:employer = {
+			carn_dress_character_effect = yes
+		}
+	}
+}
+
+# 5. Astrology/Fortune Telling Contract
+cpr_laamp_contract_schemes.1500 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1500.t
+	desc = cpr_laamp_contract_schemes.1500.desc
+	theme = learning
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = flirtation_left
+	}
+	lower_left_portrait = scope:follower
+	override_background = {
+		reference = study
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				cpr_laamp_contract_schemes_1500_valid_follower_trigger = yes
+			}
+			save_scope_as = follower
+		}
+		scope:employer = {
+			save_scope_as = bg_override_char
+		}
+	}
+
+	# Learning duel
+	option = {
+		name = cpr_laamp_contract_schemes.1500.a
+
+		cpr_laamp_contract_schemes_1000_primary_duel_effect = {
+			SKILL = learning
+			N = 5
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = learning
+					multiply = 2.5
+				}
+			}
+			ai_value_modifier = {
+				ai_rationality = -0.5
+			}
+		}
+	}
+
+	# Intrigue duel
+	option = {
+		name = cpr_laamp_contract_schemes.1500.b
+
+		cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
+			SKILL = intrigue
+			TYPE = deception
+			N = 5
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = intrigue
+					multiply = 2
+				}
+			}
+			ai_value_modifier = {
+				ai_honor = -0.5
+			}
+		}
+	}
+
+	# Follower
+	option = {
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { exists = scope:follower }
+						desc = cpr_laamp_contract_schemes.1500.c
+					}
+					desc = cpr_laamp_contract_schemes.1500.c.no_follower
+				}
+			}
+		}
+
+		trigger = {
+			custom_tooltip = {
+				text = cpr_laamp_contract_schemes.1500.c.tt.no_follower
+				exists = scope:follower
+			}
+		}
+		show_as_unavailable = { always = yes }
+
+		cpr_laamp_contract_schemes_1000_follower_effect = { N = 5 }
+
+		ai_chance = {
+			base = 10000
+		}
+	}
+}
+
+# Exceptional Success (Learning)
+cpr_laamp_contract_schemes.1501 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1501.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1501.desc
+		desc = cpr_laamp_contract_schemes.1501.desc.outro
+	}
+	theme = learning
+	left_portrait = {
+		character = root
+		animation = debating
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = admiration
+	}
+	override_background = {
+		reference = study
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_critical_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1501.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Success (Learning)
+cpr_laamp_contract_schemes.1502 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1502.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1502.desc
+		desc = cpr_laamp_contract_schemes.1502.desc.outro
+	}
+	theme = learning
+	left_portrait = {
+		character = root
+		animation = debating
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = throne_room_applaud_1
+	}
+	override_background = {
+		reference = study
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_standard_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1502.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Follower Success
+cpr_laamp_contract_schemes.1503 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1503.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1503.desc
+		desc = cpr_laamp_contract_schemes.1503.desc.outro
+	}
+	theme = learning
+	left_portrait = {
+		character = scope:follower
+		animation = debating
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = throne_room_applaud_1
+	}
+	override_background = {
+		reference = study
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_follower_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1503.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Success (Intrigue)
+cpr_laamp_contract_schemes.1504 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1504.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1504.desc
+		desc = cpr_laamp_contract_schemes.1504.desc.outro
+	}
+	theme = learning
+	left_portrait = {
+		character = root
+		animation = debating
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = admiration
+	}
+	override_background = {
+		reference = study
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_deception_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1504.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Failure (Learning)
+cpr_laamp_contract_schemes.1505 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1505.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1505.desc
+		desc = cpr_laamp_contract_schemes.1505.desc.outro
+	}
+	theme = learning
+	left_portrait = {
+		character = root
+		animation = debating
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = disappointed
+	}
+	override_background = {
+		reference = study
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_standard_failure_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1505.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Failure (Intrigue)
+cpr_laamp_contract_schemes.1506 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1506.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1506.desc
+		desc = cpr_laamp_contract_schemes.1506.desc.outro
+	}
+	theme = learning
+	left_portrait = {
+		character = root
+		animation = debating
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = disapproval
+	}
+	override_background = {
+		reference = study
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_deception_failure_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1506.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# 6. Illusion/Deception Contract
+cpr_laamp_contract_schemes.1600 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1600.t
+	desc = cpr_laamp_contract_schemes.1600.desc
+	theme = intrigue
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = flirtation_left
+	}
+	lower_left_portrait = scope:follower
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				cpr_laamp_contract_schemes_1600_valid_follower_trigger = yes
+			}
+			save_scope_as = follower
+		}
+		scope:employer = {
+			save_scope_as = bg_override_char
+		}
+	}
+
+	# Intrigue duel
+	option = {
+		name = cpr_laamp_contract_schemes.1600.a
+
+		cpr_laamp_contract_schemes_1000_primary_duel_effect = {
+			SKILL = intrigue
+			N = 6
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = intrigue
+					multiply = 2.5
+				}
+			}
+			ai_value_modifier = {
+				ai_honor = -0.5
+			}
+		}
+	}
+
+	# Learning duel
+	option = {
+		name = cpr_laamp_contract_schemes.1600.b
+
+		cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
+			SKILL = learning
+			TYPE = standard
+			N = 6
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = {
+					value = learning
+					multiply = 2
+				}
+			}
+			ai_value_modifier = {
+				ai_rationality = 0.5
+			}
+		}
+	}
+
+	# Follower
+	option = {
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { exists = scope:follower }
+						desc = cpr_laamp_contract_schemes.1600.c
+					}
+					desc = cpr_laamp_contract_schemes.1600.c.no_follower
+				}
+			}
+		}
+
+		trigger = {
+			custom_tooltip = {
+				text = cpr_laamp_contract_schemes.1600.c.tt.no_follower
+				exists = scope:follower
+			}
+		}
+		show_as_unavailable = { always = yes }
+
+		cpr_laamp_contract_schemes_1000_follower_effect = { N = 6 }
+
+		ai_chance = {
+			base = 10000
+		}
+	}
+}
+
+# Exceptional Success (Intrigue)
+cpr_laamp_contract_schemes.1601 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1601.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1601.desc
+		desc = cpr_laamp_contract_schemes.1601.desc.outro
+	}
+	theme = intrigue
+	left_portrait = {
+		character = root
+		animation = chess_cocky
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = admiration
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_critical_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1601.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Success (Intrigue)
+cpr_laamp_contract_schemes.1602 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1602.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1602.desc
+		desc = cpr_laamp_contract_schemes.1602.desc.outro
+	}
+	theme = intrigue
+	left_portrait = {
+		character = root
+		animation = chess_cocky
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = throne_room_applaud_1
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_standard_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1602.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Follower Success
+cpr_laamp_contract_schemes.1603 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1603.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1603.desc
+		desc = cpr_laamp_contract_schemes.1603.desc.outro
+	}
+	theme = intrigue
+	left_portrait = {
+		character = scope:follower
+		animation = chess_cocky
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = throne_room_applaud_1
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_follower_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1603.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Success (Learning)
+cpr_laamp_contract_schemes.1604 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1604.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1604.desc
+		desc = cpr_laamp_contract_schemes.1604.desc.outro
+	}
+	theme = intrigue
+	left_portrait = {
+		character = root
+		animation = chess_cocky
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = admiration
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_deception_success_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1604.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Failure (Intrigue)
+cpr_laamp_contract_schemes.1605 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1605.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1605.desc
+		desc = cpr_laamp_contract_schemes.1605.desc.outro
+	}
+	theme = intrigue
+	left_portrait = {
+		character = root
+		animation = chess_cocky
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = disappointed
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_standard_failure_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1605.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
+
+# Failure (Learning)
+cpr_laamp_contract_schemes.1606 = {
+	type = character_event
+	title = cpr_laamp_contract_schemes.1606.t
+	desc = {
+		desc = cpr_laamp_contract_schemes.1606.desc
+		desc = cpr_laamp_contract_schemes.1606.desc.outro
+	}
+	theme = intrigue
+	left_portrait = {
+		character = root
+		animation = chess_cocky
+	}
+	right_portrait = {
+		character = scope:employer
+		animation = disapproval
+	}
+	override_background = {
+		reference = feast
+	}
+
+	immediate = {
+		cpr_laamp_contract_schemes_1000_deception_failure_effect = yes
+	}
+
+	option = {
+		name = cpr_laamp_contract_schemes.1606.a
+		flavor = laamp_base_contract_schemes.0000.f.contract_concluded
+		return_home = yes
+	}
+}
