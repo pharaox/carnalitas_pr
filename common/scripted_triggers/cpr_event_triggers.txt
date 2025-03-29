@@ -65,3 +65,8 @@ cpr_province_is_holy_site_trigger = {
 		}
 	}
 }
+
+cpr_is_in_list_trigger = {
+	save_temporary_scope_value_as = { name = value value = $VALUE$ }
+	scope:value = { is_in_list = $LIST$ }
+}

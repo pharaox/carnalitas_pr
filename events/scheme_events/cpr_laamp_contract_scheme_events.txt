@@ -10,7 +10,7 @@ scripted_trigger cpr_laamp_contract_schemes_1100_valid_follower_trigger = {
 }
 
 scripted_trigger cpr_laamp_contract_schemes_1200_valid_follower_trigger = {
-	diplomacy >= very_high_skill_rating # 18
+	diplomacy >= high_skill_rating # 15
 	has_trait = poet
 	is_available_allow_travelling = yes
 }
@@ -25,12 +25,13 @@ scripted_trigger cpr_laamp_contract_schemes_1300_valid_follower_trigger = {
 }
 
 scripted_trigger cpr_laamp_contract_schemes_1400_valid_follower_trigger = {
-	diplomacy >= very_high_skill_rating # 18
+	diplomacy >= high_skill_rating # 15
 	AND = {
 		has_trait = lifestyle_prostitute
 		has_trait_xp = { trait = lifestyle_prostitute value >= 50 }
 	}
 	is_available_allow_travelling = yes
+	is_attracted_to_gender_of = scope:employer
 	scope:employer = {
 		is_attracted_to_gender_of = prev
 	}
@@ -47,7 +48,7 @@ scripted_trigger cpr_laamp_contract_schemes_1500_valid_follower_trigger = {
 }
 
 scripted_trigger cpr_laamp_contract_schemes_1600_valid_follower_trigger = {
-	intrigue >= very_high_skill_rating # 18
+	intrigue >= high_skill_rating # 15
 	AND = {
 		has_trait = gallowsbait
 		has_trait_xp = { trait = gallowsbait track = trickster value >= 50 }
@@ -76,6 +77,140 @@ cpr_laamp_contract_schemes.1000 = {
 	immediate = {
 		scope:employer = {
 			save_scope_as = bg_override_char
+
+			# Choose up to 4 employer options based on AI values, lifestyle, and traits
+			while = {
+				limit = {
+					list_size = { name = options value < 4 }
+					NOT = { exists = scope:break }
+				}
+				clear_saved_scope = option
+				random_list = {
+					10 = {
+						trigger = {
+							NOT = { cpr_is_in_list_trigger = { LIST = options VALUE = flag:music } }
+						}
+						ai_value_modifier = {
+							ai_sociability = 0.1
+						}
+						modifier = {
+							has_lifestyle = diplomacy_lifestyle
+							add = 10
+						}
+						modifier = {
+							has_trait = lifestyle_reveler
+							add = {
+								value = "has_trait_xp(lifestyle_reveler)"
+								multiply = 0.1
+							}
+						}
+						save_temporary_scope_value_as = { name = option value = flag:music }
+					}
+					10 = {
+						trigger = {
+							NOT = { cpr_is_in_list_trigger = { LIST = options VALUE = flag:poetry } }
+						}
+						ai_value_modifier = {
+							ai_sociability = 0.1
+						}
+						modifier = {
+							has_lifestyle = diplomacy_lifestyle
+							add = 10
+						}
+						modifier = {
+							has_trait = poet
+							add = 10
+						}
+						save_temporary_scope_value_as = { name = option value = flag:poetry }
+					}
+					10 = {
+						trigger = {
+							NOT = { cpr_is_in_list_trigger = { LIST = options VALUE = flag:dance } }
+						}
+						ai_value_modifier = {
+							ai_sociability = 0.1
+						}
+						modifier = {
+							has_lifestyle = diplomacy_lifestyle
+							add = 10
+						}
+						modifier = {
+							has_trait = lifestyle_reveler
+							add = {
+								value = "has_trait_xp(lifestyle_reveler)"
+								multiply = 0.1
+							}
+						}
+						save_temporary_scope_value_as = { name = option value = flag:dance }
+					}
+					20 = {
+						trigger = {
+							NOT = { cpr_is_in_list_trigger = { LIST = options VALUE = flag:sex } }
+						}
+						modifier = {
+							has_trait = lustful
+							add = 10
+						}
+						modifier = {
+							has_trait = chaste
+							add = -10
+						}
+						modifier = {
+							has_lifestyle = intrigue_lifestyle
+							add = 10
+						}
+						modifier = {
+							OR = {
+								has_trait = seducer
+								has_trait = rakish
+							}
+							add = 10
+						}
+						save_temporary_scope_value_as = { name = option value = flag:sex }
+					}
+					10 = {
+						trigger = {
+							NOT = { cpr_is_in_list_trigger = { LIST = options VALUE = flag:astrology } }
+						}
+						ai_value_modifier = {
+							ai_rationality = -0.1
+						}
+						modifier = {
+							has_lifestyle = learning_lifestyle
+							add = 10
+						}
+						modifier = {
+							has_trait = scholar
+							add = 10
+						}
+						save_temporary_scope_value_as = { name = option value = flag:astrology }
+					}
+					10 = {
+						trigger = {
+							NOT = { cpr_is_in_list_trigger = { LIST = options VALUE = flag:illusion } }
+						}
+						ai_value_modifier = {
+							ai_honor = -0.1
+						}
+						modifier = {
+							has_lifestyle = intrigue_lifestyle
+							add = 10
+						}
+						modifier = {
+							has_trait = schemer
+							add = 10
+						}
+						save_temporary_scope_value_as = { name = option value = flag:illusion }
+					}
+				}
+				if = {
+					limit = { exists = scope:option }
+					scope:option = { add_to_list = options }
+				}
+				else = {
+					save_temporary_scope_value_as = { name = break value = yes }
+				}
+			}
 		}
 	}
 
@@ -85,6 +220,7 @@ cpr_laamp_contract_schemes.1000 = {
 		custom_tooltip = cpr_laamp_contract_schemes.1000.a.tt
 
 		trigger = {
+			cpr_is_in_list_trigger = { LIST = options VALUE = flag:music }
 			OR = {
 				diplomacy >= decent_skill_rating
 				has_trait = lifestyle_reveler
@@ -136,6 +272,7 @@ cpr_laamp_contract_schemes.1000 = {
 		custom_tooltip = cpr_laamp_contract_schemes.1000.b.tt
 
 		trigger = {
+			cpr_is_in_list_trigger = { LIST = options VALUE = flag:poetry }
 			OR = {
 				diplomacy >= decent_skill_rating
 				has_trait = poet
@@ -184,6 +321,7 @@ cpr_laamp_contract_schemes.1000 = {
 		custom_tooltip = cpr_laamp_contract_schemes.1000.c.tt
 
 		trigger = {
+			cpr_is_in_list_trigger = { LIST = options VALUE = flag:dance }
 			OR = {
 				diplomacy >= decent_skill_rating
 				has_trait = lifestyle_reveler
@@ -235,6 +373,7 @@ cpr_laamp_contract_schemes.1000 = {
 		custom_tooltip = cpr_laamp_contract_schemes.1000.e.tt
 
 		trigger = {
+			cpr_is_in_list_trigger = { LIST = options VALUE = flag:astrology }
 			OR = {
 				learning >= decent_skill_rating
 				has_trait = lifestyle_mystic
@@ -286,6 +425,7 @@ cpr_laamp_contract_schemes.1000 = {
 		custom_tooltip = cpr_laamp_contract_schemes.1000.f.tt
 
 		trigger = {
+			cpr_is_in_list_trigger = { LIST = options VALUE = flag:illusion }
 			OR = {
 				intrigue >= decent_skill_rating
 				has_trait = gallowsbait
@@ -334,6 +474,7 @@ cpr_laamp_contract_schemes.1000 = {
 		custom_tooltip = cpr_laamp_contract_schemes.1000.d.tt
 
 		trigger = {
+			cpr_is_in_list_trigger = { LIST = options VALUE = flag:sex }
 			scope:employer = {
 				carn_can_have_sex_trigger = yes
 			}
@@ -343,6 +484,7 @@ cpr_laamp_contract_schemes.1000 = {
 						has_trait = lifestyle_prostitute
 						has_trait = seducer
 					}
+					is_attracted_to_gender_of = scope:employer
 					scope:employer = {
 						is_attracted_to_gender_of = root
 					}
@@ -1923,7 +2065,7 @@ cpr_laamp_contract_schemes.1500 = {
 	}
 	lower_left_portrait = scope:follower
 	override_background = {
-		reference = study
+		reference = feast
 	}
 
 	immediate = {
@@ -2033,7 +2175,7 @@ cpr_laamp_contract_schemes.1501 = {
 		animation = admiration
 	}
 	override_background = {
-		reference = study
+		reference = feast
 	}
 
 	immediate = {
@@ -2065,7 +2207,7 @@ cpr_laamp_contract_schemes.1502 = {
 		animation = throne_room_applaud_1
 	}
 	override_background = {
-		reference = study
+		reference = feast
 	}
 
 	immediate = {
@@ -2097,7 +2239,7 @@ cpr_laamp_contract_schemes.1503 = {
 		animation = throne_room_applaud_1
 	}
 	override_background = {
-		reference = study
+		reference = feast
 	}
 
 	immediate = {
@@ -2129,7 +2271,7 @@ cpr_laamp_contract_schemes.1504 = {
 		animation = admiration
 	}
 	override_background = {
-		reference = study
+		reference = feast
 	}
 
 	immediate = {
@@ -2161,7 +2303,7 @@ cpr_laamp_contract_schemes.1505 = {
 		animation = disappointed
 	}
 	override_background = {
-		reference = study
+		reference = feast
 	}
 
 	immediate = {
@@ -2193,7 +2335,7 @@ cpr_laamp_contract_schemes.1506 = {
 		animation = disapproval
 	}
 	override_background = {
-		reference = study
+		reference = feast
 	}
 
 	immediate = {
