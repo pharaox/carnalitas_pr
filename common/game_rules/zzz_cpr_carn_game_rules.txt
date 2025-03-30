@@ -1,0 +1,7 @@
+﻿carn_prostitution_default_religious_doctrine = {
+	default = carn_prostitution_default_religious_doctrine_full_historical
+	carn_prostitution_default_religious_doctrine_full_historical = {}
+	carn_prostitution_default_religious_doctrine_accepted = {}
+	carn_prostitution_default_religious_doctrine_shunned = {}
+	carn_prostitution_default_religious_doctrine_criminal = {}
+}

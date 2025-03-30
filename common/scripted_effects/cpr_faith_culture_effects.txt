@@ -1,0 +1,449 @@
+﻿# Add prostitution doctrines based on historical research.
+# Sources: Claude.ai
+cpr_seed_historical_prostitution_doctrines_effect = {
+	# Remove existing doctrine
+	if = {
+		limit = { has_doctrine = carn_doctrine_prostitution_crime }
+		remove_doctrine = carn_doctrine_prostitution_crime
+	}
+	else_if = {
+		limit = { has_doctrine = carn_doctrine_prostitution_shunned }
+		remove_doctrine = carn_doctrine_prostitution_shunned
+	}
+	else_if = {
+		limit = { has_doctrine = carn_doctrine_prostitution_accepted }
+		remove_doctrine = carn_doctrine_prostitution_accepted
+	}
+
+	# Add historical doctrine
+	if = {
+		limit = { religion = { is_in_family = rf_pagan } }
+		# Paganism
+		#
+		# Regulated with limited stigma or fully integrated (Accepted)
+		# * Akom (00_akom.txt) - West African tradition with pragmatic approach to sexuality
+		# * Bon (00_bon.txt) - though influenced by Buddhism, retained more accepting pre-Buddhist elements
+		# * Donyipoloism (00_donyipoloism.txt) - tribal faith with less rigid sexual codes
+		# * Hellenism (00_hellenism.txt) - particularly in urban centers and areas influenced by Greek and Roman traditions
+		# * Kushitism (00_kushitism.txt) - African traditions with more integrated views of sexuality
+		# * Mundhumism (00_mundhumism.txt) - tribal faith with less institutionalized moral restrictions
+		# * North African (00_north_african.txt) - syncretic traditions with Carthaginian/Berber influences
+		# * Waaqism (00_waaqism.txt) - East African tradition with less rigid sexual codes
+		# * Bori (00_west_african_bori.txt)
+		# * Orisha (00_west_african_orisha.txt)
+		# * Roog (00_west_african_roog.txt)
+		# * Generic West African (00_west_african.txt)
+		#
+		# Morally disapproved but pragmatically tolerated (Shunned)
+		# * Baltic (00_baltic.txt)
+		# * Basque Paganism (00_basque_paganism.txt)
+		# * Finno-Ugric (00_finno_ugric.txt) - including Suomenusko
+		# * Germanic (00_germanic.txt) - except for some more urbanized variants that might be more accepting
+		# * Magyarism (00_magyarism.txt)
+		# * Paganism (generic) (00_paganism.txt)
+		# * Qiangic (00_qiangic.txt)
+		# * Siberian (00_siberian.txt)
+		# * Slavic (00_slavic.txt)
+		# * Tengrism (00_tengrism.txt)
+		# * Zunism (00_zunism.txt) - sun worship with emphasis on righteousness might lead to stricter views
+		#
+		# Exceptions
+		# * Within Germanic paganism, the Reformed Norse faith might take a stricter view (Shunned or even Criminal) if reformed with specific virtues emphasizing family values
+		# * Within Hellenism, the Hellenic faith specifically focused on Artemis or Athena cults might be more restrictive (Shunned) than those centered on Aphrodite or Dionysus (Accepted)
+		# * Within Tengrism, more settled and Islamic-influenced variants might trend toward Shunned or even Criminal attitudes
+		if = {
+			limit = {
+				OR = {
+					religion = religion:akom_religion
+					religion = religion:bon_religion
+					religion = religion:tani_religion
+					religion = religion:hellenism_religion
+					religion = religion:kushitism_religion
+					religion = religion:mundhum_religion
+					religion = religion:north_african_religion
+					religion = religion:waaqism_religion
+					religion = religion:west_african_bori_religion
+					religion = religion:west_african_orisha_religion
+					religion = religion:west_african_roog_religion
+					religion = religion:west_african_religion
+				}
+			}
+			add_doctrine = carn_doctrine_prostitution_accepted
+		}
+		else = {
+			add_doctrine = carn_doctrine_prostitution_shunned
+		}
+	}
+	else_if = {
+		limit = { religion = { is_in_family = rf_abrahamic } }
+		if = {
+			limit = { religion = religion:christianity_religion }
+			# Christianity
+			#
+			# Highly condemned, often with harsh penalties (Criminal)
+			# * Cathar - Dualistic faith that viewed the physical world as corrupt; severely condemned sexual commerce
+			# * Waldensian - Reform movement that emphasized moral purity and literal biblical interpretation
+			# * Lollard - Followers of Wycliffe who advocated strict morality and criticized the Church's tolerance
+			# * Bogomilist - Eastern dualistic movement that rejected physical pleasures
+			# * Adamites - Despite practicing ritual nudity, would have condemned commercial sex as corrupting
+			# * Insular Celtic - Early medieval Celtic Christianity with strong monastic influence and strict moral codes
+			# * Messalian - Considered heretical partly for alleged sexual practices, but would condemn commercial sex
+			# * Bosnian Church - Local variant with ascetic tendencies
+			# 
+			# Morally disapproved but pragmatically tolerated (Shunned)
+			# * Catholic - Official condemnation but practical tolerance as a "necessary evil" in urban areas
+			# * Orthodox - Similar to Catholicism, with periods of stricter enforcement
+			# * Coptic - Egyptian Christianity with moral disapproval but practical accommodation
+			# * Armenian Apostolic - Similar to other Eastern churches in practice
+			# * Conversos - Jewish converts to Christianity who maintained some Jewish cultural practices
+			# * Iconoclast - Despite theological differences with mainstream Orthodoxy, shared similar moral views
+			# * Nestorian - Eastern Christian faith that spread along trade routes, practical in its approach
+			# * Mozarabic Church - Christians under Muslim rule, practical accommodation to social realities
+			# * Adoptionist - Theological heresy focused on Christ's nature rather than moral differences
+			# 
+			# Borderline Cases
+			# * Paulician - Often placed between Shunned and Accepted (3-4) due to accusations by opponents of moral laxity, though historical evidence is contested and mostly comes from their critics
+			# * Mozarabic Church - While generally Shunned (3), some Mozarabic communities under long-term Muslim rule might have developed more accepting practical attitudes in certain urban areas
+			#
+			# No mainstream Christian faith in CK3's medieval setting would have fully accepted prostitution (Rating 5) in their official doctrine. 
+			# The practical implementation varied widely by region, urban/rural divide, and the political power of religious authorities.
+			if = {
+				limit = {
+					OR = {
+						this = faith:cathar
+						this = faith:waldensian
+						this = faith:lollard
+						this = faith:bogomilist
+						this = faith:adamites
+						this = faith:insular_celtic
+						this = faith:messalian
+						this = faith:bosnian_church
+					}
+				}
+				add_doctrine = carn_doctrine_prostitution_crime
+			}
+			else = {
+				add_doctrine = carn_doctrine_prostitution_shunned
+			}
+		}
+		else_if = {
+			limit = { religion = religion:islam_religion }
+			# Islam
+			#
+			# Highly condemned, often with harsh penalties (Criminal)
+			# * Masmudi - Reformist Almohad movement known for moral purification campaigns
+			# * Ashari - Arabian Sunni tradition with stricter interpretations of Islamic law
+			# * Qarmatian - Revolutionary Ismaili offshoot with unique social structures but strict moral codes
+			# * Azariqa - Extremely strict Kharijite sect known for harsh implementation of religious law
+			# * Najdat - Another Kharijite sect with strict moral codes
+			# * Sufri - Kharijite sect with somewhat moderated views but still strict on moral matters
+			# * Quranist - Focused on direct Quranic interpretation without flexibility of traditional jurisprudence
+			# 
+			# Morally disapproved but pragmatically tolerated (Shunned)
+			# * Maturidi - Persian Sunni Islam with pragmatic application of religious law
+			# * Muwalladi - Iberian Sunni Islam influenced by proximity to Christian kingdoms
+			# * Mutazila - Rationalist school more focused on reason in interpreting religious law
+			# * Ismaili - Sevener Shia with esoteric interpretations but practical governance
+			# * Nizari - Ismaili offshoot with pragmatic approach to ruling diverse populations
+			# * Zayidi - Moderate Shia sect closer to Sunni in many practices
+			# * Imami - Twelver Shia, officially condemned but practically regulated in urban centers
+			# * Ibadi - Distinct tradition focused on moderate implementation of religious law
+			# 
+			# Officially criminal but with varied practical implementations (Criminal / Shunned)
+			# * Alawite - Syncretic beliefs but socially conservative on practical moral matters
+			# * Alevi - Mystical tradition with less emphasis on external religious law but still concerned with community morality
+			# * Druze - Closed religious community with strict internal codes but varied interactions with outside world
+			# * Ghulat - "Exaggerator" Shia sects with diverse beliefs but generally strict community boundaries
+			# * Hafizi - Sub-set of Ismaili Shiites with similar practical approaches to mainstream Ismaili
+			# 
+			# All Islamic faiths in CK3 would officially condemn prostitution based on clear Quranic prohibitions, but the practical implementation varied widely. 
+			# The distinction between "Criminal" and "Shunned" often depended more on the political circumstances, urban/rural divide, and specific rulers than on theological differences between faiths.
+			# 
+			# None of these Islamic faiths would reach an "Accepted" status regarding prostitution at the doctrinal level, though practical tolerance might have existed in certain 
+			# cosmopolitan urban centers under specific rulers, particularly in places like medieval Cairo, Baghdad, or Córdoba during culturally open periods.
+			if = {
+				limit = {
+					OR = {
+						this = faith:masmudi
+						this = faith:ashari
+						this = faith:qarmatian
+						this = faith:azariqa
+						this = faith:najdat
+						this = faith:sufri
+						this = faith:quranist
+					}
+				}
+				add_doctrine = carn_doctrine_prostitution_crime
+			}
+			else = {
+				add_doctrine = carn_doctrine_prostitution_shunned
+			}
+		}
+		else_if = {
+			limit = { religion = religion:judaism_religion }
+			# Judaism
+			#
+			# Highly condemned, often with harsh penalties (Criminal)
+			# * Karaism - Scriptural literalist movement rejecting rabbinic interpretation; would strictly follow biblical prohibitions against prostitution
+			# * Samaritan - Ancient tradition adhering strictly to the Torah; maintained strict moral codes within their small communities
+			# * Merkabah - Mystical tradition with focus on purity and ascent; would view prostitution as spiritually polluting
+			# 
+			# Morally disapproved but pragmatically tolerated (Shunned)
+			# * Rabbinism - Mainstream rabbinic Judaism; officially condemned prostitution but recognized practical realities in urban settings
+			# * Haymanot - Ethiopian Jewish tradition; combined Jewish law with some local cultural elements
+			# * Malabarism - Indian Jewish tradition; adapted to local cultural contexts while maintaining core prohibitions
+			# * Kabarism - Central Asian Jewish tradition; maintained Jewish moral codes while adapting to local conditions
+			# 
+			# All Jewish faiths in CK3's medieval setting would condemn prostitution at the doctrinal level based on Torah prohibitions. 
+			# However, the practical implementation varied by community circumstances, geography, and external political pressures.
+			# The distinction between "Criminal" and "Shunned" categories often depended on:
+			# * Urban vs. rural settings (urban communities generally more practical)
+			# * Level of community autonomy (more autonomous communities could enforce stricter standards)
+			# * Economic circumstances (poorer communities sometimes had less rigid enforcement)
+			# * External pressures (Jewish communities under tolerant rulers might have more flexible approaches)
+			# 
+			# None of the Jewish faiths would reach an "Accepted" (4-5) status regarding prostitution at the doctrinal level. 
+			# The religion's focus on family structure, community continuity, and ritual purity meant prostitution remained morally problematic across all Jewish traditions,
+			# even where practical accommodations existed.
+			if = {
+				limit = {
+					OR = {
+						this = faith:karaism
+						this = faith:samaritan
+						this = faith:merkabah
+					}
+				}
+				add_doctrine = carn_doctrine_prostitution_crime
+			}
+			else = {
+				add_doctrine = carn_doctrine_prostitution_shunned
+			}
+		}
+		else_if = {
+			limit = { religion = religion:dualism_religion }
+			# Dualism
+			#
+			# Highly condemned, often with harsh penalties (Criminal)
+			# * Manichean - Founded by prophet Mani; viewed the material world as evil and emphasized strict asceticism, including sexual purity
+			# * Priscillianism - Spanish ascetic movement influenced by Gnosticism; advocated strict moral codes and sexual abstinence
+			# * Sethianism - Gnostic sect focused on divine knowledge; viewed physical desires as traps of the material world
+			# 
+			# Morally disapproved but pragmatically tolerated (Shunned)
+			# * Mandeaism - Gnostic sect centered on John the Baptist; focused on ritual purity but with practical approaches to social realities
+			# * Sabianism - Star-worshipping faith with complex purity codes but practical social accommodation
+			# * Valentinianism - Sophisticated Gnostic system; viewed spiritual knowledge as primary but had nuanced views on physical existence
+			# 
+			# Complex/Contested Cases (Accepted)
+			# * Cainitism - Often accused of moral antinomianism (Rating 4), but historical evidence is limited and mostly comes from their opponents who may have exaggerated their moral laxity
+			# 
+			# The dualistic faiths in CK3 share a common theological thread of distinguishing between the spiritual/divine realm and the material/physical world, but they differed significantly in how this dualism translated to practical moral codes:
+			# 
+			# Most viewed the material world (including physical pleasures) as inferior or corrupt
+			# Many advocated asceticism for spiritual adepts while recognizing ordinary followers might not maintain such standards
+			# Historical evidence for many of these faiths comes primarily from their opponents, who often accused them of either extreme asceticism or moral license
+			# 
+			# None of these faiths would have officially accepted prostitution in their doctrines, though accusations of secret libertinism were sometimes leveled against them by their religious opponents. 
+			# These accusations were most likely exaggerations or misrepresentations used to discredit these minority faiths.
+			# The practical implementation of moral codes would have varied considerably based on the specific communities and historical circumstances of these often-persecuted religious minorities.
+			if = {
+				limit = {
+					OR = {
+						this = faith:manichean
+						this = faith:priscillianism
+						this = faith:sethianism
+					}
+				}
+				add_doctrine = carn_doctrine_prostitution_crime
+			}
+			else_if = {
+				limit = { this = faith:cainitism }
+				add_doctrine = carn_doctrine_prostitution_accepted
+			}
+			else = {
+				add_doctrine = carn_doctrine_prostitution_shunned
+			}
+		}
+		else_if = {
+			limit = { religion = religion:yazidi_religion }
+			# Yazidi
+			#
+			# All Yazidi faiths (due to strict community boundaries and emphasis on purity)
+			add_doctrine = carn_doctrine_prostitution_crime
+		}
+		else = {
+			# Fallback, should not happen
+			add_doctrine = carn_doctrine_prostitution_shunned
+		}
+	}
+	else_if = {
+		limit = { religion = { is_in_family = rf_eastern } }
+		if = {
+			limit = { religion = religion:buddhism_religion }
+			# Buddshism
+			# 
+			# Highly condemned, often with harsh penalties (Criminal)
+			# * Vajrayana - In its purest doctrinal form, despite tantric elements, would condemn commercial exploitation; strict monastic codes would condemn prostitution while maintaining compassion for all involved
+			# 
+			# Morally disapproved but pragmatically tolerated (Shunned)
+			# * Theravada - Conservative Buddhist tradition emphasizing monastic discipline; prostitution would violate precepts against sexual misconduct but practical regulation was common in Theravada societies
+			# * Mahayana - Broader Buddhist tradition with emphasis on compassion; while maintaining moral disapproval, practical accommodation was common
+			# * Lamaism - Tibetan Buddhism blending multiple traditions; while monastically strict, recognized practical realities of lay society
+			# 
+			# Complex, context-dependent attitudes (Shunned / Accepted)
+			# * Ari - Pre-reform Burmese Buddhism with syncretic elements; more accommodating of pre-Buddhist cultural practices including less rigid sexual mores
+			# 
+			# Buddhist attitudes toward prostitution were characterized by:
+			# * Clear moral disapproval based on precepts against sexual misconduct
+			# * Emphasis on compassion toward individuals regardless of occupation
+			# * Recognition of karma and personal choice rather than eternal damnation
+			# * Practical accommodation when Buddhism became a state religion
+			# 
+			# No Buddhist tradition officially endorsed prostitution, but the response was typically less punitive than in Abrahamic traditions. The focus was more on:
+			# * Offering paths to alternative livelihoods
+			# * Viewing involvement in prostitution as a result of negative karma and unfortunate circumstances
+			# * Maintaining compassion for all beings regardless of their actions
+			# 
+			# When Buddhist kingdoms implemented law codes, they typically regulated rather than harshly criminalized prostitution, placing it in the "Shunned" category in practice, even when doctrine might suggest stricter approaches.
+			if = {
+				limit = { this = faith:vajrayana }
+				add_doctrine = carn_doctrine_prostitution_crime
+			}
+			else = {
+				add_doctrine = carn_doctrine_prostitution_shunned
+			}
+		}
+		else_if = {
+			limit = { religion = religion:hinduism_religion }
+			# Hinduism
+			# 
+			# Morally disapproved but pragmatically tolerated (Shunned)
+			# * Vaishnavism - Focused on devotion to Vishnu; maintained traditional dharmic social structures with moral disapproval but practical regulation
+			# * Advaitism - Philosophical tradition of non-dualism; while emphasizing spiritual pursuits over physical desires, took pragmatic approach to social realities
+			# * Shaivism - Centered on Shiva worship; despite ascetic elements, practically accommodated social customs
+			# * Smartism - Tradition honoring multiple deities; generally followed mainstream Hindu attitudes with practical tolerance
+			# * Krishnaism - Devotion to Krishna; emphasized love and devotion while maintaining conventional moral boundaries
+			# * Saura - Sun worship tradition; maintained traditional dharmic social structures
+			# 
+			# More accommodating attitudes in practice (Shunned / Accepted)
+			# * Srikula Shaktism - "Family of Sri" form of Goddess worship; more accommodating of female power and sexuality in religious context, though distinction maintained between sacred and commercial
+			# * Kalikula Shaktism - "Family of Kali" form of Goddess worship; tantric elements and distinctive ritual practices sometimes included controlled ritual sexuality
+			# 
+			# Hindu attitudes toward prostitution were characterized by:
+			# * Ambivalence rather than absolute condemnation - viewed through lens of dharma (duty/order) rather than sin
+			# * Recognition of prostitution within the social order (with various terms like ganika, devadasi, vesya)
+			# * Class/caste distinctions affecting how prostitution was viewed (courtesans vs. lower-status prostitutes)
+			# * Regional variations in practice, particularly regarding temple traditions
+			# 
+			# Notable contextual factors:
+			# * Temple connections - Some regions had traditions of women dedicated to temples (devadasis) whose status varied significantly by time and place
+			# * Cultural sophistication - Classical Hindu texts like Kamasutra acknowledged courtesans as skilled professionals
+			# * Dharmic framework - Viewed through lens of social duty and order rather than absolute moral prohibition
+			# * Royal patronage - Court courtesans sometimes held respected positions in medieval Hindu kingdoms
+			# 
+			# No Hindu tradition officially promoted prostitution as morally positive, but practical accommodation was common, with significant variation by region, historical period, and specific faith tradition. 
+			# The distinction between sacred ritual practices and commercial sex was generally maintained across all Hindu faiths.
+			add_doctrine = carn_doctrine_prostitution_shunned
+		}
+		else_if = {
+			limit = { religion = religion:jainism_religion }
+			# Jainism
+			# 
+			# Highly condemned, often with harsh penalties (Criminal)
+			# * Digambara - "Sky-clad" tradition with strictest ascetic practices; strongly condemned any sexual commerce based on principles of ahimsa (non-violence) and aparigraha (non-possession)
+			# * Svetambara - "White-clad" tradition; slightly less severe than Digambara but still maintained strict moral codes including sexual ethics
+			# * Yapaniya - Now-extinct compromise tradition between the other two; would have maintained similar strict sexual ethics
+			# 
+			# All Jain traditions would strongly condemn prostitution based on core Jain principles:
+			# * Ahimsa (Non-violence) - Viewed prostitution as causing harm through exploitation and objectification
+			# * Aparigraha (Non-possession) - Rejected treating bodies as commodities or possessions
+			# * Brahmacharya (Sexual restraint) - Emphasized sexual restraint for both monastics and laypeople
+			# * Anekantavada (Non-absolutism) - While acknowledging multiple perspectives on ethics, maintained clear position on sexual exploitation
+			# 
+			# Jainism's exceptionally strict ethical framework placed all forms of prostitution firmly in the "Criminal" category in terms of moral evaluation. 
+			# When Jains had political influence, they would advocate against the practice, though their historical political power was limited compared to Hindu or Buddhist rulers.
+			# 
+			# No Jain tradition would have approached an "Accepted" or even "Shunned" position on prostitution, as the fundamental principles of the religion are incompatible with commercial sexual activity.
+			add_doctrine = carn_doctrine_prostitution_crime
+		}
+		else_if = {
+			limit = { religion = religion:taoism_religion }
+			# Taoism
+			# 
+			# Morally disapproved but pragmatically tolerated (Shunned)
+			# * Quanzhen ("Complete Perfection") - Monastic tradition emphasizing internal alchemy and cultivation; advocated sexual restraint and would view prostitution as depleting vital essence
+			# 
+			# Complex attitudes with practical accommodation (Shunned / Accepted)
+			# * Zhengyi ("Orthodox Unity") - Less ascetic tradition involved with community rituals; maintained traditional Chinese family values but took pragmatic approach to social realities
+			# * Shangqing ("Highest Clarity") - Visionary and mystical tradition; focused more on spiritual cultivation than enforcing moral codes on society
+			# 
+			# Taoist attitudes toward prostitution were characterized by:
+			# * Balance philosophy - Viewed through lens of yin-yang harmony rather than absolute moral prohibition
+			# * Vital essence concerns - Some traditions concerned with conservation of sexual energy (jing)
+			# * Integration with Confucian values - Often adopted mainstream Chinese social norms on family and sexuality
+			# * Practical coexistence - In medieval Chinese society, religious and secular domains were often separate
+			# 
+			# Important contextual factors:
+			# * Medieval Chinese society generally regulated rather than eliminated prostitution
+			# * Taoist religious authorities rarely held direct political power to criminalize social practices
+			# * Different Taoist schools varied in their emphasis on asceticism versus social integration
+			# * The "Three Teachings" (Taoism, Confucianism, Buddhism) influenced each other in medieval China
+			# 
+			# No Taoist tradition actively promoted prostitution as morally positive, but the religion's focus on natural balance, pragmatism, 
+			# and integration with existing social structures meant that extreme condemnation was also rare. 
+			# The approach was generally to regulate rather than eliminate, placing most Taoist attitudes in the Shunned to Borderline Accepted categories.
+			add_doctrine = carn_doctrine_prostitution_shunned 
+		}
+		else_if = {
+			limit = { religion = religion:zoroastrianism_religion }
+			# Zoroastrianism
+			# 
+			# Highly condemned, often with harsh penalties
+			# * Mazdayasna - Orthodox Zoroastrianism; viewed prostitution as defiling sacred elements and violating moral principles of good thoughts, words, and deeds
+			# * Zurvanism - Philosophical branch focusing on time; maintained traditional Zoroastrian moral codes
+			# * Gayomarthianism - Theological variant focusing on the first man; maintained strict purity codes
+			# * Khurmazta - Central Asian variant; emphasized purity and righteousness
+			# 
+			# Morally disapproved but pragmatically tolerated
+			# * Urartuism (Arewordik) - Ancient Armenian religion with Zoroastrian influences; more pragmatic in social regulation
+			# * Afridunism - Daylamite folk religion; syncretistic approach with practical accommodation
+			# 
+			# Complex/Contested Cases
+			# * Mazdakism - Social reform movement advocating communal property; while traditionally accused of advocating communal women (Rating 4-5), historical evidence suggests this was likely propaganda by opponents
+			# * Khurramism - Revolutionary movement with some relaxed social attitudes; accused by opponents of moral license but evidence is contested
+			# 
+			# Zoroastrian attitudes toward prostitution were characterized by:
+			# * Purity concerns - Focus on ritual purity and avoidance of pollution
+			# * Cosmic dualism - Prostitution associated with forces of chaos and evil
+			# * Communal integrity - Emphasis on proper family structures and social order
+			# * Water sanctity - Particular concern about bodily fluids polluting sacred water
+			# 
+			# The orthodox Zoroastrian tradition (Mazdayasna) would have been among the strictest in condemning prostitution, viewing it as a form of ritual pollution and moral corruption. 
+			# When Zoroastrians held political power in the Sasanian Empire, they implemented laws against prostitution, though practical enforcement varied by period and ruler.
+			# 
+			# The accusations of sexual license against reformist movements like Mazdakism and Khurramism should be viewed skeptically, 
+			# as similar accusations were commonly used to discredit religious and social reform movements throughout history.
+			if = {
+				limit = {
+					OR = {
+						this = faith:mazdayasna
+						this = faith:zurvanism
+						this = faith:gayomarthianism
+						this = faith:khurmazta
+					}
+				}
+				add_doctrine = carn_doctrine_prostitution_crime
+			}
+			else = {
+				add_doctrine = carn_doctrine_prostitution_shunned
+			}
+		}
+		else = {
+			# Fallback, should not happen
+			add_doctrine = carn_doctrine_prostitution_shunned
+		}
+	}
+	else = {
+		# Fallback, should not happen
+		add_doctrine = carn_doctrine_prostitution_shunned
+	}
+}

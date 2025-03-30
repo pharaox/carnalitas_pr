@@ -1,0 +1,40 @@
+﻿namespace = carn_prostitution_doctrine_seeding
+
+carn_prostitution_doctrine_seeding.0001 = {
+	scope = none
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { has_game_rule = carn_prostitution_default_religious_doctrine_full_historical }
+			every_religion_global = {
+				every_faith = {
+					cpr_seed_historical_prostitution_doctrines_effect = yes
+				}
+			}
+		}
+		else = {
+			every_religion_global = {
+				every_faith = {
+					carn_seed_prostitution_doctrines_effect = yes
+				}
+			}
+		}
+	}
+}
+
+carn_prostitution_doctrine_seeding.0002 = {
+	hidden = yes
+
+	immediate = {
+		root.faith = {
+			if = {
+				limit = { has_game_rule = carn_prostitution_default_religious_doctrine_full_historical }
+				cpr_seed_historical_prostitution_doctrines_effect = yes
+			}
+			else = {
+				carn_seed_prostitution_doctrines_effect = yes
+			}
+		}
+	}
+}
