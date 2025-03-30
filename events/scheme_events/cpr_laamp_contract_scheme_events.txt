@@ -560,6 +560,28 @@ cpr_laamp_contract_schemes.1000 = {
 	}
 }
 
+scripted_effect cpr_laamp_contract_schemes_1000_add_trait_xp_effect = {
+	switch = {
+		trigger = $TYPE$
+		flag:music = {
+			cpr_add_trait_xp_effect = { TRAIT = lifestyle_reveler VALUE = $VALUE$ }
+		}
+		flag:poetry = {}
+		flag:dance = {
+			cpr_add_trait_xp_effect = { TRAIT = lifestyle_reveler VALUE = $VALUE$ }
+		}
+		flag:sex = {
+			cpr_add_trait_xp_effect = { TRAIT = lifestyle_prostitute VALUE = $VALUE$ }
+		}
+		flag:astrology = {
+			cpr_add_trait_xp_effect = { TRAIT = lifestyle_mystic VALUE = $VALUE$ }
+		}
+		flag:illusion = {
+			cpr_add_trait_track_xp_effect = { TRAIT = gallowsbait TRACK = trickster VALUE = $VALUE$ }
+		}
+	}
+}
+
 scripted_effect cpr_laamp_contract_schemes_1000_critical_success_effect = {
 	scope:task_contract = {
 		complete_task_contract = success_critical
@@ -575,6 +597,7 @@ scripted_effect cpr_laamp_contract_schemes_1000_critical_success_effect = {
 		humble = minor_stress_impact_gain
 		arrogant = minor_stress_impact_loss
 	}
+	cpr_laamp_contract_schemes_1000_add_trait_xp_effect = { TYPE = $TYPE$ VALUE = 10 }
 }
 
 scripted_effect cpr_laamp_contract_schemes_1000_standard_success_effect = {
@@ -588,6 +611,7 @@ scripted_effect cpr_laamp_contract_schemes_1000_standard_success_effect = {
 			years = 1
 		}
 	}
+	cpr_laamp_contract_schemes_1000_add_trait_xp_effect = { TYPE = $TYPE$ VALUE = 5 }
 }
 
 scripted_effect cpr_laamp_contract_schemes_1000_follower_success_effect = {
@@ -600,6 +624,9 @@ scripted_effect cpr_laamp_contract_schemes_1000_follower_success_effect = {
 			modifier = cpr_laamp_1000_success_employer_modifier
 			years = 1
 		}
+	}
+	scope:follower = {
+		cpr_laamp_contract_schemes_1000_add_trait_xp_effect = { TYPE = $TYPE$ VALUE = 5 }
 	}
 }
 
@@ -617,6 +644,9 @@ scripted_effect cpr_laamp_contract_schemes_1000_deception_success_effect = {
 	stress_impact = {
 		just = minor_stress_impact_gain
 		deceitful = minor_stress_impact_loss
+	}
+	if = {
+		limit = { $TYPE$ = flag:dummy }
 	}
 }
 
@@ -674,12 +704,12 @@ scripted_effect cpr_laamp_contract_schemes_1000_primary_duel_effect = {
 					50 = {
 						show_chance = no
 						desc = label_success_critical
-						cpr_laamp_contract_schemes_1000_critical_success_effect = yes
+						cpr_laamp_contract_schemes_1000_critical_success_effect = { TYPE = $TYPE$ }
 					}
 					50 = {
 						show_chance = no
 						desc = label_success_standard
-						cpr_laamp_contract_schemes_1000_standard_success_effect = yes
+						cpr_laamp_contract_schemes_1000_standard_success_effect = { TYPE = $TYPE$ }
 					}
 				}
 			}
@@ -718,7 +748,7 @@ scripted_effect cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
 		skill = $SKILL$
 		value = {
 			value = scope:employer.$SKILL$
-			add = 10
+			add = 15
 		}
 		# Victory!
 		50 = {
@@ -730,7 +760,7 @@ scripted_effect cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
 			min = 5
 			desc = cpr_laamp_contract_schemes.1$N$00.b.tt.success
 			show_as_tooltip = {
-				cpr_laamp_contract_schemes_1000_$TYPE$_success_effect = yes
+				cpr_laamp_contract_schemes_1000_$KIND$_success_effect = { TYPE = $TYPE$ }
 			}
 			hidden_effect = {
 				trigger_event = cpr_laamp_contract_schemes.1$N$04
@@ -746,7 +776,7 @@ scripted_effect cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
 			min = 5
 			desc = cpr_laamp_contract_schemes.1$N$00.b.tt.failure
 			show_as_tooltip = {
-				cpr_laamp_contract_schemes_1000_$TYPE$_failure_effect = yes
+				cpr_laamp_contract_schemes_1000_$KIND$_failure_effect = yes
 			}
 			hidden_effect = {
 				trigger_event = cpr_laamp_contract_schemes.1$N$06
@@ -758,7 +788,7 @@ scripted_effect cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
 scripted_effect cpr_laamp_contract_schemes_1000_follower_effect = {
 	custom_tooltip = cpr_laamp_contract_schemes.1$N$00.c.tt.success
 	show_as_tooltip = {
-		cpr_laamp_contract_schemes_1000_follower_success_effect = yes
+		cpr_laamp_contract_schemes_1000_follower_success_effect = { TYPE = $TYPE$ }
 	}
 	hidden_effect = {
 		trigger_event = cpr_laamp_contract_schemes.1$N$03
@@ -802,6 +832,7 @@ cpr_laamp_contract_schemes.1100 = {
 
 		cpr_laamp_contract_schemes_1000_primary_duel_effect = {
 			SKILL = diplomacy
+			TYPE = flag:music
 			N = 1
 		}
 
@@ -825,7 +856,8 @@ cpr_laamp_contract_schemes.1100 = {
 
 		cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
 			SKILL = intrigue
-			TYPE = deception
+			KIND = deception
+			TYPE = flag:music
 			N = 1
 		}
 
@@ -865,7 +897,10 @@ cpr_laamp_contract_schemes.1100 = {
 		}
 		show_as_unavailable = { always = yes }
 
-		cpr_laamp_contract_schemes_1000_follower_effect = { N = 1 }
+		cpr_laamp_contract_schemes_1000_follower_effect = {
+			TYPE = flag:music
+			N = 1
+		}
 
 		ai_chance = {
 			base = 10000
@@ -895,7 +930,7 @@ cpr_laamp_contract_schemes.1101 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_critical_success_effect = yes
+		cpr_laamp_contract_schemes_1000_critical_success_effect = { TYPE = flag:music }
 	}
 
 	option = {
@@ -927,7 +962,7 @@ cpr_laamp_contract_schemes.1102 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_standard_success_effect = yes
+		cpr_laamp_contract_schemes_1000_standard_success_effect = { TYPE = flag:music }
 	}
 
 	option = {
@@ -959,7 +994,7 @@ cpr_laamp_contract_schemes.1103 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_follower_success_effect = yes
+		cpr_laamp_contract_schemes_1000_follower_success_effect = { TYPE = flag:music }
 	}
 
 	option = {
@@ -991,7 +1026,7 @@ cpr_laamp_contract_schemes.1104 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_deception_success_effect = yes
+		cpr_laamp_contract_schemes_1000_deception_success_effect = { TYPE = flag:music }
 	}
 
 	option = {
@@ -1102,6 +1137,7 @@ cpr_laamp_contract_schemes.1200 = {
 
 		cpr_laamp_contract_schemes_1000_primary_duel_effect = {
 			SKILL = diplomacy
+			TYPE = flag:poetry
 			N = 2
 		}
 
@@ -1125,7 +1161,8 @@ cpr_laamp_contract_schemes.1200 = {
 
 		cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
 			SKILL = learning
-			TYPE = standard
+			KIND = standard
+			TYPE = flag:poetry
 			N = 2
 		}
 
@@ -1165,7 +1202,10 @@ cpr_laamp_contract_schemes.1200 = {
 		}
 		show_as_unavailable = { always = yes }
 
-		cpr_laamp_contract_schemes_1000_follower_effect = { N = 2 }
+		cpr_laamp_contract_schemes_1000_follower_effect = {
+			TYPE = flag:poetry
+			N = 2
+		}
 
 		ai_chance = {
 			base = 10000
@@ -1195,7 +1235,7 @@ cpr_laamp_contract_schemes.1201 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_critical_success_effect = yes
+		cpr_laamp_contract_schemes_1000_critical_success_effect = { TYPE = flag:poetry }
 	}
 
 	option = {
@@ -1227,7 +1267,7 @@ cpr_laamp_contract_schemes.1202 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_standard_success_effect = yes
+		cpr_laamp_contract_schemes_1000_standard_success_effect = { TYPE = flag:poetry }
 	}
 
 	option = {
@@ -1259,7 +1299,7 @@ cpr_laamp_contract_schemes.1203 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_follower_success_effect = yes
+		cpr_laamp_contract_schemes_1000_follower_success_effect = { TYPE = flag:poetry }
 	}
 
 	option = {
@@ -1291,7 +1331,7 @@ cpr_laamp_contract_schemes.1204 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_deception_success_effect = yes
+		cpr_laamp_contract_schemes_1000_standard_success_effect = { TYPE = flag:poetry }
 	}
 
 	option = {
@@ -1355,7 +1395,7 @@ cpr_laamp_contract_schemes.1206 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_deception_failure_effect = yes
+		cpr_laamp_contract_schemes_1000_standard_failure_effect = yes
 	}
 
 	option = {
@@ -1402,6 +1442,7 @@ cpr_laamp_contract_schemes.1300 = {
 
 		cpr_laamp_contract_schemes_1000_primary_duel_effect = {
 			SKILL = diplomacy
+			TYPE = flag:dance
 			N = 3
 		}
 
@@ -1425,7 +1466,8 @@ cpr_laamp_contract_schemes.1300 = {
 
 		cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
 			SKILL = prowess
-			TYPE = standard
+			KIND = standard
+			TYPE = flag:dance
 			N = 3
 		}
 
@@ -1465,7 +1507,10 @@ cpr_laamp_contract_schemes.1300 = {
 		}
 		show_as_unavailable = { always = yes }
 
-		cpr_laamp_contract_schemes_1000_follower_effect = { N = 3 }
+		cpr_laamp_contract_schemes_1000_follower_effect = {
+			TYPE = flag:dance
+			N = 3
+		}
 
 		ai_chance = {
 			base = 10000
@@ -1495,7 +1540,7 @@ cpr_laamp_contract_schemes.1301 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_critical_success_effect = yes
+		cpr_laamp_contract_schemes_1000_critical_success_effect = { TYPE = flag:dance }
 	}
 
 	option = {
@@ -1527,7 +1572,7 @@ cpr_laamp_contract_schemes.1302 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_standard_success_effect = yes
+		cpr_laamp_contract_schemes_1000_standard_success_effect = { TYPE = flag:dance }
 	}
 
 	option = {
@@ -1559,7 +1604,7 @@ cpr_laamp_contract_schemes.1303 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_follower_success_effect = yes
+		cpr_laamp_contract_schemes_1000_follower_success_effect = { TYPE = flag:dance }
 	}
 
 	option = {
@@ -1591,7 +1636,7 @@ cpr_laamp_contract_schemes.1304 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_deception_success_effect = yes
+		cpr_laamp_contract_schemes_1000_standard_success_effect = { TYPE = flag:dance }
 	}
 
 	option = {
@@ -1655,7 +1700,7 @@ cpr_laamp_contract_schemes.1306 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_deception_failure_effect = yes
+		cpr_laamp_contract_schemes_1000_standard_failure_effect = yes
 	}
 
 	option = {
@@ -1706,6 +1751,7 @@ cpr_laamp_contract_schemes.1400 = {
 		}
 		cpr_laamp_contract_schemes_1000_primary_duel_effect = {
 			SKILL = diplomacy
+			TYPE = flag:sex
 			N = 4
 		}
 
@@ -1733,7 +1779,8 @@ cpr_laamp_contract_schemes.1400 = {
 		}
 		cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
 			SKILL = intrigue
-			TYPE = deception
+			KIND = deception
+			TYPE = flag:sex
 			N = 4
 		}
 
@@ -1779,7 +1826,10 @@ cpr_laamp_contract_schemes.1400 = {
 				PREGNANCY_CHANCE = pregnancy_chance
 			}
 		}
-		cpr_laamp_contract_schemes_1000_follower_effect = { N = 4 }
+		cpr_laamp_contract_schemes_1000_follower_effect = {
+			TYPE = flag:sex
+			N = 4
+		}
 
 		ai_chance = {
 			base = 10000
@@ -1809,7 +1859,7 @@ cpr_laamp_contract_schemes.1401 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_critical_success_effect = yes
+		cpr_laamp_contract_schemes_1000_critical_success_effect = { TYPE = flag:sex }
 		carn_undress_character_effect = yes
 		scope:employer = {
 			carn_undress_character_effect = yes
@@ -1852,7 +1902,7 @@ cpr_laamp_contract_schemes.1402 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_standard_success_effect = yes
+		cpr_laamp_contract_schemes_1000_standard_success_effect = { TYPE = flag:sex }
 		carn_undress_character_effect = yes
 		scope:employer = {
 			carn_undress_character_effect = yes
@@ -1895,7 +1945,7 @@ cpr_laamp_contract_schemes.1403 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_follower_success_effect = yes
+		cpr_laamp_contract_schemes_1000_follower_success_effect = { TYPE = flag:sex }
 		scope:follower = {
 			carn_undress_character_effect = yes
 		}
@@ -1942,7 +1992,7 @@ cpr_laamp_contract_schemes.1404 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_deception_success_effect = yes
+		cpr_laamp_contract_schemes_1000_deception_success_effect = { TYPE = flag:sex }
 		carn_undress_character_effect = yes
 		scope:employer = {
 			carn_undress_character_effect = yes
@@ -2086,6 +2136,7 @@ cpr_laamp_contract_schemes.1500 = {
 
 		cpr_laamp_contract_schemes_1000_primary_duel_effect = {
 			SKILL = learning
+			TYPE = flag:astrology
 			N = 5
 		}
 
@@ -2109,7 +2160,8 @@ cpr_laamp_contract_schemes.1500 = {
 
 		cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
 			SKILL = intrigue
-			TYPE = deception
+			KIND = deception
+			TYPE = flag:astrology
 			N = 5
 		}
 
@@ -2149,7 +2201,10 @@ cpr_laamp_contract_schemes.1500 = {
 		}
 		show_as_unavailable = { always = yes }
 
-		cpr_laamp_contract_schemes_1000_follower_effect = { N = 5 }
+		cpr_laamp_contract_schemes_1000_follower_effect = {
+			TYPE = flag:astrology
+			N = 5
+		}
 
 		ai_chance = {
 			base = 10000
@@ -2179,7 +2234,7 @@ cpr_laamp_contract_schemes.1501 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_critical_success_effect = yes
+		cpr_laamp_contract_schemes_1000_critical_success_effect = { TYPE = flag:astrology }
 	}
 
 	option = {
@@ -2211,7 +2266,7 @@ cpr_laamp_contract_schemes.1502 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_standard_success_effect = yes
+		cpr_laamp_contract_schemes_1000_standard_success_effect = { TYPE = flag:astrology }
 	}
 
 	option = {
@@ -2243,7 +2298,7 @@ cpr_laamp_contract_schemes.1503 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_follower_success_effect = yes
+		cpr_laamp_contract_schemes_1000_follower_success_effect = { TYPE = flag:astrology }
 	}
 
 	option = {
@@ -2275,7 +2330,7 @@ cpr_laamp_contract_schemes.1504 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_deception_success_effect = yes
+		cpr_laamp_contract_schemes_1000_deception_success_effect = { TYPE = flag:astrology }
 	}
 
 	option = {
@@ -2386,6 +2441,7 @@ cpr_laamp_contract_schemes.1600 = {
 
 		cpr_laamp_contract_schemes_1000_primary_duel_effect = {
 			SKILL = intrigue
+			TYPE = flag:illusion
 			N = 6
 		}
 
@@ -2409,7 +2465,8 @@ cpr_laamp_contract_schemes.1600 = {
 
 		cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
 			SKILL = learning
-			TYPE = standard
+			KIND = standard
+			TYPE = flag:illusion
 			N = 6
 		}
 
@@ -2449,7 +2506,10 @@ cpr_laamp_contract_schemes.1600 = {
 		}
 		show_as_unavailable = { always = yes }
 
-		cpr_laamp_contract_schemes_1000_follower_effect = { N = 6 }
+		cpr_laamp_contract_schemes_1000_follower_effect = {
+			TYPE = flag:illusion
+			N = 6
+		}
 
 		ai_chance = {
 			base = 10000
@@ -2479,7 +2539,7 @@ cpr_laamp_contract_schemes.1601 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_critical_success_effect = yes
+		cpr_laamp_contract_schemes_1000_critical_success_effect = { TYPE = flag:illusion }
 	}
 
 	option = {
@@ -2511,7 +2571,7 @@ cpr_laamp_contract_schemes.1602 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_standard_success_effect = yes
+		cpr_laamp_contract_schemes_1000_standard_success_effect = { TYPE = flag:illusion }
 	}
 
 	option = {
@@ -2543,7 +2603,7 @@ cpr_laamp_contract_schemes.1603 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_follower_success_effect = yes
+		cpr_laamp_contract_schemes_1000_follower_success_effect = { TYPE = flag:illusion }
 	}
 
 	option = {
@@ -2575,7 +2635,7 @@ cpr_laamp_contract_schemes.1604 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_deception_success_effect = yes
+		cpr_laamp_contract_schemes_1000_standard_success_effect = { TYPE = flag:illusion }
 	}
 
 	option = {
@@ -2639,7 +2699,7 @@ cpr_laamp_contract_schemes.1606 = {
 	}
 
 	immediate = {
-		cpr_laamp_contract_schemes_1000_deception_failure_effect = yes
+		cpr_laamp_contract_schemes_1000_standard_failure_effect = yes
 	}
 
 	option = {

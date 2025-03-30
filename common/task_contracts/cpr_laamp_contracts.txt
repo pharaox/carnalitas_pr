@@ -11,7 +11,8 @@ cpr_laamp_1000 = {
 		value = task_contract_weight_default_value
 		add = laamp_contracts_weight_up_diplomacy_value
 		add = laamp_contracts_weight_up_diplomacy_slight_value
-		add = 1000 # Debug
+		# Boost for relevant traits
+		add = cpr_laamp_contracts_weight_up_traits_value
 		# Employer weights.
 		scope:employer = {
 			add = {
@@ -55,8 +56,7 @@ cpr_laamp_1000 = {
 				min = task_contract_weight_employer_associated_traits_min_value
 				max = task_contract_weight_employer_associated_traits_max_value
 			}
-			# Don't weight down barons (?)
-			#multiply = task_contract_weight_by_tier_value
+			multiply = cpr_task_contract_weight_by_tier_value
 			# This weight is an override, so make sure it's placed at the bottom.
 			add = task_contract_weight_employer_contact_list_value
 		}
@@ -194,12 +194,12 @@ cpr_laamp_1000 = {
 				task_contract_taker = { play_sound_effect = "event:/DLC/EP3/SFX/UI/Contracts/ep3_ui_contracts_success_on_contract" }
 				save_scope_value_as = { name = extra_reward value = flag:no }
 				laamp_rewards_disburse_ordinary_currency_effect = {
-					GOLD = scope:task_contract.var:gold_success_critical
+					GOLD = scope:task_contract.var:gold_success_standard
 					PRESTIGE = task_contract_success_prestige_gain_half_value
 					PIETY = 0
-					PROVISIONS = task_contract_success_provisions_gain_medium_value
+					PROVISIONS = task_contract_success_provisions_gain_minor_value
 					OPINION = task_contract_opinion_excelled_reward_value
-					OPINION_TYPE = critically_succeeded_task_contract_opinion
+					OPINION_TYPE = succeeded_task_contract_opinion
 					CONTACT = yes
 					CONTACT_HOOK = yes
 					EXTRA_REWARD = scope:extra_reward

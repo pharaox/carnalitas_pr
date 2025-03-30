@@ -299,3 +299,24 @@ cpr_get_relevant_ruler_effect = {
 		location.county.holder ?= { save_scope_as = $RULER$ }
 	}
 }
+
+cpr_add_trait_xp_effect = {
+	if = {
+		limit = { has_trait = $TRAIT$ }
+		add_trait_xp = {
+			trait = $TRAIT$
+			value = $VALUE$
+		}
+	}
+}
+
+cpr_add_trait_track_xp_effect = {
+	if = {
+		limit = { has_trait = $TRAIT$ }
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = $TRACK$
+			value = $VALUE$
+		}
+	}
+}
