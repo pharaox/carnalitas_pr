@@ -58,6 +58,9 @@
  cpr_debug_msg_forced_to_start_working_as_prostitute: "$cpr_debug_prefix_2$: Character was forced to start working as prostitute, cpr_forced_by_owner: [THIS.Var('cpr_forced_by_owner').Char.GetFullNameNoTooltip] ([THIS.Var('cpr_forced_by_owner').Char.GetID])"
  cpr_debug_msg_forced_to_stop_working_as_prostitute: "$cpr_debug_prefix_2$: Character was forced to stop working as prostitute, cpr_forced_by_owner: [THIS.Var('cpr_forced_by_owner').Char.GetFullNameNoTooltip] ([THIS.Var('cpr_forced_by_owner').Char.GetID])"
 
+ # Contract creation
+ cpr_debug_msg_task_contract_created: "$cpr_debug_prefix$: Task contract created, contract: [THIS.Var('cpr_task_contract').TaskContract.GetNameNoTooltip]"
+
  # Carnalitas decisions
  cpr_debug_msg_work_as_prostitute_decision_made: "$cpr_debug_prefix_2$: $carn_work_as_prostitute_decision$ decision made, work_as_prostitute_ai_willingness: [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
  cpr_debug_msg_stop_work_as_prostitute_decision_made: "$cpr_debug_prefix_2$: $carn_stop_work_as_prostitute_decision$ decision made, work_as_prostitute_ai_willingness: [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
