@@ -373,8 +373,22 @@ cpr_stress_trait_coping_decisions.2004 = {
 			set_house = root.house
 		}
 
-		add_courtier = scope:baby
-		add_courtier = scope:prostitute
+		if = {
+			limit = {
+				scope:prostitute = {
+					NOT = { is_courtier_of = root }
+				}
+			}
+			add_courtier = scope:prostitute
+		}
+		if = {
+			limit = {
+				scope:baby = {
+					NOT = { is_courtier_of = root }
+				}
+			}
+			add_courtier = scope:baby
+		}
 
 		every_in_list = {
 			list = insulted_list
@@ -419,8 +433,22 @@ cpr_stress_trait_coping_decisions.2004 = {
 
 		add_piety = minor_piety_gain
 
-		add_courtier = scope:baby
-		add_courtier = scope:prostitute
+		if = {
+			limit = {
+				scope:prostitute = {
+					NOT = { is_courtier_of = root }
+				}
+			}
+			add_courtier = scope:prostitute
+		}
+		if = {
+			limit = {
+				scope:baby = {
+					NOT = { is_courtier_of = root }
+				}
+			}
+			add_courtier = scope:baby
+		}
 
 		every_in_list = {
 			list = insulted_list
