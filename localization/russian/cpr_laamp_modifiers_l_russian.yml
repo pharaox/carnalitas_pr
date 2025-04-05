@@ -1,0 +1,13 @@
+﻿l_russian:
+
+cpr_laamp_1000_success_employer_modifier: "Entertained by Skillful Performance"
+cpr_laamp_1000_success_employer_modifier_desc: "This character has been moved by a performance of remarkable quality, bringing temporary respite from the burdens of rule and enhancing their diplomatic presence."
+
+cpr_laamp_1000_failure_employer_modifier: "Subjected to Painful Performance"
+cpr_laamp_1000_failure_employer_modifier_desc: "This character has recently endured an entertainment of questionable quality, leaving them more irritable and less composed in diplomatic matters."
+
+cpr_laamp_1000_deception_success_employer_modifier: "Unwittingly Manipulated"
+cpr_laamp_1000_deception_success_employer_modifier_desc: "This character has been subtly manipulated through entertainment, believing themselves to have experienced something genuine while actually revealing vulnerabilities and secrets. Their judgment is compromised without their knowledge."
+
+cpr_laamp_1000_deception_failure_employer_modifier: "Heightened Suspicion"
+cpr_laamp_1000_deception_failure_employer_modifier_desc: "Having detected an attempt at manipulation disguised as entertainment, this character has become more vigilant and suspicious, making them harder to deceive but also more stressed and paranoid."

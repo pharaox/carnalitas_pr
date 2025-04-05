@@ -1,0 +1,340 @@
+﻿l_russian:
+
+# Contract
+cpr_laamp_1000_contract: "A Night's Diversion"
+cpr_laamp_1000_desc_title: "Wanderers of refined talents,"
+cpr_laamp_1000_desc: "[TaskContract.GetEmployer.GetTitleAsNameNoTooltip] of [TaskContract.GetEmployer.GetPrimaryTitle.GetNameNoTier] seeks an entertainer to provide private diversions. [TaskContract.GetEmployer.GetSheHe|U] has specific preferences based on [TaskContract.GetEmployer.GetHerHis] personal tastes. Discretion assured and generous compensation offered to those who can truly impress."
+cpr_laamp_1000_request: "This [task_contract|E] requires you to [travel|E] to a [ruler|E]'s residence and provide entertainment. You will choose from several options based on the employer's interests — music, poetry, dance, fortune-telling, illusions, or companionship. Your success will depend on your [diplomacy|E], [intrigue|E], [learning|E], or [prowess|E] skills. You may also assign a suitable [follower|E] to perform in your place."
+
+# Initial Selection Event
+cpr_laamp_contract_schemes.1000.t: "$cpr_laamp_1000_contract$"
+cpr_laamp_contract_schemes.1000.desc: "[employer.GetTitledFirstName] welcomes me to [employer.GetHerHis] private chambers, a smile not quite reaching [employer.GetHerHis] eyes. The room is overly lit by candles, yet somehow remains cold.\n\n'My position affords me many things,' [employer.GetSheHe] says, swirling wine in a goblet. 'Power, wealth, respect... yet I find myself starved for novelty, for distraction from courtly matters.'\n\n[employer.GetSheHe|U] looks at me intently. 'I'm told you possess uncommon talents. I would have you entertain me — what do you offer?'"
+cpr_laamp_contract_schemes.1000.a: "I could perform music to ease your troubled mind."
+cpr_laamp_contract_schemes.1000.b: "Allow me to share poetry and tales from distant lands."
+cpr_laamp_contract_schemes.1000.c: "Perhaps a dance would lift your spirits?"
+cpr_laamp_contract_schemes.1000.d: "I offer companionship of a more... intimate nature."
+cpr_laamp_contract_schemes.1000.e: "I could read your fortune through the ancient art of astrology."
+cpr_laamp_contract_schemes.1000.f: "I know arts of illusion that will astonish and delight you."
+cpr_laamp_contract_schemes.1000.g: "You wish me to play the fool for your amusement? I think not."
+
+# Tooltips
+cpr_laamp_contract_schemes.1000.a.tt: "You will attempt to entertain [employer.GetTitledFirstName] with musical performance. Success depends primarily on your [diplomacy|E], but you may be able to use other approaches."
+cpr_laamp_contract_schemes.1000.b.tt: "You will recite poetry and tales for [employer.GetTitledFirstName]. Success depends primarily on your [diplomacy|E], though your [learning|E] may offer alternative approaches."
+cpr_laamp_contract_schemes.1000.c.tt: "You will perform dances to entertain [employer.GetTitledFirstName]. Success depends primarily on your [diplomacy|E], though your [prowess|E] might allow for an impressive warrior's dance."
+cpr_laamp_contract_schemes.1000.d.tt: "You will provide [employer.GetTitledFirstName] with intimate companionship. Success depends primarily on your [diplomacy|E], though your [intrigue|E] might allow you to extract secrets during vulnerable moments."
+cpr_laamp_contract_schemes.1000.e.tt: "You will read [employer.GetTitledFirstNamePossessive] fortune through astrology. Success depends primarily on your [learning|E], though your [intrigue|E] might allow for manipulation through 'divination'."
+cpr_laamp_contract_schemes.1000.f.tt: "You will perform illusions and tricks to amaze [employer.GetTitledFirstName]. Success depends primarily on your [intrigue|E], though your [learning|E] might offer a more scholarly approach to the art of deception."
+cpr_laamp_contract_schemes.1000.g.tt: "You decline the request for entertainment, judging that your talents would be wasted on this particular patron. Though this may damage relations with [employer.GetTitledFirstName], your dignity remains intact... along with whatever other assets you've chosen to preserve."
+
+# 1. Music Performance Contract
+cpr_laamp_contract_schemes.1100.t: "$cpr_laamp_1000_contract$: A Melody for Weary Ears"
+cpr_laamp_contract_schemes.1100.desc: "[employer.GetTitledFirstName] nods with interest at my mention of musical talents. 'Music... yes, it has been too long since these chambers heard anything but plotting and petitioning.'\n\n[employer.GetSheHe|U] gestures toward an ornate lute resting on a stand in the corner. 'That instrument has sat silent since the last minstrel passed through. They say music soothes the troubled mind — and mine has troubles enough to drown a kingdom. Show me your skill, if you would. Let me forget, if only for an evening, the weight of my position.'"
+cpr_laamp_contract_schemes.1100.a: "I shall perform with all the skill at my disposal." # Diplomacy Challenge
+cpr_laamp_contract_schemes.1100.b: "I may not be a master musician, but I know what will truly please you." # Intrigue Challenge
+cpr_laamp_contract_schemes.1100.c: "I shall have my follower [follower.GetTitledFirstName] perform; [follower.GetSheHe] has a gift for music." # follower exists
+cpr_laamp_contract_schemes.1100.c.no_follower: "None of my followers possess the musical talent required for this task."
+
+# Tooltips
+cpr_laamp_contract_schemes.1100.a.tt.success: "Your musical performance enchants [employer.GetTitledFirstName], bringing a rare moment of beauty to [employer.GetHerHis] world. Your reward will be substantial, and your reputation as an entertainer enhanced."
+cpr_laamp_contract_schemes.1100.a.tt.failure: "Your musical abilities prove inadequate, resulting in an awkward performance that [employer.GetTitledFirstName] politely endures. You will receive no payment, and this failure may damage your reputation."
+cpr_laamp_contract_schemes.1100.b.tt.success: "Though your musical skills are modest, your keen observation allows you to understand what [employer.GetTitledFirstName] truly desires. You'll not only receive payment but gain valuable insights that could prove useful in the future."
+cpr_laamp_contract_schemes.1100.b.tt.failure: "Your attempt to manipulate the situation backfires, as [employer.GetTitledFirstName] sees through your deception. You leave with neither payment nor dignity."
+cpr_laamp_contract_schemes.1100.c.tt.success: "Your follower's musical talent thoroughly impresses [employer.GetTitledFirstName], reflecting well on your judgment in companions. You receive generous payment and enhance both your reputations."
+cpr_laamp_contract_schemes.1100.c.tt.no_follower: "You lack an available [follower|E] with at least 18 [diplomacy|E] and 50 [trait_level_track_xp|E] in $trait_lifestyle_reveler$ to delegate to."
+
+# Exceptional Success (Diplomacy)
+cpr_laamp_contract_schemes.1101.t: "$cpr_laamp_1000_contract$: Symphony of the Soul"
+cpr_laamp_contract_schemes.1101.desc: "The lute feels alive in my hands, an extension of my own voice as I coax melodies that drift through [employer.GetTitledFirstNamePossessive] chambers like ghosts of happier times. I begin with court favorites, then slowly transition to rarer tunes — ballads from [ROOT.Char.GetCulture.GetName] lands and haunting rhythms carried along trade routes from distant shores.\n\nI notice [employer.GetTitledFirstNamePossessive] fingers first tapping in time, then [employer.GetHerHis] lips moving silently with half-remembered lyrics. When I shift to a childhood lullaby common in these lands, I glimpse a moment of unguarded emotion cross [employer.GetHerHis] face.\n\nBy the time the final note fades, hanging in the air like morning mist, [employer.GetTitledFirstName] sits in contented silence, transformed by the experience."
+cpr_laamp_contract_schemes.1101.desc.outro: "\n\n'It has been too long since these walls heard anything but plotting and petitions,' [employer.GetSheHe] says finally, voice softer than before. 'You have given me a gift beyond mere entertainment — you have reminded me of beauty.'\n\n[employer.GetSheHe|U] presents me with a purse that jingles pleasingly with coin. 'Worth every denier, and then some.'"
+cpr_laamp_contract_schemes.1101.a: "The music speaks what words cannot."
+
+# Success (Diplomacy)
+cpr_laamp_contract_schemes.1102.t: "$cpr_laamp_1000_contract$: Pleasing Melodies"
+cpr_laamp_contract_schemes.1102.desc: "Though I am no master, my fingers find the right notes more often than not. I play simple, pleasing melodies that gradually draw [employer.GetTitledFirstName] out of [employer.GetHerHis] melancholy.\n\nWhen I stumble over a particularly difficult passage, I cover it with a flourish and a smile. [employer.GetTitledFirstName] seems not to notice — or perhaps chooses not to comment — as [employer.GetSheHe] is carried away by the simple joy of music filling [employer.GetHerHis] chambers."
+cpr_laamp_contract_schemes.1102.desc.outro: "\n\n'That was... refreshing,' [employer.GetTitledFirstName] says as the final notes fade. 'It is good to be reminded of simple pleasures.' [employer.GetSheHe|U] signals for a servant who brings forward my payment — modest but fair for the entertainment provided."
+cpr_laamp_contract_schemes.1102.a: "Even imperfect music can lift the spirits."
+
+# Follower Success
+cpr_laamp_contract_schemes.1103.t: "$cpr_laamp_1000_contract$: A Master's Touch"
+cpr_laamp_contract_schemes.1103.desc: "I present [follower.GetTitledFirstName], who bows with practiced grace before taking up position with [follower.GetHerHis] instrument. What follows can only be described as enchantment through sound. Notes cascade like water, build like storm clouds, and dance like flame, all guided by [follower.GetFirstNamePossessive] masterful touch.\n\n[employer.GetTitledFirstName] sits transfixed, occasionally closing [employer.GetHerHis] eyes to better absorb the melody. By the performance's end, the hard lines of authority have softened on [employer.GetHerHis] face."
+cpr_laamp_contract_schemes.1103.desc.outro: "\n\n'Your [follower.GetTitledFirstName] has a rare gift,' [employer.GetTitledFirstName] acknowledges. 'To think such talent travels in your company!' [employer.GetSheHe|U] rewards us generously, clearly pleased with the arrangement."
+cpr_laamp_contract_schemes.1103.a: "True talent deserves recognition."
+
+# Success (Intrigue)
+cpr_laamp_contract_schemes.1104.t: "$cpr_laamp_1000_contract$: A Different Tune"
+cpr_laamp_contract_schemes.1104.desc: "I begin to play, but my true performance lies in my observation of [employer.GetTitledFirstName]. I notice how [employer.GetHerHis] eyes linger on certain objects, how [employer.GetHerHis] posture shifts when I mention certain topics between songs.\n\nGradually, I weave conversations into my performance, drawing out [employer.GetTitledFirstNamePossessive] interests and concerns. The music becomes secondary to the connection I'm establishing — one where [employer.GetSheHe] feels truly heard, perhaps for the first time in years.\n\nBy the time I set down the instrument, [employer.GetTitledFirstName] is speaking freely of matters I suspect are rarely shared, believing [employer.GetSheHe] has found a sympathetic ear rather than recognizing my careful extraction of valuable information."
+cpr_laamp_contract_schemes.1104.desc.outro: "\n\n'I had not expected such... understanding from a mere entertainer,' [employer.GetTitledFirstName] admits, seemingly unaware of how much [employer.GetSheHe] has revealed. 'You have a gift for more than music.' [employer.GetSheHe|U] pays me well, perhaps hoping for future conversations — unaware of the advantage I've gained through this seemingly simple performance."
+cpr_laamp_contract_schemes.1104.a: "Sometimes the most valuable notes are those left unplayed."
+
+# Failure (Diplomacy)
+cpr_laamp_contract_schemes.1105.t: "$cpr_laamp_1000_contract$: Discordant Notes"
+cpr_laamp_contract_schemes.1105.desc: "I had overestimated my musical abilities. What began as ambitious quickly devolved into embarrassment as my fingers fumbled over strings and my voice cracked on notes beyond my range.\n\nI tried to recover with simpler melodies, but by then [employer.GetTitledFirstName] had already begun exchanging pained glances with [employer.GetHerHis] attendants. When I accidentally snapped a string mid-performance, the sharp twang seemed to echo my failure throughout the chamber.\n\n'Perhaps that's... enough for tonight,' [employer.GetTitledFirstName] suggests diplomatically, though [employer.GetHerHis] grimace betrays [employer.GetHerHis] true feelings. 'I find I am more fatigued than I realized.'"
+cpr_laamp_contract_schemes.1105.desc.outro: "\n\nThere is no payment offered, only a swift dismissal and the burning shame of a performance best forgotten. As I depart, I overhear a courtier whisper, 'And to think we expected entertainment worthy of our [employer.GetTitleAsNameNoTooltip]!'"
+cpr_laamp_contract_schemes.1105.a: "Some talents are better left unclaimed."
+
+# Failure (Intrigue)
+cpr_laamp_contract_schemes.1106.t: "$cpr_laamp_1000_contract$: A Discord of Intentions"
+cpr_laamp_contract_schemes.1106.desc: "I begin to play, focusing more on observing [employer.GetTitledFirstName] than on the music itself. My fingers hit discordant notes as I search for vulnerabilities or secrets I might exploit.\n\nMy distraction becomes increasingly obvious as the melody falls apart. I attempt to cover the musical failures with clever conversation, but [employer.GetTitledFirstName]'s expression hardens with each probing question I interject between faltering notes.\n\n'I believe,' [employer.GetSheHe] finally states, raising a hand to silence my performance, 'that you are more interested in matters beyond your contract. Do you think me a fool to be so easily manipulated?'\n\nThe atmosphere in the chamber chills instantly. What I had intended as subtle information gathering has been perceived as invasive and disrespectful."
+cpr_laamp_contract_schemes.1106.desc.outro: "\n\n'You may leave now,' [employer.GetTitledFirstName] dismisses me coldly. 'I have no use for entertainers who seek to pry rather than perform.' Not only is payment withheld, but I leave having made an enemy who now watches me with heightened suspicion."
+cpr_laamp_contract_schemes.1106.a: "My subtlety needs considerable refinement."
+
+# 2. Poetry Recitation Contract
+cpr_laamp_contract_schemes.1200.t: "$cpr_laamp_1000_contract$: Words to Stir the Soul"
+cpr_laamp_contract_schemes.1200.desc: "'Poetry...' [employer.GetTitledFirstName] considers thoughtfully. 'The court bards offer empty flatteries, but true poetry — that which speaks to the heart's condition — is rare in these halls.'\n\n[employer.GetSheHe|U] settles into [employer.GetHerHis] chair, swirling wine in a goblet. 'Bring me tales of distant lands, verses that stir the soul. Let your words paint pictures my eyes may never see, speak truths courtiers dare not utter. Show me your mastery of language, if you truly possess it.'"
+cpr_laamp_contract_schemes.1200.a: "I shall weave words to captivate your mind and heart." # Diplomacy Challenge
+cpr_laamp_contract_schemes.1200.b: "I shall craft verses that speak to your deepest desires." # Learning Challenge
+cpr_laamp_contract_schemes.1200.c: "I shall have my follower [follower.GetTitledFirstName] recite; [follower.GetSheHe] has studied the poetic arts." # follower exists
+cpr_laamp_contract_schemes.1200.c.no_follower: "I have no followers versed in the poetic arts who could serve in my place."
+
+# Tooltips
+cpr_laamp_contract_schemes.1200.a.tt.success: "Your verses captivate [employer.GetTitledFirstName], transporting [employer.GetHerHim] beyond the confines of [employer.GetHerHis] position. Your payment will be generous, and your reputation for artistry enhanced."
+cpr_laamp_contract_schemes.1200.a.tt.failure: "Your poetic efforts fall flat, boring or confusing [employer.GetTitledFirstName]. You will receive no payment, and your reputation as a wordsmith suffers."
+cpr_laamp_contract_schemes.1200.b.tt.success: "Your scholarly approach to poetry impresses [employer.GetTitledFirstName], who appreciates both beauty and intellectual depth. You receive payment and gain respect for your erudition."
+cpr_laamp_contract_schemes.1200.b.tt.failure: "Your academic approach overwhelms the artistry, turning what should be entertainment into tedious lecturing. [employer.GetTitledFirstName] dismisses you without payment, bored rather than impressed."
+cpr_laamp_contract_schemes.1200.c.tt.success: "Your follower's poetic mastery captivates [employer.GetTitledFirstName], reflecting well on your judgment in companions. You receive generous payment and enhance both your reputations."
+cpr_laamp_contract_schemes.1200.c.tt.no_follower: "You lack an available [follower|E] with at least 18 [diplomacy|E] and a $trait_poet$ trait to delegate to."
+
+# Exceptional Success (Diplomacy)
+cpr_laamp_contract_schemes.1201.t: "$cpr_laamp_1000_contract$: Verses Like Spellcraft"
+cpr_laamp_contract_schemes.1201.desc: "I begin with verses of my own creation, carefully crafted to flatter without appearing obsequious. As [employer.GetTitledFirstName] relaxes, I transition to epic poems of heroes whose circumstances mirror [employer.GetHerHis] own struggles, subtly emphasizing their ultimate triumphs.\n\nMy voice rises and falls with practiced cadence, painting pictures with words alone. I sprinkle in philosophical musings from eastern sages, bawdy couplets that draw unexpected laughter, and tender sonnets that speak to the heart's quiet yearnings.\n\nBy the time I finish with a stirring ode to legacy and remembrance, [employer.GetTitledFirstName] leans forward, completely absorbed in the worlds I've conjured from thin air."
+cpr_laamp_contract_schemes.1201.desc.outro: "\n\n'In all my years,' [employer.GetTitledFirstName] says when the final verse ends, 'few have shown me worlds so vivid without leaving this chamber. You have a rare gift.'\n\n[employer.GetSheHe|U] signals to a servant who brings forward not just coin, but a small token of appreciation — a ring bearing [employer.GetHerHis] house symbol. 'That you might remember this evening as fondly as I shall.'"
+cpr_laamp_contract_schemes.1201.a: "Words, like seeds, may bloom in unexpected places."
+
+# Success (Diplomacy)
+cpr_laamp_contract_schemes.1202.t: "$cpr_laamp_1000_contract$: Tales Well Told"
+cpr_laamp_contract_schemes.1202.desc: "Though not all my rhymes flow perfectly, the stories I weave capture [employer.GetTitledFirstNamePossessive] imagination. I recite tales of valor and romance collected during my travels, adapting them slightly to better resonate with my audience.\n\nWhen I falter momentarily in remembering a particular verse, I improvise with convincing confidence. [employer.GetTitledFirstName] nods appreciatively at a clever turn of phrase, seemingly content with my modest talents."
+cpr_laamp_contract_schemes.1202.desc.outro: "\n\n'You have a gift for storytelling,' [employer.GetTitledFirstName] acknowledges when I conclude. 'It has been a pleasant diversion.' [employer.GetSheHe|U] provides fair payment for my efforts, clearly satisfied if not entirely transported by the experience."
+cpr_laamp_contract_schemes.1202.a: "Even simple words can paint a thousand pictures."
+
+# Follower Success
+cpr_laamp_contract_schemes.1203.t: "$cpr_laamp_1000_contract$: A Wordsmith's Craft"
+cpr_laamp_contract_schemes.1203.desc: "[follower.GetTitledFirstName] steps forward with the quiet confidence of one who has performed before royalty. As [follower.GetSheHe] begins to speak, the very air seems to still in reverence to [follower.GetHerHis] words.\n\nProse becomes music, and poetry becomes truth as [follower.GetFirstNameNoTooltip] weaves tales that transport [employer.GetTitledFirstName] far beyond the confines of [employer.GetHerHis] position. I watch with pride as my companion demonstrates the power of language wielded by a true master."
+cpr_laamp_contract_schemes.1203.desc.outro: "\n\n'Your [follower.GetTitledFirstName] possesses true artistry,' [employer.GetTitledFirstName] declares when the recitation concludes. 'You choose your companions wisely.' [employer.GetSheHe|U] rewards us generously, clearly moved by [follower.GetFirstNamePossessive] performance."
+cpr_laamp_contract_schemes.1203.a: "A master's words carry weight beyond their sound."
+
+# Success (Learning)
+cpr_laamp_contract_schemes.1204.t: "$cpr_laamp_1000_contract$: Scholar's Verses"
+cpr_laamp_contract_schemes.1204.desc: "Rather than rely solely on entertainment value, I draw on my scholarly knowledge to present verses with historical and philosophical depth. I recite ancient poems in their original tongues before translating, explaining the cultural contexts that give them deeper meaning.\n\nI compare rhetorical techniques across traditions, noting how certain metaphors transcend cultural boundaries. [employer.GetTitledFirstName] engages intellectually, asking questions that reveal [employer.GetHerHis] own education — a side [employer.GetSheHe] perhaps rarely has opportunity to display.\n\nWhat begins as recitation evolves into scholarly discourse, with poetry as its foundation. [employer.GetTitledFirstName] seems to appreciate being treated as a mind worth engaging rather than merely an audience to be diverted."
+cpr_laamp_contract_schemes.1204.desc.outro: "\n\n'Most entertainers assume I desire only distraction,' [employer.GetTitledFirstName] confides as our session concludes. 'You recognized a hunger for substance as well as beauty.' [employer.GetSheHe|U] compensates me well, with a look that suggests [employer.GetSheHe] will remember this encounter differently from most."
+cpr_laamp_contract_schemes.1204.a: "True poetry enlightens as it entertains."
+
+# Failure (Diplomacy)
+cpr_laamp_contract_schemes.1205.t: "$cpr_laamp_1000_contract$: Empty Verses"
+cpr_laamp_contract_schemes.1205.desc: "I had prepared what I thought were moving verses, but from the moment I began, I could sense [employer.GetTitledFirstNamePossessive] attention drifting. My carefully selected poems — perhaps too scholarly or too foreign for local tastes — fell flat in the space between us.\n\nWorse still, I found myself repeating sections I had already recited, my mind blanking at crucial moments. What should have been a captivating journey through words became an awkward trudge through increasingly confused narratives.\n\n[employer.GetTitledFirstName] attempted politeness at first, nodding at appropriate intervals, but eventually began glancing toward the door with undisguised longing."
+cpr_laamp_contract_schemes.1205.desc.outro: "\n\n'I believe we've had quite enough... culture for one evening,' [employer.GetSheHe] finally interrupts, making no attempt to hide a yawn. 'Court business calls early tomorrow.'\n\nNo coin exchanges hands, and it's clear that my name will not be mentioned favorably in this court's gossip."
+cpr_laamp_contract_schemes.1205.a: "Words failed me when I needed them most."
+
+# Failure (Learning)
+cpr_laamp_contract_schemes.1206.t: "$cpr_laamp_1000_contract$: Scholarly Pretensions"
+cpr_laamp_contract_schemes.1206.desc: "I attempt to elevate my recitation with scholarly references and philosophical insights, hoping to impress [employer.GetTitledFirstName] with intellectual depth rather than mere artistic expression. My verses become weighted with citations of ancient texts and complex theological concepts.\n\nAs I expound on the metaphysical implications of a particularly obscure simile, I notice [employer.GetTitledFirstNamePossessive] attention wandering. What I intended as profound discourse has become tedious pedantry, the poetry buried beneath layers of academic posturing.\n\n'I believe,' [employer.GetSheHe] finally interrupts with thinly veiled impatience, 'that I requested entertainment, not a lecture. Perhaps you misunderstood the nature of our arrangement?'"
+cpr_laamp_contract_schemes.1206.desc.outro: "\n\n'That will be all for tonight,' [employer.GetTitledFirstName] dismisses me with a wave, barely concealing a yawn. 'Next time, I shall be more specific in requesting someone who understands the difference between recitation and dissertation.' I depart without payment, my scholarly approach having thoroughly failed to provide the diversion sought."
+cpr_laamp_contract_schemes.1206.a: "Knowledge without artistry is merely information."
+
+# 3. Dance Performance Contract
+cpr_laamp_contract_schemes.1300.t: "$cpr_laamp_1000_contract$: Movement and Grace"
+cpr_laamp_contract_schemes.1300.desc: "[employer.GetTitledFirstName] raises an eyebrow at my mention of dance. 'Now that is an offer rarely made by those of your profession,' [employer.GetSheHe] remarks, interest clearly piqued.\n\n'The court dances are so formal, so rigid with tradition,' [employer.GetSheHe] continues, signaling for music. 'Show me something different — movements from distant lands, perhaps, or styles too provocative for formal occasions. Let me see what the common folk or foreign courts enjoy when eyes of judgment are not upon them.'"
+cpr_laamp_contract_schemes.1300.a: "I shall dance with all the grace and skill I possess." # Diplomacy Challenge
+cpr_laamp_contract_schemes.1300.b: "I may surprise you with a martial dance few have witnessed." # Prowess Challenge
+cpr_laamp_contract_schemes.1300.c: "I shall have my follower [follower.GetTitledFirstName] perform; [follower.GetSheHe] is trained in many dance traditions." # follower exists
+cpr_laamp_contract_schemes.1300.c.no_follower: "None of my followers are skilled enough in dance to perform this service."
+
+# Tooltips
+cpr_laamp_contract_schemes.1300.a.tt.success: "Your dance mesmerizes [employer.GetTitledFirstName], your movements speaking a language beyond words. Your reward will be substantial, and your grace remembered long after the performance ends."
+cpr_laamp_contract_schemes.1300.a.tt.failure: "Your dancing proves awkward and unimpressive, embarrassing both yourself and [employer.GetTitledFirstName]. You receive no payment and leave with your reputation diminished."
+cpr_laamp_contract_schemes.1300.b.tt.success: "Your warrior's dance demonstrates strength and precision that impresses [employer.GetTitledFirstName]. You receive payment and earn respect for showing the beauty in martial discipline."
+cpr_laamp_contract_schemes.1300.b.tt.failure: "Your attempt at a martial dance results in clumsy movements and nearly damaged property. [employer.GetTitledFirstName] dismisses you without payment, your physical prowess clearly better suited to the battlefield than the ballroom."
+cpr_laamp_contract_schemes.1300.c.tt.success: "Your follower's graceful movements thoroughly impress [employer.GetTitledFirstName], reflecting well on your judgment in companions. You receive generous payment and enhance both your reputations."
+cpr_laamp_contract_schemes.1300.c.tt.no_follower: "You lack an available [follower|E] with at least 18 [diplomacy|E] and 50 [trait_level_track_xp|E] in $trait_lifestyle_reveler$ to delegate to."
+
+# Exceptional Success (Diplomacy)
+cpr_laamp_contract_schemes.1301.t: "$cpr_laamp_1000_contract$: Body as Poetry"
+cpr_laamp_contract_schemes.1301.desc: "I request permission to rearrange the furniture slightly, creating space at the center of the chamber. [employer.GetTitledFirstName] watches with curiosity as I prepare, then signal for the musicians [employer.GetSheHe] has provided to begin.\n\nMy first movements are controlled and precise — the formal patterns favored in noble courts across the realm. But as [employer.GetTitledFirstNamePossessive] interest grows, I gradually incorporate elements from dances I've learned in my travels: the passionate spins of Iberian courts, the hypnotic hand gestures of eastern temples, the earthy vigor of common festivals.\n\nMy body speaks a language beyond words, telling stories of passion, loss, triumph, and devotion. I see [employer.GetTitledFirstNamePossessive] breath quicken at moments of tension, [employer.GetHerHis] smile widen during playful sequences."
+cpr_laamp_contract_schemes.1301.desc.outro: "\n\nWhen the final notes fade and the dance concludes, [employer.GetTitledFirstName] applauds with genuine enthusiasm — perhaps the first sincere emotion [employer.GetSheHe] has displayed since my arrival.\n\n'For a time, I forgot my station and all its burdens,' [employer.GetSheHe] admits, color high in [employer.GetHerHis] cheeks. 'A rare gift indeed.' [employer.GetSheHe|U] rewards me generously, the heavy purse a testament to how thoroughly [employer.GetSheHe] was transported by the performance."
+cpr_laamp_contract_schemes.1301.a: "The body remembers what the mind forgets."
+
+# Success (Diplomacy)
+cpr_laamp_contract_schemes.1302.t: "$cpr_laamp_1000_contract$: Rhythms of Life"
+cpr_laamp_contract_schemes.1302.desc: "Though I am no court performer, I move with enough grace to hold [employer.GetTitledFirstNamePossessive] attention. My steps follow the traditional patterns, occasionally embellished with flourishes I've observed in taverns and town squares during my travels.\n\nWhat I lack in technical precision, I make up for with enthusiasm and a willingness to occasionally make light of my own missteps. [employer.GetTitledFirstName] seems to appreciate the authenticity of my efforts, tapping [employer.GetHerHis] foot in time with the music."
+cpr_laamp_contract_schemes.1302.desc.outro: "\n\n'Refreshingly unpretentious,' [employer.GetTitledFirstName] comments when I finish, slightly out of breath. 'A welcome change from the calculated perfection of court dancers.' [employer.GetSheHe|U] provides fair payment, seemingly content with the modest entertainment."
+cpr_laamp_contract_schemes.1302.a: "Even imperfect dance can speak true."
+
+# Follower Success
+cpr_laamp_contract_schemes.1303.t: "$cpr_laamp_1000_contract$: Master of Movement"
+cpr_laamp_contract_schemes.1303.desc: "[follower.GetTitledFirstName] transforms the very space around [follower.GetHerHim] as [follower.GetSheHe] begins to dance. Each movement flows into the next with such natural grace that one forgets they are watching a performance rather than witnessing some elemental force of nature.\n\n[employer.GetTitledFirstName] watches with undisguised wonder as [follower.GetFirstNameNoTooltip] weaves patterns in the air, telling stories without words. Even the servants pause in their duties, momentarily entranced by the display."
+cpr_laamp_contract_schemes.1303.desc.outro: "\n\n'Your [follower.GetTitledFirstName] moves as though [follower.GetSheHe] were born to dance,' [employer.GetTitledFirstName] remarks, clearly impressed. 'I shall remember this performance for years to come.' [employer.GetSheHe|U] rewards us handsomely, appreciation evident in [employer.GetHerHis] generous payment."
+cpr_laamp_contract_schemes.1303.a: "True mastery makes difficult things appear effortless."
+
+# Success (Prowess)
+cpr_laamp_contract_schemes.1304.t: "$cpr_laamp_1000_contract$: Warrior's Dance"
+cpr_laamp_contract_schemes.1304.desc: "I request space and a moment to prepare. Rather than the courtly dance [employer.GetTitledFirstName] likely expected, I begin a warrior's display from distant lands — part combat training, part ritual performance.\n\nMy movements demonstrate strength and control, each position flowing into the next with precision honed through martial discipline. What I perform is not merely entertainment but the deadly grace of combat transformed into art.\n\n[employer.GetTitledFirstName] watches with growing fascination, occasionally leaning forward when a particularly complex sequence unfolds. I can see [employer.GetSheHe] recognizes the martial foundation beneath the performance — and respects it."
+cpr_laamp_contract_schemes.1304.desc.outro: "\n\n'Remarkable,' [employer.GetTitledFirstName] observes when I finish, a sheen of exertion evident on my brow. 'Beauty and deadliness in equal measure. I had not considered how closely they might be allied.' [employer.GetSheHe|U] pays me well, with the respect one warrior shows another rather than mere appreciation for entertainment."
+cpr_laamp_contract_schemes.1304.a: "The dance of blades knows its own beauty."
+
+# Failure (Diplomacy)
+cpr_laamp_contract_schemes.1305.t: "$cpr_laamp_1000_contract$: Stumbling Steps"
+cpr_laamp_contract_schemes.1305.desc: "My confidence in my dancing abilities proved woefully misplaced. What should have been graceful movements resembled more the awkward flailing of a newborn foal, and my attempts at exotic flourishes only highlighted my lack of proper training.\n\nMatters worsened when I misjudged the space and sent a valuable vase crashing to the floor. [employer.GetTitledFirstName] winced visibly, [employer.GetHerHis] initial polite interest transforming into barely concealed mortification.\n\nBy the time I accidentally stepped on the hem of my own garment and stumbled forward, [employer.GetTitledFirstName] had raised a hand to halt the suffering of all present."
+cpr_laamp_contract_schemes.1305.desc.outro: "\n\n'I think we've seen quite enough,' [employer.GetSheHe] says, voice strained with forced courtesy. 'Perhaps your talents lie... elsewhere.'\n\nI am shown out without payment, the musicians exchanging knowing looks as I pass. This performance will not be securing me future contracts."
+cpr_laamp_contract_schemes.1305.a: "Some dances are best left to the imagination."
+
+# Failure (Prowess)
+cpr_laamp_contract_schemes.1306.t: "$cpr_laamp_1000_contract$: Warrior's Misstep"
+cpr_laamp_contract_schemes.1306.desc: "I clear space in the chamber, explaining that I will perform a warrior's dance from distant lands—a display of martial prowess transformed into art. [employer.GetTitledFirstName] watches with interest as I begin movements inspired by combat forms.\n\nMy confidence quickly exceeds my ability. What should be controlled power becomes awkward lunging; what should be fluid grace becomes stiff posturing. I attempt a particularly ambitious spinning leap, only to land heavily and painfully twist my ankle.\n\nTrying to maintain dignity, I continue limping through increasingly simplified movements while [employer.GetTitledFirstName] watches with a mixture of embarrassment and pity. When I nearly topple a priceless vase, [employer.GetSheHe] raises a hand."
+cpr_laamp_contract_schemes.1306.desc.outro: "\n\n'I think we've had quite enough... prowess display for one evening,' [employer.GetSheHe] says diplomatically. 'Perhaps you should rest that ankle.' I am dismissed without payment, my attempt to impress with physical prowess having resulted in nothing but bruised pride and body."
+cpr_laamp_contract_schemes.1306.a: "The battlefield and ballroom require different mastery."
+
+# 4. Intimate Companionship Contract
+cpr_laamp_contract_schemes.1400.t: "$cpr_laamp_1000_contract$: A Different Comfort"
+cpr_laamp_contract_schemes.1400.desc: "[employer.GetTitledFirstName] regards me with new interest at my suggestion of more intimate companionship. [employer.GetSheHe|U] dismisses the servants with a subtle gesture, waiting until the chamber door closes firmly behind them.\n\n'How perceptive of you,' [employer.GetSheHe] says, voice lowered. 'Those in my position rarely know genuine connection — every interaction clouded by power and politics. Perhaps you understand what I truly require: not merely physical release, but a space where, for a time, I might simply be [employer.GetFirstName] rather than [employer.GetTitledFirstNameNoTooltip].'"
+cpr_laamp_contract_schemes.1400.a: "I shall attend to your pleasure with all my skill." # Diplomacy Challenge
+cpr_laamp_contract_schemes.1400.b: "I sense what you truly desire beneath the surface." # Intrigue Challenge
+cpr_laamp_contract_schemes.1400.c: "I shall have my companion [follower.GetTitledFirstName] attend to you; [follower.GetSheHe] is most accomplished in these arts." # follower exists
+cpr_laamp_contract_schemes.1400.c.no_follower: "I have no companions skilled in the intimate arts who could attend to [employer.GetTitledFirstName]."
+
+# Tooltips
+cpr_laamp_contract_schemes.1400.a.tt.success: "Your attentiveness and genuine connection provide [employer.GetTitledFirstName] with rare respite from the isolation of authority. Your generous payment reflects the meaningful experience you've created."
+cpr_laamp_contract_schemes.1400.a.tt.failure: "Your attempts at intimacy fall flat, creating awkwardness rather than connection. [employer.GetTitledFirstName] dismisses you without payment, clearly disappointed."
+cpr_laamp_contract_schemes.1400.b.tt.success: "While providing companionship, you extract valuable information from [employer.GetTitledFirstName] during moments of vulnerability. You receive payment and gain secrets that may prove useful in future endeavors."
+cpr_laamp_contract_schemes.1400.b.tt.failure: "Your manipulation is transparent, and [employer.GetTitledFirstName] recognizes your attempts to extract information. You are dismissed without payment and may have made a powerful enemy aware of your methods."
+cpr_laamp_contract_schemes.1400.c.tt.success: "Your follower provides [employer.GetTitledFirstName] with exceptional companionship, reflecting well on your judgment. You receive generous payment and enhance both your reputations."
+cpr_laamp_contract_schemes.1400.c.tt.no_follower: "You lack an available [follower|E] with at least 18 [diplomacy|E] and 50 [trait_level_track_xp|E] in $trait_lifestyle_prostitute$ to delegate to."
+
+# Exceptional Success (Diplomacy)
+cpr_laamp_contract_schemes.1401.t: "$cpr_laamp_1000_contract$: Whispered Passions"
+cpr_laamp_contract_schemes.1401.desc: "The candles burn low as I guide [employer.GetTitledFirstName] through a journey of sensation and connection. I read [employer.GetHerHis] responses with practiced ease, knowing when to advance and when to withdraw, when to speak and when silence best serves the moment.\n\nThis is an art form like any other — one that requires attentiveness, skill, and genuine presence. I offer [employer.GetTitledFirstName] not merely physical release but a rare space where [employer.GetSheHe] need not be the ever-vigilant [employer.GetTitleAsNameNoTooltip] but simply a [employer.GetWomanMan] with desires and vulnerabilities.\n\nTime loses meaning in the soft shadows of [employer.GetHerHis] chambers, moments stretching and compressing like the cadence of our shared breaths."
+cpr_laamp_contract_schemes.1401.desc.outro: "\n\nAfterward, as we lie catching our breath, [employer.GetTitledFirstName] regards me with new eyes — not as a mere hired companion but as someone who has shared something authentic.\n\n'You understand what few do,' [employer.GetSheHe] says softly. 'The person beneath the title.'\n\nWhen morning comes, [employer.GetSheHe] presents me with payment that exceeds our agreement, along with a small token I suspect [employer.GetSheHe] had not initially intended to part with. Our eyes meet in silent understanding before I take my leave."
+cpr_laamp_contract_schemes.1401.a: "Some memories are best carried in silence."
+
+# Success (Diplomacy)
+cpr_laamp_contract_schemes.1402.t: "$cpr_laamp_1000_contract$: Shared Warmth"
+cpr_laamp_contract_schemes.1402.desc: "I approach our encounter with sincerity rather than mere technique, finding my way through intuition and [employer.GetTitledFirstNamePossessive] reactions. What I may lack in artful sophistication, I make up for with genuine attention to [employer.GetHerHis] pleasure.\n\nOur connection, though brief, offers [employer.GetTitledFirstName] respite from the isolation of authority. In these private moments, the weight of [employer.GetHerHis] position seems to lift from [employer.GetHerHis] shoulders, if only temporarily."
+cpr_laamp_contract_schemes.1402.desc.outro: "\n\n'That was... exactly what I needed,' [employer.GetTitledFirstName] admits as we dress afterward. 'You have a gift for reading what remains unspoken.' [employer.GetSheHe|U] provides fair payment, with a warmth that suggests the transaction was satisfactory for both parties."
+cpr_laamp_contract_schemes.1402.a: "True pleasure requires presence, not just passion."
+
+# Follower Success
+cpr_laamp_contract_schemes.1403.t: "$cpr_laamp_1000_contract$: Practiced Company"
+cpr_laamp_contract_schemes.1403.desc: "I present [follower.GetTitledFirstName], whose experience in the intimate arts far exceeds my own. [follower.GetSheHe|U] approaches [employer.GetTitledFirstName] with practiced grace, speaking softly as I discretely withdraw to give them privacy.\n\nFrom the occasional sounds that drift through the chamber door, it is clear that [follower.GetFirstNamePossessive] skills are being well received. I wait patiently, making arrangements to ensure we will not be disturbed during this delicate contract."
+cpr_laamp_contract_schemes.1403.desc.outro: "\n\nWhen I am finally summoned back, [employer.GetTitledFirstName] appears thoroughly satisfied, lounging with the relaxed demeanor of one whose tensions have been expertly relieved. 'Your [follower.GetTitledFirstName] has talents worth twice the agreed sum,' [employer.GetSheHe] remarks, gesturing toward a purse that indeed seems heavier than expected."
+cpr_laamp_contract_schemes.1403.a: "Some skills are best delegated to those who have mastered them."
+
+# Success (Intrigue)
+cpr_laamp_contract_schemes.1404.t: "$cpr_laamp_1000_contract$: Deeper Desires"
+cpr_laamp_contract_schemes.1404.desc: "Rather than approaching this as mere physical satisfaction, I carefully observe [employer.GetTitledFirstName], noting the subtle tells that reveal [employer.GetHerHis] deeper desires — not just for pleasure, but for understanding, for being truly seen.\n\nI weave a tapestry of selective truths and perceptive insights, creating the illusion of profound connection while gathering valuable information. [employer.GetTitledFirstName] reveals more than [employer.GetSheHe] intends between sighs of pleasure — vulnerabilities, fears, and ambitions typically hidden behind the mask of authority.\n\nBy the time our encounter concludes, I have learned secrets that could prove useful in future dealings, while [employer.GetTitledFirstName] believes [employer.GetSheHe] has found a rare soul who understands [employer.GetHerHis] burdens."
+cpr_laamp_contract_schemes.1404.desc.outro: "\n\n'I had not expected to find such... depth in a hired companion,' [employer.GetTitledFirstName] confesses, unaware of how thoroughly I have read and manipulated [employer.GetHerHis] needs. 'Perhaps we might arrange such meetings with greater regularity.' [employer.GetSheHe|U] pays generously, but the real value lies in the information and influence I have gained."
+cpr_laamp_contract_schemes.1404.a: "Bodies speak truths that lips would keep silent."
+
+# Failure (Diplomacy)
+cpr_laamp_contract_schemes.1405.t: "$cpr_laamp_1000_contract$: Cold Comfort"
+cpr_laamp_contract_schemes.1405.desc: "What I had imagined would be a night of passion instead became an exercise in awkwardness. My attempts at seduction fell flat, my touches too hesitant or too bold, never finding the right rhythm or pressure to please [employer.GetTitledFirstName].\n\nPerhaps it was nerves, or perhaps simply an incompatibility of temperaments, but the connection I sought to establish remained frustratingly out of reach. [employer.GetTitledFirstName] became increasingly withdrawn, eventually suggesting we bring the evening to a premature close.\n\n'This is not what I had in mind,' [employer.GetSheHe] says with poorly disguised disappointment. 'I think it best if we end this now.'"
+cpr_laamp_contract_schemes.1405.desc.trait_arrogant: "I approached our encounter with excessive confidence, certain that my charm alone would suffice. I spoke too much of my own prowess and listened too little to [employer.GetTitledFirstNamePossessive] responses, missing the signs of growing frustration.\n\nBy the time I realized my error, [employer.GetTitledFirstNamePossessive] patience had already worn through. [employer.GetSheHe|U] dismisses me with a coldness that cuts deeper than any blade."
+cpr_laamp_contract_schemes.1405.desc.outro: "\n\nI depart with neither payment nor dignity, [employer.GetTitledFirstNamePossessive] dismissal making it clear that my services were found severely wanting. This failure will not enhance my reputation as one who can fulfill delicate contracts."
+cpr_laamp_contract_schemes.1405.a: "Some nights are best forgotten by all involved."
+
+# Failure (Intrigue)
+cpr_laamp_contract_schemes.1406.t: "$cpr_laamp_1000_contract$: Cold Calculations"
+cpr_laamp_contract_schemes.1406.desc: "I approach our encounter calculating every touch and whisper, less focused on genuine connection than on what secrets I might extract in moments of vulnerability. As [employer.GetTitledFirstName] begins to relax, I introduce subtle questions between caresses, seeking weaknesses I might later exploit.\n\nBut [employer.GetTitledFirstName] has not reached [employer.GetHerHis] position by being easily manipulated. Midway through my performance, [employer.GetSheHe] suddenly stiffens, [employer.GetHerHis] eyes narrowing as [employer.GetSheHe] recognizes the pattern in my seemingly casual inquiries.\n\n'How interesting,' [employer.GetSheHe] says, voice suddenly cold as [employer.GetSheHe] moves away from my touch. 'You offer pleasure with one hand while picking my mind with the other. Did you truly believe I would not notice your true purpose?'"
+cpr_laamp_contract_schemes.1406.desc.outro: "\n\n'Get dressed and leave,' [employer.GetTitledFirstName] orders, all pretense of warmth vanished. 'And be grateful I do not have you thrown in the dungeons for such shameless treachery.' I depart hastily, having gained nothing but a dangerous enemy whose intimate knowledge now includes my methods of deception."
+cpr_laamp_contract_schemes.1406.a: "Some schemes should never mix with pleasure."
+
+# 5. Astrology/Fortune Telling Contract
+cpr_laamp_contract_schemes.1500.t: "$cpr_laamp_1000_contract$: Celestial Whispers"
+cpr_laamp_contract_schemes.1500.desc: "[employer.GetTitledFirstName] raises an eyebrow at my mention of astrology. 'The stars and their secrets? How unexpected from one of your profession,' [employer.GetSheHe] remarks, but I detect genuine interest beneath the skepticism.\n\n'My court astrologer offers nothing but vague platitudes and favorable predictions,' [employer.GetSheHe] continues. 'I wonder if you might provide something more... substantial. Read my fortunes if you will, but spare me empty flattery. I would know what the heavens truly portend, be it fair or foul.'"
+cpr_laamp_contract_schemes.1500.a: "I shall reveal what the stars have written in your destiny." # Learning Challenge
+cpr_laamp_contract_schemes.1500.b: "The stars whisper what you wish to hear, and I shall listen carefully." # Intrigue Challenge
+cpr_laamp_contract_schemes.1500.c: "My follower [follower.GetTitledFirstName] is versed in celestial mysteries and will serve you well." # follower exists
+cpr_laamp_contract_schemes.1500.c.no_follower: "None of my followers possess the mystical knowledge required for this divination."
+
+# Tooltips
+cpr_laamp_contract_schemes.1500.a.tt.success: "Your astrological insights impress [employer.GetTitledFirstName] with their depth and apparent accuracy. You receive generous payment and enhance your reputation for mystical wisdom."
+cpr_laamp_contract_schemes.1500.a.tt.failure: "Your astrological knowledge proves insufficient, with obvious errors that [employer.GetTitledFirstName] quickly identifies. You receive no payment and lose credibility as a mystic."
+cpr_laamp_contract_schemes.1500.b.tt.success: "Using astrology as a pretense, you manipulate [employer.GetTitledFirstName] into revealing personal concerns and court secrets. You receive payment and valuable information while leaving [employer.GetHerHim] vulnerable to future influence."
+cpr_laamp_contract_schemes.1500.b.tt.failure: "Your attempt to extract information through false divination is exposed when you reveal knowledge the stars couldn't provide. [employer.GetTitledFirstName] dismisses you without payment, now alert to such manipulation tactics."
+cpr_laamp_contract_schemes.1500.c.tt.success: "Your follower's mystical insights impress [employer.GetTitledFirstName], reflecting well on your judgment in companions. You receive generous payment and enhance both your reputations."
+cpr_laamp_contract_schemes.1500.c.tt.no_follower: "You lack an available [follower|E] with at least 18 [learning|E] and 50 [trait_level_track_xp|E] in $trait_lifestyle_mystic$ to delegate to."
+
+# Exceptional Success (Learning)
+cpr_laamp_contract_schemes.1501.t: "$cpr_laamp_1000_contract$: Written in the Stars"
+cpr_laamp_contract_schemes.1501.desc: "I request a clear table and privacy, arranging my tools with practiced precision — star charts, ancient texts, and carefully chosen crystals that catch the candlelight. [employer.GetTitledFirstName] watches with growing curiosity as I create an atmosphere of scholarly mysticism.\n\nBeginning with genuine astronomical knowledge, I trace the celestial patterns present at [employer.GetHerHis] birth. My explanations weave together actual planetary movements with their purported influences, my voice shifting between academic lecturer and mystical guide as I reveal 'truths' written in the heavens.\n\nI note with satisfaction how [employer.GetTitledFirstName] leans forward when I speak of Mars in [employer.GetHerHis] house of ambition, or Venus casting favorable aspects on future endeavors. Each revelation is crafted to flatter without seeming transparent, to provide hope without promising impossibilities."
+cpr_laamp_contract_schemes.1501.desc.outro: "\n\n'Few approach the stars with such... clarity,' [employer.GetTitledFirstName] admits, clearly impressed by my presentation. 'You've given me much to consider beyond mere superstition.'\n\n[employer.GetSheHe|U] rewards me generously, confessing that the evening provided intellectual stimulation long absent from [employer.GetHerHis] court. As I depart, I notice [employer.GetSheHe] already examining the star chart I've left behind, perhaps finding comfort in the cosmic patterns I've revealed."
+cpr_laamp_contract_schemes.1501.a: "Knowledge, properly presented, can be the most seductive art of all."
+
+# Success (Learning)
+cpr_laamp_contract_schemes.1502.t: "$cpr_laamp_1000_contract$: Celestial Patterns"
+cpr_laamp_contract_schemes.1502.desc: "I arrange my modest collection of astrological tools and begin to interpret the celestial signs relevant to [employer.GetTitledFirstName]. Though my knowledge has gaps, I compensate with confidence and careful observation of [employer.GetHerHis] reactions.\n\nWhen I speak of courage indicated by a strong solar influence, [employer.GetSheHe] sits straighter. When I mention challenges foreseen in the coming season, I notice a flicker of recognition. I adjust my reading accordingly, building a narrative that resonates with [employer.GetHerHis] experiences while maintaining an air of cosmic inevitability."
+cpr_laamp_contract_schemes.1502.desc.outro: "\n\n'Interesting,' [employer.GetTitledFirstName] comments when I conclude. 'Less flattery and more substance than I typically receive from such readings.' [employer.GetSheHe|U] provides fair payment, seemingly satisfied with the modest insights I've offered."
+cpr_laamp_contract_schemes.1502.a: "The stars speak to those who know how to listen."
+
+# Follower Success
+cpr_laamp_contract_schemes.1503.t: "$cpr_laamp_1000_contract$: Cosmic Interpreter"
+cpr_laamp_contract_schemes.1503.desc: "I present [follower.GetTitledFirstName], whose knowledge of celestial matters far exceeds my own. With reverent precision, [follower.GetSheHe] arranges complex astronomical instruments and charts of [follower.GetHerHis] own design.\n\n[follower.GetFirstNamePossessive] explanation of the cosmic influences affecting [employer.GetTitledFirstName] weaves together mathematical precision and mystical insight in a way that clearly impresses our client. [employer.GetTitledFirstName] listens with growing fascination as [follower.GetFirstNameNoTooltip] reveals patterns and possibilities that even the court astrologer has never mentioned."
+cpr_laamp_contract_schemes.1503.desc.outro: "\n\n'Your [follower.GetTitledFirstName] possesses rare insight,' [employer.GetTitledFirstName] acknowledges when the reading concludes. 'The court astrologer could learn much from such techniques.' [employer.GetSheHe|U] rewards us handsomely, clearly impressed by the depth of knowledge displayed."
+cpr_laamp_contract_schemes.1503.a: "True wisdom recognizes patterns others cannot see."
+
+# Success (Intrigue)
+cpr_laamp_contract_schemes.1504.t: "$cpr_laamp_1000_contract$: Stars and Secrets"
+cpr_laamp_contract_schemes.1504.desc: "I set the scene with astrological tools and charts, but my true skill lies in reading [employer.GetTitledFirstName] rather than the stars. As I begin the reading, I carefully note [employer.GetHerHis] reactions to various topics, building a narrative that aligns with [employer.GetHerHis] hopes and fears.\n\nThrough careful questioning disguised as astrological inquiry, I extract information about court politics, personal ambitions, and private concerns. Each 'celestial revelation' I offer reinforces what [employer.GetTitledFirstName] already believes or desperately wants to hear.\n\nBy the session's end, [employer.GetTitledFirstName] has revealed far more than [employer.GetSheHe] realizes, while believing that the stars themselves have spoken directly to [employer.GetHerHis] circumstances."
+cpr_laamp_contract_schemes.1504.desc.outro: "\n\n'Remarkable how accurately you've read what lies ahead,' [employer.GetTitledFirstName] says, unaware that [employer.GetSheHe] provided most of the insights [employer.GetHerHim]self. 'The heavens speak clearly through you.' [employer.GetSheHe|U] pays generously for what [employer.GetSheHe] perceives as cosmic wisdom, while I depart with valuable information about court dynamics."
+cpr_laamp_contract_schemes.1504.a: "The greatest fortune-teller reads faces, not stars."
+
+# Failure (Learning)
+cpr_laamp_contract_schemes.1505.t: "$cpr_laamp_1000_contract$: Celestial Embarrassment"
+cpr_laamp_contract_schemes.1505.desc: "My attempt at scholarly mysticism quickly unravels when [employer.GetTitledFirstName] asks a simple astronomical question I cannot answer. I try to redirect with vague pronouncements about cosmic influences, but it soon becomes clear that my knowledge has significant gaps.\n\nMatters worsen when I make a blatant error concerning the ruling house of [employer.GetTitledFirstNamePossessive] birth month — a mistake that draws raised eyebrows and exchanged glances among those present. My increasingly desperate attempts to recover only highlight my ignorance further.\n\n'I believe there has been some misunderstanding about your expertise,' [employer.GetTitledFirstName] says coolly, cutting short my faltering explanation of planetary influences."
+cpr_laamp_contract_schemes.1505.desc.outro: "\n\nThe evening concludes prematurely, my claims of celestial insight thoroughly discredited. Not only is payment withheld, but I depart knowing that tales of my fraudulent wisdom will likely spread through court circles, undermining future opportunities."
+cpr_laamp_contract_schemes.1505.a: "False knowledge is quickly exposed in educated company."
+
+# Failure (Intrigue)
+cpr_laamp_contract_schemes.1506.t: "$cpr_laamp_1000_contract$: Stars Misaligned"
+cpr_laamp_contract_schemes.1506.desc: "I set the scene with astrological tools and charts, but my focus is on extracting information rather than providing genuine insight. Each celestial interpretation I offer is carefully designed to prompt revelations about court politics and personal concerns.\n\nI push too far when I casually reference a detail about [employer.GetTitledFirstNamePossessive] family that the stars could not possibly have revealed. [employer.GetTitledFirstName] freezes mid-response, suddenly alert to my manipulation.\n\n'How curious,' [employer.GetSheHe] remarks, voice dangerously soft, 'that the stars would reveal such specific details—details I have shared with only my closest confidants. Perhaps your talents lie less in reading the heavens and more in gathering court gossip?'"
+cpr_laamp_contract_schemes.1506.desc.outro: "\n\n'This session is concluded,' [employer.GetTitledFirstName] declares, rising abruptly. 'In the future, remember that those who spy under false pretenses often find their own secrets exposed.' I am dismissed without payment, and worse, with the knowledge that my target is now alert to methods of manipulation that might have served me well in future endeavors."
+cpr_laamp_contract_schemes.1506.a: "Even the stars cannot hide poor deception."
+
+# 6. Illusion/Deception Contract
+cpr_laamp_contract_schemes.1600.t: "$cpr_laamp_1000_contract$: Mysteries and Marvels"
+cpr_laamp_contract_schemes.1600.desc: "[employer.GetTitledFirstName] perks up at my mention of illusions and deceptions. 'Now that is something different,' [employer.GetSheHe] says, a hint of childlike excitement breaking through [employer.GetHerHis] usual reserve.\n\n'Court entertainments grow so predictable — the same jugglers, the same tired tales. Show me something that will truly bewilder me, tricks that will leave me questioning my own eyes. I would experience that rare pleasure of genuine astonishment, if you can provide it.'"
+cpr_laamp_contract_schemes.1600.a: "I shall perform mysteries that will challenge your perception." # Intrigue Challenge
+cpr_laamp_contract_schemes.1600.b: "My tricks may seem simple, but their meaning runs deeper." # Learning Challenge
+cpr_laamp_contract_schemes.1600.c: "My follower [follower.GetTitledFirstName] is a master of illusion and will astonish you." # follower exists
+cpr_laamp_contract_schemes.1600.c.no_follower: "I have no followers skilled in the arts of illusion who could perform in my stead."
+
+# Tooltips
+cpr_laamp_contract_schemes.1600.a.tt.success: "Your illusions and deceptions thoroughly amaze [employer.GetTitledFirstName], creating an experience of genuine wonder. You receive generous payment and enhance your reputation for mysterious skills."
+cpr_laamp_contract_schemes.1600.a.tt.failure: "Your tricks fail at crucial moments, exposing the mundane methods behind your supposed magic. [employer.GetTitledFirstName] dismisses you without payment, your reputation as an illusionist tarnished."
+cpr_laamp_contract_schemes.1600.b.tt.success: "You frame your illusions within philosophical context, impressing [employer.GetTitledFirstName] with both spectacle and intellectual depth. You receive payment and gain respect for your scholarly approach to entertainment."
+cpr_laamp_contract_schemes.1600.b.tt.failure: "Your excessive explanations and philosophical digressions overwhelm the entertainment value of your modest tricks. [employer.GetTitledFirstName] dismisses you without payment, bored rather than amazed."
+cpr_laamp_contract_schemes.1600.c.tt.success: "Your follower's illusions amaze [employer.GetTitledFirstName], reflecting well on your judgment in companions. You receive generous payment and enhance both your reputations."
+cpr_laamp_contract_schemes.1600.c.tt.no_follower: "You lack an available [follower|E] with at least 18 [intrigue|E] and 50 [trait_level_track_xp|E] in $trait_track_trickster$ to delegate to."
+
+# Exceptional Success (Intrigue)
+cpr_laamp_contract_schemes.1601.t: "$cpr_laamp_1000_contract$: Sleight of Hand, Sleight of Mind"
+cpr_laamp_contract_schemes.1601.desc: "I request that [employer.GetTitledFirstName] gather a few trusted courtiers — an audience enhances the experience I plan to provide. Once they've assembled, I begin with simple deceptions: coins that vanish and reappear, cards that seemingly read thoughts, tokens that transpose impossibly between closed hands.\n\nBut mere tricks are just the foundation. As the evening progresses, I elevate my performance to the realm of elegant deception. I reveal secrets about guests that I couldn't possibly know — details gleaned from careful observation and subtle manipulation of conversation before the performance began.\n\nI stage predictions that come true before their eyes, having engineered their fulfillment through misdirection and psychological manipulation. With each revelation, [employer.GetTitledFirstNamePossessive] eyes widen, first with suspicion, then with delight at being masterfully deceived."
+cpr_laamp_contract_schemes.1601.desc.outro: "\n\n'Remarkable,' [employer.GetTitledFirstName] declares as my performance concludes. 'I shall be puzzling over your methods for weeks to come.'\n\n[employer.GetSheHe|U] rewards me handsomely, the generous payment reflecting both enjoyment of the entertainment and perhaps a touch of wariness at my demonstrated talents for deception. I have made quite an impression — one that might prove valuable beyond this single evening."
+cpr_laamp_contract_schemes.1601.a: "The greatest illusion is making them believe they've seen through your deceptions."
+
+# Success (Intrigue)
+cpr_laamp_contract_schemes.1602.t: "$cpr_laamp_1000_contract$: Tricks and Marvels"
+cpr_laamp_contract_schemes.1602.desc: "I present a series of illusions and minor deceptions that, while not flawless, still manage to bewilder and entertain [employer.GetTitledFirstName] and the small audience [employer.GetSheHe] has gathered. What I lack in technical perfection, I compensate for with theatrical flair.\n\nWhen a trick nearly fails, I incorporate the mistake into the performance, convincing all present that the apparent error was itself part of a larger deception. [employer.GetTitledFirstName] applauds my recovery, perhaps more impressed by my quick thinking than [employer.GetSheHe] would have been by flawless execution."
+cpr_laamp_contract_schemes.1602.desc.outro: "\n\n'Most entertaining,' [employer.GetTitledFirstName] pronounces when my final illusion concludes. 'A welcome diversion from the predictable amusements of court.' [employer.GetSheHe|U] provides fair payment, clearly satisfied with the evening's entertainment."
+cpr_laamp_contract_schemes.1602.a: "Perception is easily guided by expectation."
+
+# Follower Success
+cpr_laamp_contract_schemes.1603.t: "$cpr_laamp_1000_contract$: Master of Deception"
+cpr_laamp_contract_schemes.1603.desc: "I present [follower.GetTitledFirstName], whose skills in illusion and deception far surpass my own. With elegant precision and captivating presence, [follower.GetSheHe] performs feats that seem to defy the very laws of nature.\n\nObjects appear and vanish, thoughts are seemingly plucked from minds, predictions materialize with impossible accuracy. [employer.GetTitledFirstName] watches with childlike wonder as [follower.GetFirstNameNoTooltip] transforms the mundane chamber into a place where the impossible becomes reality, if only for an evening."
+cpr_laamp_contract_schemes.1603.desc.outro: "\n\n'Extraordinary,' [employer.GetTitledFirstName] breathes when the final illusion concludes. 'Your [follower.GetTitledFirstName] possesses talents that border on the supernatural.' [employer.GetSheHe|U] rewards us generously, clearly spellbound by the performance [employer.GetSheHe] has witnessed."
+cpr_laamp_contract_schemes.1603.a: "True mastery makes the impossible seem inevitable."
+
+# Success (Learning)
+cpr_laamp_contract_schemes.1604.t: "$cpr_laamp_1000_contract$: Philosophical Deceptions"
+cpr_laamp_contract_schemes.1604.desc: "Rather than focus solely on spectacle, I present my illusions as demonstrations of philosophical principles — how easily perception can be misled, how firmly we trust our senses despite their fallibility.\n\nBetween tricks, I offer insights from ancient scholars on the nature of reality and perception, transforming simple deceptions into explorations of deeper truths. [employer.GetTitledFirstName] engages not merely as an audience to be amazed but as a mind to be stimulated.\n\nBy framing each illusion within a context of intellectual inquiry, I elevate what could have been mere entertainment into a scholarly journey that flatters [employer.GetTitledFirstNamePossessive] intelligence while still providing the wonder [employer.GetSheHe] sought."
+cpr_laamp_contract_schemes.1604.desc.outro: "\n\n'You've given me not just amusement but food for thought,' [employer.GetTitledFirstName] acknowledges when the performance ends. 'A rare combination indeed.' [employer.GetSheHe|U] compensates me well, with a respect that suggests [employer.GetSheHe] values the intellectual framework as much as the illusions themselves."
+cpr_laamp_contract_schemes.1604.a: "The greatest deception is not what fools the eyes, but what challenges the mind."
+
+# Failure (Intrigue)
+cpr_laamp_contract_schemes.1605.t: "$cpr_laamp_1000_contract$: The Trick Revealed"
+cpr_laamp_contract_schemes.1605.desc: "My performance begins well enough, with simple illusions drawing appropriate gasps from [employer.GetTitledFirstName] and the assembled courtiers. Emboldened by this early success, I attempt a more complex deception — one requiring careful preparation and timing.\n\nDisaster strikes when a hidden mechanism fails at the crucial moment, exposing the mundane method behind my supposed magic. A courtier points and laughs, others soon joining in as my performance collapses into embarrassment.\n\nWorse still, in my flustered state, I accidentally reveal another prepared trick, making it painfully obvious that what I presented as mysterious insight was merely careful preparation and theatrical contrivance."
+cpr_laamp_contract_schemes.1605.desc.outro: "\n\n'I think we've seen enough of these... parlor tricks,' [employer.GetTitledFirstName] says, making no attempt to hide [employer.GetHerHis] disappointment. 'Perhaps next time I shall hire a child's birthday performer instead.'\n\nI am dismissed without payment, my reputation for clever deception thoroughly undermined by very real failure."
+cpr_laamp_contract_schemes.1605.a: "An illusionist exposed is merely a fool with props."
+
+# Failure (Learning)
+cpr_laamp_contract_schemes.1606.t: "$cpr_laamp_1000_contract$: Philosopher's Folly"
+cpr_laamp_contract_schemes.1606.desc: "Rather than focus on spectacle, I attempt to frame my modest illusions as demonstrations of profound philosophical principles. Between simple tricks, I launch into elaborate explanations about perception, reality, and the fallibility of human senses.\n\nMy scholarly digressions grow increasingly lengthy while my actual illusions remain rudimentary. [employer.GetTitledFirstName] shifts impatiently as what should be an entertaining display becomes an impromptu lecture on epistemology.\n\n'Yes, yes,' [employer.GetSheHe] finally interrupts my discourse on how a vanishing coin represents the transience of material wealth, 'most fascinating. But I had rather hoped to be amazed, not educated. Can you perhaps perform an illusion without explaining it to death?'"
+cpr_laamp_contract_schemes.1606.desc.outro: "\n\n'I believe we've had enough philosophy for one evening,' [employer.GetTitledFirstName] concludes when I begin yet another theoretical explanation. 'Next time I desire a lecture, I shall visit the monastery.' I am dismissed without payment, having thoroughly failed to understand that entertainment requires wonder, not merely intellectual understanding."
+cpr_laamp_contract_schemes.1606.a: "Some mysteries are better left unexplained."
