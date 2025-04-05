@@ -12,7 +12,7 @@
 		value = 1
 	}
 	else = {
-		value = 0.1
+		value = 0.2
 	}
 }
 
@@ -28,7 +28,7 @@ cpr_laamp_contracts_weight_up_traits_value = {
 	}
 	if = {
 		limit = { has_trait = lifestyle_prostitute }
-		add = 100
+		add = 200
 	}
 	if = {
 		limit = { has_trait = lifestyle_mystic }

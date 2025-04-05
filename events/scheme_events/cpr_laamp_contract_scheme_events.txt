@@ -625,7 +625,7 @@ scripted_effect cpr_laamp_contract_schemes_1000_follower_success_effect = {
 			years = 1
 		}
 	}
-	scope:follower = {
+	scope:follower ?= {
 		cpr_laamp_contract_schemes_1000_add_trait_xp_effect = { TYPE = $TYPE$ VALUE = 5 }
 	}
 }
@@ -748,7 +748,7 @@ scripted_effect cpr_laamp_contract_schemes_1000_secondary_duel_effect = {
 		skill = $SKILL$
 		value = {
 			value = scope:employer.$SKILL$
-			add = 15
+			add = 10
 		}
 		# Victory!
 		50 = {
