@@ -1,5 +1,24 @@
 # Changelog
 
+## Version 0.3.0
+
+### Interactions
+
+* Added *Interact with Prostitute* interaction for the player to easily find working prostitutes and interact with them.
+
+### Events
+
+* Added *A Night's Diversion* task contract for landless adventurer characters (player only for now).
+
+### Miscellaneous
+
+* Added *Full Historical* setting for the *Default Prostitution Doctrine* Carnalitas game rule as a separate mod, "Carnalitas Historical Prostitution Doctrines".
+
+### Balance
+
+* Increased the chance of getting Carnalitas prostitution events to 80%.
+* Courtiers and guests no longer get penalty to their willingness to work as prostitutes.
+
 ## Version 0.2.0
 
 ### Compatibility

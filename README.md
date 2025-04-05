@@ -2,7 +2,7 @@
 
 [Download from LoversLab](https://www.loverslab.com/files/file/39623-carnalitas-prostitution-reimagined/)
 
-A comprehensive rework of the Carnalitas prostitution system aiming at improved balance and better integration with other aspects of the game.
+A comprehensive rework of the Carnalitas prostitution system aiming at improved balance and better integration with other aspects of the game. Now also complemented by a "Carnalitas Historical Prostitution Doctrines" mod that enables such doctrines for all faiths.
 
 The latest version is compatible with CK3 1.15.x and Carnalitas 2.9. If you are still on CK3 1.14.x, download [version 0.1.1](https://github.com/pharaox/carnalitas_sex/releases/download/0.1.1/carnalitas_love_reimagined-0.1.1.zip) instead, and use it with Carnalitas 2.8.
 
@@ -28,7 +28,14 @@ With this mod:
 * Characters **stop working as prostitutes immediately when no longer able** (e.g. due to being imprisoned), not with some months delay.
 * *Make Love* **prostitution prices** scale more gradually with the *Prostitute* trait XP, and so does **stress loss**.
 * Having sex with a prostitute may result in **secrets being learned** by either of the partners.
-* In future versions, there will be more **prostitution-related interactions, decisions, and events** for prostitutes to offer their services to clients, and for rulers to visit brothels during travel or while visiting holdings as landless adventurers.
+
+This mods also adds new prostitution-related interactions and events:
+
+* Players can use the **Interact with Prostitute** interaction to easily find working prostitutes and interact with them.
+* Landless adventurer characters can get the **A Night's Diversion** task contract to entertain a ruler.
+* In future versions, there will be more **prostitution-related flavor events**.
+
+In addition, **"Full Historical" prostitution doctrines** are added by the complementary "Carnalitas Historical Prostitution Doctrines" mod, available as a separate download.
 
 All taken together, prostitution is no longer a rarely used player-only feature, but instead a global social phenomenon that affects the gameplay in various ways. As a player, you can choose between many different ways to interact with the system to either roleplay or use it to your advantage.
 
@@ -144,6 +151,16 @@ Besides the ways already described, additional prostitutes are spawned every yea
 | >= 10 | Capital of at least a kingdom, or holy site of a faith with at least 50 counties |
 |  < 10 | Never |
 
+### Finding and Interacting with Working Prostitutes
+
+Since *Working as a Prostitute* is a modifier rather than a trait, finding working prostitutes to e.g. *Make Love* to them can be tricky. For this reason, this mod adds an additional *Interact with Prostitute* interaction that enables the player to find all working prostitutes in their diplomatic range and trigger one of the interactions *Make Love*, *Invite to Court*, or *Invite as Guest* (with [Travelers](https://steamcommunity.com/sharedfiles/filedetails/?id=3082182371)) if that interaction is valid at the moment.
+
+### Entertaining Rulers as a Landless Adventurer
+
+With this mod, landless adventurer player characters can get the new *A Night's Diversion* task contract. It requires you to travel to a ruler's residence and provide entertainment. You can then choose from several options based on the employer's interests — music, poetry, dance, fortune-telling, illusions, or companionship (sex). The success may depend on your *Diplomacy*, *Intrigue*, *Learning*, or *Prowess* skills. You may also assign a suitable follower to perform in your place.
+
+While this contract is not limited to prostitutes, characters with the *Prostitute* trait get a bonus to the probability of getting it. Since this is a *Diplomacy* contract, it is also more likely with *Explorers* camp purpose.
+
 ### Prostitute Characters
 
 Once created in one way or another, characters having the *Prostitute* trait may be either working as prostitutes or not. If they are working, they can be targeted by the *Make Love* interaction and get the [Carnalitas Prostitution Events](#carnalitas-prostitution-events).
@@ -171,7 +188,7 @@ If any of the above conditions changes for a character, they either stop working
 
 #### Carnalitas Prostitution Events
 
-Characters working as prostitutes have approx. 60% chance every year to get one of the following Carnalitas events:
+Characters working as prostitutes have approx. 80% chance every year to get one of the following Carnalitas events:
 
 * *Improved Skills*: Get random *Prostitution* trait XP (20 to 40).
 * *Rivals Slander You*: Lose prestige.
