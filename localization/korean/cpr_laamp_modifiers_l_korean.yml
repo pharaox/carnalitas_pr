@@ -1,13 +1,13 @@
 ﻿l_korean:
 
-cpr_laamp_1000_success_employer_modifier: "Entertained by Skillful Performance"
-cpr_laamp_1000_success_employer_modifier_desc: "This character has been moved by a performance of remarkable quality, bringing temporary respite from the burdens of rule and enhancing their diplomatic presence."
+ cpr_laamp_1000_success_employer_modifier: "능숙한 공연에 즐거워함"
+ cpr_laamp_1000_success_employer_modifier_desc: "이 인물은 주목할 만한 수준의 공연에 감동받아, 통치의 부담에서 잠시 벗어나고 외교력이 향상되었다."
 
-cpr_laamp_1000_failure_employer_modifier: "Subjected to Painful Performance"
-cpr_laamp_1000_failure_employer_modifier_desc: "This character has recently endured an entertainment of questionable quality, leaving them more irritable and less composed in diplomatic matters."
+ cpr_laamp_1000_failure_employer_modifier: "끔찍한 공연을 겪음"
+ cpr_laamp_1000_failure_employer_modifier_desc: "이 인물은 최근 질 낮은 유흥거리를 견뎌냈으며, 그 결과 더 신경질적으로 변하고 외교 문제에서 평정심을 잃게 되었다."
 
-cpr_laamp_1000_deception_success_employer_modifier: "Unwittingly Manipulated"
-cpr_laamp_1000_deception_success_employer_modifier_desc: "This character has been subtly manipulated through entertainment, believing themselves to have experienced something genuine while actually revealing vulnerabilities and secrets. Their judgment is compromised without their knowledge."
+ cpr_laamp_1000_deception_success_employer_modifier: "자신도 모르게 조종당함"
+ cpr_laamp_1000_deception_success_employer_modifier_desc: "이 인물은 유흥을 통해 교묘하게 조종당했다. 본인은 진정한 무언가를 경험했다고 믿지만, 실제로는 약점과 비밀을 드러내 버렸다. 자신도 모르는 사이에 판단력이 흐려졌다."
 
-cpr_laamp_1000_deception_failure_employer_modifier: "Heightened Suspicion"
-cpr_laamp_1000_deception_failure_employer_modifier_desc: "Having detected an attempt at manipulation disguised as entertainment, this character has become more vigilant and suspicious, making them harder to deceive but also more stressed and paranoid."
+ cpr_laamp_1000_deception_failure_employer_modifier: "경계심 증가"
+ cpr_laamp_1000_deception_failure_employer_modifier_desc: "유흥으로 위장한 조종 시도를 감지한 이 인물은 경계심과 의심이 더욱 깊어졌다. 이로 인해 속이기는 더 어려워졌지만, 스트레스를 더 많이 받고 편집증적인 상태가 되었다."
