@@ -1,5 +1,15 @@
 # Changelog
 
+## Version 0.4.0
+
+### Compatibility
+
+* Adapted to CK3 1.16.0 and Carnalitas 2.10.
+
+### Localization
+
+* Added Korean translation by **@Xelren**.
+
 ## Version 0.3.0
 
 ### Interactions

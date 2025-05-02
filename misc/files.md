@@ -25,6 +25,7 @@
 * `events/stress_events/stress_trait_coping_decisions_events.txt`
   * `stress_trait_coping_decisions.2001`
   * `stress_trait_coping_decisions.2002`
+  * `stress_trait_coping_decisions.2004`
 
 ## Carnalitas Files and Objects
 
