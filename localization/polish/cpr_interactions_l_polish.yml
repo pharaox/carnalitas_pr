@@ -1,0 +1,23 @@
+﻿l_polish:
+ cpr_find_prostitutes_interaction: "Interakcja z Prostytutką"
+ cpr_find_prostitutes_interaction_desc: "Znajdź pracującą prostytutkę, aby uprawiać seks lub zaprosić na dwór"
+
+ recipient_secondary_cpr_find_prostitutes_interaction: "Prostytutka"
+
+ cpr_sex_option: "$carn_sex_interaction$"
+ cpr_sex_option_desc: "Otwórz #EMP $carn_sex_interaction$#! dla [secondary_recipient.GetShortUINameNoTooltip]"
+ cpr_invite_to_court_option: "Zaproś na Dwór"
+ cpr_invite_to_court_option_desc: "Otwórz #EMP $invite_to_court_interaction$#! dla [secondary_recipient.GetShortUINameNoTooltip]"
+ cpr_invite_as_guest_option: "$travl_invite_as_guest_interaction$"
+ cpr_invite_as_guest_option_desc: "Otwórz #EMP $travl_invite_as_guest_interaction$#! dla [secondary_recipient.GetShortUINameNoTooltip]"
+
+ cpr_sex_interaction_not_valid_tt: "$carn_sex_interaction$ nie jest obecnie ważny dla [secondary_recipient.GetShortUINameNoTooltip]."
+ cpr_invite_to_court_interaction_not_accepted_tt: "$invite_to_court_interaction$ nie jest obecnie ważny dla [secondary_recipient.GetShortUINameNoTooltip] lub nie zostanie przez nich zaakceptowany."
+ cpr_invite_as_guest_interaction_not_accepted_tt: "$travl_invite_as_guest_interaction$ nie jest obecnie ważny dla [secondary_recipient.GetShortUINameNoTooltip] lub nie zostanie przez nich zaakceptowany."
+
+ cpr_sex_interaction_warning_tt: "#X Otwiera #EMP $carn_sex_interaction$#! dla [secondary_recipient.GetShortUINameNoTooltip]#!"
+ cpr_invite_to_court_interaction_warning_tt: "#X Otwiera #EMP $invite_to_court_interaction$#! dla [secondary_recipient.GetShortUINameNoTooltip]#!"
+ cpr_invite_as_guest_interaction_warning_tt: "#X Otwiera #EMP $travl_invite_as_guest_interaction$#! dla [secondary_recipient.GetShortUINameNoTooltip]#!"
+
+ travl_invite_as_guest_interaction: "Zaproś jako Gościa"
+

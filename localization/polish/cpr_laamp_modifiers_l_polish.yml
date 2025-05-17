@@ -1,0 +1,13 @@
+﻿l_polish:
+
+cpr_laamp_1000_success_employer_modifier: "Zabawiony Zręcznym Występem"
+cpr_laamp_1000_success_employer_modifier_desc: "Ta postać została poruszona występem o niezwykłej jakości, przynosząc tymczasowe wytchnienie od ciężarów rządzenia i wzmacniając jej obecność dyplomatyczną."
+
+cpr_laamp_1000_failure_employer_modifier: "Podlegający Bolesnemu Występowi"
+cpr_laamp_1000_failure_employer_modifier_desc: "Ta postać niedawno zniosła rozrywkę o wątpliwej jakości, pozostawiając ją bardziej drażliwą i mniej opanowaną w sprawach dyplomatycznych."
+
+cpr_laamp_1000_deception_success_employer_modifier: "Nieświadomie Zmanipulowany"
+cpr_laamp_1000_deception_success_employer_modifier_desc: "Ta postać została subtelnie zmanipulowana poprzez rozrywkę, wierząc, że doświadczyła czegoś prawdziwego, podczas gdy w rzeczywistości ujawniła słabości i sekrety. Jej osąd jest naruszony bez jej wiedzy."
+
+cpr_laamp_1000_deception_failure_employer_modifier: "Wzmożona Podejrzliwość"
+cpr_laamp_1000_deception_failure_employer_modifier_desc: "Wykrywszy próbę manipulacji przebranej za rozrywkę, ta postać stała się bardziej czujna i podejrzliwa, co czyni ją trudniejszą do oszukania, ale także bardziej zestresowaną i paranoiczną."

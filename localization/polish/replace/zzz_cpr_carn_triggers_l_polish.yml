@@ -1,0 +1,21 @@
+﻿l_polish:
+ carn_cannot_have_max_number_of_slave_prostitutes : "Nie można mieć więcej niż [EmptyScope.ScriptValue('carn_max_slave_prostitutes_per_owner')|0] niewolników pracujących jako prostytutki"
+ 
+ carn_not_effective_age_under_value_cutoff : "Wiek nie jest mniejszy niż $VALUE|0$"
+ 
+ carn_i_can_have_sex_trigger : "Mogę uprawiać seks"
+ carn_not_i_can_have_sex_trigger : "Nie mogę uprawiać seksu"
+ carn_they_can_have_sex_trigger : "[CHARACTER.GetShortUIName|U] może uprawiać seks"
+ carn_not_they_can_have_sex_trigger : "[CHARACTER.GetShortUIName|U] nie może uprawiać seksu"
+ carn_can_have_sex_trigger : "Można uprawiać seks"
+ carn_not_can_have_sex_trigger : "Nie można uprawiać seksu"
+ 
+ carn_i_accepts_prostitution_trigger : "Prostytucja jest akceptowana przez twoją wiarę lub kulturę"
+ carn_not_i_accepts_prostitution_trigger : "Prostytucja #bold NIE#! jest akceptowana przez twoją wiarę lub kulturę"
+ carn_they_accepts_prostitution_trigger : "Prostytucja jest akceptowana przez wiarę lub kulturę [CHARACTER.GetShortUINamePossessive|U]"
+ carn_not_they_accepts_prostitution_trigger : "Prostytucja #bold NIE#! jest akceptowana przez [CHARACTER.GetShortUINamePossessive|U] wiarę lub kulturę"
+ carn_accepts_prostitution_trigger : "Prostytucja jest akceptowana przez wiarę i kulturę"
+ carn_not_accepts_prostitution_trigger : "Prostytucja #bold NIE#! jest akceptowana przez wiarę i kulturę"
+ 
+ cpr_may_learn_secret_tooltip : "[secret_learner.GetShortUIName|U] może poznać sekret od [secret_knower.GetShortUIName]"
+ cpr_empty_tooltip : ""
