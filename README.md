@@ -72,6 +72,8 @@ If you like this mod, you may also consider my other mods:
 * [Travelers](https://steamcommunity.com/sharedfiles/filedetails/?id=3082182371), characters always travel to their home when it changes instead of teleporting.
 * [Active Courtiers](https://steamcommunity.com/sharedfiles/filedetails/?id=3157170996), courtiers search for spouses themselves for less micromanagement, stronger AI, and immersion.
 
+Thumbnail Source: [*An Algerian Prostitute* by Frederick Arthur Bridgman](https://www.meisterdrucke.uk/fine-art-prints/Frederick-Arthur-Bridgman/842422/An-Algerian-Prostitute.html)
+
 ## Features
 
 ### Becoming a Prostitute as Ruler
