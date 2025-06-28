@@ -1,22 +1,22 @@
 ﻿l_french:
- cpr_find_prostitutes_interaction: "Interact with Prostitute"
- cpr_find_prostitutes_interaction_desc: "Find a working prostitute to have sex with or invite to court"
+ cpr_find_prostitutes_interaction: "Interagir avec une prostituée"
+ cpr_find_prostitutes_interaction_desc: "Trouver une prostituée en activité pour avoir des relations sexuelles ou l'inviter à votre cour"
 
- recipient_secondary_cpr_find_prostitutes_interaction: "Prostitute"
+ recipient_secondary_cpr_find_prostitutes_interaction: "Prostituée"
 
  cpr_sex_option: "$carn_sex_interaction$"
- cpr_sex_option_desc: "Open #EMP $carn_sex_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]"
- cpr_invite_to_court_option: "Invite to Court"
- cpr_invite_to_court_option_desc: "Open #EMP $invite_to_court_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]"
+ cpr_sex_option_desc: "Ouvrir #EMP $carn_sex_interaction$#! pour [secondary_recipient.GetShortUINameNoTooltip]"
+ cpr_invite_to_court_option: "Inviter à la cour"
+ cpr_invite_to_court_option_desc: "Ouvrir #EMP $invite_to_court_interaction$#! pour [secondary_recipient.GetShortUINameNoTooltip]"
  cpr_invite_as_guest_option: "$travl_invite_as_guest_interaction$"
- cpr_invite_as_guest_option_desc: "Open #EMP $travl_invite_as_guest_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]"
+ cpr_invite_as_guest_option_desc: "Ouvrir #EMP $travl_invite_as_guest_interaction$#! pour [secondary_recipient.GetShortUINameNoTooltip]"
 
- cpr_sex_interaction_not_valid_tt: "$carn_sex_interaction$ is not valid for [secondary_recipient.GetShortUINameNoTooltip] at the moment."
- cpr_invite_to_court_interaction_not_accepted_tt: "$invite_to_court_interaction$ is not valid for [secondary_recipient.GetShortUINameNoTooltip] or they will not accept it at the moment."
- cpr_invite_as_guest_interaction_not_accepted_tt: "$travl_invite_as_guest_interaction$ is not valid for [secondary_recipient.GetShortUINameNoTooltip] or will not accept it at the moment."
+ cpr_sex_interaction_not_valid_tt: "$carn_sex_interaction$ n'est pas possible pour [secondary_recipient.GetShortUINameNoTooltip] pour le moment."
+ cpr_invite_to_court_interaction_not_accepted_tt: "$invite_to_court_interaction$ n'est pas possible pour [secondary_recipient.GetShortUINameNoTooltip] ou elle/il ne l'acceptera pas pour l'instant."
+ cpr_invite_as_guest_interaction_not_accepted_tt: "$travl_invite_as_guest_interaction$ n'est pas possible pour [secondary_recipient.GetShortUINameNoTooltip] ou ne sera pas accepté pour l'instant."
 
- cpr_sex_interaction_warning_tt: "#X Opens #EMP $carn_sex_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]#!"
- cpr_invite_to_court_interaction_warning_tt: "#X Opens #EMP $invite_to_court_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]#!"
- cpr_invite_as_guest_interaction_warning_tt: "#X Opens #EMP $travl_invite_as_guest_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]#!"
+ cpr_sex_interaction_warning_tt: "#X Ouvre #EMP $carn_sex_interaction$#! pour [secondary_recipient.GetShortUINameNoTooltip]#!"
+ cpr_invite_to_court_interaction_warning_tt: "#X Ouvre #EMP $invite_to_court_interaction$#! pour [secondary_recipient.GetShortUINameNoTooltip]#!"
+ cpr_invite_as_guest_interaction_warning_tt: "#X Ouvre #EMP $travl_invite_as_guest_interaction$#! pour [secondary_recipient.GetShortUINameNoTooltip]#!"
 
- travl_invite_as_guest_interaction: "Invite as Guest"
+ travl_invite_as_guest_interaction: "Inviter comme invité(e)"

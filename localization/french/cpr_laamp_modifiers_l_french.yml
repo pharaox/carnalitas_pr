@@ -1,13 +1,13 @@
 ﻿l_french:
 
-cpr_laamp_1000_success_employer_modifier: "Entertained by Skillful Performance"
-cpr_laamp_1000_success_employer_modifier_desc: "This character has been moved by a performance of remarkable quality, bringing temporary respite from the burdens of rule and enhancing their diplomatic presence."
+cpr_laamp_1000_success_employer_modifier: "Ému par une performance remarquable"
+cpr_laamp_1000_success_employer_modifier_desc: "Ce personnage a été touché par une prestation de grande qualité, lui apportant un répit temporaire face aux charges du pouvoir et renforçant sa prestance diplomatique."
 
-cpr_laamp_1000_failure_employer_modifier: "Subjected to Painful Performance"
-cpr_laamp_1000_failure_employer_modifier_desc: "This character has recently endured an entertainment of questionable quality, leaving them more irritable and less composed in diplomatic matters."
+cpr_laamp_1000_failure_employer_modifier: "Spectateur d'une performance pénible"
+cpr_laamp_1000_failure_employer_modifier_desc: "Ce personnage a récemment assisté à un divertissement de qualité douteuse, ce qui l'a rendu plus irritable et moins posé dans ses relations diplomatiques."
 
-cpr_laamp_1000_deception_success_employer_modifier: "Unwittingly Manipulated"
-cpr_laamp_1000_deception_success_employer_modifier_desc: "This character has been subtly manipulated through entertainment, believing themselves to have experienced something genuine while actually revealing vulnerabilities and secrets. Their judgment is compromised without their knowledge."
+cpr_laamp_1000_deception_success_employer_modifier: "Manipulé à son insu"
+cpr_laamp_1000_deception_success_employer_modifier_desc: "Ce personnage a été subtilement manipulé sous couvert d'un divertissement, croyant vivre une expérience sincère tout en dévoilant failles et secrets. Son jugement en ressort altéré — sans qu'il s'en rende compte."
 
-cpr_laamp_1000_deception_failure_employer_modifier: "Heightened Suspicion"
-cpr_laamp_1000_deception_failure_employer_modifier_desc: "Having detected an attempt at manipulation disguised as entertainment, this character has become more vigilant and suspicious, making them harder to deceive but also more stressed and paranoid."
+cpr_laamp_1000_deception_failure_employer_modifier: "Méfiance accrue"
+cpr_laamp_1000_deception_failure_employer_modifier_desc: "Ayant perçu une tentative de manipulation déguisée en spectacle, ce personnage est devenu plus vigilant et soupçonneux. Il sera plus difficile à tromper, mais aussi plus stressé et paranoïaque."
