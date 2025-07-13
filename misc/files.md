@@ -12,16 +12,21 @@
   * `ep3_prostitute_character`
 * `common/scripted_effects/00_death_management_effects.txt`
   * `silent_disappearance_effect`
-* `common/scripted_effects/00_health_effects.txt`
-  * `risk_of_std_from_effect`
 * `common/scripted_effects/00_personal_details_effects.txt`
   * `get_quirk_character_effect`
+* `common/scripted_effects/00_romance_effects.txt`
+  * `had_sex_with_effect`
 * `common/scripted_effects/00_scripted_effects.txt`
   * `disease_data_save_contraction_effect`
 * `common/scripted_effects/00_stress_effects.txt`
   * `rakish_brothel_night_effect`
+* `common/scripted_effects/20_health_effects.txt`
+  * `risk_of_std_from_effect`
 * `common/scripted_triggers/00_task_contract_triggers.txt`
   * `can_create_diplomacy_contract_trigger`
+
+### Implicit
+
 * `events/stress_events/stress_trait_coping_decisions_events.txt`
   * `stress_trait_coping_decisions.2001`
   * `stress_trait_coping_decisions.2002`
