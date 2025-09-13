@@ -4,7 +4,7 @@
 
 A comprehensive rework of the Carnalitas prostitution system aiming at improved balance and better integration with other aspects of the game. Now also complemented by a "Carnalitas Historical Prostitution Doctrines" mod that enables such doctrines for all faiths.
 
-The latest version is compatible with CK3 1.16.x and Carnalitas 2.10. If you are still on CK3 1.15.x, download [version 0.3.0](https://github.com/pharaox/carnalitas_pr/releases/download/0.3.0/carnalitas_prostitution_reimagined-0.3.0.zip) instead, and use it with Carnalitas 2.9.
+The latest version is compatible with CK3 1.17.x and Carnalitas 2.11 / 2.10. If you are still on CK3 1.16.x, download [version 0.4.0](https://github.com/pharaox/carnalitas_pr/releases/download/0.4.0/carnalitas_prostitution_reimagined-0.4.0.zip) instead, and use it with Carnalitas 2.10.
 
 ## Overview
 
@@ -57,7 +57,7 @@ If you still want to try using CPR with a conversion mod, be prepared that some 
 
 ## Localization
 
-This mod is currently available in English, Chinese (translated by [@Dark_Crow](https://www.loverslab.com/profile/10396935-dark_crow/)), Korean (translated by [@Xelren](https://www.loverslab.com/profile/4890252-xelren/)), and French (translated by [@FonWasH](https://www.loverslab.com/profile/4673452-fonwash/)). For other languages, it uses the original English text as a placeholder.
+This mod is currently available in English, Chinese (translated by [@Dark_Crow](https://www.loverslab.com/profile/10396935-dark_crow/)), Korean (translated by [@Xelren](https://www.loverslab.com/profile/4890252-xelren/)), French (translated by [@FonWasH](https://www.loverslab.com/profile/4673452-fonwash/)), and Polish (translated by **@Avinus**). For other languages, it uses the original English text as a placeholder.
 
 ## Links
 

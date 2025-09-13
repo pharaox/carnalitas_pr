@@ -1,5 +1,16 @@
 # Changelog
 
+## Version 0.5.0
+
+### Compatibility
+
+* Adapted to CK3 1.17.0 and Carnalitas 2.11.
+
+### Localization
+
+* Added French translation by **@FonWasH**.
+* Added Polish translation by **@Avinus**.
+
 ## Version 0.4.0
 
 ### Compatibility
