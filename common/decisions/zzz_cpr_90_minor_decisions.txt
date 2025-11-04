@@ -99,7 +99,7 @@
 			}
 		}
 	}
-
+	
 	ai_potential = {
 		has_trait = rakish
 	}

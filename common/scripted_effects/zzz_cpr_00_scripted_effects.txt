@@ -4,7 +4,7 @@
 			activate_disease_data_tracking_trigger = yes
 			has_variable = disease_data_activate_tracking
 		}
-
+		
 		change_variable = {
 			name = disease_data_character_$DISEASE$_amount
 			add = 1

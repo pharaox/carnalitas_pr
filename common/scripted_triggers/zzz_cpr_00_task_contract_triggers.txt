@@ -1,5 +1,4 @@
-﻿#This should list _ALL_ laamp_contracts_diplomacy_group-contracts 
-can_create_diplomacy_contract_trigger = {
+﻿can_create_diplomacy_contract_trigger = {
 	$LAAMP$ = {
 		OR = {
 			can_create_task_contract = { 

@@ -1,6 +1,4 @@
-﻿#Used to make sure that a character used for a quirk has one
-#Utilises assign_quirk_effect, and must always be placed in the same file, after that one.
-get_quirk_character_effect = {
+﻿get_quirk_character_effect = {
 	if = {
 		limit = {
 			root = { is_ai = no }
