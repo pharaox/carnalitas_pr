@@ -71,7 +71,14 @@ carn_force_start_prostitution_interaction = {
 		ai_recipients = scripted_relations
 	}
 
-	ai_frequency = 24
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 24
+		empire = 24
+		hegemony = 24
+	}
 
 	ai_potential = {
 		always = yes

@@ -92,7 +92,7 @@ cpr_laamp_contract_schemes.1200.a.tt.failure: "Twoje wysiłki poetyckie zawodzą
 cpr_laamp_contract_schemes.1200.b.tt.success: "Twoje naukowe podejście do poezji imponuje [employer.GetTitledFirstName], który docenia zarówno piękno, jak i intelektualną głębię. Otrzymujesz zapłatę i zyskujesz szacunek za swoją erudycję."
 cpr_laamp_contract_schemes.1200.b.tt.failure: "Twoje akademickie podejście przytłacza artyzm, zamieniając to, co powinno być rozrywką, w nużące wykłady. [employer.GetTitledFirstName] zwalnia cię bez zapłaty, znudzony zamiast pod wrażeniem."
 cpr_laamp_contract_schemes.1200.c.tt.success: "Mistrzostwo poetyckie twojego towarzysza zniewala [employer.GetTitledFirstName], co dobrze świadczy o twoim osądzie w wyborze towarzyszy. Otrzymujesz hojną zapłatę i wzmacniasz obie wasze reputacje."
-cpr_laamp_contract_schemes.1200.c.tt.no_follower: "Brakuje ci dostępnego [follower|E] z co najmniej 18 [diplomacy|E] i cechą $trait_poet$, którego mógłbyś oddelegować."
+cpr_laamp_contract_schemes.1200.c.tt.no_follower: "Brakuje ci dostępnego [follower|E] z co najmniej 18 [diplomacy|E] i cechą $trait_lifestyle_poet$, którego mógłbyś oddelegować."
 
 # Wyjątkowy Sukces (Dyplomacja)
 cpr_laamp_contract_schemes.1201.t: "$cpr_laamp_1000_contract$: Wersy Jak Czar"

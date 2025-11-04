@@ -92,7 +92,7 @@ cpr_laamp_contract_schemes.1200.a.tt.failure: "Vos tentatives poétiques tombent
 cpr_laamp_contract_schemes.1200.b.tt.success: "Votre approche savante de la poésie impressionne [employer.GetTitledFirstName], qui apprécie autant la beauté que la profondeur intellectuelle. Vous recevez un paiement et gagnez en estime."
 cpr_laamp_contract_schemes.1200.b.tt.failure: "Votre approche académique noie la poésie, transformant ce qui devait être un divertissement en conférence soporifique. [employer.GetTitledFirstName] vous congédie sans paiement."
 cpr_laamp_contract_schemes.1200.c.tt.success: "La maîtrise poétique de votre suivant captive [employer.GetTitledFirstName], soulignant la qualité de votre entourage. Vous recevez un paiement généreux et vos réputations s'en trouvent renforcées."
-cpr_laamp_contract_schemes.1200.c.tt.no_follower: "Vous n'avez pas de [follower|E] avec au moins 18 en [diplomacy|E] et le trait $trait_poet$ à qui déléguer cette tâche."
+cpr_laamp_contract_schemes.1200.c.tt.no_follower: "Vous n'avez pas de [follower|E] avec au moins 18 en [diplomacy|E] et le trait $trait_lifestyle_poet$ à qui déléguer cette tâche."
 
 # Succès exceptionnel (Diplomatie)
 cpr_laamp_contract_schemes.1201.t: "$cpr_laamp_1000_contract$: Des vers comme des sortilèges"

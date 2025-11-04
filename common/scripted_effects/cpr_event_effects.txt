@@ -202,7 +202,7 @@ cpr_add_prostitute_traits_effect = {
 			add = 10
 			culture = { has_cultural_parameter = poet_trait_more_common }
 		}
-		add_trait = poet
+		add_trait = lifestyle_poet
 	}
 
 	# Lifestyle Reveler XP

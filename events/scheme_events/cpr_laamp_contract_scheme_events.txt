@@ -11,7 +11,7 @@ scripted_trigger cpr_laamp_contract_schemes_1100_valid_follower_trigger = {
 
 scripted_trigger cpr_laamp_contract_schemes_1200_valid_follower_trigger = {
 	diplomacy >= high_skill_rating # 15
-	has_trait = poet
+	has_trait = lifestyle_poet
 	is_available_allow_travelling = yes
 }
 
@@ -118,7 +118,7 @@ cpr_laamp_contract_schemes.1000 = {
 							add = 10
 						}
 						modifier = {
-							has_trait = poet
+							has_trait = lifestyle_poet
 							add = 10
 						}
 						save_temporary_scope_value_as = { name = option value = flag:poetry }
@@ -275,7 +275,7 @@ cpr_laamp_contract_schemes.1000 = {
 			cpr_is_in_list_trigger = { LIST = options VALUE = flag:poetry }
 			OR = {
 				diplomacy >= decent_skill_rating
-				has_trait = poet
+				has_trait = lifestyle_poet
 				any_courtier = {
 					cpr_laamp_contract_schemes_1200_valid_follower_trigger = yes
 				}
@@ -299,7 +299,7 @@ cpr_laamp_contract_schemes.1000 = {
 				}
 			}
 			modifier = {
-				has_trait = poet
+				has_trait = lifestyle_poet
 				add = 50
 			}
 			modifier = {

@@ -23,7 +23,7 @@ cpr_laamp_contracts_weight_up_traits_value = {
 		add = 100
 	}
 	if = {
-		limit = { has_trait = poet }
+		limit = { has_trait = lifestyle_poet }
 		add = 50
 	}
 	if = {

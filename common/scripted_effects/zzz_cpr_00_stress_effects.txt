@@ -77,6 +77,7 @@ vanilla_rakish_brothel_night_effect = {
 				limit = {
 					NOT = { has_character_flag = had_story_cycle_peasant_affair }
 					is_ruler = yes
+					is_ai = no
 				}
 				create_character = {
 					location = root.capital_province

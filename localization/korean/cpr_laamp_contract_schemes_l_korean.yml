@@ -92,7 +92,7 @@ cpr_laamp_contract_schemes.1200.a.tt.failure: "당신의 시적 노력은 실패
 cpr_laamp_contract_schemes.1200.b.tt.success: "시에 대한 당신의 학문적 접근은 아름다움과 지적 깊이를 모두 높이 평가하는 [employer.GetTitledFirstName]에게 깊은 인상을 준다. 당신은 보상을 받고 박식함으로 존경을 얻는다." # 해라체
 cpr_laamp_contract_schemes.1200.b.tt.failure: "당신의 학문적 접근은 예술성을 압도하여, 여흥이 되어야 할 것을 지루한 강의로 만든다. [employer.GetTitledFirstName]은(는) 감명받기보다는 지루해하며 보상 없이 당신을 해고한다." # 해라체
 cpr_laamp_contract_schemes.1200.c.tt.success: "당신 추종자의 시적 숙달은 [employer.GetTitledFirstName]을(를) 사로잡아, 당신의 동료 판단력을 좋게 반영한다. 당신은 후한 보상을 받고 두 사람 모두의 평판을 높인다." # 해라체
-cpr_laamp_contract_schemes.1200.c.tt.no_follower: "당신에게는 최소 18 [diplomacy|E]와 $trait_poet$ 특성을 가진 이용 가능한 [follower|E]가 없어 위임할 수 없다." # 해라체
+cpr_laamp_contract_schemes.1200.c.tt.no_follower: "당신에게는 최소 18 [diplomacy|E]와 $trait_lifestyle_poet$ 특성을 가진 이용 가능한 [follower|E]가 없어 위임할 수 없다." # 해라체
 
 # 뛰어난 성공 (외교)
 cpr_laamp_contract_schemes.1201.t: "$cpr_laamp_1000_contract$: 주문 같은 구절"
