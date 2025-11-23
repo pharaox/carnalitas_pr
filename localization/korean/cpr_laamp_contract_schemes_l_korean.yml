@@ -3,338 +3,338 @@
 # 계약
 cpr_laamp_1000_contract: "하룻밤의 여흥"
 cpr_laamp_1000_desc_title: "세련된 재능을 지닌 방랑자에게," # 편지/공고 제목
-cpr_laamp_1000_desc: "[TaskContract.GetEmployer.GetPrimaryTitle.GetNameNoTier]의 [TaskContract.GetEmployer.GetTitleAsNameNoTooltip]이(가) 사적인 여흥을 제공할 예능인을 찾고 있다. [TaskContract.GetEmployer.GetSheHe|U]는 [TaskContract.GetEmployer.GetHerHis] 개인적인 취향에 따른 구체적인 선호도를 가지고 있다. 비밀 보장은 확실하며, 진정으로 깊은 인상을 줄 수 있는 자에게는 후한 보상이 제공될 것이다." # 해라체
-cpr_laamp_1000_request: "이 [task_contract|E]은(는) 당신이 [ruler|E]의 거주지로 [travel|E]하여 여흥을 제공해야 함을 요구한다. 당신은 고용주의 관심사에 따라 여러 선택지 — 음악, 시, 춤, 점술, 환영술 또는 동반자 관계 — 중에서 선택하게 될 것이다. 성공 여부는 당신의 [diplomacy|E], [intrigue|E], [learning|E] 또는 [prowess|E] 능력치에 달려있다. 당신은 또한 적합한 [follower|E]를 지정하여 대신 공연하게 할 수도 있다." # 해라체
+cpr_laamp_1000_desc: "[TaskContract.GetEmployer.GetPrimaryTitle.GetNameNoTier]의 [TaskContract.GetEmployer.GetTitleAsNameNoTooltip](이)가 사적인 여흥을 제공할 예능인을 찾고 있습니다. [TaskContract.GetEmployer.GetSheHe|U]는 [TaskContract.GetEmployer.GetHerHis] 개인적인 취향에 따른 구체적인 선호가 있습니다. 비밀 보장은 확실하며, 진정으로 깊은 인상을 줄 수 있는 자에게는 후한 보상이 있을 것입니다." # 해라체
+cpr_laamp_1000_request: "이 [task_contract|E]는 당신이 [ruler|E]의 거주지로 [travel|E]하여 여흥을 제공하길 요구함. 당신은 고용주의 관심사에 따라 여러 선택지 — 음악, 시, 춤, 점술, 환영술 또는 동반자 관계 — 중에서 선택하게 됨. 성공 여부는 당신의 [diplomacy|E], [intrigue|E], [learning|E] 또는 [prowess|E] 능력치에 달림. 당신은 또한 적합한 [follower|E]를 지정하여 대신 공연하게 할 수도 있음." # 해라체
 
 # 초기 선택 이벤트
 cpr_laamp_contract_schemes.1000.t: "$cpr_laamp_1000_contract$"
-cpr_laamp_contract_schemes.1000.desc: "[employer.GetTitledFirstName]은(는) 미소가 눈가에는 채 미치지 않은 채, 나를 [employer.GetHerHis] 사적인 내실로 맞이한다. 방은 촛불로 과도하게 밝지만, 어쩐지 차갑게 남아있다.\n\n'[employer.GetSheHe]가 술잔에 담긴 포도주를 휘저으며 말한다. '내 지위는 많은 것을 가져다주지. 권력, 부, 존경... 하지만 궁정의 일에서 벗어날 새로움, 기분 전환에 굶주려 있는 나 자신을 발견하곤 하네.'\n\n[employer.GetSheHe|U]가 나를 유심히 본다. '그대는 비범한 재능을 가졌다고 들었소. 나를 즐겁게 해주었으면 하네 — 무엇을 제공하겠소?'" # 서술부는 1인칭 '나' 시점 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1000.desc: "[employer.GetTitledFirstName](은)는 미소가 눈가에는 채 미치지 않은 채, 나를 [employer.GetHerHis] 내실로 맞이한다. 방은 촛불로 과도하게 밝지만, 어쩐지 차갑게 남아 있다.\n\n[employer.GetSheHe]가 술잔에 담긴 포도주를 휘저으며 말한다. '내 지위는 많은 것을 가져다주지. 권력, 부, 존경... 하지만 궁정의 일에서 벗어날 새로움, 기분 전환에 굶주려 있는 나 자신을 발견하곤 하네.'\n\n[employer.GetSheHe|U]가 나를 유심히 본다. '그대는 비범한 재능을 가졌다고 들었소. 나를 즐겁게 해 주었으면 하네. 무엇을 제공하겠소?'" # 서술부는 1인칭 '나' 시점 해라체, 대사는 구어체
 cpr_laamp_contract_schemes.1000.a: "그대의 번뇌하는 마음을 달랠 음악을 연주할 수 있소." # 구어체 (제안)
 cpr_laamp_contract_schemes.1000.b: "먼 땅에서 온 시와 이야기를 들려드리리다." # 구어체 (제안)
 cpr_laamp_contract_schemes.1000.c: "춤이 그대의 기운을 북돋아 줄 수 있을까?" # 구어체 (제안)
-cpr_laamp_contract_schemes.1000.d: "나는 더... 은밀한 본성의 동반자 관계를 제공하오." # 구어체 (제안)
+cpr_laamp_contract_schemes.1000.d: "나는 좀 더... 은밀한 동반자 관계를 제공하오." # 구어체 (제안)
 cpr_laamp_contract_schemes.1000.e: "고대의 점성술로 그대의 운세를 읽어드릴 수 있소." # 구어체 (제안)
 cpr_laamp_contract_schemes.1000.f: "그대를 놀라게 하고 기쁘게 할 환영술을 알고 있소." # 구어체 (제안)
 cpr_laamp_contract_schemes.1000.g: "그대의 즐거움을 위해 내가 광대 노릇을 하길 바라시오? 그렇게는 못 하겠소." # 구어체 (거절)
 
 # 툴팁
-cpr_laamp_contract_schemes.1000.a.tt: "당신은 음악 공연으로 [employer.GetTitledFirstName]을(를) 즐겁게 하려 시도할 것이다. 성공은 주로 당신의 [diplomacy|E]에 달려있지만, 다른 접근 방식을 사용할 수도 있다." # 해라체
-cpr_laamp_contract_schemes.1000.b.tt: "당신은 [employer.GetTitledFirstName]을(를) 위해 시와 이야기를 낭송할 것이다. 성공은 주로 당신의 [diplomacy|E]에 달려있지만, 당신의 [learning|E]이(가) 대안적인 접근 방식을 제공할 수도 있다." # 해라체
-cpr_laamp_contract_schemes.1000.c.tt: "당신은 [employer.GetTitledFirstName]을(를) 즐겁게 하기 위해 춤을 출 것이다. 성공은 주로 당신의 [diplomacy|E]에 달려있지만, 당신의 [prowess|E]이(가) 인상적인 전사의 춤을 가능하게 할 수도 있다." # 해라체
-cpr_laamp_contract_schemes.1000.d.tt: "당신은 [employer.GetTitledFirstName]에게 은밀한 동반자 관계를 제공할 것이다. 성공은 주로 당신의 [diplomacy|E]에 달려있지만, 당신의 [intrigue|E]이(가) 취약한 순간에 비밀을 캐낼 수 있게 할 수도 있다." # 해라체
-cpr_laamp_contract_schemes.1000.e.tt: "당신은 점성술을 통해 [employer.GetTitledFirstNamePossessive] 운세를 읽을 것이다. 성공은 주로 당신의 [learning|E]에 달려있지만, 당신의 [intrigue|E]이(가) '점괘'를 통한 조작을 가능하게 할 수도 있다." # 해라체
-cpr_laamp_contract_schemes.1000.f.tt: "당신은 [employer.GetTitledFirstName]을(를) 놀라게 하기 위해 환영술과 속임수를 공연할 것이다. 성공은 주로 당신의 [intrigue|E]에 달려있지만, 당신의 [learning|E]이(가) 기만술에 대해 더 학문적인 접근 방식을 제공할 수도 있다." # 해라체
-cpr_laamp_contract_schemes.1000.g.tt: "당신은 당신의 재능이 이 특정 후원자에게는 낭비될 것이라 판단하여 여흥 요청을 거절한다. 이것이 [employer.GetTitledFirstName]과의 관계를 손상시킬 수 있지만, 당신의 존엄성은 온전히 유지된다... 당신이 보존하기로 선택한 다른 자산들과 함께." # 해라체
+cpr_laamp_contract_schemes.1000.a.tt: "당신은 음악 공연으로 [employer.GetTitledFirstName](을)를 즐겁게 하려 시도할 것임. 성공은 주로 당신의 [diplomacy|E]에 달렸지만, 다르게 접근할 수도 있음." # 해라체
+cpr_laamp_contract_schemes.1000.b.tt: "당신은 [employer.GetTitledFirstName](을)를 위해 시와 이야기를 낭송할 것임. 성공은 주로 당신의 [diplomacy|E]에 달렸지만, 당신의 [learning|E]이 다른 접근을 제공할 수도 있음." # 해라체
+cpr_laamp_contract_schemes.1000.c.tt: "당신은 [employer.GetTitledFirstName](을)를 즐겁게 하기 위해 춤을 출 것임. 성공은 주로 당신의 [diplomacy|E]에 달렸지만, 당신의 [prowess|E]이 인상적인 전사의 춤을 가능하게 할 수도 있음." # 해라체
+cpr_laamp_contract_schemes.1000.d.tt: "당신은 [employer.GetTitledFirstName]에게 은밀한 동반자 관계를 제공할 것임. 성공은 주로 당신의 [diplomacy|E]에 달렸지만, 당신의 [intrigue|E]이 취약한 순간에 비밀을 캐낼 수도 있음." # 해라체
+cpr_laamp_contract_schemes.1000.e.tt: "당신은 점성술을 통해 [employer.GetTitledFirstNamePossessive] 운세를 읽을 것임. 성공은 주로 당신의 [learning|E]에 달렸지만, 당신의 [intrigue|E]이 '점괘'를 통한 조종을 가능하게 할 수도 있음." # 해라체
+cpr_laamp_contract_schemes.1000.f.tt: "당신은 [employer.GetTitledFirstName](을)를 놀라게 하기 위해 환영술과 속임수를 공연할 것임. 성공은 주로 당신의 [intrigue|E]에 달렸지만, 당신의 [learning|E]이 기만술에 대한 더 학문적인 접근을 제공할 수도 있음." # 해라체
+cpr_laamp_contract_schemes.1000.g.tt: "당신은 이 후원자에게 재능을 베푸는 건 낭비라고 판단해 여흥 요청을 거절함. [employer.GetTitledFirstName](와)과의 관계가 손상될 수 있지만, 당신의 존엄성은 당신이 지키기로 한 다른... 자산과 함께 온전히 유지됨." # 해라체
 
 # 1. 음악 공연 계약
 cpr_laamp_contract_schemes.1100.t: "$cpr_laamp_1000_contract$: 지친 귀를 위한 선율"
-cpr_laamp_contract_schemes.1100.desc: "내가 음악적 재능을 언급하자 [employer.GetTitledFirstName]이(가) 흥미롭게 고개를 끄덕인다. '음악이라... 그래, 이 내실이 모략과 청원 외의 소리를 들은 지 너무 오래되었지.'\n\n[employer.GetSheHe|U]가 구석의 받침대 위에 놓인 화려한 류트를 가리킨다. '저 악기는 마지막 음유시인이 지나간 이후로 침묵을 지켰소. 음악은 번뇌하는 마음을 달랜다고들 하더군 — 그리고 내 마음에는 왕국을 잠기게 할 만큼 충분한 번뇌가 있소. 그대의 기술을 보여주시오, 괜찮다면 말이오. 단 하룻밤만이라도 내 지위의 무게를 잊게 해주시오.'" # 서술부는 1인칭 '나' 시점 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1100.desc: "내가 음악적 재능을 언급하자 [employer.GetTitledFirstName](이)가 흥미롭게 고개를 끄덕인다. '음악이라... 그래, 이 내실이 모략과 청원 외의 소리를 들은 지 너무 오래되었지.'\n\n[employer.GetSheHe|U]가 구석의 받침대 위에 놓인 화려한 류트를 가리킨다. '저 악기는 마지막 음유시인이 지나간 이후로 침묵을 지켰소. 음악은 번뇌하는 마음을 달랜다고들 하더군 — 그리고 내 마음에는 왕국을 잠기게 할 만큼 충분한 번뇌가 있소. 그대의 기술을 보여주시오, 괜찮다면 말이오. 단 하룻밤만이라도 내 지위의 무게를 잊게 해주시오.'" # 서술부는 1인칭 '나' 시점 해라체, 대사는 구어체
 cpr_laamp_contract_schemes.1100.a: "내가 가진 모든 기술을 다해 연주하겠소." # 구어체 (도전 - 외교)
 cpr_laamp_contract_schemes.1100.b: "나는 음악의 대가는 아닐지 몰라도, 무엇이 진정 그대를 기쁘게 할지는 알고 있소." # 구어체 (도전 - 음모)
 cpr_laamp_contract_schemes.1100.c: "나의 추종자 [follower.GetTitledFirstName]에게 연주하게 하겠소. [follower.GetSheHe]는 음악에 재능이 있소." # 구어체 (추종자 있음)
 cpr_laamp_contract_schemes.1100.c.no_follower: "나의 추종자 중에는 이 임무에 필요한 음악적 재능을 가진 자가 없다." # 해라체 (추종자 없음)
 
 # 툴팁
-cpr_laamp_contract_schemes.1100.a.tt.success: "당신의 음악 공연은 [employer.GetTitledFirstName]을(를) 매료시켜, [employer.GetHerHis] 세계에 드문 아름다움의 순간을 선사한다. 당신의 보상은 상당할 것이며, 예능인으로서의 명성도 높아질 것이다." # 해라체
-cpr_laamp_contract_schemes.1100.a.tt.failure: "당신의 음악적 능력은 부족함이 드러나, [employer.GetTitledFirstName]이(가) 정중하게 견뎌내는 어색한 공연으로 끝난다. 당신은 보상을 받지 못하며, 이 실패는 당신의 평판을 손상시킬 수 있다." # 해라체
-cpr_laamp_contract_schemes.1100.b.tt.success: "당신의 음악 기술은 평범하지만, 예리한 관찰력으로 [employer.GetTitledFirstName]이(가) 진정으로 원하는 것을 이해할 수 있다. 당신은 보상을 받을 뿐만 아니라, 미래에 유용할 수 있는 귀중한 통찰력을 얻게 될 것이다." # 해라체
-cpr_laamp_contract_schemes.1100.b.tt.failure: "[employer.GetTitledFirstName]이(가) 당신의 기만을 간파하여, 상황을 조작하려는 시도는 역효과를 낳는다. 당신은 보상도 위엄도 없이 떠난다." # 해라체
-cpr_laamp_contract_schemes.1100.c.tt.success: "당신 추종자의 음악적 재능은 [employer.GetTitledFirstName]에게 깊은 인상을 주어, 당신의 동료 판단력을 좋게 반영한다. 당신은 후한 보상을 받고 두 사람 모두의 평판을 높인다." # 해라체
-cpr_laamp_contract_schemes.1100.c.tt.no_follower: "당신에게는 최소 18 [diplomacy|E]와 $trait_lifestyle_reveler$에서 50 [trait_level_track_xp|E]를 가진 이용 가능한 [follower|E]가 없어 위임할 수 없다." # 해라체
+cpr_laamp_contract_schemes.1100.a.tt.success: "당신의 음악 공연은 [employer.GetTitledFirstName](을)를 매료시켜, [employer.GetHerHis] 세계에 드문 아름다움의 순간을 선사함. 보상은 상당할 것이며, 예능인으로서의 명성도 높아질 것임." # 해라체
+cpr_laamp_contract_schemes.1100.a.tt.failure: "당신의 음악적 능력은 부족함이 드러나, [employer.GetTitledFirstName](이)가 정중하게 견뎌내는 어색한 공연으로 끝남. 당신은 보상을 받지 못하며, 이 실패는 당신의 평판을 손상시킬 수 있음." # 해라체
+cpr_laamp_contract_schemes.1100.b.tt.success: "당신의 음악 기술은 평범하지만, 예리한 관찰력으로 [employer.GetTitledFirstName](이)가 진정으로 원하는 것을 이해함. 당신은 보상을 받을 뿐 아니라, 미래에 유용할 수 있는 귀중한 통찰력을 얻게 될 것임." # 해라체
+cpr_laamp_contract_schemes.1100.b.tt.failure: "[employer.GetTitledFirstName](이)가 당신의 기만을 간파하여, 상황을 조작하려는 시도는 역효과를 낳음. 당신은 보상도 위엄도 없이 떠남." # 해라체
+cpr_laamp_contract_schemes.1100.c.tt.success: "추종자의 음악적 재능은 [employer.GetTitledFirstName]에게 깊은 인상을 주어, 당신이 동료를 보는 눈이 있음을 보여줌. 당신은 후한 보상을 받고 두 사람 모두의 평판을 높임." # 해라체
+cpr_laamp_contract_schemes.1100.c.tt.no_follower: "당신에게는 최소 18 [diplomacy|E]와 $trait_lifestyle_reveler$에서 50 [trait_level_track_xp|E]를 가진 이용 가능한 [follower|E]가 없어 위임할 수 없음" # 해라체
 
 # 뛰어난 성공 (외교)
 cpr_laamp_contract_schemes.1101.t: "$cpr_laamp_1000_contract$: 영혼의 교향곡"
-cpr_laamp_contract_schemes.1101.desc: "류트는 내 손안에서 살아 숨 쉬는 듯, 더 행복했던 시절의 유령처럼 [employer.GetTitledFirstNamePossessive] 내실을 떠도는 선율을 달래듯 내 자신의 목소리가 확장된 것 같다. 나는 궁정에서 인기 있는 곡으로 시작하여, 점차 희귀한 곡조로 전환한다 — [ROOT.Char.GetCulture.GetName] 땅의 발라드와 먼 해안에서 교역로를 따라 전해진 애절한 리듬으로.\n\n나는 [employer.GetTitledFirstNamePossessive] 손가락이 처음에는 박자에 맞춰 두드리고, 다음에는 반쯤 기억나는 가사를 조용히 따라 부르는 것을 알아챈다. 내가 이 땅에서 흔한 어린 시절 자장가로 전환할 때, 나는 [employer.GetHerHis] 얼굴에 스치는 무방비한 감정의 순간을 엿본다.\n\n마지막 음표가 아침 안개처럼 공중에 매달리며 사라질 때쯤, [employer.GetTitledFirstName]은(는) 경험에 의해 변화되어 만족스러운 침묵 속에 앉아 있다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1101.desc.outro: "\n\n'[employer.GetSheHe]가 마침내 이전보다 부드러운 목소리로 말한다. '이 벽들이 모략과 청원 외의 소리를 들은 지 너무 오래되었소. 그대는 단순한 여흥 이상의 선물을 내게 주었소 — 아름다움을 상기시켜 주었지.'\n\n[employer.GetSheHe|U]가 동전으로 기분 좋게 짤랑거리는 지갑을 내게 내민다. '모든 데나리우스 값어치를 하고도 남소.'" # 구어체 (대사)
+cpr_laamp_contract_schemes.1101.desc: "류트는 내 손안에서 살아 숨 쉬는 듯, 더 행복했던 시절의 유령처럼 [employer.GetTitledFirstNamePossessive] 내실을 떠도는 선율을 달래듯 내 자신의 목소리가 확장된 것 같다. 나는 궁정에서 인기 있는 곡으로 시작하여, 점차 희귀한 곡조로 전환한다 — [ROOT.Char.GetCulture.GetName] 땅의 발라드와 먼 해안에서 교역로를 따라 전해진 애절한 리듬으로.\n\n나는 [employer.GetTitledFirstNamePossessive] 손가락이 처음에는 박자에 맞춰 두드리고, 다음에는 반쯤 기억나는 가사를 조용히 따라 부르는 것을 알아챈다. 내가 이 땅에서 흔한 어린 시절 자장가로 전환할 때, 나는 [employer.GetHerHis] 얼굴에 스치는 무방비한 감정의 순간을 엿본다.\n\n마지막 음표가 아침 안개처럼 공중에 매달리며 사라질 때쯤, [employer.GetTitledFirstName](은)는 경험에 의해 변화되어 만족스러운 침묵 속에 앉아 있다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1101.desc.outro: "\n\n[employer.GetSheHe]가 마침내 이전보다 부드러운 목소리로 말한다. '이 벽들이 모략과 청원 외의 소리를 들은 지 너무 오래되었소. 그대는 단순한 여흥 이상의 선물을 내게 주었소 — 아름다움을 상기시켜 주었지.'\n\n[employer.GetSheHe|U]가 동전으로 기분 좋게 짤랑거리는 지갑을 내게 내민다. '모든 데나리우스 값어치를 하고도 남소.'" # 구어체 (대사)
 cpr_laamp_contract_schemes.1101.a: "음악은 말이 할 수 없는 것을 말한다." # 해라체 (결과)
 
 # 성공 (외교)
 cpr_laamp_contract_schemes.1102.t: "$cpr_laamp_1000_contract$: 즐거운 선율"
-cpr_laamp_contract_schemes.1102.desc: "비록 나는 대가가 아니지만, 내 손가락은 틀리는 것보다 맞는 음을 더 자주 찾는다. 나는 [employer.GetTitledFirstName]을(를) 점차 [employer.GetHerHis] 우울함에서 끌어내는 단순하고 즐거운 선율을 연주한다.\n\n특히 어려운 구절에서 비틀거릴 때, 나는 기교와 미소로 그것을 덮는다. [employer.GetTitledFirstName]은(는) 알아채지 못한 듯 — 또는 아마도 언급하지 않기로 선택한 듯 — [employer.GetSheHe]는 [employer.GetHerHis] 내실을 채우는 음악의 단순한 즐거움에 휩쓸린다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1102.desc.outro: "\n\n마지막 음표가 사라지자 '[employer.GetTitledFirstName]이(가) 말한다. '그것 참... 상쾌했소. 단순한 즐거움을 상기하는 것은 좋은 일이오.' [employer.GetSheHe|U]가 하인에게 신호하여 제공된 여흥에 대해 적당하지만 공정한 나의 보상을 가져오게 한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1102.desc: "비록 나는 대가가 아니지만, 내 손가락은 틀리는 것보다 맞는 음을 더 자주 찾는다. 나는 [employer.GetTitledFirstName](을)를 점차 [employer.GetHerHis] 우울함에서 끌어내는 단순하고 즐거운 선율을 연주한다.\n\n특히 어려운 구절에서 비틀거릴 때, 나는 기교와 미소로 그것을 덮는다. [employer.GetTitledFirstName](은)는 알아채지 못한 듯 — 또는 아마도 언급하지 않기로 선택한 듯 — [employer.GetSheHe]는 [employer.GetHerHis] 내실을 채우는 음악의 단순한 즐거움에 휩쓸린다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1102.desc.outro: "\n\n마지막 음표가 사라지자 [employer.GetTitledFirstName](이)가 말한다. '그것 참... 상쾌했소. 단순한 즐거움을 상기하는 것은 좋은 일이오.' [employer.GetSheHe|U]가 하인에게 신호하여 제공된 여흥에 대해 적당하지만 공정한 나의 보상을 가져오게 한다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1102.a: "불완전한 음악조차도 기운을 북돋을 수 있다." # 해라체 (결과)
 
 # 추종자 성공
 cpr_laamp_contract_schemes.1103.t: "$cpr_laamp_1000_contract$: 대가의 손길"
-cpr_laamp_contract_schemes.1103.desc: "나는 [follower.GetTitledFirstName]을(를) 소개하고, 그는 [follower.GetHerHis] 악기를 들고 자리를 잡기 전에 연습된 우아함으로 절한다. 뒤따르는 것은 소리를 통한 마법이라고밖에 설명할 수 없다. 음표는 물처럼 쏟아지고, 폭풍 구름처럼 쌓이며, 불꽃처럼 춤춘다. 모든 것은 [follower.GetFirstNamePossessive] 대가의 손길에 의해 인도된다.\n\n[employer.GetTitledFirstName]은(는) 넋을 잃고 앉아, 때때로 선율을 더 잘 흡수하기 위해 [employer.GetHerHis] 눈을 감는다. 공연이 끝날 무렵, 권위의 딱딱한 선들이 [employer.GetHerHis] 얼굴에서 부드러워졌다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1103.desc.outro: "\n\n'[employer.GetTitledFirstName]이(가) 인정한다. '그대의 [follower.GetTitledFirstName]은(는) 희귀한 재능을 가졌소. 그런 재능이 그대의 동행 속에 있다니!' [employer.GetSheHe|U]는 배열에 분명히 만족하며 우리에게 후하게 보상한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1103.desc: "나는 [follower.GetTitledFirstName](을)를 소개하고, 그는 [follower.GetHerHis] 악기를 들고 자리를 잡기 전에 연습된 우아함으로 절한다. 뒤따르는 것은 소리를 통한 마법이라고밖에 설명할 수 없다. 음표는 물처럼 쏟아지고, 폭풍 구름처럼 쌓이며, 불꽃처럼 춤춘다. 모든 것은 [follower.GetFirstNamePossessive] 대가의 손길에 의해 인도된다.\n\n[employer.GetTitledFirstName](은)는 넋을 잃고 앉아, 때때로 선율을 더 잘 흡수하기 위해 [employer.GetHerHis] 눈을 감는다. 공연이 끝날 무렵, 권위의 딱딱한 선들이 [employer.GetHerHis] 얼굴에서 부드러워졌다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1103.desc.outro: "\n\n[employer.GetTitledFirstName](이)가 인정한다. '그대의 [follower.GetTitledFirstName](은)는 희귀한 재능을 가졌소. 그런 재능이 그대의 동행 속에 있다니!' [employer.GetSheHe|U]는 배열에 분명히 만족하며 우리에게 후하게 보상한다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1103.a: "진정한 재능은 인정을 받을 자격이 있다." # 해라체 (결과)
 
 # 성공 (음모)
 cpr_laamp_contract_schemes.1104.t: "$cpr_laamp_1000_contract$: 다른 곡조"
-cpr_laamp_contract_schemes.1104.desc: "나는 연주를 시작하지만, 나의 진정한 공연은 [employer.GetTitledFirstName]을(를) 관찰하는 데 있다. 나는 [employer.GetHerHis] 눈이 특정 물건에 머무는 방식, 노래 사이에 특정 주제를 언급할 때 [employer.GetHerHis] 자세가 바뀌는 방식을 알아챈다.\n\n점차적으로, 나는 내 공연에 대화를 엮어 넣어, [employer.GetTitledFirstNamePossessive] 관심사와 걱정거리를 끌어낸다. 음악은 내가 구축하고 있는 연결의 부차적인 것이 된다 — 그 연결 속에서 [employer.GetSheHe]는 아마도 몇 년 만에 처음으로 진정으로 경청받는다고 느낀다.\n\n내가 악기를 내려놓을 때쯤, [employer.GetTitledFirstName]은(는) 내가 귀중한 정보를 신중하게 추출했다는 것을 인식하지 못한 채, 동정적인 귀를 찾았다고 믿으며 좀처럼 공유되지 않는 문제들에 대해 자유롭게 이야기하고 있다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1104.desc.outro: "\n\n'[employer.GetTitledFirstName]이(가) 인정한다. '단순한 예능인에게서 그런... 이해를 기대하지 않았소. 그대는 음악 이상의 재능을 가졌군.' [employer.GetSheHe|U]는 아마도 미래의 대화를 바라며 내게 후하게 지불한다 — 이 단순해 보이는 공연을 통해 내가 얻은 이점을 알지 못한 채." # 구어체 (대사)
+cpr_laamp_contract_schemes.1104.desc: "나는 연주를 시작하지만, 나의 진정한 공연은 [employer.GetTitledFirstName](을)를 관찰하는 데 있다. 나는 [employer.GetHerHis] 눈이 특정 물건에 머무는 방식, 노래 사이에 특정 주제를 언급할 때 [employer.GetHerHis] 자세가 바뀌는 방식을 알아챈다.\n\n점차적으로, 나는 내 공연에 대화를 엮어 넣어, [employer.GetTitledFirstNamePossessive] 관심사와 걱정거리를 끌어낸다. 음악은 내가 구축하고 있는 연결의 부차적인 것이 된다 — 그 연결 속에서 [employer.GetSheHe]는 아마도 몇 년 만에 처음으로 진정으로 경청받는다고 느낀다.\n\n내가 악기를 내려놓을 때쯤, [employer.GetTitledFirstName](은)는 내가 귀중한 정보를 신중하게 추출했다는 것을 인식하지 못한 채, 동정적인 귀를 찾았다고 믿으며 좀처럼 공유되지 않는 문제들에 대해 자유롭게 이야기하고 있다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1104.desc.outro: "\n\n[employer.GetTitledFirstName](이)가 인정한다. '단순한 예능인에게서 그런... 이해를 기대하지 않았소. 그대는 음악 이상의 재능을 가졌군.' [employer.GetSheHe|U]는 아마도 미래의 대화를 바라며 내게 후하게 지불한다 — 이 단순해 보이는 공연을 통해 내가 얻은 이점을 알지 못한 채." # 구어체 (대사)
 cpr_laamp_contract_schemes.1104.a: "때로는 가장 가치 있는 음표는 연주되지 않은 것들이다." # 해라체 (결과)
 
 # 실패 (외교)
 cpr_laamp_contract_schemes.1105.t: "$cpr_laamp_1000_contract$: 불협화음"
-cpr_laamp_contract_schemes.1105.desc: "나는 나의 음악적 능력을 과대평가했다. 야심 차게 시작했던 것은 내 손가락이 현 위에서 더듬거리고 내 목소리가 내 음역을 벗어난 음에서 갈라지면서 빠르게 당혹감으로 변질되었다.\n\n나는 더 단순한 선율로 회복하려 했지만, 그때쯤 [employer.GetTitledFirstName]은(는) 이미 [employer.GetHerHis] 시종들과 고통스러운 눈짓을 교환하기 시작했다. 공연 도중 실수로 현 하나를 끊었을 때, 날카로운 튕김 소리는 내 실패를 방 전체에 메아리치는 듯했다.\n\n'[employer.GetTitledFirstName]이(가) 외교적으로 제안한다. '아마도 오늘 밤은... 이만하면 충분하오. 내가 생각했던 것보다 더 피곤하다는 것을 알게 되었소.' 비록 [employer.GetHerHis] 찡그림이 [employer.GetHerHis] 진정한 감정을 드러내지만." # 1인칭 '나' 시점, 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1105.desc: "나는 나의 음악적 능력을 과대평가했다. 야심 차게 시작했던 것은 내 손가락이 현 위에서 더듬거리고 내 목소리가 내 음역을 벗어난 음에서 갈라지면서 빠르게 당혹감으로 변질되었다.\n\n나는 더 단순한 선율로 회복하려 했지만, 그때쯤 [employer.GetTitledFirstName](은)는 이미 [employer.GetHerHis] 시종들과 고통스러운 눈짓을 교환하기 시작했다. 공연 도중 실수로 현 하나를 끊었을 때, 날카로운 튕김 소리는 내 실패를 방 전체에 메아리치는 듯했다.\n\n[employer.GetTitledFirstName](이)가 외교적으로 제안한다. '아마도 오늘 밤은... 이만하면 충분하오. 내가 생각했던 것보다 더 피곤하다는 것을 알게 되었소.' 비록 [employer.GetHerHis] 찡그림이 [employer.GetHerHis] 진정한 감정을 드러내지만." # 1인칭 '나' 시점, 해라체, 대사는 구어체
 cpr_laamp_contract_schemes.1105.desc.outro: "\n\n보상은 제공되지 않고, 오직 신속한 해고와 잊는 것이 최선인 공연의 타는 듯한 수치심뿐이다. 내가 떠날 때, 한 궁정 신하가 속삭이는 것을 엿듣는다. '그리고 우리가 우리 [employer.GetTitleAsNameNoTooltip]께 합당한 여흥을 기대했다고 생각하다니!'" # 해라체
 cpr_laamp_contract_schemes.1105.a: "어떤 재능은 주장하지 않는 것이 더 낫다." # 해라체 (결과)
 
 # 실패 (음모)
 cpr_laamp_contract_schemes.1106.t: "$cpr_laamp_1000_contract$: 의도의 불협화음"
-cpr_laamp_contract_schemes.1106.desc: "나는 연주를 시작하지만, 음악 자체보다는 [employer.GetTitledFirstName]을(를) 관찰하는 데 더 집중한다. 내가 이용할 수 있는 취약점이나 비밀을 찾으면서 내 손가락은 불협화음을 낸다.\n\n선율이 무너지면서 나의 산만함은 점점 더 명백해진다. 나는 교묘한 대화로 음악적 실패를 덮으려 하지만, 내가 흔들리는 음표 사이에 던지는 탐색적인 질문마다 [employer.GetTitledFirstName]의 표정은 굳어진다.\n\n'[employer.GetSheHe]가 마침내 내 공연을 침묵시키려 손을 들어 올리며 말한다. '나는 그대가 계약 범위를 벗어난 문제에 더 관심이 있다고 믿소. 내가 그렇게 쉽게 조종당할 바보라고 생각하시오?'\n\n방 안의 분위기는 즉시 싸늘해진다. 내가 미묘한 정보 수집으로 의도했던 것이 침해적이고 무례한 것으로 인식되었다." # 1인칭 '나' 시점, 해라체, 대사는 구어체
-cpr_laamp_contract_schemes.1106.desc.outro: "\n\n'[employer.GetTitledFirstName]이(가) 차갑게 나를 해고한다. '이제 떠나시오. 나는 공연하기보다는 캐내려 드는 예능인은 쓸모가 없소.' 보상이 보류될 뿐만 아니라, 이제 나의 기만 수법을 포함하여 나를 고조된 의심으로 지켜보는 적을 만들고 떠난다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1106.desc: "나는 연주를 시작하지만, 음악 자체보다는 [employer.GetTitledFirstName](을)를 관찰하는 데 더 집중한다. 내가 이용할 수 있는 취약점이나 비밀을 찾으면서 내 손가락은 불협화음을 낸다.\n\n선율이 무너지면서 나의 산만함은 점점 더 명백해진다. 나는 교묘한 대화로 음악적 실패를 덮으려 하지만, 내가 흔들리는 음표 사이에 던지는 탐색적인 질문마다 [employer.GetTitledFirstName]의 표정은 굳어진다.\n\n[employer.GetSheHe]가 마침내 내 공연을 침묵시키려 손을 들어 올리며 말한다. '나는 그대가 계약 범위를 벗어난 문제에 더 관심이 있다고 믿소. 내가 그렇게 쉽게 조종당할 바보라고 생각하시오?'\n\n방 안의 분위기는 즉시 싸늘해진다. 내가 미묘한 정보 수집으로 의도했던 것이 침해적이고 무례한 것으로 인식되었다." # 1인칭 '나' 시점, 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1106.desc.outro: "\n\n[employer.GetTitledFirstName](이)가 차갑게 나를 해고한다. '이제 떠나시오. 나는 공연하기보다는 캐내려 드는 예능인은 쓸모가 없소.' 보상이 보류될 뿐만 아니라, 이제 나의 기만 수법을 포함하여 나를 고조된 의심으로 지켜보는 적을 만들고 떠난다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1106.a: "나의 미묘함은 상당한 개선이 필요하다." # 해라체 (결과)
 
 # 2. 시 낭송 계약
 cpr_laamp_contract_schemes.1200.t: "$cpr_laamp_1000_contract$: 영혼을 휘젓는 말"
-cpr_laamp_contract_schemes.1200.desc: "'시라...' [employer.GetTitledFirstName]이(가) 생각에 잠겨 숙고한다. '궁정 시인들은 공허한 아첨만을 제공하지만, 진정한 시 — 마음의 상태를 이야기하는 것 — 는 이 홀에서는 드물지.'\n\n[employer.GetSheHe|U]가 술잔에 담긴 포도주를 휘저으며 의자에 자리 잡는다. '먼 땅의 이야기, 영혼을 휘젓는 구절들을 내게 가져오시오. 내 눈이 결코 볼 수 없는 그림을 그대의 말로 그리고, 궁정 신하들이 감히 발설하지 못하는 진실을 말하시오. 그대가 진정으로 가졌다면, 언어의 숙달을 내게 보여주시오.'" # 서술부는 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1200.desc: "'시라...' [employer.GetTitledFirstName](이)가 생각에 잠겨 숙고한다. '궁정 시인들은 공허한 아첨만을 제공하지만, 진정한 시 — 마음의 상태를 이야기하는 것 — 는 이 홀에서는 드물지.'\n\n[employer.GetSheHe|U]가 술잔에 담긴 포도주를 휘저으며 의자에 자리 잡는다. '먼 땅의 이야기, 영혼을 휘젓는 구절들을 내게 가져오시오. 내 눈이 결코 볼 수 없는 그림을 그대의 말로 그리고, 궁정 신하들이 감히 발설하지 못하는 진실을 말하시오. 그대가 진정으로 가졌다면, 언어의 숙달을 내게 보여주시오.'" # 서술부는 해라체, 대사는 구어체
 cpr_laamp_contract_schemes.1200.a: "그대의 마음과 심장을 사로잡을 말을 엮겠소." # 구어체 (도전 - 외교)
 cpr_laamp_contract_schemes.1200.b: "그대의 가장 깊은 욕망에 호소하는 구절을 만들겠소." # 구어체 (도전 - 학식)
-cpr_laamp_contract_schemes.1200.c: "나의 추종자 [follower.GetTitledFirstName]에게 낭송하게 하겠소. [follower.GetSheHe]는 시 예술을 공부했소." # 구어체 (추종자 있음)
-cpr_laamp_contract_schemes.1200.c.no_follower: "내 추종자 중에는 시 예술에 정통하여 내 대신 봉사할 수 있는 자가 없다." # 해라체 (추종자 없음)
+cpr_laamp_contract_schemes.1200.c: "나의 추종자 [follower.GetTitledFirstName]에게 낭송하게 하겠소. [follower.GetSheHe]는 시를 공부했소." # 구어체 (추종자 있음)
+cpr_laamp_contract_schemes.1200.c.no_follower: "내 추종자 중에는 시에 정통하여 내 대신 봉사할 수 있는 자가 없다." # 해라체 (추종자 없음)
 
 # 툴팁
-cpr_laamp_contract_schemes.1200.a.tt.success: "당신의 구절은 [employer.GetTitledFirstName]을(를) 사로잡아, [employer.GetHerHim]을(를) [employer.GetHerHis] 지위의 한계 너머로 이끈다. 당신의 보상은 후할 것이며, 예술가로서의 명성도 높아질 것이다." # 해라체
-cpr_laamp_contract_schemes.1200.a.tt.failure: "당신의 시적 노력은 실패하여, [employer.GetTitledFirstName]을(를) 지루하게 하거나 혼란스럽게 한다. 당신은 보상을 받지 못하며, 문장가로서의 평판이 손상된다." # 해라체
-cpr_laamp_contract_schemes.1200.b.tt.success: "시에 대한 당신의 학문적 접근은 아름다움과 지적 깊이를 모두 높이 평가하는 [employer.GetTitledFirstName]에게 깊은 인상을 준다. 당신은 보상을 받고 박식함으로 존경을 얻는다." # 해라체
-cpr_laamp_contract_schemes.1200.b.tt.failure: "당신의 학문적 접근은 예술성을 압도하여, 여흥이 되어야 할 것을 지루한 강의로 만든다. [employer.GetTitledFirstName]은(는) 감명받기보다는 지루해하며 보상 없이 당신을 해고한다." # 해라체
-cpr_laamp_contract_schemes.1200.c.tt.success: "당신 추종자의 시적 숙달은 [employer.GetTitledFirstName]을(를) 사로잡아, 당신의 동료 판단력을 좋게 반영한다. 당신은 후한 보상을 받고 두 사람 모두의 평판을 높인다." # 해라체
-cpr_laamp_contract_schemes.1200.c.tt.no_follower: "당신에게는 최소 18 [diplomacy|E]와 $trait_lifestyle_poet$ 특성을 가진 이용 가능한 [follower|E]가 없어 위임할 수 없다." # 해라체
+cpr_laamp_contract_schemes.1200.a.tt.success: "당신의 구절은 [employer.GetTitledFirstName](을)를 사로잡아, [employer.GetHerHim]를 [employer.GetHerHis] 지위의 한계 너머로 이끎. 보상은 후할 것이며, 예술가로서의 명성도 높아질 것임." # 해라체
+cpr_laamp_contract_schemes.1200.a.tt.failure: "당신의 시적 노력은 실패하여, [employer.GetTitledFirstName](을)를 지루하거나 혼란스럽게 함. 당신은 보상을 받지 못하며, 문장가로서의 평판이 손상됨." # 해라체
+cpr_laamp_contract_schemes.1200.b.tt.success: "시에 대한 당신의 학문적 접근은 아름다움과 지적 깊이를 모두 높이 평가하는 [employer.GetTitledFirstName]에게 깊은 인상을 줌. 당신은 보상을 받고 박식함으로 존경을 얻음." # 해라체
+cpr_laamp_contract_schemes.1200.b.tt.failure: "당신의 학문적 접근은 예술성을 압도하여, 여흥이 되어야 할 것을 지루한 강의로 만듦. [employer.GetTitledFirstName](은)는 감명받기보다는 지루해하며 보상 없이 당신을 해고함." # 해라체
+cpr_laamp_contract_schemes.1200.c.tt.success: "추종자의 시적 숙달은 [employer.GetTitledFirstName](을)를 사로잡아, 당신이 동료를 보는 눈이 있음을 보여줌. 당신은 후한 보상을 받고 두 사람 모두의 평판을 높임." # 해라체
+cpr_laamp_contract_schemes.1200.c.tt.no_follower: "당신에게는 최소 18 [diplomacy|E]와 $trait_lifestyle_poet$ 특성을 가진 이용 가능한 [follower|E]가 없어 위임할 수 없음" # 해라체
 
 # 뛰어난 성공 (외교)
 cpr_laamp_contract_schemes.1201.t: "$cpr_laamp_1000_contract$: 주문 같은 구절"
-cpr_laamp_contract_schemes.1201.desc: "나는 아첨하는 것처럼 보이지 않으면서도 교묘하게 아첨하도록 세심하게 만들어진 나 자신의 창작 구절로 시작한다. [employer.GetTitledFirstName]이(가) 긴장을 풀자, 나는 [employer.GetHerHis] 자신의 투쟁을 반영하는 영웅들의 서사시로 전환하여, 미묘하게 그들의 궁극적인 승리를 강조한다.\n\n내 목소리는 연습된 운율로 오르내리며, 오직 말로만 그림을 그린다. 나는 동양 현자들의 철학적 사색, 예상치 못한 웃음을 자아내는 음탕한 2행 연구, 그리고 마음의 조용한 갈망에 호소하는 부드러운 소네트를 곁들인다.\n\n내가 유산과 추모에 대한 감동적인 송가로 끝맺을 때쯤, [employer.GetTitledFirstName]은(는) 내가 허공에서 만들어낸 세계에 완전히 몰입하여 앞으로 몸을 기울인다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1201.desc.outro: "\n\n마지막 구절이 끝나자 '[employer.GetTitledFirstName]이(가) 말한다. '내 평생, 이 방을 떠나지 않고도 그렇게 생생한 세계를 보여준 사람은 거의 없었소. 그대는 희귀한 재능을 가졌군.'\n\n[employer.GetSheHe|U]가 하인에게 신호하여 동전뿐만 아니라 감사의 작은 증표 — [employer.GetHerHis] 가문의 상징이 새겨진 반지 — 를 가져오게 한다. '그대가 이 저녁을 나만큼이나 좋게 기억하기를 바라오.'" # 구어체 (대사)
+cpr_laamp_contract_schemes.1201.desc: "나는 아첨하는 것처럼 보이지 않으면서도 교묘하게 아첨하도록 세심하게 만들어진 나 자신의 창작 구절로 시작한다. [employer.GetTitledFirstName](이)가 긴장을 풀자, 나는 [employer.GetHerHis] 자신의 투쟁을 반영하는 영웅들의 서사시로 전환하여, 미묘하게 그들의 궁극적인 승리를 강조한다.\n\n내 목소리는 연습된 운율로 오르내리며, 오직 말로만 그림을 그린다. 나는 동양 현자들의 철학적 사색, 예상치 못한 웃음을 자아내는 음탕한 2행 연구, 그리고 마음의 조용한 갈망에 호소하는 부드러운 소네트를 곁들인다.\n\n내가 유산과 추모에 대한 감동적인 송가로 끝맺을 때쯤, [employer.GetTitledFirstName](은)는 내가 허공에서 만들어낸 세계에 완전히 몰입하여 앞으로 몸을 기울인다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1201.desc.outro: "\n\n마지막 구절이 끝나자 [employer.GetTitledFirstName](이)가 말한다. '내 평생, 이 방을 떠나지 않고도 그렇게 생생한 세계를 보여준 사람은 거의 없었소. 그대는 희귀한 재능을 가졌군.'\n\n[employer.GetSheHe|U]가 하인에게 신호하여 동전뿐만 아니라 감사의 작은 증표 — [employer.GetHerHis] 가문의 상징이 새겨진 반지 — 를 가져오게 한다. '그대가 이 저녁을 나만큼이나 좋게 기억하기를 바라오.'" # 구어체 (대사)
 cpr_laamp_contract_schemes.1201.a: "말은 씨앗처럼 예상치 못한 곳에서 피어날 수 있다." # 해라체 (결과)
 
 # 성공 (외교)
 cpr_laamp_contract_schemes.1202.t: "$cpr_laamp_1000_contract$: 잘 전해진 이야기"
-cpr_laamp_contract_schemes.1202.desc: "비록 내 모든 운율이 완벽하게 흐르지는 않지만, 내가 엮어내는 이야기들은 [employer.GetTitledFirstNamePossessive] 상상력을 사로잡는다. 나는 여행 중에 수집한 용기와 로맨스 이야기를 낭송하며, 청중에게 더 잘 공감되도록 약간 각색한다.\n\n특정 구절을 기억하는 데 잠시 비틀거릴 때, 나는 설득력 있는 자신감으로 즉흥적으로 처리한다. [employer.GetTitledFirstName]은(는) 교묘한 표현 전환에 감탄하며 고개를 끄덕이고, 내 평범한 재능에 만족한 듯 보인다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1202.desc.outro: "\n\n내가 끝맺자 '[employer.GetTitledFirstName]이(가) 인정한다. '그대는 이야기꾼의 재능이 있소. 즐거운 기분 전환이었소.' [employer.GetSheHe|U]는 경험에 완전히 매료되지는 않았지만 분명히 만족하며 내 노력에 대해 공정한 보상을 제공한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1202.desc: "비록 내 모든 운율이 완벽하게 흐르지는 않지만, 내가 엮어내는 이야기들은 [employer.GetTitledFirstNamePossessive] 상상력을 사로잡는다. 나는 여행 중에 수집한 용기와 로맨스 이야기를 낭송하며, 청중에게 더 잘 공감되도록 약간 각색한다.\n\n특정 구절을 기억하는 데 잠시 비틀거릴 때, 나는 설득력 있는 자신감으로 즉흥적으로 처리한다. [employer.GetTitledFirstName](은)는 교묘한 표현 전환에 감탄하며 고개를 끄덕이고, 내 평범한 재능에 만족한 듯 보인다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1202.desc.outro: "\n\n내가 끝맺자 [employer.GetTitledFirstName](이)가 인정한다. '그대는 이야기꾼의 재능이 있소. 즐거운 기분 전환이었소.' [employer.GetSheHe|U]는 경험에 완전히 매료되지는 않았지만 분명히 만족하며 내 노력에 대해 공정한 보상을 제공한다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1202.a: "단순한 말조차도 천 개의 그림을 그릴 수 있다." # 해라체 (결과)
 
 # 추종자 성공
 cpr_laamp_contract_schemes.1203.t: "$cpr_laamp_1000_contract$: 문장가의 솜씨"
-cpr_laamp_contract_schemes.1203.desc: "[follower.GetTitledFirstName]은(는) 왕족 앞에서 공연해 본 사람의 조용한 자신감으로 앞으로 나선다. [follower.GetSheHe]가 말하기 시작하자, 바로 그 공기가 [follower.GetHerHis] 말에 대한 경외심 속에서 고요해지는 듯하다.\n\n[follower.GetFirstNameNoTooltip]이(가) [employer.GetTitledFirstName]을(를) [employer.GetHerHis] 지위의 한계를 훨씬 뛰어넘는 이야기들을 엮어낼 때, 산문은 음악이 되고 시는 진실이 된다. 나는 내 동료가 진정한 대가가 휘두르는 언어의 힘을 보여주는 것을 자랑스럽게 지켜본다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1203.desc.outro: "\n\n낭송이 끝나자 '[employer.GetTitledFirstName]이(가) 선언한다. '그대의 [follower.GetTitledFirstName]은(는) 진정한 예술성을 지녔소. 동료를 현명하게 선택하는군.' [employer.GetSheHe|U]는 [follower.GetFirstNamePossessive] 공연에 분명히 감동받아 우리에게 후하게 보상한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1203.desc: "[follower.GetTitledFirstName](은)는 왕족 앞에서 공연해 본 사람의 조용한 자신감으로 앞으로 나선다. [follower.GetSheHe]가 말하기 시작하자, 바로 그 공기가 [follower.GetHerHis] 말에 대한 경외심 속에서 고요해지는 듯하다.\n\n[follower.GetFirstNameNoTooltip](이)가 [employer.GetTitledFirstName](을)를 [employer.GetHerHis] 지위의 한계를 훨씬 뛰어넘는 이야기들을 엮어낼 때, 산문은 음악이 되고 시는 진실이 된다. 나는 내 동료가 진정한 대가가 휘두르는 언어의 힘을 보여주는 것을 자랑스럽게 지켜본다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1203.desc.outro: "\n\n낭송이 끝나자 [employer.GetTitledFirstName](이)가 선언한다. '그대의 [follower.GetTitledFirstName](은)는 진정한 예술성을 지녔소. 동료를 현명하게 선택하는군.' [employer.GetSheHe|U]는 [follower.GetFirstNamePossessive] 공연에 분명히 감동받아 우리에게 후하게 보상한다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1203.a: "대가의 말은 그 소리 이상의 무게를 지닌다." # 해라체 (결과)
 
 # 성공 (학식)
 cpr_laamp_contract_schemes.1204.t: "$cpr_laamp_1000_contract$: 학자의 구절"
-cpr_laamp_contract_schemes.1204.desc: "단순히 여흥 가치에만 의존하기보다는, 나는 나의 학문적 지식을 활용하여 역사적, 철학적 깊이가 있는 구절을 제시한다. 나는 고대 시를 원어로 낭송한 후 번역하며, 더 깊은 의미를 부여하는 문화적 맥락을 설명한다.\n\n나는 전통 간의 수사 기법을 비교하며, 특정 은유가 문화적 경계를 어떻게 초월하는지 주목한다. [employer.GetTitledFirstName]은(는) 지적으로 참여하며, [employer.GetHerHis] 자신의 교육 수준을 드러내는 질문을 한다 — 아마도 [employer.GetSheHe]가 좀처럼 보여줄 기회가 없는 면모일 것이다.\n\n낭송으로 시작된 것은 시를 기반으로 한 학문적 담론으로 진화한다. [employer.GetTitledFirstName]은(는) 단순히 즐겁게 해줄 청중이 아니라 참여할 가치가 있는 지성으로 대우받는 것을 높이 평가하는 듯하다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1204.desc.outro: "\n\n우리 시간이 끝나자 '[employer.GetTitledFirstName]이(가) 털어놓는다. '대부분의 예능인들은 내가 오직 기분 전환만을 원한다고 가정하오. 그대는 아름다움뿐만 아니라 내용에 대한 갈망을 인식했소.' [employer.GetSheHe|U]는 이 만남을 대부분과 다르게 기억할 것임을 시사하는 표정으로 내게 후하게 보상한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1204.desc: "단순히 여흥 가치에만 의존하기보다는, 나는 나의 학문적 지식을 활용하여 역사적, 철학적 깊이가 있는 구절을 제시한다. 나는 고대 시를 원어로 낭송한 후 번역하며, 더 깊은 의미를 부여하는 문화적 맥락을 설명한다.\n\n나는 전통 간의 수사 기법을 비교하며, 특정 은유가 문화적 경계를 어떻게 초월하는지 주목한다. [employer.GetTitledFirstName](은)는 지적으로 참여하며, [employer.GetHerHis] 자신의 교육 수준을 드러내는 질문을 한다 — 아마도 [employer.GetSheHe]가 좀처럼 보여줄 기회가 없는 면모일 것이다.\n\n낭송으로 시작된 것은 시를 기반으로 한 학문적 담론으로 진화한다. [employer.GetTitledFirstName](은)는 단순히 즐겁게 해줄 청중이 아니라 참여할 가치가 있는 지성으로 대우받는 것을 높이 평가하는 듯하다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1204.desc.outro: "\n\n우리 시간이 끝나자 [employer.GetTitledFirstName](이)가 털어놓는다. '대부분의 예능인들은 내가 오직 기분 전환만을 원한다고 가정하오. 그대는 아름다움뿐만 아니라 내용에 대한 갈망을 인식했소.' [employer.GetSheHe|U]는 이 만남을 대부분과 다르게 기억할 것임을 시사하는 표정으로 내게 후하게 보상한다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1204.a: "진정한 시는 즐겁게 하는 동시에 계몽한다." # 해라체 (결과)
 
 # 실패 (외교)
 cpr_laamp_contract_schemes.1205.t: "$cpr_laamp_1000_contract$: 공허한 구절"
-cpr_laamp_contract_schemes.1205.desc: "나는 감동적인 구절이라고 생각했던 것을 준비했지만, 시작한 순간부터 [employer.GetTitledFirstNamePossessive] 주의가 흩어지는 것을 느낄 수 있었다. 내가 신중하게 선택한 시들 — 아마도 현지 취향에는 너무 학문적이거나 너무 이국적이었을 것 — 은 우리 사이의 공간에서 무미건조하게 떨어졌다.\n\n더 나쁜 것은, 결정적인 순간에 정신이 멍해져 이미 낭송했던 부분을 반복하고 있는 나 자신을 발견했다는 것이다. 말로 이루어진 매혹적인 여행이 되어야 했던 것이 점점 더 혼란스러워지는 이야기들을 통한 어색한 터벅거림이 되었다.\n\n[employer.GetTitledFirstName]은(는) 처음에는 적절한 간격으로 고개를 끄덕이며 예의를 지키려 했지만, 결국 감출 수 없는 갈망으로 문 쪽을 힐끗거리기 시작했다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1205.desc.outro: "\n\n'[employer.GetSheHe]가 마침내 하품을 숨기려 하지 않고 말을 끊는다. '오늘 저녁에는... 문화를 충분히 접했다고 생각하오. 내일 아침 일찍 궁정 업무가 있소.'\n\n동전은 교환되지 않으며, 내 이름이 이 궁정의 소문에서 호의적으로 언급되지 않을 것임은 분명하다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1205.desc: "나는 감동적인 구절이라고 생각했던 것을 준비했지만, 시작한 순간부터 [employer.GetTitledFirstNamePossessive] 주의가 흩어지는 것을 느낄 수 있었다. 내가 신중하게 선택한 시들 — 아마도 현지 취향에는 너무 학문적이거나 너무 이국적이었을 것 — 은 우리 사이의 공간에서 무미건조하게 떨어졌다.\n\n더 나쁜 것은, 결정적인 순간에 정신이 멍해져 이미 낭송했던 부분을 반복하고 있는 나 자신을 발견했다는 것이다. 말로 이루어진 매혹적인 여행이 되어야 했던 것이 점점 더 혼란스러워지는 이야기들을 통한 어색한 터벅거림이 되었다.\n\n[employer.GetTitledFirstName](은)는 처음에는 적절한 간격으로 고개를 끄덕이며 예의를 지키려 했지만, 결국 감출 수 없는 갈망으로 문 쪽을 힐끗거리기 시작했다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1205.desc.outro: "\n\n[employer.GetSheHe]가 마침내 하품을 숨기려 하지 않고 말을 끊는다. '오늘 저녁에는... 문화를 충분히 접했다고 생각하오. 내일 아침 일찍 궁정 업무가 있소.'\n\n동전은 교환되지 않으며, 내 이름이 이 궁정의 소문에서 호의적으로 언급되지 않을 것임은 분명하다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1205.a: "가장 필요할 때 말이 나를 저버렸다." # 해라체 (결과)
 
 # 실패 (학식)
 cpr_laamp_contract_schemes.1206.t: "$cpr_laamp_1000_contract$: 학자적 허세"
-cpr_laamp_contract_schemes.1206.desc: "나는 단순한 예술적 표현보다는 지적 깊이로 [employer.GetTitledFirstName]에게 깊은 인상을 주기를 바라며, 학문적 참조와 철학적 통찰로 나의 낭송을 격상시키려 시도한다. 내 구절들은 고대 문헌 인용과 복잡한 신학 개념으로 무거워진다.\n\n내가 특히 모호한 직유의 형이상학적 함의에 대해 장황하게 설명할 때, 나는 [employer.GetTitledFirstNamePossessive] 주의가 방황하는 것을 알아챈다. 내가 심오한 담론으로 의도했던 것이 지루한 현학이 되어, 시는 학문적 허세의 층 아래 묻혀버렸다.\n\n'[employer.GetSheHe]가 마침내 얇게 가려진 초조함으로 말을 끊는다. '나는 여흥을 요청했다고 믿었소, 강의가 아니라. 아마도 우리 합의의 본질을 오해하신 듯하오?'" # 1인칭 '나' 시점, 해라체, 대사는 구어체
-cpr_laamp_contract_schemes.1206.desc.outro: "\n\n'[employer.GetTitledFirstName]이(가) 하품을 간신히 감추며 해고한다. '오늘 밤은 이걸로 충분하오. 다음번에는 낭송과 학위 논문의 차이를 이해하는 사람을 더 구체적으로 요청하겠소.' 나는 추구했던 기분 전환을 제공하는 데 철저히 실패하여 보상 없이 떠난다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1206.desc: "나는 단순한 예술적 표현보다는 지적 깊이로 [employer.GetTitledFirstName]에게 깊은 인상을 주기를 바라며, 학문적 참조와 철학적 통찰로 나의 낭송을 격상시키려 시도한다. 내 구절들은 고대 문헌 인용과 복잡한 신학 개념으로 무거워진다.\n\n내가 특히 모호한 직유의 형이상학적 함의에 대해 장황하게 설명할 때, 나는 [employer.GetTitledFirstNamePossessive] 주의가 방황하는 것을 알아챈다. 내가 심오한 담론으로 의도했던 것이 지루한 현학이 되어, 시는 학문적 허세의 층 아래 묻혀버렸다.\n\n[employer.GetSheHe]가 마침내 얇게 가려진 초조함으로 말을 끊는다. '나는 여흥을 요청했다고 믿었소, 강의가 아니라. 아마도 우리 합의의 본질을 오해하신 듯하오?'" # 1인칭 '나' 시점, 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1206.desc.outro: "\n\n[employer.GetTitledFirstName](이)가 하품을 간신히 감추며 해고한다. '오늘 밤은 이걸로 충분하오. 다음번에는 낭송과 학위 논문의 차이를 이해하는 사람을 더 구체적으로 요청하겠소.' 나는 추구했던 기분 전환을 제공하는 데 철저히 실패하여 보상 없이 떠난다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1206.a: "예술성 없는 지식은 단지 정보일 뿐이다." # 해라체 (결과)
 
 # 3. 춤 공연 계약
 cpr_laamp_contract_schemes.1300.t: "$cpr_laamp_1000_contract$: 움직임과 우아함"
-cpr_laamp_contract_schemes.1300.desc: "[employer.GetTitledFirstName]이(가) 내가 춤을 언급하자 눈썹을 치켜올린다. '[employer.GetSheHe]가 분명히 흥미가 돋은 채로 말한다. '이제 그것은 그대 직업의 사람들이 좀처럼 하지 않는 제안이오.'\n\n'[employer.GetSheHe]가 음악을 위해 신호하며 계속한다. '궁정 춤은 너무 형식적이고, 전통에 너무 엄격하게 얽매여 있소. 내게 다른 것을 보여주시오 — 아마도 먼 땅의 움직임이나, 공식적인 행사에는 너무 도발적인 스타일 말이오. 판단의 눈길이 그들 위에 없을 때 평민이나 외국 궁정들이 무엇을 즐기는지 내게 보여주시오.'" # 서술부는 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1300.desc: "[employer.GetTitledFirstName](이)가 내가 춤을 언급하자 눈썹을 치켜올린다. [employer.GetSheHe]가 분명히 흥미가 돋은 채로 말한다. '이제 그것은 그대 직업의 사람들이 좀처럼 하지 않는 제안이오.'\n\n[employer.GetSheHe]가 음악을 위해 신호하며 계속한다. '궁정 춤은 너무 형식적이고, 전통에 너무 엄격하게 얽매여 있소. 내게 다른 것을 보여주시오 — 아마도 먼 땅의 움직임이나, 공식적인 행사에는 너무 도발적인 스타일 말이오. 판단의 눈길이 그들 위에 없을 때 평민이나 외국 궁정들이 무엇을 즐기는지 내게 보여주시오.'" # 서술부는 해라체, 대사는 구어체
 cpr_laamp_contract_schemes.1300.a: "내가 가진 모든 우아함과 기술로 춤을 추겠소." # 구어체 (도전 - 외교)
-cpr_laamp_contract_schemes.1300.b: "나는 거의 목격되지 않은 무인의 춤으로 그대를 놀라게 할 수도 있소." # 구어체 (도전 - 기량)
+cpr_laamp_contract_schemes.1300.b: "나는 거의 아무도 본 적 없는 무인의 춤으로 그대를 놀라게 할 수도 있소." # 구어체 (도전 - 기량)
 cpr_laamp_contract_schemes.1300.c: "나의 추종자 [follower.GetTitledFirstName]에게 공연하게 하겠소. [follower.GetSheHe]는 많은 춤 전통에 훈련되어 있소." # 구어체 (추종자 있음)
 cpr_laamp_contract_schemes.1300.c.no_follower: "내 추종자 중에는 이 서비스를 수행할 만큼 춤에 능숙한 자가 없다." # 해라체 (추종자 없음)
 
 # 툴팁
-cpr_laamp_contract_schemes.1300.a.tt.success: "당신의 춤은 [employer.GetTitledFirstName]을(를) 매료시키고, 당신의 움직임은 말을 넘어선 언어를 구사한다. 당신의 보상은 상당할 것이며, 당신의 우아함은 공연이 끝난 후에도 오랫동안 기억될 것이다." # 해라체
-cpr_laamp_contract_schemes.1300.a.tt.failure: "당신의 춤은 어색하고 인상적이지 못함이 드러나, 당신 자신과 [employer.GetTitledFirstName] 모두를 당황하게 한다. 당신은 보상을 받지 못하고 평판이 떨어진 채 떠난다." # 해라체
-cpr_laamp_contract_schemes.1300.b.tt.success: "당신의 전사의 춤은 [employer.GetTitledFirstName]에게 깊은 인상을 주는 힘과 정확성을 보여준다. 당신은 보상을 받고 무술 규율 속의 아름다움을 보여준 것에 대한 존경을 얻는다." # 해라체
-cpr_laamp_contract_schemes.1300.b.tt.failure: "무인의 춤을 시도한 결과 서투른 움직임과 거의 손상될 뻔한 재산으로 끝난다. [employer.GetTitledFirstName]은(는) 당신의 신체적 기량이 무도회장보다는 전장에 더 적합함이 분명하다며 보상 없이 당신을 해고한다." # 해라체
-cpr_laamp_contract_schemes.1300.c.tt.success: "당신 추종자의 우아한 움직임은 [employer.GetTitledFirstName]에게 깊은 인상을 주어, 당신의 동료 판단력을 좋게 반영한다. 당신은 후한 보상을 받고 두 사람 모두의 평판을 높인다." # 해라체
-cpr_laamp_contract_schemes.1300.c.tt.no_follower: "당신에게는 최소 18 [diplomacy|E]와 $trait_lifestyle_reveler$에서 50 [trait_level_track_xp|E]를 가진 이용 가능한 [follower|E]가 없어 위임할 수 없다." # 해라체
+cpr_laamp_contract_schemes.1300.a.tt.success: "당신의 춤은 [employer.GetTitledFirstName](을)를 매료시키고, 당신의 움직임은 말을 넘어선 언어를 구사함. 보상은 상당할 것이며, 당신의 우아함은 공연이 끝난 후에도 오랫동안 기억될 것임." # 해라체
+cpr_laamp_contract_schemes.1300.a.tt.failure: "당신의 춤은 어색하고 인상적이지 못함이 드러나, 당신 자신과 [employer.GetTitledFirstName] 모두를 당황하게 함. 당신은 보상을 받지 못하고 평판이 떨어진 채 떠남." # 해라체
+cpr_laamp_contract_schemes.1300.b.tt.success: "당신의 전사의 춤은 [employer.GetTitledFirstName]에게 깊은 인상을 주는 힘과 정확성을 보여줌. 당신은 보상을 받고 무술 규율 속의 아름다움을 보여준 것에 대한 존경을 얻음." # 해라체
+cpr_laamp_contract_schemes.1300.b.tt.failure: "무인의 춤을 시도한 결과는 서투른 움직임과 망가질 뻔한 재산뿐임. [employer.GetTitledFirstName](은)는 당신의 기량이 무도회장보다는 전장에 더 적합함이 분명하다며 보상 없이 당신을 해고함." # 해라체
+cpr_laamp_contract_schemes.1300.c.tt.success: "추종자의 우아한 움직임은 [employer.GetTitledFirstName]에게 깊은 인상을 주어, 당신이 동료를 보는 눈이 있음을 보여줌. 당신은 후한 보상을 받고 두 사람 모두의 평판을 높임." # 해라체
+cpr_laamp_contract_schemes.1300.c.tt.no_follower: "당신에게는 최소 18 [diplomacy|E]와 $trait_lifestyle_reveler$에서 50 [trait_level_track_xp|E]를 가진 이용 가능한 [follower|E]가 없어 위임할 수 없음" # 해라체
 
 # 뛰어난 성공 (외교)
 cpr_laamp_contract_schemes.1301.t: "$cpr_laamp_1000_contract$: 시 같은 몸짓"
-cpr_laamp_contract_schemes.1301.desc: "나는 방 중앙에 공간을 만들기 위해 가구를 약간 재배치할 허락을 요청한다. [employer.GetTitledFirstName]은(는) 내가 준비하는 것을 호기심으로 지켜보다가, [employer.GetSheHe]가 제공한 음악가들에게 시작하라고 신호한다.\n\n나의 첫 움직임은 통제되고 정확하다 — 영역 전역의 귀족 궁정에서 선호되는 형식적인 패턴이다. 그러나 [employer.GetTitledFirstNamePossessive] 관심이 커짐에 따라, 나는 점차 여행에서 배운 춤의 요소들을 통합한다: 이베리아 궁정의 열정적인 회전, 동양 사원의 최면적인 손짓, 평민 축제의 소박한 활력.\n\n내 몸은 말을 넘어선 언어를 구사하며, 열정, 상실, 승리, 헌신의 이야기를 전한다. 나는 긴장의 순간에 [employer.GetTitledFirstNamePossessive] 숨결이 빨라지는 것을, 장난스러운 순서 동안 [employer.GetHerHis] 미소가 넓어지는 것을 본다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1301.desc.outro: "\n\n마지막 음표가 사라지고 춤이 끝나자, [employer.GetTitledFirstName]은(는) 진정한 열정으로 박수를 보낸다 — 아마도 내가 도착한 이후로 [employer.GetSheHe]가 보여준 첫 진실된 감정일 것이다.\n\n'[employer.GetSheHe]가 인정한다. '한동안, 나는 내 지위와 그 모든 부담을 잊었소. 참으로 희귀한 선물이오.' [employer.GetSheHe|U]는 공연에 의해 얼마나 철저히 매료되었는지를 증명하는 무거운 지갑으로 내게 후하게 보상한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1301.desc: "나는 방 중앙에 공간을 만들기 위해 가구를 약간 재배치할 허락을 요청한다. [employer.GetTitledFirstName](은)는 내가 준비하는 것을 호기심으로 지켜보다가, [employer.GetSheHe]가 제공한 음악가들에게 시작하라고 신호한다.\n\n나의 첫 움직임은 통제되고 정확하다 — 영역 전역의 귀족 궁정에서 선호되는 형식적인 패턴이다. 그러나 [employer.GetTitledFirstNamePossessive] 관심이 커짐에 따라, 나는 점차 여행에서 배운 춤의 요소들을 통합한다: 이베리아 궁정의 열정적인 회전, 동양 사원의 최면적인 손짓, 평민 축제의 소박한 활력.\n\n내 몸은 말을 넘어선 언어를 구사하며, 열정, 상실, 승리, 헌신의 이야기를 전한다. 나는 긴장의 순간에 [employer.GetTitledFirstNamePossessive] 숨결이 빨라지는 것을, 장난스러운 순서 동안 [employer.GetHerHis] 미소가 넓어지는 것을 본다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1301.desc.outro: "\n\n마지막 음표가 사라지고 춤이 끝나자, [employer.GetTitledFirstName](은)는 진정한 열정으로 박수를 보낸다 — 아마도 내가 도착한 이후로 [employer.GetSheHe]가 보여준 첫 진실된 감정일 것이다.\n\n[employer.GetSheHe]가 인정한다. '한동안, 나는 내 지위와 그 모든 부담을 잊었소. 참으로 희귀한 선물이오.' [employer.GetSheHe|U]는 공연에 의해 얼마나 철저히 매료되었는지를 증명하는 무거운 지갑으로 내게 후하게 보상한다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1301.a: "몸은 마음이 잊은 것을 기억한다." # 해라체 (결과)
 
 # 성공 (외교)
 cpr_laamp_contract_schemes.1302.t: "$cpr_laamp_1000_contract$: 삶의 리듬"
-cpr_laamp_contract_schemes.1302.desc: "비록 나는 궁정 공연가는 아니지만, [employer.GetTitledFirstNamePossessive] 주의를 끌기에 충분한 우아함으로 움직인다. 내 스텝은 전통적인 패턴을 따르며, 때때로 여행 중 선술집과 마을 광장에서 관찰한 기교로 장식된다.\n\n기술적인 정확성이 부족한 부분을, 나는 열정과 때때로 나 자신의 실수를 가볍게 여기는 태도로 만회한다. [employer.GetTitledFirstName]은(는) 내 노력의 진정성을 높이 평가하는 듯, 음악에 맞춰 [employer.GetHerHis] 발을 두드린다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1302.desc.outro: "\n\n내가 숨을 약간 헐떡이며 끝내자 '[employer.GetTitledFirstName]이(가) 논평한다. '상쾌하게 가식이 없군. 궁정 무용수들의 계산된 완벽함과는 반가운 변화요.' [employer.GetSheHe|U]는 평범한 여흥에 만족한 듯 공정한 보상을 제공한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1302.desc: "비록 나는 궁정 공연가는 아니지만, [employer.GetTitledFirstNamePossessive] 주의를 끌기에 충분한 우아함으로 움직인다. 내 스텝은 전통적인 패턴을 따르며, 때때로 여행 중 선술집과 마을 광장에서 관찰한 기교로 장식된다.\n\n기술적인 정확성이 부족한 부분을, 나는 열정과 때때로 나 자신의 실수를 가볍게 여기는 태도로 만회한다. [employer.GetTitledFirstName](은)는 내 노력의 진정성을 높이 평가하는 듯, 음악에 맞춰 [employer.GetHerHis] 발을 두드린다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1302.desc.outro: "\n\n내가 숨을 약간 헐떡이며 끝내자 [employer.GetTitledFirstName](이)가 논평한다. '상쾌하게 가식이 없군. 궁정 무용수들의 계산된 완벽함과는 반가운 변화요.' [employer.GetSheHe|U]는 평범한 여흥에 만족한 듯 공정한 보상을 제공한다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1302.a: "불완전한 춤조차도 진실을 말할 수 있다." # 해라체 (결과)
 
 # 추종자 성공
 cpr_laamp_contract_schemes.1303.t: "$cpr_laamp_1000_contract$: 움직임의 대가"
-cpr_laamp_contract_schemes.1303.desc: "[follower.GetTitledFirstName]은(는) 춤을 추기 시작하자 [follower.GetHerHim] 주위의 바로 그 공간을 변형시킨다. 각 움직임은 너무나 자연스러운 우아함으로 다음으로 흘러가서, 관객은 공연을 보고 있다는 것보다는 자연의 어떤 근원적인 힘을 목격하고 있다는 것을 잊게 된다.\n\n[employer.GetTitledFirstName]은(는) [follower.GetFirstNameNoTooltip]이(가) 말없이 이야기를 전하며 공중에 패턴을 엮어내는 것을 숨김없는 경이로움으로 지켜본다. 심지어 하인들도 그들의 임무를 잠시 멈추고, 그 광경에 순간적으로 매료된다." # 해라체
-cpr_laamp_contract_schemes.1303.desc.outro: "\n\n'[employer.GetTitledFirstName]이(가) 분명히 감명받아 말한다. '그대의 [follower.GetTitledFirstName]은(는) 마치 춤추기 위해 태어난 것처럼 움직이는군. 나는 이 공연을 앞으로 몇 년 동안 기억할 것이오.' [employer.GetSheHe|U]는 [employer.GetHerHis] 후한 보상에서 감사가 분명하게 드러나며 우리에게 후하게 보상한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1303.desc: "[follower.GetTitledFirstName](은)는 춤을 추기 시작하자 [follower.GetHerHim] 주위의 바로 그 공간을 변형시킨다. 각 움직임은 너무나 자연스러운 우아함으로 다음으로 흘러가서, 관객은 공연을 보고 있다는 것보다는 자연의 어떤 근원적인 힘을 목격하고 있다는 것을 잊게 된다.\n\n[employer.GetTitledFirstName](은)는 [follower.GetFirstNameNoTooltip](이)가 말없이 이야기를 전하며 공중에 패턴을 엮어내는 것을 숨김없는 경이로움으로 지켜본다. 심지어 하인들도 그들의 임무를 잠시 멈추고, 그 광경에 순간적으로 매료된다." # 해라체
+cpr_laamp_contract_schemes.1303.desc.outro: "\n\n[employer.GetTitledFirstName](이)가 분명히 감명받아 말한다. '그대의 [follower.GetTitledFirstName](은)는 마치 춤추기 위해 태어난 것처럼 움직이는군. 나는 이 공연을 앞으로 몇 년 동안 기억할 것이오.' [employer.GetSheHe|U]는 [employer.GetHerHis] 후한 보상에서 감사가 분명하게 드러나며 우리에게 후하게 보상한다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1303.a: "진정한 숙달은 어려운 일을 쉬워 보이게 만든다." # 해라체 (결과)
 
 # 성공 (기량)
 cpr_laamp_contract_schemes.1304.t: "$cpr_laamp_1000_contract$: 전사의 춤"
-cpr_laamp_contract_schemes.1304.desc: "나는 공간과 준비할 시간을 요청한다. [employer.GetTitledFirstName]이(가) 아마도 예상했을 궁정 춤 대신, 나는 먼 땅에서 온 전사의 표현 — 일부는 전투 훈련, 일부는 의식 공연 — 을 시작한다.\n\n내 움직임은 힘과 통제를 보여주며, 각 자세는 무술 훈련을 통해 연마된 정확성으로 다음으로 흘러간다. 내가 공연하는 것은 단순한 여흥이 아니라 예술로 변형된 전투의 치명적인 우아함이다.\n\n[employer.GetTitledFirstName]은(는) 커져가는 매혹으로 지켜보며, 특히 복잡한 순서가 펼쳐질 때 때때로 앞으로 몸을 기울인다. 나는 [employer.GetSheHe]가 공연 아래의 무술 기반을 인식하고 — 그것을 존중한다는 것을 알 수 있다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1304.desc.outro: "\n\n내가 끝내자 '[employer.GetTitledFirstName]이(가) 관찰한다. '놀랍군. 아름다움과 치명성이 동등하게 있소. 그것들이 얼마나 밀접하게 연관될 수 있는지 생각하지 못했소.' [employer.GetSheHe|U]는 단순한 여흥에 대한 감사보다는 한 전사가 다른 전사에게 보이는 존경심으로 내게 후하게 지불한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1304.desc: "나는 공간과 준비할 시간을 요청한다. [employer.GetTitledFirstName](이)가 아마도 예상했을 궁정 춤 대신, 나는 먼 땅에서 온 전사의 표현 — 일부는 전투 훈련, 일부는 의식 공연 — 을 시작한다.\n\n내 움직임은 힘과 통제를 보여주며, 각 자세는 무술 훈련을 통해 연마된 정확성으로 다음으로 흘러간다. 내가 공연하는 것은 단순한 여흥이 아니라 예술로 변형된 전투의 치명적인 우아함이다.\n\n[employer.GetTitledFirstName](은)는 커져가는 매혹으로 지켜보며, 특히 복잡한 순서가 펼쳐질 때 때때로 앞으로 몸을 기울인다. 나는 [employer.GetSheHe]가 공연 아래의 무술 기반을 인식하고 — 그것을 존중한다는 것을 알 수 있다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1304.desc.outro: "\n\n내가 끝내자 [employer.GetTitledFirstName](이)가 관찰한다. '놀랍군. 아름다움과 치명성이 동등하게 있소. 그것들이 얼마나 밀접하게 연관될 수 있는지 생각하지 못했소.' [employer.GetSheHe|U]는 단순한 여흥에 대한 감사보다는 한 전사가 다른 전사에게 보이는 존경심으로 내게 후하게 지불한다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1304.a: "칼날의 춤은 그 자체의 아름다움을 안다." # 해라체 (결과)
 
 # 실패 (외교)
-cpr_laamp_contract_schemes.1305.t: "$cpr_laamp_1000_contract$: 비틀거리는 스텝"
-cpr_laamp_contract_schemes.1305.desc: "나의 춤 실력에 대한 자신감은 비참하게 잘못된 것으로 판명되었다. 우아해야 할 움직임은 갓 태어난 망아지의 어색한 버둥거림에 더 가까웠고, 이국적인 기교를 시도하려는 나의 노력은 적절한 훈련 부족만을 강조했다.\n\n내가 공간을 잘못 판단하여 귀중한 꽃병을 바닥에 떨어뜨려 산산조각 냈을 때 상황은 악화되었다. [employer.GetTitledFirstName]은(는) 눈에 띄게 움찔했고, [employer.GetHerHis] 처음의 정중한 관심은 간신히 감춘 당혹감으로 변했다.\n\n내가 실수로 내 옷자락을 밟고 앞으로 비틀거렸을 때쯤, [employer.GetTitledFirstName]은(는) 모든 참석자들의 고통을 멈추기 위해 손을 들어 올렸다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1305.desc.outro: "\n\n'[employer.GetSheHe]가 강요된 예의로 긴장된 목소리로 말한다. '우리가 충분히 본 것 같소. 아마도 그대의 재능은... 다른 곳에 있을 것이오.'\n\n나는 보상 없이 밖으로 안내되고, 내가 지나갈 때 음악가들은 아는 체하는 눈짓을 교환한다. 이 공연은 나에게 미래의 계약을 확보해주지 않을 것이다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1305.t: "$cpr_laamp_1000_contract$: 비틀거리는 발짓"
+cpr_laamp_contract_schemes.1305.desc: "나의 춤 실력에 대한 자신감은 비참하게 잘못된 것으로 판명되었다. 우아해야 할 움직임은 갓 태어난 망아지의 어색한 버둥거림에 더 가까웠고, 이국적인 기교를 시도하려는 나의 노력은 적절한 훈련 부족만을 강조했다.\n\n내가 공간을 잘못 판단하여 귀중한 꽃병을 바닥에 떨어뜨려 산산조각 냈을 때 상황은 악화되었다. [employer.GetTitledFirstName](은)는 눈에 띄게 움찔했고, [employer.GetHerHis] 처음의 정중한 관심은 간신히 감춘 당혹감으로 변했다.\n\n내가 실수로 내 옷자락을 밟고 앞으로 비틀거렸을 때쯤, [employer.GetTitledFirstName](은)는 모든 참석자들의 고통을 멈추기 위해 손을 들어 올렸다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1305.desc.outro: "\n\n[employer.GetSheHe]가 강요된 예의로 긴장된 목소리로 말한다. '우리가 충분히 본 것 같소. 아마도 그대의 재능은... 다른 곳에 있을 것이오.'\n\n나는 보상 없이 밖으로 안내되고, 내가 지나갈 때 음악가들은 아는 체하는 눈짓을 교환한다. 이 공연은 나에게 미래의 계약을 확보해주지 않을 것이다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1305.a: "어떤 춤은 상상에 맡기는 것이 최선이다." # 해라체 (결과)
 
 # 실패 (기량)
 cpr_laamp_contract_schemes.1306.t: "$cpr_laamp_1000_contract$: 전사의 실수"
-cpr_laamp_contract_schemes.1306.desc: "나는 방 안의 공간을 확보하고, 먼 땅에서 온 전사의 춤 — 예술로 변형된 무술 기량의 표현 — 을 공연할 것이라고 설명한다. [employer.GetTitledFirstName]은(는) 내가 전투 형태에서 영감을 받은 움직임을 시작하는 것을 흥미롭게 지켜본다.\n\n내 자신감은 빠르게 내 능력을 넘어선다. 통제된 힘이어야 할 것이 어색한 돌진이 되고, 유려한 우아함이어야 할 것이 뻣뻣한 자세 잡기가 된다. 나는 특히 야심 찬 회전 도약을 시도하지만, 무겁고 고통스럽게 착지하며 발목을 삔다.\n\n위엄을 유지하려 애쓰며, 나는 점점 더 단순화된 움직임으로 절뚝거리며 계속하고, [employer.GetTitledFirstName]은(는) 당혹감과 연민이 섞인 표정으로 지켜본다. 내가 값비싼 꽃병을 거의 넘어뜨릴 뻔했을 때, [employer.GetSheHe]는 손을 들어 올린다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1306.desc.outro: "\n\n'[employer.GetSheHe]가 외교적으로 말한다. '오늘 저녁에는... 기량 표현을 충분히 본 것 같소. 아마도 그 발목을 쉬게 해야 할 것이오.' 나는 보상 없이 해고되고, 신체적 기량으로 깊은 인상을 주려는 나의 시도는 멍든 자존심과 몸 외에는 아무것도 남기지 않았다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1306.desc: "나는 방 안의 공간을 확보하고, 먼 땅에서 온 전사의 춤 — 예술로 변형된 무술 기량의 표현 — 을 공연할 것이라고 설명한다. [employer.GetTitledFirstName](은)는 내가 전투 형태에서 영감을 받은 움직임을 시작하는 것을 흥미롭게 지켜본다.\n\n내 자신감은 빠르게 내 능력을 넘어선다. 통제된 힘이어야 할 것이 어색한 돌진이 되고, 유려한 우아함이어야 할 것이 뻣뻣한 자세 잡기가 된다. 나는 특히 야심 찬 회전 도약을 시도하지만, 무겁고 고통스럽게 착지하며 발목을 삔다.\n\n위엄을 유지하려 애쓰며, 나는 점점 더 단순화된 움직임으로 절뚝거리며 계속하고, [employer.GetTitledFirstName](은)는 당혹감과 연민이 섞인 표정으로 지켜본다. 내가 값비싼 꽃병을 거의 넘어뜨릴 뻔했을 때, [employer.GetSheHe]는 손을 들어 올린다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1306.desc.outro: "\n\n[employer.GetSheHe]가 외교적으로 말한다. '오늘 저녁에는... 기량 표현을 충분히 본 것 같소. 아마도 그 발목을 쉬게 해야 할 것이오.' 나는 보상 없이 해고되고, 신체적 기량으로 깊은 인상을 주려는 나의 시도는 멍든 자존심과 몸 외에는 아무것도 남기지 않았다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1306.a: "전장과 무도회장은 다른 숙달을 요구한다." # 해라체 (결과)
 
 # 4. 은밀한 동반자 관계 계약
 cpr_laamp_contract_schemes.1400.t: "$cpr_laamp_1000_contract$: 다른 위안"
-cpr_laamp_contract_schemes.1400.desc: "내가 더 은밀한 동반자 관계를 제안하자 [employer.GetTitledFirstName]이(가) 새로운 관심으로 나를 본다. [employer.GetSheHe|U]는 미묘한 제스처로 하인들을 물리고, 그들 뒤에서 내실 문이 단단히 닫힐 때까지 기다린다.\n\n'[employer.GetSheHe]가 목소리를 낮추며 말한다. '참으로 통찰력이 있군. 내 지위에 있는 자들은 좀처럼 진정한 연결을 알지 못하오 — 모든 상호작용이 권력과 정치로 흐려져 있지. 아마도 그대는 내가 진정으로 요구하는 것을 이해할 것이오: 단순히 육체적 해방뿐만 아니라, 한동안 내가 [employer.GetTitledFirstNameNoTooltip]이(가) 아니라 단지 [employer.GetFirstName]일 수 있는 공간 말이오.'" # 서술부는 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1400.desc: "내가 더 은밀한 동반자 관계를 제안하자 [employer.GetTitledFirstName](이)가 새로운 관심으로 나를 본다. [employer.GetSheHe|U]는 미묘한 몸짓으로 하인들을 물리고, 그들 뒤에서 내실 문이 단단히 닫힐 때까지 기다린다.\n\n[employer.GetSheHe]가 목소리를 낮추며 말한다. '참으로 통찰력이 있군. 내 지위에 있는 자들은 좀처럼 진정한 연결을 알지 못하오 — 모든 상호작용이 권력과 정치로 흐려져 있지. 아마도 그대는 내가 진정으로 요구하는 것을 이해할 것이오: 단순히 육체적 해방뿐만 아니라, 한동안 내가 [employer.GetTitledFirstNameNoTooltip](이)가 아니라 단지 [employer.GetFirstName]일 수 있는 공간 말이오.'" # 서술부는 해라체, 대사는 구어체
 cpr_laamp_contract_schemes.1400.a: "나의 모든 기술로 그대의 쾌락에 부응하겠소." # 구어체 (도전 - 외교)
 cpr_laamp_contract_schemes.1400.b: "나는 표면 아래 그대가 진정으로 원하는 것을 감지하오." # 구어체 (도전 - 음모)
-cpr_laamp_contract_schemes.1400.c: "나의 동반자 [follower.GetTitledFirstName]에게 그대를 모시게 하겠소. [follower.GetSheHe]는 이 기술들에 가장 능통하오." # 구어체 (추종자 있음)
-cpr_laamp_contract_schemes.1400.c.no_follower: "내 동반자 중에는 [employer.GetTitledFirstName]을(를) 모실 만큼 은밀한 기술에 능숙한 자가 없다." # 해라체 (추종자 없음)
+cpr_laamp_contract_schemes.1400.c: "나의 추종자 [follower.GetTitledFirstName]에게 그대를 모시게 하겠소. [follower.GetSheHe]는 이 기술들에 가장 능통하오." # 구어체 (추종자 있음)
+cpr_laamp_contract_schemes.1400.c.no_follower: "내 추종자 중에는 [employer.GetTitledFirstName](을)를 모실 만큼 은밀한 기술에 능숙한 자가 없다." # 해라체 (추종자 없음)
 
 # 툴팁
-cpr_laamp_contract_schemes.1400.a.tt.success: "당신의 세심함과 진정한 연결은 [employer.GetTitledFirstName]에게 권위의 고립으로부터 드문 휴식을 제공한다. 당신의 후한 보상은 당신이 만들어낸 의미 있는 경험을 반영할 것이다." # 해라체
-cpr_laamp_contract_schemes.1400.a.tt.failure: "친밀함을 위한 당신의 시도는 실패하여, 연결보다는 어색함을 만든다. [employer.GetTitledFirstName]은(는) 분명히 실망하며 보상 없이 당신을 해고한다." # 해라체
-cpr_laamp_contract_schemes.1400.b.tt.success: "동반자 관계를 제공하는 동안, 당신은 취약한 순간에 [employer.GetTitledFirstName]으로부터 귀중한 정보를 추출한다. 당신은 보상을 받고 미래의 노력에 유용할 수 있는 비밀을 얻는다." # 해라체
-cpr_laamp_contract_schemes.1400.b.tt.failure: "당신의 조작은 투명하며, [employer.GetTitledFirstName]은(는) 정보를 추출하려는 당신의 시도를 인식한다. 당신은 보상 없이 해고되고 강력한 적에게 당신의 방법을 알렸을 수 있다." # 해라체
-cpr_laamp_contract_schemes.1400.c.tt.success: "당신의 추종자는 [employer.GetTitledFirstName]에게 뛰어난 동반자 관계를 제공하여, 당신의 판단력을 좋게 반영한다. 당신은 후한 보상을 받고 두 사람 모두의 평판을 높인다." # 해라체
-cpr_laamp_contract_schemes.1400.c.tt.no_follower: "당신에게는 최소 18 [diplomacy|E]와 $trait_lifestyle_prostitute$에서 50 [trait_level_track_xp|E]를 가진 이용 가능한 [follower|E]가 없어 위임할 수 없다." # 해라체
+cpr_laamp_contract_schemes.1400.a.tt.success: "당신의 세심함과 진정한 연결은 [employer.GetTitledFirstName]에게 권위의 고립으로부터 드문 휴식을 제공함. 후한 보상은 당신이 만들어낸 의미 있는 경험을 반영함." # 해라체
+cpr_laamp_contract_schemes.1400.a.tt.failure: "친밀함을 위한 당신의 시도는 실패하여, 연결보다는 어색함을 만듦. [employer.GetTitledFirstName](은)는 분명히 실망하며 보상 없이 당신을 해고함." # 해라체
+cpr_laamp_contract_schemes.1400.b.tt.success: "동반자 관계를 제공하는 동안, 당신은 취약한 순간에 [employer.GetTitledFirstName]으로부터 귀중한 정보를 캐냄. 당신은 보상을 받고 미래의 노력에 유용할 수 있는 비밀을 얻음." # 해라체
+cpr_laamp_contract_schemes.1400.b.tt.failure: "당신의 조종은 뻔히 드러나며, [employer.GetTitledFirstName](은)는 정보를 추출하려는 당신의 시도를 인식함. 당신은 보상 없이 해고되고 강력한 적에게 당신의 방법을 알렸을 수 있다." # 해라체
+cpr_laamp_contract_schemes.1400.c.tt.success: "추종자는 [employer.GetTitledFirstName]에게 뛰어난 동반자 관계를 제공하여, 당신의 좋은 판단력을 보여줌. 당신은 후한 보상을 받고 두 사람 모두의 평판을 높임." # 해라체
+cpr_laamp_contract_schemes.1400.c.tt.no_follower: "당신에게는 최소 18 [diplomacy|E]와 $trait_lifestyle_prostitute$에서 50 [trait_level_track_xp|E]를 가진 이용 가능한 [follower|E]가 없어 위임할 수 없음" # 해라체
 
 # 뛰어난 성공 (외교)
 cpr_laamp_contract_schemes.1401.t: "$cpr_laamp_1000_contract$: 속삭이는 열정"
-cpr_laamp_contract_schemes.1401.desc: "촛불이 낮게 타오르는 가운데, 나는 [employer.GetTitledFirstName]을(를) 감각과 연결의 여정으로 안내한다. 나는 [employer.GetHerHis] 반응을 연습된 용이함으로 읽어내며, 언제 나아가고 언제 물러날지, 언제 말하고 언제 침묵이 순간에 가장 잘 부합하는지 안다.\n\n이것은 다른 어떤 것과 같은 예술 형태이다 — 세심함, 기술, 그리고 진정한 현존을 요구하는 것. 나는 [employer.GetTitledFirstName]에게 단순히 육체적 해방뿐만 아니라, [employer.GetSheHe]가 늘 경계하는 [employer.GetTitleAsNameNoTooltip]일 필요 없이 단지 욕망과 취약점을 가진 [employer.GetWomanMan]일 수 있는 드문 공간을 제공한다.\n\n시간은 [employer.GetHerHis] 내실의 부드러운 그림자 속에서 의미를 잃고, 순간들은 우리의 공유된 숨결의 운율처럼 늘어나고 압축된다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1401.desc.outro: "\n\n나중에, 우리가 숨을 고르며 누워있을 때, [employer.GetTitledFirstName]은(는) 나를 새로운 눈으로 본다 — 단순한 고용된 동반자가 아니라 진정한 무언가를 공유한 사람으로.\n\n'[employer.GetSheHe]가 부드럽게 말한다. '소수만이 이해하는 것을 그대는 이해하는군. 칭호 아래의 사람을.'\n\n아침이 오자, [employer.GetSheHe]는 우리의 합의를 초과하는 보상과 함께, 내가 의심컨대 [employer.GetSheHe]가 처음에는 내놓을 의도가 없었던 작은 증표를 내게 선물한다. 내가 떠나기 전에 우리의 눈은 조용한 이해 속에서 마주친다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1401.desc: "촛불이 낮게 타오르는 가운데, 나는 [employer.GetTitledFirstName](을)를 감각과 연결의 여정으로 안내한다. 나는 [employer.GetHerHis] 반응을 연습된 용이함으로 읽어내며, 언제 나아가고 언제 물러날지, 언제 말하고 언제 침묵이 순간에 가장 잘 부합하는지 안다.\n\n이것은 다른 어떤 것과 같은 예술 형태이다 — 세심함, 기술, 그리고 진정한 현존을 요구하는 것. 나는 [employer.GetTitledFirstName]에게 단순히 육체적 해방뿐만 아니라, [employer.GetSheHe]가 늘 경계하는 [employer.GetTitleAsNameNoTooltip]일 필요 없이 단지 욕망과 취약점을 가진 [employer.GetWomanMan]일 수 있는 드문 공간을 제공한다.\n\n시간은 [employer.GetHerHis] 내실의 부드러운 그림자 속에서 의미를 잃고, 순간들은 우리의 공유된 숨결의 운율처럼 늘어나고 압축된다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1401.desc.outro: "\n\n나중에, 우리가 숨을 고르며 누워있을 때, [employer.GetTitledFirstName](은)는 나를 새로운 눈으로 본다 — 단순한 고용된 동반자가 아니라 진정한 무언가를 공유한 사람으로.\n\n[employer.GetSheHe]가 부드럽게 말한다. '소수만이 이해하는 것을 그대는 이해하는군. 칭호 아래의 사람을.'\n\n아침이 오자, [employer.GetSheHe]는 우리의 합의를 초과하는 보상과 함께, 내가 의심컨대 [employer.GetSheHe]가 처음에는 내놓을 의도가 없었던 작은 증표를 내게 선물한다. 내가 떠나기 전에 우리의 눈은 조용한 이해 속에서 마주친다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1401.a: "어떤 기억들은 침묵 속에서 가장 잘 간직된다." # 해라체 (결과)
 
 # 성공 (외교)
 cpr_laamp_contract_schemes.1402.t: "$cpr_laamp_1000_contract$: 공유된 온기"
 cpr_laamp_contract_schemes.1402.desc: "나는 단순한 기술보다는 진정성으로 우리의 만남에 접근하며, 직관과 [employer.GetTitledFirstNamePossessive] 반응을 통해 길을 찾는다. 기교적인 세련됨이 부족할 수 있는 부분을, 나는 [employer.GetHerHis] 쾌락에 대한 진정한 관심으로 만회한다.\n\n우리의 연결은 비록 짧지만, [employer.GetTitledFirstName]에게 권위의 고립으로부터 휴식을 제공한다. 이 사적인 순간들 속에서, [employer.GetHerHis] 지위의 무게는 비록 일시적일지라도 [employer.GetHerHis] 어깨에서 들어 올려지는 듯하다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1402.desc.outro: "\n\n나중에 우리가 옷을 입을 때 '[employer.GetTitledFirstName]이(가) 인정한다. '그것 참... 내가 정확히 필요했던 것이었소. 그대는 말하지 않은 것을 읽는 재능이 있군.' [employer.GetSheHe|U]는 거래가 양측 모두에게 만족스러웠음을 시사하는 온기와 함께 공정한 보상을 제공한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1402.desc.outro: "\n\n나중에 우리가 옷을 입을 때 [employer.GetTitledFirstName](이)가 인정한다. '그것 참... 내가 정확히 필요했던 것이었소. 그대는 말하지 않은 것을 읽는 재능이 있군.' [employer.GetSheHe|U]는 거래가 양측 모두에게 만족스러웠음을 시사하는 온기와 함께 공정한 보상을 제공한다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1402.a: "진정한 쾌락은 열정뿐만 아니라 현존을 요구한다." # 해라체 (결과)
 
 # 추종자 성공
 cpr_laamp_contract_schemes.1403.t: "$cpr_laamp_1000_contract$: 숙련된 동행"
-cpr_laamp_contract_schemes.1403.desc: "나는 은밀한 기술에서 나의 경험을 훨씬 능가하는 [follower.GetTitledFirstName]을(를) 소개한다. [follower.GetSheHe|U]는 연습된 우아함으로 [employer.GetTitledFirstName]에게 다가가, 내가 그들에게 프라이버시를 주기 위해 신중하게 물러나는 동안 부드럽게 말한다.\n\n내실 문을 통해 때때로 흘러나오는 소리들로부터, [follower.GetFirstNamePossessive] 기술이 잘 받아들여지고 있음이 분명하다. 나는 이 섬세한 계약 동안 우리가 방해받지 않도록 준비하며 인내심 있게 기다린다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1403.desc.outro: "\n\n내가 마침내 다시 불려갔을 때, [employer.GetTitledFirstName]은(는) 긴장이 전문적으로 풀린 사람의 편안한 태도로 기대어 앉아 철저히 만족한 듯 보인다. '[employer.GetSheHe]가 말한다. '그대의 [follower.GetTitledFirstName]은(는) 합의된 금액의 두 배 가치가 있는 재능을 가졌소.' 예상보다 확실히 무거워 보이는 지갑을 가리키며." # 구어체 (대사)
+cpr_laamp_contract_schemes.1403.desc: "나는 은밀한 기술에서 나의 경험을 훨씬 능가하는 [follower.GetTitledFirstName](을)를 소개한다. [follower.GetSheHe|U]는 연습된 우아함으로 [employer.GetTitledFirstName]에게 다가가, 내가 그들에게 둘만의 시간을 주기 위해 신중하게 물러나는 동안 부드럽게 말한다.\n\n내실 문을 틈으로 때때로 흘러나오는 소리로부터, [follower.GetFirstNamePossessive] 기술이 잘 받아들여지고 있음이 분명하다. 나는 이 섬세한 계약 동안 우리가 방해받지 않도록 준비하며 인내심 있게 기다린다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1403.desc.outro: "\n\n내가 마침내 다시 불려갔을 때, [employer.GetTitledFirstName](은)는 긴장이 전문적으로 풀린 사람의 편안한 태도로 기대어 앉아 철저히 만족한 듯 보인다. [employer.GetSheHe]가 말한다. '그대의 [follower.GetTitledFirstName](은)는 합의된 금액의 두 배 가치가 있는 재능을 가졌소.' 예상보다 확실히 무거워 보이는 지갑을 가리키며." # 구어체 (대사)
 cpr_laamp_contract_schemes.1403.a: "어떤 기술은 그것을 숙달한 자에게 위임하는 것이 최선이다." # 해라체 (결과)
 
 # 성공 (음모)
 cpr_laamp_contract_schemes.1404.t: "$cpr_laamp_1000_contract$: 더 깊은 욕망"
-cpr_laamp_contract_schemes.1404.desc: "이것을 단순한 육체적 만족으로 접근하기보다는, 나는 [employer.GetTitledFirstName]을(를) 신중하게 관찰하며, [employer.GetHerHis] 더 깊은 욕망 — 단지 쾌락뿐만 아니라, 이해받고, 진정으로 보여지기를 바라는 — 을 드러내는 미묘한 신호들을 주목한다.\n\n나는 선택적인 진실과 통찰력 있는 통찰력의 직물을 엮어내어, 귀중한 정보를 수집하는 동안 심오한 연결의 환상을 만든다. [employer.GetTitledFirstName]은(는) 쾌락의 한숨 사이에서 [employer.GetSheHe]가 의도한 것보다 더 많은 것을 드러낸다 — 취약점, 두려움, 그리고 일반적으로 권위의 가면 뒤에 숨겨진 야망들.\n\n우리의 만남이 끝날 때쯤, 나는 미래의 거래에 유용할 수 있는 비밀들을 배웠고, 반면 [employer.GetTitledFirstName]은(는) [employer.GetSheHe]의 부담을 이해하는 희귀한 영혼을 찾았다고 믿는다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1404.desc.outro: "\n\n'[employer.GetTitledFirstName]이(가) 고백한다. '고용된 동반자에게서 그런... 깊이를 찾을 줄은 예상하지 못했소. 아마도 우리는 더 규칙적으로 그런 만남을 주선할 수도 있을 것이오.' [employer.GetSheHe|U]는 후하게 지불하지만, 진정한 가치는 내가 얻은 정보와 영향력에 있다." # 구어체 (대사)
-cpr_laamp_contract_schemes.1404.a: "몸은 입술이 침묵하려 하는 진실을 말한다." # 해라체 (결과)
+cpr_laamp_contract_schemes.1404.desc: "단순한 육체적 만족으로 접근하기보다, 나는 [employer.GetTitledFirstName](을)를 신중하게 관찰하며, 단지 쾌락뿐만 아니라, 이해받고, 진정으로 보여지기를 바라는 [employer.GetHerHis] 더 깊은 욕망을 드러내는 미묘한 신호들에 주목한다.\n\n나는 선택적인 진실과 날카로운 통찰을 한데 엮어, 심오한 연결의 환상을 만들어내며 귀중한 정보를 수집한다. [employer.GetTitledFirstName](은)는 쾌락의 탄식 사이에서 [employer.GetSheHe]가 의도한 것보다 더 많은 것을 드러낸다 — 대개는 권위의 가면 뒤에 숨겨진 약점, 두려움, 그리고 야망을.\n\n우리의 만남이 끝날 때쯤, 나는 미래의 거래에 유용할 수 있는 비밀들을 알게 되었고, 반면 [employer.GetTitledFirstName](은)는 [employer.GetSheHe]의 부담을 이해하는 드문 영혼을 발견했다고 믿게 되었다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1404.desc.outro: "\n\n[employer.GetTitledFirstName](이)가 고백한다. '고용된 동반자에게서 그런... 깊이를 찾을 줄은 예상하지 못했소. 우리는 더 자주 이런 만남을 주선해도 좋을 것 같군.' [employer.GetSheHe|U]는 후하게 지불하지만, 진정한 가치는 내가 얻은 정보와 영향력에 있다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1404.a: "몸은 입술이 말하지 않는 진실을 말한다." # 해라체 (결과)
 
 # 실패 (외교)
 cpr_laamp_contract_schemes.1405.t: "$cpr_laamp_1000_contract$: 차가운 위안"
-cpr_laamp_contract_schemes.1405.desc: "내가 열정의 밤이 될 것이라고 상상했던 것은 대신 어색함의 연습이 되었다. 나의 유혹 시도는 실패했고, 나의 손길은 너무 망설이거나 너무 대담하여, 결코 [employer.GetTitledFirstName]을(를) 기쁘게 할 올바른 리듬이나 압력을 찾지 못했다.\n\n아마도 긴장 때문이었거나, 아니면 단순히 기질의 불일치 때문이었을지도 모르지만, 내가 구축하려 했던 연결은 좌절스러울 정도로 손이 닿지 않는 곳에 남아 있었다. [employer.GetTitledFirstName]은(는) 점점 더 내성적이 되어, 결국 저녁을 조기에 끝내자고 제안했다.\n\n'[employer.GetSheHe]가 형편없이 감춘 실망감으로 말한다. '이것은 내가 염두에 두었던 것이 아니오. 지금 이것을 끝내는 것이 최선이라고 생각하오.'" # 1인칭 '나' 시점, 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1405.desc: "내가 열정의 밤이 될 것이라고 상상했던 것은 대신 어색함의 연습이 되었다. 나의 유혹 시도는 실패했고, 나의 손길은 너무 망설이거나 너무 대담하여, 결코 [employer.GetTitledFirstName](을)를 기쁘게 할 올바른 박자나 압력을 찾지 못했다.\n\n긴장 때문이었거나, 아니면 단순히 기질의 불일치 때문이었을지도 모르지만, 내가 구축하려 했던 연결은 좌절스러울 정도로 손이 닿지 않는 곳에 남아 있었다. [employer.GetTitledFirstName](은)는 점점 더 내성적이 되어, 결국 저녁을 일찍 끝내자고 제안했다.\n\n[employer.GetSheHe]가 실망을 감추지 못하고 말한다. '이건 내가 생각했던 것이 아니오. 지금 끝내는 게 좋겠소.'" # 1인칭 '나' 시점, 해라체, 대사는 구어체
 cpr_laamp_contract_schemes.1405.desc.trait_arrogant: "나는 과도한 자신감으로 우리의 만남에 접근했고, 나의 매력만으로 충분할 것이라고 확신했다. 나는 나 자신의 기량에 대해 너무 많이 말하고 [employer.GetTitledFirstNamePossessive] 반응에는 너무 적게 귀 기울였으며, 커져가는 좌절의 신호들을 놓쳤다.\n\n내가 나의 실수를 깨달았을 때쯤, [employer.GetTitledFirstNamePossessive] 인내심은 이미 바닥났다. [employer.GetSheHe|U]는 어떤 칼날보다 더 깊이 베는 차가움으로 나를 해고한다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1405.desc.outro: "\n\n나는 보상도 위엄도 없이 떠나며, [employer.GetTitledFirstNamePossessive] 해고는 나의 서비스가 심각하게 부족했음을 분명히 한다. 이 실패는 섬세한 계약을 이행할 수 있는 자로서의 나의 평판을 높이지 못할 것이다." # 해라체
+cpr_laamp_contract_schemes.1405.desc.outro: "\n\n나는 보상도 위엄도 없이 떠나며, [employer.GetTitledFirstNamePossessive] 해고는 나의 봉사가 심각하게 부족했음을 보여준다. 이 실패는 섬세한 계약을 이행할 수 있는 자로서의 나의 평판을 높이지 못할 것이다." # 해라체
 cpr_laamp_contract_schemes.1405.a: "어떤 밤들은 관련된 모든 이에게 잊히는 것이 최선이다." # 해라체 (결과)
 
 # 실패 (음모)
 cpr_laamp_contract_schemes.1406.t: "$cpr_laamp_1000_contract$: 차가운 계산"
-cpr_laamp_contract_schemes.1406.desc: "나는 모든 접촉과 속삭임을 계산하며 우리의 만남에 접근한다. 진정한 연결보다는 취약한 순간에 어떤 비밀을 추출할 수 있을지에 덜 집중한다. [employer.GetTitledFirstName]이(가) 긴장을 풀기 시작하자, 나는 나중에 이용할 수 있는 약점을 찾으며 애무 사이에 미묘한 질문들을 도입한다.\n\n그러나 [employer.GetTitledFirstName]은(는) 쉽게 조종당함으로써 [employer.GetHerHis] 지위에 도달하지 않았다. 내 공연 도중에, [employer.GetSheHe]는 갑자기 굳어지고, [employer.GetHerHis] 눈은 나의 겉보기에 우연한 질문들의 패턴을 인식하면서 좁아진다.\n\n'[employer.GetSheHe]가 말한다. '참으로 흥미롭군.' 갑자기 차가워진 목소리로 [employer.GetSheHe]가 내 손길에서 멀어진다. '한 손으로는 쾌락을 제공하면서 다른 손으로는 내 마음을 뒤지다니. 내가 당신의 진정한 목적을 알아채지 못할 것이라고 정말로 믿었소?'" # 1인칭 '나' 시점, 해라체, 대사는 구어체
-cpr_laamp_contract_schemes.1406.desc.outro: "\n\n'[employer.GetTitledFirstName]이(가) 명령한다. '옷 입고 떠나시오.' 온기의 모든 가식이 사라졌다. '그리고 그런 뻔뻔스러운 배신 행위에 대해 당신을 지하 감옥에 던져 넣지 않는 것에 감사하시오.' 나는 아무것도 얻지 못하고 서둘러 떠나며, 이제 나의 기만 수법을 포함하여 친밀한 지식을 가진 위험한 적을 만들었다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1406.desc: "나는 모든 접촉과 속삭임을 계산하며 우리의 만남에 접근한다. 진정한 연결보다는 취약한 순간에 어떤 비밀을 추출할 수 있을지에 덜 집중한다. [employer.GetTitledFirstName](이)가 긴장을 풀기 시작하자, 나는 나중에 이용할 수 있는 약점을 찾으며 애무 사이에 미묘한 질문들을 도입한다.\n\n그러나 [employer.GetTitledFirstName](은)는 쉽게 조종당함으로써 [employer.GetHerHis] 지위를 얻은 것이 아니다. 내 공연 도중에, [employer.GetSheHe]는 갑자기 굳어지고, [employer.GetHerHis] 눈은 나의 겉보기에 우연한 질문들의 패턴을 인식하면서 좁아진다.\n\n[employer.GetSheHe]가 말한다. '참으로 흥미롭군.' 갑자기 차가워진 목소리로 [employer.GetSheHe]가 내 손길에서 멀어진다. '한 손으로는 쾌락을 제공하면서 다른 손으로는 내 마음을 뒤지다니. 정말로 내가 당신의 진짜 목적을 알아채지 못할 것이라 믿었소?'" # 1인칭 '나' 시점, 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1406.desc.outro: "\n\n[employer.GetTitledFirstName](이)가 명령한다. '옷 입고 떠나시오.' 온기의 모든 가식이 사라졌다. '그리고 그런 뻔뻔스러운 배신 행위에 대해 당신을 지하 감옥에 던져 넣지 않는 것에 감사하시오.' 나는 아무것도 얻지 못하고 서둘러 떠나며, 이제 나의 기만 수법을 포함하여 친밀한 지식을 가진 위험한 적을 만들었다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1406.a: "어떤 계획들은 결코 쾌락과 섞여서는 안 된다." # 해라체 (결과)
 
 # 5. 점성술/점술 계약
 cpr_laamp_contract_schemes.1500.t: "$cpr_laamp_1000_contract$: 천상의 속삭임"
-cpr_laamp_contract_schemes.1500.desc: "[employer.GetTitledFirstName]이(가) 내가 점성술을 언급하자 눈썹을 치켜올린다. '[employer.GetSheHe]가 말하지만, 회의론 아래 진정한 관심을 감지한다. '별들과 그 비밀이라? 그대 직업의 사람에게서는 참으로 예상치 못한 일이오.'\n\n'[employer.GetSheHe]가 계속한다. '내 궁정 점성가는 모호한 상투어구와 유리한 예측 외에는 아무것도 제공하지 않소. 그대가 좀 더... 실질적인 것을 제공할 수 있을지 궁금하오. 원한다면 내 운세를 읽으시오, 하지만 공허한 아첨은 삼가시오. 나는 하늘이 진정으로 예고하는 것을 알고 싶소, 그것이 좋든 나쁘든.'" # 서술부는 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1500.desc: "[employer.GetTitledFirstName](이)가 내가 점성술을 언급하자 눈썹을 치켜올린다. [employer.GetSheHe]가 말하지만, 회의론 아래 진정한 관심을 감지한다. '별들과 그 비밀이라? 그대 직업의 사람에게서는 참으로 예상치 못한 일이오.'\n\n[employer.GetSheHe]가 계속한다. '내 궁정 점성가는 모호한 상투어구와 유리한 예측 외에는 아무것도 제공하지 않소. 그대가 좀 더... 실질적인 것을 제공할 수 있을지 궁금하오. 원한다면 내 운세를 읽으시오, 하지만 공허한 아첨은 삼가시오. 나는 하늘이 진정으로 예고하는 것을 알고 싶소, 그것이 좋든 나쁘든.'" # 서술부는 해라체, 대사는 구어체
 cpr_laamp_contract_schemes.1500.a: "별들이 그대의 운명에 기록한 것을 밝히겠소." # 구어체 (도전 - 학식)
-cpr_laamp_contract_schemes.1500.b: "별들은 그대가 듣고 싶어 하는 것을 속삭이며, 나는 주의 깊게 듣겠소." # 구어체 (도전 - 음모)
-cpr_laamp_contract_schemes.1500.c: "나의 추종자 [follower.GetTitledFirstName]은(는) 천상의 신비에 정통하며 그대에게 잘 봉사할 것이오." # 구어체 (추종자 있음)
+cpr_laamp_contract_schemes.1500.b: "별들은 그대가 듣고 싶어 하는 것을 속삭인다오. 나는 그것을 주의 깊게 듣겠소." # 구어체 (도전 - 음모)
+cpr_laamp_contract_schemes.1500.c: "나의 추종자 [follower.GetTitledFirstName](은)는 천상의 신비에 정통하며 그대에게 잘 봉사할 것이오." # 구어체 (추종자 있음)
 cpr_laamp_contract_schemes.1500.c.no_follower: "내 추종자 중에는 이 점술에 필요한 신비로운 지식을 가진 자가 없다." # 해라체 (추종자 없음)
 
 # 툴팁
-cpr_laamp_contract_schemes.1500.a.tt.success: "당신의 점성술적 통찰력은 그 깊이와 명백한 정확성으로 [employer.GetTitledFirstName]에게 깊은 인상을 준다. 당신은 후한 보상을 받고 신비로운 지혜에 대한 명성을 높인다." # 해라체
-cpr_laamp_contract_schemes.1500.a.tt.failure: "당신의 점성술 지식은 불충분함이 드러나고, [employer.GetTitledFirstName]이(가) 빠르게 식별하는 명백한 오류가 있다. 당신은 보상을 받지 못하고 신비가로서의 신뢰를 잃는다." # 해라체
-cpr_laamp_contract_schemes.1500.b.tt.success: "점성술을 구실로 삼아, 당신은 [employer.GetTitledFirstName]을(를) 조종하여 개인적인 걱정거리와 궁정 비밀을 드러내게 한다. 당신은 보상과 귀중한 정보를 받고 [employer.GetHerHim]을(를) 미래의 영향력에 취약하게 만든다." # 해라체
-cpr_laamp_contract_schemes.1500.b.tt.failure: "별들이 제공할 수 없었던 지식을 드러낼 때 거짓 점술을 통해 정보를 추출하려는 당신의 시도가 폭로된다. [employer.GetTitledFirstName]은(는) 이제 그러한 조작 전술에 경계하며 보상 없이 당신을 해고한다." # 해라체
-cpr_laamp_contract_schemes.1500.c.tt.success: "당신 추종자의 신비로운 통찰력은 [employer.GetTitledFirstName]에게 깊은 인상을 주어, 당신의 동료 판단력을 좋게 반영한다. 당신은 후한 보상을 받고 두 사람 모두의 평판을 높인다." # 해라체
-cpr_laamp_contract_schemes.1500.c.tt.no_follower: "당신에게는 최소 18 [learning|E]와 $trait_lifestyle_mystic$에서 50 [trait_level_track_xp|E]를 가진 이용 가능한 [follower|E]가 없어 위임할 수 없다." # 해라체
+cpr_laamp_contract_schemes.1500.a.tt.success: "당신의 점성술적 통찰력은 그 깊이와 명백한 정확성으로 [employer.GetTitledFirstName]에게 깊은 인상을 줌. 당신은 후한 보상을 받고 신비로운 지혜에 대한 명성을 높임." # 해라체
+cpr_laamp_contract_schemes.1500.a.tt.failure: "당신의 점성술 지식은 불충분함이 드러나고, [employer.GetTitledFirstName](이)가 재빨리 알아채는 명백한 오류가 있음. 당신은 보상을 받지 못하고 신비가로서의 신뢰를 잃음." # 해라체
+cpr_laamp_contract_schemes.1500.b.tt.success: "점성술을 구실로 삼아, 당신은 [employer.GetTitledFirstName](을)를 조종하여 개인적인 걱정거리와 궁정의 비밀을 드러내게 함. 당신은 보상과 귀중한 정보를 받고 [employer.GetHerHim]를 미래의 영향력에 취약하게 만듦." # 해라체
+cpr_laamp_contract_schemes.1500.b.tt.failure: "별들이 제공할 수 없었던 지식을 드러내자 거짓 점술로 정보를 추출하려는 당신의 시도가 폭로됨. [employer.GetTitledFirstName](은)는 이제 그러한 조종 전술에 경계하며 보상 없이 당신을 해고함." # 해라체
+cpr_laamp_contract_schemes.1500.c.tt.success: "추종자의 신비로운 통찰력은 [employer.GetTitledFirstName]에게 깊은 인상을 주어, 당신이 동료를 보는 눈이 있음을 보여줌. 당신은 후한 보상을 받고 두 사람 모두의 평판을 높임." # 해라체
+cpr_laamp_contract_schemes.1500.c.tt.no_follower: "당신에게는 최소 18 [learning|E]와 $trait_lifestyle_mystic$에서 50 [trait_level_track_xp|E]를 가진 이용 가능한 [follower|E]가 없어 위임할 수 없음" # 해라체
 
 # 뛰어난 성공 (학식)
 cpr_laamp_contract_schemes.1501.t: "$cpr_laamp_1000_contract$: 별에 쓰인 글"
-cpr_laamp_contract_schemes.1501.desc: "나는 맑은 테이블과 프라이버시를 요청하고, 연습된 정밀함으로 내 도구들 — 별자리표, 고대 문헌, 그리고 촛불을 잡아내는 신중하게 선택된 수정들 — 을 배열한다. [employer.GetTitledFirstName]은(는) 내가 학문적 신비주의의 분위기를 만드는 것을 커져가는 호기심으로 지켜본다.\n\n진정한 천문학 지식으로 시작하여, 나는 [employer.GetHerHis] 탄생 시 존재했던 천체 패턴들을 추적한다. 내 설명은 실제 행성 운동과 그것들의 주장된 영향력을 함께 엮어내며, 내 목소리는 하늘에 쓰인 '진실'을 드러내면서 학문 강사와 신비로운 안내자 사이를 오간다.\n\n나는 내가 [employer.GetHerHis] 야망의 집에 있는 화성에 대해 말할 때 [employer.GetTitledFirstName]이(가) 앞으로 몸을 기울이는 것을, 또는 금성이 미래의 노력에 유리한 측면을 던지는 것을 언급할 때 만족스럽게 주목한다. 각 계시는 투명하게 보이지 않으면서 아첨하도록 만들어졌고, 불가능을 약속하지 않으면서 희망을 제공하도록 만들어졌다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1501.desc.outro: "\n\n'[employer.GetTitledFirstName]이(가) 내 발표에 분명히 감명받아 인정한다. '소수만이 그런... 명료함으로 별에 접근하오. 그대는 단순한 미신 이상의 고려할 많은 것을 내게 주었소.'\n\n[employer.GetSheHe|U]는 저녁 식사가 [employer.GetHerHis] 궁정에서 오랫동안 부재했던 지적 자극을 제공했다고 고백하며 내게 후하게 보상한다. 내가 떠날 때, 나는 [employer.GetSheHe]가 내가 남긴 별자리표를 이미 살펴보고 있는 것을 알아챈다. 아마도 내가 드러낸 우주 패턴에서 위안을 찾고 있을 것이다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1501.desc: "나는 빈 책상과 혼자만의 시간을 요청하고, 연습된 정밀함으로 내 도구들 — 별자리표, 고대 문헌, 그리고 촛불을 잡아내는 신중하게 선택된 수정들 — 을 배열한다. [employer.GetTitledFirstName](은)는 내가 학문적 신비주의의 분위기를 만드는 것을 커져가는 호기심으로 지켜본다.\n\n진정한 천문학 지식으로 시작하여, 나는 [employer.GetHerHis] 탄생 시 존재했던 천체 패턴들을 추적한다. 내 설명은 실제 행성 운동과 그것들의 주장된 영향력을 함께 엮어내며, 내 목소리는 하늘에 쓰인 '진실'을 드러내면서 학문 강사와 신비로운 안내자 사이를 오간다.\n\n나는 내가 [employer.GetHerHis] 야망의 집에 있는 화성에 대해 말할 때 [employer.GetTitledFirstName](이)가 앞으로 몸을 기울이는 것을, 또는 금성이 미래의 노력에 유리한 측면을 던지는 것을 언급할 때 만족스럽게 주목한다. 각 계시는 투명하게 보이지 않으면서 아첨하도록 만들어졌고, 불가능을 약속하지 않으면서 희망을 제공하도록 만들어졌다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1501.desc.outro: "\n\n[employer.GetTitledFirstName](이)가 내 발표에 분명히 감명받아 인정한다. '소수만이 그런... 명료함으로 별에 접근하오. 그대는 단순한 미신 이상의 고려할 많은 것을 내게 주었소.'\n\n[employer.GetSheHe|U]는 저녁 식사가 [employer.GetHerHis] 궁정에서 오랫동안 부재했던 지적 자극을 제공했다고 고백하며 내게 후하게 보상한다. 내가 떠날 때, 나는 [employer.GetSheHe]가 벌써 내가 남긴 별자리표를 살펴보고 있는 것을 알아챈다. 아마도 내가 드러낸 우주 패턴에서 위안을 찾고 있을 것이다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1501.a: "지식은 제대로 제시될 때 가장 매혹적인 예술이 될 수 있다." # 해라체 (결과)
 
 # 성공 (학식)
 cpr_laamp_contract_schemes.1502.t: "$cpr_laamp_1000_contract$: 천상의 패턴"
 cpr_laamp_contract_schemes.1502.desc: "나는 나의 평범한 점성술 도구 모음을 배열하고 [employer.GetTitledFirstName]과 관련된 천체 신호들을 해석하기 시작한다. 비록 내 지식에 공백이 있지만, 나는 자신감과 [employer.GetHerHis] 반응에 대한 신중한 관찰로 보완한다.\n\n내가 강한 태양의 영향으로 나타나는 용기에 대해 말할 때, [employer.GetSheHe]는 더 똑바로 앉는다. 내가 다가오는 계절에 예견된 도전들을 언급할 때, 나는 인식의 깜박임을 알아챈다. 나는 우주적 필연성의 분위기를 유지하면서 [employer.GetHerHis] 경험과 공명하는 이야기를 구축하며 그에 따라 나의 해석을 조정한다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1502.desc.outro: "\n\n내가 끝맺자 '[employer.GetTitledFirstName]이(가) 논평한다. '흥미롭군. 내가 일반적으로 그런 해석에서 받는 것보다 덜 아첨하고 더 실질적이오.' [employer.GetSheHe|U]는 내가 제공한 평범한 통찰력에 만족한 듯 공정한 보상을 제공한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1502.desc.outro: "\n\n내가 끝맺자 [employer.GetTitledFirstName](이)가 논평한다. '흥미롭군. 내가 일반적으로 그런 해석에서 받는 것보다 덜 아첨하고 더 실질적이오.' [employer.GetSheHe|U]는 내가 제공한 평범한 통찰력에 만족한 듯 공정한 보상을 제공한다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1502.a: "별들은 듣는 법을 아는 자에게 말한다." # 해라체 (결과)
 
 # 추종자 성공
 cpr_laamp_contract_schemes.1503.t: "$cpr_laamp_1000_contract$: 우주의 해석자"
-cpr_laamp_contract_schemes.1503.desc: "나는 천체 문제에 대한 지식이 나를 훨씬 능가하는 [follower.GetTitledFirstName]을(를) 소개한다. 경건한 정밀함으로, [follower.GetSheHe]는 복잡한 천문 기구와 [follower.GetHerHis] 자신의 디자인의 차트들을 배열한다.\n\n[employer.GetTitledFirstName]에게 영향을 미치는 우주적 영향력에 대한 [follower.GetFirstNamePossessive] 설명은 수학적 정밀함과 신비로운 통찰력을 우리의 고객에게 분명히 깊은 인상을 주는 방식으로 엮어낸다. [employer.GetTitledFirstName]은(는) [follower.GetFirstNameNoTooltip]이(가) 궁정 점성가조차 언급한 적 없는 패턴과 가능성들을 드러낼 때 커져가는 매혹으로 듣는다." # 해라체
-cpr_laamp_contract_schemes.1503.desc.outro: "\n\n해석이 끝나자 '[employer.GetTitledFirstName]이(가) 인정한다. '그대의 [follower.GetTitledFirstName]은(는) 희귀한 통찰력을 지녔소. 궁정 점성가는 그런 기술들로부터 많은 것을 배울 수 있을 것이오.' [employer.GetSheHe|U]는 전시된 지식의 깊이에 분명히 감명받아 우리에게 후하게 보상한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1503.desc: "나는 천체 문제에 대한 지식이 나를 훨씬 능가하는 [follower.GetTitledFirstName](을)를 소개한다. 경건한 정밀함으로, [follower.GetSheHe]는 복잡한 천문 기구와 스스로 고안한 천문도들을 배열한다.\n\n[employer.GetTitledFirstName]에게 영향을 미치는 우주적 영향력에 대한 [follower.GetFirstNamePossessive] 설명은 수학적 정밀함과 신비로운 통찰력을 우리의 고객에게 분명히 깊은 인상을 주는 방식으로 엮어낸다. [employer.GetTitledFirstName](은)는 [follower.GetFirstNameNoTooltip](이)가 궁정 점성가조차 언급한 적 없는 패턴과 가능성들을 드러낼 때 커져가는 매혹으로 듣는다." # 해라체
+cpr_laamp_contract_schemes.1503.desc.outro: "\n\n해석이 끝나자 [employer.GetTitledFirstName](이)가 인정한다. '그대의 [follower.GetTitledFirstName](은)는 희귀한 통찰력을 지녔소. 궁정 점성가는 그런 기술들로부터 많은 것을 배울 수 있을 것이오.' [employer.GetSheHe|U]는 전시된 지식의 깊이에 분명히 감명받아 우리에게 후하게 보상한다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1503.a: "진정한 지혜는 다른 이들이 볼 수 없는 패턴을 인식한다." # 해라체 (결과)
 
 # 성공 (음모)
 cpr_laamp_contract_schemes.1504.t: "$cpr_laamp_1000_contract$: 별과 비밀"
-cpr_laamp_contract_schemes.1504.desc: "나는 점성술 도구와 차트로 장면을 설정하지만, 나의 진정한 기술은 별을 읽는 것보다 [employer.GetTitledFirstName]을(를) 읽는 데 있다. 내가 해석을 시작할 때, 나는 다양한 주제에 대한 [employer.GetHerHis] 반응을 신중하게 주목하며, [employer.GetHerHis] 희망과 두려움에 부합하는 이야기를 구축한다.\n\n점성술적 질문으로 위장한 신중한 질문을 통해, 나는 궁정 정치, 개인적인 야망, 그리고 사적인 걱정거리에 대한 정보를 추출한다. 내가 제공하는 각각의 '천체 계시'는 [employer.GetTitledFirstName]이(가) 이미 믿거나 간절히 듣고 싶어 하는 것을 강화한다.\n\n세션이 끝날 때쯤, [employer.GetTitledFirstName]은(는) 별 자체가 [employer.GetHerHis] 상황에 직접적으로 말했다고 믿으면서, [employer.GetSheHe]가 깨닫는 것보다 훨씬 더 많은 것을 드러냈다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1504.desc.outro: "\n\n'[employer.GetTitledFirstName]이(가) 말한다. '앞으로 놓인 것을 얼마나 정확하게 읽었는지 놀랍소.' [employer.GetSheHe]가 통찰력의 대부분을 [employer.GetHerHim] 스스로 제공했다는 것을 알지 못한 채. '하늘이 그대를 통해 명확하게 말하는군.' [employer.GetSheHe|U]는 [employer.GetSheHe]가 우주적 지혜로 인식하는 것에 대해 후하게 지불하고, 나는 궁정 역학에 대한 귀중한 정보를 가지고 떠난다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1504.desc: "나는 점성술 도구와 천문도로 장면을 설정하지만, 나의 진정한 기술은 별을 읽는 것보다 [employer.GetTitledFirstName](을)를 읽는 데 있다. 내가 해석을 시작할 때, 나는 다양한 주제에 대한 [employer.GetHerHis] 반응을 신중하게 주목하며, [employer.GetHerHis] 희망과 두려움에 부합하는 이야기를 구축한다.\n\n점성술적 질문으로 위장한 신중한 질문을 통해, 나는 궁정 정치, 개인적인 야망, 그리고 사적인 걱정거리에 대한 정보를 추출한다. 내가 제공하는 각각의 '천체 계시'는 [employer.GetTitledFirstName](이)가 이미 믿거나 간절히 듣고 싶어 하는 것을 강화한다.\n\n끝날 때쯤, [employer.GetTitledFirstName](은)는 별 자체가 [employer.GetHerHis] 상황에 직접적으로 말했다고 믿으면서, [employer.GetSheHe]가 깨닫는 것보다 훨씬 더 많은 것을 드러냈다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1504.desc.outro: "\n\n[employer.GetTitledFirstName](이)가 말한다. '앞으로 놓인 것을 얼마나 정확하게 읽었는지 놀랍소.' [employer.GetSheHe]가 통찰력의 대부분을 [employer.GetHerHim] 스스로 제공했다는 것을 알지 못한 채. '하늘이 그대를 통해 명확하게 말하는군.' [employer.GetSheHe|U]는 [employer.GetSheHe]가 우주적 지혜로 인식하는 것에 대해 후하게 지불하고, 나는 궁정 역학에 대한 귀중한 정보를 가지고 떠난다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1504.a: "가장 위대한 점술가는 별이 아니라 얼굴을 읽는다." # 해라체 (결과)
 
 # 실패 (학식)
 cpr_laamp_contract_schemes.1505.t: "$cpr_laamp_1000_contract$: 천상의 당혹감"
-cpr_laamp_contract_schemes.1505.desc: "내가 대답할 수 없는 간단한 천문학적 질문을 [employer.GetTitledFirstName]이(가) 했을 때 나의 학문적 신비주의 시도는 빠르게 풀어진다. 나는 우주적 영향력에 대한 모호한 선언으로 방향을 바꾸려 하지만, 곧 내 지식에 상당한 공백이 있음이 분명해진다.\n\n내가 [employer.GetTitledFirstNamePossessive] 출생 월의 지배 가문에 대해 명백한 실수를 저질렀을 때 상황은 악화된다 — 그 실수는 참석자들 사이에서 치켜 올라간 눈썹과 교환되는 눈짓을 이끌어낸다. 회복하려는 나의 점점 더 필사적인 시도는 나의 무지를 더욱 강조할 뿐이다.\n\n'[employer.GetTitledFirstName]이(가) 차갑게 말한다. '그대의 전문 지식에 대해 약간의 오해가 있었던 것 같소.' 나의 흔들리는 행성 영향력 설명을 짧게 끊으며." # 1인칭 '나' 시점, 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1505.desc: "내가 대답할 수 없는 간단한 천문학적 질문을 [employer.GetTitledFirstName](이)가 했을 때 나의 학문적 신비주의 시도는 빠르게 풀어진다. 나는 우주적 영향력에 대한 모호한 선언으로 방향을 바꾸려 하지만, 곧 내 지식에 상당한 공백이 있음이 분명해진다.\n\n내가 [employer.GetTitledFirstNamePossessive] 출생 월의 지배 가문에 대해 명백한 실수를 저질렀을 때 상황은 악화된다 — 그 실수는 참석자들 사이에서 치켜 올라간 눈썹과 교환되는 눈짓을 이끌어낸다. 회복하려는 나의 점점 더 필사적인 시도는 나의 무지를 더욱 강조할 뿐이다.\n\n[employer.GetTitledFirstName](이)가 차갑게 말한다. '그대의 전문 지식에 대해 약간의 오해가 있었던 것 같소.' 나의 흔들리는 행성 영향력 설명을 짧게 끊으며." # 1인칭 '나' 시점, 해라체, 대사는 구어체
 cpr_laamp_contract_schemes.1505.desc.outro: "\n\n저녁은 조기에 끝나고, 나의 천체 통찰력 주장은 철저히 신뢰를 잃었다. 보상이 보류될 뿐만 아니라, 나의 사기성 지혜에 대한 이야기가 궁정계에 퍼져 미래의 기회를 약화시킬 것임을 알고 떠난다." # 해라체
 cpr_laamp_contract_schemes.1505.a: "거짓 지식은 교육받은 이들 사이에서 빠르게 폭로된다." # 해라체 (결과)
 
 # 실패 (음모)
 cpr_laamp_contract_schemes.1506.t: "$cpr_laamp_1000_contract$: 어긋난 별들"
-cpr_laamp_contract_schemes.1506.desc: "나는 점성술 도구와 차트로 장면을 설정하지만, 나의 초점은 진정한 통찰력을 제공하는 것보다 정보를 추출하는 데 있다. 내가 제공하는 각 천체 해석은 궁정 정치와 개인적인 걱정거리에 대한 폭로를 유도하도록 신중하게 설계되었다.\n\n내가 별들이 도저히 드러낼 수 없었던 [employer.GetTitledFirstNamePossessive] 가족에 대한 세부 사항을 아무렇지도 않게 언급했을 때 나는 너무 멀리 나아간다. [employer.GetTitledFirstName]은(는) 응답 도중 얼어붙고, 갑자기 나의 조작에 경계한다.\n\n'[employer.GetSheHe]가 위험할 정도로 부드러운 목소리로 말한다. '참으로 호기심이 이는군. 별들이 그런 구체적인 세부 사항들을 드러내다니—내가 가장 가까운 측근들과만 공유했던 세부 사항들을 말이오. 아마도 그대의 재능은 하늘을 읽는 것보다는 궁정 가십을 모으는 데 더 있는 것 같소?'" # 1인칭 '나' 시점, 해라체, 대사는 구어체
-cpr_laamp_contract_schemes.1506.desc.outro: "\n\n'[employer.GetTitledFirstName]이(가) 갑자기 일어서며 선언한다. '이 세션은 끝났소. 미래에는 거짓 구실 아래 염탐하는 자들이 종종 자신의 비밀이 폭로된다는 것을 기억하시오.' 나는 보상 없이 해고되고, 더 나쁜 것은 내 목표가 이제 미래의 노력에 나에게 잘 도움이 되었을 수도 있는 조작 방법에 대해 경계하게 되었다는 지식을 가지고 있다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1506.desc: "나는 점성술 도구와 천문도로 장면을 설정하지만, 나의 초점은 진정한 통찰력을 제공하는 것보다 정보를 추출하는 데 있다. 내가 제공하는 각 천체 해석은 궁정 정치와 개인적인 걱정거리에 대한 폭로를 유도하도록 신중하게 설계되었다.\n\n내가 별들이 도저히 드러낼 수 없었던 [employer.GetTitledFirstNamePossessive] 가족에 대한 세부 사항을 아무렇지도 않게 언급했을 때 나는 너무 멀리 나아간다. [employer.GetTitledFirstName](은)는 응답 도중 얼어붙고, 갑자기 나의 조종에 경계한다.\n\n[employer.GetSheHe]가 위험할 정도로 부드러운 목소리로 말한다. '참으로 호기심이 이는군. 별들이 그런 구체적인 세부 사항들을 드러내다니—내가 가장 가까운 측근들과만 공유했던 세부 사항들을 말이오. 어쩌면 그대의 재능은 하늘을 읽는 것보다는 궁정의 뒷소문을 모으는 것인가 보오?'" # 1인칭 '나' 시점, 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1506.desc.outro: "\n\n[employer.GetTitledFirstName](이)가 갑자기 일어서며 선언한다. '이 시간은 끝났소. 앞으로는 거짓 구실로 염탐하는 자들은 종종 그 자신의 비밀이 탄로남을 기억하시오.' 나는 보상 없이 해고되고, 더 나쁜 것은 내 목표물이 이제 미래의 나에게 도움이 되었을 수도 있는 조종술을 경계하게 되었다는 것이다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1506.a: "형편없는 기만은 별조차도 숨길 수 없다." # 해라체 (결과)
 
 # 6. 환영술/기만 계약
 cpr_laamp_contract_schemes.1600.t: "$cpr_laamp_1000_contract$: 신비와 경이"
-cpr_laamp_contract_schemes.1600.desc: "[employer.GetTitledFirstName]이(가) 내가 환영술과 기만을 언급하자 흥미를 보인다. '[employer.GetSheHe]가 말한다. '이제 그것은 뭔가 다른 것이오.' [employer.GetHerHis] 평소의 자제력을 뚫고 나오는 어린아이 같은 흥분의 기미가 있다.\n\n'[employer.GetSheHe]가 계속한다. '궁정 여흥은 너무 예측 가능해지오 — 같은 곡예사들, 같은 지겨운 이야기들. 나를 진정으로 당황하게 할 무언가를 보여주시오, 내 자신의 눈을 의심하게 만들 속임수들을 말이오. 그대가 제공할 수 있다면, 진정한 경이로움의 그 희귀한 즐거움을 경험하고 싶소.'" # 서술부는 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1600.desc: "[employer.GetTitledFirstName](이)가 내가 환영술과 기만을 언급하자 흥미를 보인다. [employer.GetSheHe]가 말한다. '이제 그것은 뭔가 다른 것이오.' [employer.GetHerHis] 평소의 자제력을 뚫고 나오는 어린아이 같은 흥분의 기미가 있다.\n\n[employer.GetSheHe]가 계속한다. '궁정 여흥은 너무 예측 가능해지오 — 같은 곡예사들, 같은 지겨운 이야기들. 나를 진정으로 당황하게 할 무언가를 보여주시오, 내 자신의 눈을 의심하게 만들 속임수들을 말이오. 그대가 제공할 수 있다면, 진정한 경이로움의 그 희귀한 즐거움을 경험하고 싶소.'" # 서술부는 해라체, 대사는 구어체
 cpr_laamp_contract_schemes.1600.a: "그대의 인식을 시험할 신비를 공연하겠소." # 구어체 (도전 - 음모)
 cpr_laamp_contract_schemes.1600.b: "나의 속임수는 단순해 보일 수 있지만, 그 의미는 더 깊소." # 구어체 (도전 - 학식)
-cpr_laamp_contract_schemes.1600.c: "나의 추종자 [follower.GetTitledFirstName]은(는) 환영술의 대가이며 그대를 놀라게 할 것이오." # 구어체 (추종자 있음)
+cpr_laamp_contract_schemes.1600.c: "나의 추종자 [follower.GetTitledFirstName](은)는 환영술의 대가이며 그대를 놀라게 할 것이오." # 구어체 (추종자 있음)
 cpr_laamp_contract_schemes.1600.c.no_follower: "내 추종자 중에는 대신 공연할 수 있는 환영술에 능숙한 자가 없다." # 해라체 (추종자 없음)
 
 # 툴팁
-cpr_laamp_contract_schemes.1600.a.tt.success: "당신의 환영술과 기만은 [employer.GetTitledFirstName]을(를) 철저히 놀라게 하여, 진정한 경이로움의 경험을 만든다. 당신은 후한 보상을 받고 신비로운 기술에 대한 명성을 높인다." # 해라체
-cpr_laamp_contract_schemes.1600.a.tt.failure: "당신의 속임수는 결정적인 순간에 실패하여, 당신의 가정된 마법 뒤의 평범한 방법을 폭로한다. [employer.GetTitledFirstName]은(는) 보상 없이 당신을 해고하고, 환영술사로서의 당신의 평판은 손상된다." # 해라체
-cpr_laamp_contract_schemes.1600.b.tt.success: "당신은 당신의 환영술을 철학적 맥락 안에서 구성하여, 광경과 지적 깊이 모두로 [employer.GetTitledFirstName]에게 깊은 인상을 준다. 당신은 보상을 받고 여흥에 대한 학문적 접근으로 존경을 얻는다." # 해라체
-cpr_laamp_contract_schemes.1600.b.tt.failure: "당신의 과도한 설명과 철학적 탈선은 당신의 평범한 속임수의 여흥 가치를 압도한다. [employer.GetTitledFirstName]은(는) 놀라기보다는 지루해하며 보상 없이 당신을 해고한다." # 해라체
-cpr_laamp_contract_schemes.1600.c.tt.success: "당신 추종자의 환영술은 [employer.GetTitledFirstName]을(를) 놀라게 하여, 당신의 동료 판단력을 좋게 반영한다. 당신은 후한 보상을 받고 두 사람 모두의 평판을 높인다." # 해라체
-cpr_laamp_contract_schemes.1600.c.tt.no_follower: "당신에게는 최소 18 [intrigue|E]와 $trait_track_trickster$에서 50 [trait_level_track_xp|E]를 가진 이용 가능한 [follower|E]가 없어 위임할 수 없다." # 해라체
+cpr_laamp_contract_schemes.1600.a.tt.success: "당신의 환영술과 기만은 [employer.GetTitledFirstName](을)를 철저히 놀라게 하여, 진정 경이로운 경험을 만듦. 당신은 후한 보상을 받고 신비로운 기술에 대한 명성을 높임." # 해라체
+cpr_laamp_contract_schemes.1600.a.tt.failure: "당신의 속임수는 결정적인 순간에 실패하여, 당신의 '마법' 뒤의 평범한 수법을 폭로함. [employer.GetTitledFirstName](은)는 보상 없이 당신을 해고하고, 환영술사로서의 당신의 평판은 손상됨." # 해라체
+cpr_laamp_contract_schemes.1600.b.tt.success: "당신은 환영술을 철학적 맥락 안에서 구성하여, 광경과 지적 깊이 모두로 [employer.GetTitledFirstName]에게 깊은 인상을 줌. 당신은 보상을 받고 여흥에 대한 학문적 접근으로 존경을 얻음." # 해라체
+cpr_laamp_contract_schemes.1600.b.tt.failure: "당신의 과도한 설명과 철학적 탈선은 당신의 평범한 속임수의 여흥 가치를 압도함. [employer.GetTitledFirstName](은)는 놀라기보다는 지루해하며 보상 없이 당신을 해고함." # 해라체
+cpr_laamp_contract_schemes.1600.c.tt.success: "추종자의 환영술은 [employer.GetTitledFirstName](을)를 놀라게 하여, 당신이 동료를 보는 눈이 있음을 보여줌. 당신은 후한 보상을 받고 두 사람 모두의 평판을 높임." # 해라체
+cpr_laamp_contract_schemes.1600.c.tt.no_follower: "당신에게는 최소 18 [intrigue|E]와 $trait_track_trickster$에서 50 [trait_level_track_xp|E]를 가진 이용 가능한 [follower|E]가 없어 위임할 수 없음" # 해라체
 
 # 뛰어난 성공 (음모)
 cpr_laamp_contract_schemes.1601.t: "$cpr_laamp_1000_contract$: 손재주, 마음의 재주"
-cpr_laamp_contract_schemes.1601.desc: "나는 [employer.GetTitledFirstName]에게 몇몇 신뢰하는 궁정 신하들을 모으라고 요청한다 — 청중은 내가 제공하려는 경험을 향상시킨다. 그들이 모이자, 나는 단순한 기만으로 시작한다: 사라졌다 다시 나타나는 동전들, 생각을 읽는 듯한 카드들, 닫힌 손 사이에서 불가능하게 위치를 바꾸는 토큰들.\n\n그러나 단순한 속임수는 단지 기초일 뿐이다. 저녁이 진행됨에 따라, 나는 내 공연을 우아한 기만의 영역으로 격상시킨다. 나는 내가 도저히 알 수 없었던 손님들에 대한 비밀들을 드러낸다 — 공연 시작 전 신중한 관찰과 대화의 미묘한 조작을 통해 얻은 세부 사항들.\n\n나는 그들의 눈앞에서 실현되는 예측들을 연출하며, 그 실현을 오도와 심리적 조작을 통해 조작했다. 각 폭로마다, [employer.GetTitledFirstNamePossessive] 눈은 처음에는 의심으로, 다음에는 능숙하게 속는 것에 대한 기쁨으로 커진다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1601.desc.outro: "\n\n내 공연이 끝나자 '[employer.GetTitledFirstName]이(가) 선언한다. '놀랍군. 나는 앞으로 몇 주 동안 그대의 방법들에 대해 고심할 것이오.'\n\n[employer.GetSheHe|U]는 내게 후하게 보상하며, 그 후한 보상은 여흥의 즐거움과 아마도 나의 증명된 기만 재능에 대한 약간의 경계심 모두를 반영한다. 나는 상당한 인상을 남겼다 — 이 단 하룻밤을 넘어서 가치가 있을 수 있는 인상이다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1601.desc: "나는 [employer.GetTitledFirstName]에게 몇몇 신뢰하는 궁정 신하들을 모으라고 요청한다 — 청중은 내가 제공하려는 경험을 향상시킨다. 그들이 모이자, 나는 단순한 기만으로 시작한다: 사라졌다 다시 나타나는 동전들, 생각을 읽는 듯한 카드들, 닫힌 손 사이에서 불가능하게 위치를 바꾸는 토큰들.\n\n그러나 단순한 속임수는 단지 기초일 뿐이다. 저녁이 진행됨에 따라, 나는 내 공연을 우아한 기만의 영역으로 격상시킨다. 나는 내가 도저히 알 수 없었던 손님들에 대한 비밀들을 드러낸다 — 공연 시작 전 신중한 관찰과 대화의 미묘한 조작을 통해 얻은 세부 사항들.\n\n나는 그들의 눈앞에서 실현되는 예측들을 연출하며, 그 실현을 오도와 심리적 조종을 통해 조작했다. 각 폭로마다, [employer.GetTitledFirstNamePossessive] 눈은 처음에는 의심으로, 다음에는 능숙하게 속는 것에 대한 기쁨으로 커진다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1601.desc.outro: "\n\n내 공연이 끝나자 [employer.GetTitledFirstName](이)가 선언한다. '놀랍군. 나는 앞으로 몇 주 동안 그대의 방법들에 대해 고심할 것이오.'\n\n[employer.GetSheHe|U]는 내게 후하게 보상하며, 그 후한 보상은 여흥의 즐거움과 아마도 나의 증명된 기만 재능에 대한 약간의 경계심 모두를 반영한다. 나는 상당한 인상을 남겼다 — 이 단 하룻밤을 넘어서 가치가 있을 수 있는 인상이다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1601.a: "가장 위대한 환영은 그들이 당신의 기만을 간파했다고 믿게 만드는 것이다." # 해라체 (결과)
 
 # 성공 (음모)
 cpr_laamp_contract_schemes.1602.t: "$cpr_laamp_1000_contract$: 속임수와 경이"
-cpr_laamp_contract_schemes.1602.desc: "나는 비록 완벽하지는 않지만 여전히 [employer.GetTitledFirstName]과 [employer.GetSheHe]가 모은 작은 청중을 당황하게 하고 즐겁게 하는 일련의 환영술과 사소한 기만들을 제시한다. 기술적인 완벽함이 부족한 부분을, 나는 연극적인 기교로 보완한다.\n\n속임수가 거의 실패할 뻔했을 때, 나는 실수를 공연에 통합하여, 명백한 오류 자체가 더 큰 기만의 일부였다고 모든 참석자들을 설득한다. [employer.GetTitledFirstName]은(는) 나의 빠른 생각에 박수를 보내며, 아마도 [employer.GetSheHe]가 완벽한 실행보다 더 감명받았을 것이다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1602.desc.outro: "\n\n나의 마지막 환영술이 끝나자 '[employer.GetTitledFirstName]이(가) 선언한다. '가장 즐거웠소. 궁정의 예측 가능한 오락과는 반가운 기분 전환이었소.' [employer.GetSheHe|U]는 저녁의 여흥에 분명히 만족하며 공정한 보상을 제공한다." # 구어체 (대사)
-cpr_laamp_contract_schemes.1602.a: "인식은 기대에 의해 쉽게 인도된다." # 해라체 (결과)
+cpr_laamp_contract_schemes.1602.desc: "나는 비록 완벽하지는 않지만 여전히 [employer.GetTitledFirstName]과 [employer.GetSheHe]가 모은 작은 청중을 당황하게 하고 즐겁게 하는 일련의 환영술과 사소한 기만들을 제시한다. 기술적인 완벽함이 부족한 부분을, 나는 연극적인 기교로 보완한다.\n\n속임수가 거의 실패할 뻔했을 때, 나는 실수를 공연에 통합하여, 명백한 오류 자체가 더 큰 기만의 일부였다고 모든 참석자들을 설득한다. [employer.GetTitledFirstName](은)는 나의 빠른 생각에 박수를 보낸다. 아마도 완벽한 실행보다 더 감명받았을 것이다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1602.desc.outro: "\n\n나의 마지막 환영술이 끝나자 [employer.GetTitledFirstName](이)가 선언한다. '가장 즐거웠소. 궁정의 예측 가능한 오락과는 반가운 기분 전환이었소.' [employer.GetSheHe|U]는 저녁의 여흥에 분명히 만족하며 공정한 보상을 제공한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1602.a: "인식은 기대에 쉽게 이끌린다." # 해라체 (결과)
 
 # 추종자 성공
 cpr_laamp_contract_schemes.1603.t: "$cpr_laamp_1000_contract$: 기만의 대가"
-cpr_laamp_contract_schemes.1603.desc: "나는 환영술과 기만 기술이 나를 훨씬 능가하는 [follower.GetTitledFirstName]을(를) 소개한다. 우아한 정밀함과 매혹적인 존재감으로, [follower.GetSheHe]는 바로 그 자연 법칙에 도전하는 듯한 재주들을 공연한다.\n\n물건들이 나타났다 사라지고, 생각들이 마음에서 뽑혀 나오는 듯하며, 예측들이 불가능한 정확성으로 구체화된다. [employer.GetTitledFirstName]은(는) [follower.GetFirstNameNoTooltip]이(가) 평범한 내실을 불가능이 현실이 되는 장소로 변형시키는 것을 어린아이 같은 경이로움으로 지켜본다, 비록 단 하룻밤일지라도." # 해라체
-cpr_laamp_contract_schemes.1603.desc.outro: "\n\n마지막 환영술이 끝나자 '[employer.GetTitledFirstName]이(가) 숨을 내쉰다. '비범하군. 그대의 [follower.GetTitledFirstName]은(는) 초자연적인 것에 가까운 재능을 지녔소.' [employer.GetSheHe|U]는 [employer.GetSheHe]가 목격한 공연에 분명히 마법에 걸린 듯 우리에게 후하게 보상한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1603.desc: "나는 환영술과 기만 기술이 나를 훨씬 능가하는 [follower.GetTitledFirstName](을)를 소개한다. 우아한 정밀함과 매혹적인 존재감으로, [follower.GetSheHe]는 바로 그 자연 법칙에 도전하는 듯한 재주들을 공연한다.\n\n물건들이 나타났다 사라지고, 생각들이 마음에서 뽑혀 나오는 듯하며, 예측들이 불가능한 정확성으로 구체화된다. [employer.GetTitledFirstName](은)는 [follower.GetFirstNameNoTooltip](이)가 평범한 내실을 불가능이 현실이 되는 장소로 변형시키는 것을 어린아이 같은 경이로움으로 지켜본다, 비록 단 하룻밤일지라도." # 해라체
+cpr_laamp_contract_schemes.1603.desc.outro: "\n\n마지막 환영술이 끝나자 [employer.GetTitledFirstName](이)가 숨을 내쉰다. '비범하군. 그대의 [follower.GetTitledFirstName](은)는 초자연적인 것에 가까운 재능을 지녔소.' [employer.GetSheHe|U]는 [employer.GetSheHe]가 목격한 공연에 분명히 마법에 걸린 듯 우리에게 후하게 보상한다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1603.a: "진정한 숙달은 불가능을 필연적으로 보이게 만든다." # 해라체 (결과)
 
 # 성공 (학식)
 cpr_laamp_contract_schemes.1604.t: "$cpr_laamp_1000_contract$: 철학적 기만"
-cpr_laamp_contract_schemes.1604.desc: "단순히 광경에만 집중하기보다는, 나는 나의 환영술을 철학적 원리의 시연으로 제시한다 — 인식이 얼마나 쉽게 오도될 수 있는지, 그것들의 오류 가능성에도 불구하고 우리가 얼마나 확고하게 우리의 감각을 신뢰하는지.\n\n속임수들 사이에서, 나는 현실과 인식의 본질에 대한 고대 학자들의 통찰력을 제공하며, 단순한 기만들을 더 깊은 진실의 탐구로 변형시킨다. [employer.GetTitledFirstName]은(는) 단지 놀라움을 받을 청중으로서가 아니라 자극받을 지성으로서 참여한다.\n\n각 환영술을 지적 탐구의 맥락 안에서 구성함으로써, 나는 단순한 여흥이었을 수도 있었던 것을 [employer.GetTitledFirstNamePossessive] 지성을 아첨하면서도 [employer.GetSheHe]가 추구했던 경이로움을 여전히 제공하는 학문적 여정으로 격상시킨다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1604.desc.outro: "\n\n공연이 끝나자 '[employer.GetTitledFirstName]이(가) 인정한다. '그대는 나에게 오락뿐만 아니라 생각할 거리를 주었소. 참으로 희귀한 조합이오.' [employer.GetSheHe|U]는 [employer.GetSheHe]가 환영술 자체만큼이나 지적 틀을 가치 있게 여김을 시사하는 존경심으로 내게 후하게 보상한다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1604.desc: "단순히 광경에만 집중하기보다는, 나는 나의 환영술을 철학적 원리의 시연으로 제시한다 — 인식이 얼마나 쉽게 오도될 수 있는지, 그것들의 오류 가능성에도 불구하고 우리가 얼마나 확고하게 우리의 감각을 신뢰하는지.\n\n속임수들 사이에서, 나는 현실과 인식의 본질에 대한 고대 학자들의 통찰력을 제공하며, 단순한 기만들을 더 깊은 진실의 탐구로 변형시킨다. [employer.GetTitledFirstName](은)는 단지 놀라움을 받을 청중으로서가 아니라 자극받을 지성으로서 참여한다.\n\n각 환영술을 지적 탐구의 맥락 안에서 구성함으로써, 나는 단순한 여흥이었을 수도 있었던 것을 [employer.GetTitledFirstNamePossessive] 지성을 아첨하면서도 [employer.GetSheHe]가 추구했던 경이로움을 여전히 제공하는 학문적 여정으로 격상시킨다." # 1인칭 '나' 시점, 해라체
+cpr_laamp_contract_schemes.1604.desc.outro: "\n\n공연이 끝나자 [employer.GetTitledFirstName](이)가 인정한다. '그대는 나에게 오락뿐만 아니라 생각할 거리를 주었소. 참으로 희귀한 조합이오.' [employer.GetSheHe|U]는 [employer.GetSheHe]가 환영술 자체만큼이나 지적 틀을 가치 있게 여김을 시사하는 존경심으로 내게 후하게 보상한다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1604.a: "가장 위대한 기만은 눈을 속이는 것이 아니라 마음을 시험하는 것이다." # 해라체 (결과)
 
 # 실패 (음모)
 cpr_laamp_contract_schemes.1605.t: "$cpr_laamp_1000_contract$: 밝혀진 속임수"
 cpr_laamp_contract_schemes.1605.desc: "나의 공연은 [employer.GetTitledFirstName]과 모인 궁정 신하들로부터 적절한 감탄사를 이끌어내는 단순한 환영술로 충분히 잘 시작된다. 이 초기 성공에 고무되어, 나는 더 복잡한 기만 — 신중한 준비와 타이밍을 요구하는 것 — 을 시도한다.\n\n결정적인 순간에 숨겨진 장치가 고장 나면서 재앙이 닥쳐, 나의 가정된 마법 뒤의 평범한 방법을 폭로한다. 한 궁정 신하가 가리키며 웃고, 내 공연이 당혹감 속으로 무너지면서 곧 다른 이들도 합류한다.\n\n더 나쁜 것은, 당황한 상태에서 내가 실수로 다른 준비된 속임수를 드러내어, 내가 신비로운 통찰력으로 제시했던 것이 단지 신중한 준비와 연극적 고안이었음을 고통스럽게 명백히 만든다." # 1인칭 '나' 시점, 해라체
-cpr_laamp_contract_schemes.1605.desc.outro: "\n\n'[employer.GetTitledFirstName]이(가) 말한다. '우리가 이... 여흥용 재주들을 충분히 본 것 같소.' [employer.GetHerHis] 실망감을 숨기려 하지 않으며. '다음번에는 대신 아이의 생일 공연자를 고용해야겠소.'\n\n나는 보상 없이 해고되고, 교묘한 기만에 대한 나의 평판은 매우 현실적인 실패에 의해 철저히 약화된다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1605.desc.outro: "\n\n[employer.GetTitledFirstName](이)가 말한다. '이... 여흥용 재주들을 충분히 본 것 같소.' [employer.GetHerHis] 실망감을 숨기려 하지 않으며. '다음번에는 대신 아이의 생일 공연자를 고용해야겠소.'\n\n나는 보상 없이 해고되고, 교묘한 기만에 대한 나의 평판은 매우 현실적인 실패에 의해 철저히 약화된다." # 구어체 (대사)
 cpr_laamp_contract_schemes.1605.a: "폭로된 환영술사는 단지 소품을 가진 바보일 뿐이다." # 해라체 (결과)
 
 # 실패 (학식)
 cpr_laamp_contract_schemes.1606.t: "$cpr_laamp_1000_contract$: 철학자의 어리석음"
-cpr_laamp_contract_schemes.1606.desc: "광경에 집중하기보다는, 나는 나의 평범한 환영술을 심오한 철학적 원리의 시연으로 구성하려 시도한다. 단순한 속임수들 사이에서, 나는 인식, 현실, 그리고 인간 감각의 오류 가능성에 대한 정교한 설명에 착수한다.\n\n나의 학문적 탈선은 점점 더 길어지는 반면 나의 실제 환영술은 초보적인 수준에 머무른다. 즐거운 전시가 되어야 할 것이 인식론에 대한 즉석 강의가 되자 [employer.GetTitledFirstName]은(는) 초조하게 몸을 뒤튼다.\n\n'[employer.GetSheHe]가 마침내 사라지는 동전이 물질적 부의 덧없음을 나타내는 방법에 대한 나의 담론을 끊는다. '네, 네, 가장 흥미롭소. 하지만 나는 교육받기보다는 놀라기를 오히려 바랐소. 아마도 그것을 죽도록 설명하지 않고 환영술을 공연할 수 있겠소?'" # 1인칭 '나' 시점, 해라체, 대사는 구어체
-cpr_laamp_contract_schemes.1606.desc.outro: "\n\n내가 또 다른 이론적 설명을 시작할 때 '[employer.GetTitledFirstName]이(가) 결론짓는다. '오늘 저녁에는 철학을 충분히 접했다고 믿소. 다음번에 강의를 원하면 수도원을 방문하겠소.' 나는 여흥이 단지 지적 이해가 아니라 경이로움을 요구한다는 것을 철저히 이해하지 못하여 보상 없이 해고된다." # 구어체 (대사)
-cpr_laamp_contract_schemes.1606.a: "어떤 신비는 설명되지 않은 채로 두는 것이 더 낫다." # 해라체 (결과)
+cpr_laamp_contract_schemes.1606.desc: "광경에 집중하기보다는, 나는 나의 평범한 환영술을 심오한 철학적 원리의 시연으로 구성하려 시도한다. 단순한 속임수들 사이에서, 나는 인식, 현실, 그리고 인간 감각의 오류 가능성에 대한 정교한 설명에 착수한다.\n\n나의 학문적 탈선은 점점 더 길어지는 반면 나의 실제 환영술은 초보적인 수준에 머무른다. 즐거운 전시가 되어야 할 것이 인식론에 대한 즉석 강의가 되자 [employer.GetTitledFirstName](은)는 초조하게 몸을 뒤튼다.\n\n[employer.GetSheHe]가 마침내 사라지는 동전이 물질적 부의 덧없음을 나타내는 방법에 대한 나의 담론을 끊는다. '그래, 그래, 아주 흥미롭군. 하지만 나는 교육받기보다는 놀라기를 바랐소. 지겨운 설명 없이 공연할 수는 없소?'" # 1인칭 '나' 시점, 해라체, 대사는 구어체
+cpr_laamp_contract_schemes.1606.desc.outro: "\n\n내가 또 다른 이론적 설명을 시작할 때 [employer.GetTitledFirstName](이)가 결론짓는다. '오늘 저녁에는 철학을 충분히 접한 것 같소. 다음번에 강의를 원하면 수도원을 찾겠소.' 나는 여흥이 단지 지적 이해가 아니라 경이로움을 요구한다는 것을 철저히 이해하지 못하여 보상 없이 해고된다." # 구어체 (대사)
+cpr_laamp_contract_schemes.1606.a: "어떤 신비는 설명하지 않는 편이 낫다." # 해라체 (결과)

@@ -1,0 +1,103 @@
+﻿l_korean:
+ cpr_debug_prefix: "[GetCurrentDate.GetStringShort]: [THIS.Char.GetFullNameNoTooltip] ([THIS.Char.GetID])"
+ cpr_debug_prefix_2: "[GetCurrentDate.GetStringShort]: [THIS.Char.GetFullNameNoTooltip] ([THIS.Char.GetID], [Select_CString(THIS.Char.IsFemale, 'female', 'male')])"
+
+ # Yearly
+ cpr_debug_msg_spawning_prostitutes: "[GetCurrentDate.GetStringShort]: 매춘부 생성 중"
+
+ # Prostitution
+ cpr_debug_msg_character_started_working_as_prostitute: "$cpr_debug_prefix_2$: 인물이 매춘부로 일하기를 그만둠, cpr_event: [THIS.Var('cpr_event').GetFlagName]"
+ cpr_debug_msg_character_stopped_working_as_prostitute: "$cpr_debug_prefix_2$: 인물이 매춘부로 일하기를 그만둠, cpr_event: [THIS.Var('cpr_event').GetFlagName]"
+
+ # Sex
+ cpr_debug_msg_character_had_sex_with_prostitute: "$cpr_debug_prefix_2$: 인물이 매춘부와 성관계함, carn_sex_partner: [THIS.Var('carn_sex_partner').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_partner').Char.GetID], [Select_CString(THIS.Var('carn_sex_partner').Char.IsFemale, 'female', 'male')])"
+ cpr_debug_msg_prostitute_had_sex_with_character: "$cpr_debug_prefix_2$: 매춘부가 인물과 성관계함, carn_sex_partner: [THIS.Var('carn_sex_partner').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_partner').Char.GetID], [Select_CString(THIS.Var('carn_sex_partner').Char.IsFemale, 'female', 'male')])"
+ cpr_debug_msg_prostitute_got_pregnant: "$cpr_debug_prefix_2$: 매춘부가 임신함, 친부: [THIS.Var('father').Char.GetFullNameNoTooltip] ([THIS.Var('father').Char.GetID]), carn_pregnancy_chance: [THIS.Var('carn_pregnancy_chance').GetValue]"
+
+ cpr_debug_msg_character_learned_secret: "$cpr_debug_prefix_2$: 인물이 비밀을 알게 됨, 비밀: [THIS.Var('learned_secret').Secret.GetName] of [THIS.Var('learned_secret').Secret.GetOwner.GetFullNameNoTooltip] ([THIS.Var('learned_secret').Secret.GetOwner.GetID])"
+
+ # Health
+ cpr_debug_msg_prostitute_got_std: "$cpr_debug_prefix_2$: 매춘부가 성병에 걸림, disease_type: [THIS.Var('disease_type').GetFlagName]"
+
+ # Stress coping events
+ cpr_debug_msg_stress_trait_coping_decisions_2001_fired: "$cpr_debug_prefix_2$: $stress_trait_coping_decisions.2001.t$ 이벤트 발생"
+ cpr_debug_msg_stress_trait_coping_decisions_2002_fired: "$cpr_debug_prefix_2$: $stress_trait_coping_decisions.2002.t$ 이벤트 발생"
+
+ cpr_debug_msg_stress_trait_coping_decisions_2004_scheduled: "$cpr_debug_prefix_2$: $stress_trait_coping_decisions.2004.t$ event scheduled"
+ cpr_debug_msg_stress_trait_coping_decisions_2004_fired: "$cpr_debug_prefix_2$: $stress_trait_coping_decisions.2004.t$ 이벤트 발생"
+
+ # Carnalitas events
+ cpr_debug_msg_prostitution_random_events_0001_fired: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0001.notification$ 이벤트 발생, trait_xp: [THIS.Var('trait_xp').GetValue]"
+ cpr_debug_msg_prostitution_random_events_0002_fired: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0002.notification$ 이벤트 발생"
+ cpr_debug_msg_prostitution_random_events_0003_fired: "$cpr_debug_prefix_2$: Priests Condemn You 이벤트 발생"
+ cpr_debug_msg_prostitution_random_events_0004_fired: "$cpr_debug_prefix_2$: Got STD 이벤트 발생"
+ cpr_debug_msg_prostitution_random_events_0005_fired: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0005.notification$ 이벤트 발생"
+ cpr_debug_msg_prostitution_random_events_0010_fired: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0011.t$ setup 이벤트 발생"
+ cpr_debug_msg_prostitution_random_events_0011_fired: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0011.t$ 이벤트 발생, client: [THIS.Var('client').Char.GetFullNameNoTooltip] ([THIS.Var('client').Char.GetID])"
+ cpr_debug_msg_prostitution_random_events_0011_option_a_chosen: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0011.t$ option a chosen"
+ cpr_debug_msg_prostitution_random_events_0011_option_b_chosen: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0011.t$ option b chosen"
+ cpr_debug_msg_prostitution_random_events_0011_option_c_chosen: "$cpr_debug_prefix_2$: $carn_prostitution_random_events.0011.t$ option c chosen"
+
+ cpr_debug_msg_slave_prostitution_0001_fired: "$cpr_debug_prefix_2$: $carn_slave_prostitution.0001.t$ 이벤트 발생, total_income: [THIS.Var('total_income').GetValue], total_piety_loss: [THIS.Var('total_piety_loss').GetValue]"
+
+ # Effects
+ cpr_debug_msg_using_cpr_rakish_brothel_night_effect: "$cpr_debug_prefix_2$: cpr_rakish_brothel_night_effect 사용, from_stress_loss_decision: [Select_CString(THIS.Var('from_stress_loss_decision').IsSet, 'yes', 'no')]"
+ cpr_debug_msg_using_vanilla_rakish_brothel_night_effect: "$cpr_debug_prefix_2$: vanilla_rakish_brothel_night_effect 사용, from_stress_loss_decision: [Select_CString(THIS.Var('from_stress_loss_decision').IsSet, 'yes', 'no')]"
+
+ # Character creation and removal
+ cpr_debug_msg_creating_prostitute: "$cpr_debug_prefix_2$: 매춘부 생성, 출처: [THIS.Var('cpr_origin').GetFlagName]"
+ cpr_debug_msg_removing_prostitute: "$cpr_debug_prefix_2$: 매춘부 제거, 출처: [THIS.Var('cpr_origin').GetFlagName]"
+
+ # Moving characters
+ cpr_debug_msg_moving_prostitute: "$cpr_debug_prefix_2$: 매춘부 이동, 출발: [THIS.Var('origin').Province.GetNameNoTooltip], 도착: [THIS.Var('destination').Province.GetNameNoTooltip]"
+
+ # Starting and stopping working as prostitute
+ cpr_debug_msg_can_no_longer_work_as_prostitute: "$cpr_debug_prefix_2$: 인물이 더 이상 매춘부로 일할 수 없음"
+ cpr_debug_msg_decided_to_start_working_as_prostitute: "$cpr_debug_prefix_2$: 인물이 매춘부로 일하기로 결정함, work_as_prostitute_ai_willingness: [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
+ cpr_debug_msg_decided_to_stop_working_as_prostitute: "$cpr_debug_prefix_2$: 인물이 매춘부로 일하기를 중단하기로 결정함, work_as_prostitute_ai_willingness: [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
+ cpr_debug_msg_forced_to_start_working_as_prostitute: "$cpr_debug_prefix_2$: 인물이 매춘부로 일하도록 강요받음, cpr_forced_by_owner: [THIS.Var('cpr_forced_by_owner').Char.GetFullNameNoTooltip] ([THIS.Var('cpr_forced_by_owner').Char.GetID])"
+ cpr_debug_msg_forced_to_stop_working_as_prostitute: "$cpr_debug_prefix_2$: 인물이 매춘부로 일하기를 중단하도록 강요받음, cpr_forced_by_owner: [THIS.Var('cpr_forced_by_owner').Char.GetFullNameNoTooltip] ([THIS.Var('cpr_forced_by_owner').Char.GetID])"
+
+ # Contract creation
+ cpr_debug_msg_task_contract_created: "$cpr_debug_prefix$: 청부의뢰 생성, 의뢰: [THIS.Var('cpr_task_contract').TaskContract.GetNameNoTooltip]"
+
+ # Carnalitas decisions
+ cpr_debug_msg_work_as_prostitute_decision_made: "$cpr_debug_prefix_2$: $carn_work_as_prostitute_decision$ 결단 내림, work_as_prostitute_ai_willingness: [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
+ cpr_debug_msg_stop_work_as_prostitute_decision_made: "$cpr_debug_prefix_2$: $carn_stop_work_as_prostitute_decision$ 결단 내림, work_as_prostitute_ai_willingness: [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
+
+ # Carnalitas interactions
+ cpr_debug_msg_force_start_prostitution_interaction_accepted: "$cpr_debug_prefix_2$: $carn_force_start_prostitution_interaction$ 상호작용 승낙, force_prostitution_ai_willingness: [THIS.Var('force_prostitution_ai_willingness').GetValue]"
+ cpr_debug_msg_force_stop_prostitution_interaction_accepted: "$cpr_debug_prefix_2$: $carn_force_stop_prostitution_interaction$ 상호작용 승낙, force_prostitution_ai_willingness: [THIS.Var('force_prostitution_ai_willingness').GetValue]"
+
+ # Tooltips
+ cpr_debug_work_as_prostitute_ai_willingness_tooltip: "매춘부로 일하기 AI 의욕: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('cpr_work_as_prostitute_ai_willingness_value')]\n[GuiScope.SetRoot(GetPlayer.MakeScope).GetScriptValueDesc('cpr_work_as_prostitute_ai_willingness_value')]\n"
+ cpr_debug_force_prostitution_ai_willingness_tooltip: "매춘 강요 AI 의욕: [GuiScope.SetRoot(actor.MakeScope).AddScope('actor', actor.MakeScope).AddScope('recipient', recipient.MakeScope).ScriptValue('cpr_force_prostitution_ai_willingness_value')]\n[GuiScope.SetRoot(actor.MakeScope).AddScope('actor', actor.MakeScope).AddScope('recipient', recipient.MakeScope).GetScriptValueDesc('cpr_force_prostitution_ai_willingness_value')]"
+
+ # Value descriptions
+ cpr_debug_value_base_desc: "기본"
+ cpr_debug_value_prostitution_crime: "매춘은 범죄임"
+ cpr_debug_value_opinion_desc: "의견"
+ cpr_debug_value_greed_desc: "탐욕"
+ cpr_debug_value_compassion_desc: "연민"
+ cpr_debug_value_honor_desc: "명예"
+ cpr_debug_value_zeal_desc: "열성"
+ cpr_debug_value_sociability_desc: "사교성"
+ cpr_debug_value_family_dynasty_desc: "가족 / 가문"
+ cpr_debug_value_friend_lover_desc: "친구 / 연인"
+ cpr_debug_value_rival_desc: "경쟁자"
+ cpr_debug_value_employed_desc: "고용"
+ cpr_debug_value_trait_xp_desc: "특성 경험치"
+ cpr_debug_value_diplomacy_desc: "외교력"
+ cpr_debug_value_intrigue_desc: "계책력"
+ cpr_debug_value_attraction_desc: "매력"
+ cpr_debug_value_lustful_desc: "음탕한"
+ cpr_debug_value_chaste_desc: "순결한"
+ cpr_debug_value_rakish_desc: "방탕한"
+ cpr_debug_value_deviant_desc: "이상 성욕자"
+ cpr_debug_value_age_desc: "나이"
+ cpr_debug_value_health_desc: "건강"
+ cpr_debug_value_highborn_desc: "귀족"
+ cpr_debug_value_married_desc: "기혼"
+ cpr_debug_value_concubine_desc: "첩"
+ cpr_debug_value_children_desc: "자녀"
+ cpr_debug_value_ruler_desc: "영주"

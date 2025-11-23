@@ -1,6 +1,6 @@
 ﻿l_korean:
  cpr_find_prostitutes_interaction: "매춘부와 상호작용하기"
- cpr_find_prostitutes_interaction_desc: "성관계를 갖거나 궁정으로 초대할 매춘부를 찾음"
+ cpr_find_prostitutes_interaction_desc: "성관계를 갖거나 궁정으로 초대할 매춘부를 찾습니다."
 
  recipient_secondary_cpr_find_prostitutes_interaction: "매춘부"
 
@@ -11,12 +11,12 @@
  cpr_invite_as_guest_option: "$travl_invite_as_guest_interaction$"
  cpr_invite_as_guest_option_desc: "[secondary_recipient.GetShortUINameNoTooltip]에 대한 #EMP $travl_invite_as_guest_interaction$#! 창을 엶"
 
- cpr_sex_interaction_not_valid_tt: "[secondary_recipient.GetShortUINameNoTooltip]에게 지금은 $carn_sex_interaction$ 상호작용이 유효하지 않다."
- cpr_invite_to_court_interaction_not_accepted_tt: "[secondary_recipient.GetShortUINameNoTooltip]에게 $invite_to_court_interaction$ 상호작용이 유효하지 않거나, 현재 그들이 수락하지 않을 것이다."
- cpr_invite_as_guest_interaction_not_accepted_tt: "[secondary_recipient.GetShortUINameNoTooltip]에게 $travl_invite_as_guest_interaction$ 상호작용이 유효하지 않거나, 현재 그들이 수락하지 않을 것이다."
+ cpr_sex_interaction_not_valid_tt: "[secondary_recipient.GetShortUINameNoTooltip]에게 지금은 $carn_sex_interaction$ 상호작용이 유효하지 않음"
+ cpr_invite_to_court_interaction_not_accepted_tt: "[secondary_recipient.GetShortUINameNoTooltip]에게 $invite_to_court_interaction$ 상호작용이 유효하지 않거나, 현재 그들이 수락하지 않을 것임"
+ cpr_invite_as_guest_interaction_not_accepted_tt: "[secondary_recipient.GetShortUINameNoTooltip]에게 $travl_invite_as_guest_interaction$ 상호작용이 유효하지 않거나, 현재 그들이 수락하지 않을 것임"
 
- cpr_sex_interaction_warning_tt: "#X [secondary_recipient.GetShortUINameNoTooltip]에 대한 #EMP $carn_sex_interaction$#! 창을 연다#!"
- cpr_invite_to_court_interaction_warning_tt: "#X [secondary_recipient.GetShortUINameNoTooltip]에 대한 #EMP $invite_to_court_interaction$#! 창을 연다#!"
- cpr_invite_as_guest_interaction_warning_tt: "#X [secondary_recipient.GetShortUINameNoTooltip]에 대한 #EMP $travl_invite_as_guest_interaction$#! 창을 연다#!"
+ cpr_sex_interaction_warning_tt: "#X [secondary_recipient.GetShortUINameNoTooltip]에 대한 #EMP $carn_sex_interaction$#! 창을 엽니다.#!"
+ cpr_invite_to_court_interaction_warning_tt: "#X [secondary_recipient.GetShortUINameNoTooltip]에 대한 #EMP $invite_to_court_interaction$#! 창을 엽니다.#!"
+ cpr_invite_as_guest_interaction_warning_tt: "#X [secondary_recipient.GetShortUINameNoTooltip]에 대한 #EMP $travl_invite_as_guest_interaction$#! 창을 엽니다.#!"
 
- travl_invite_as_guest_interaction: "손님으로 초대하기"
+ travl_invite_as_guest_interaction: "문객으로 초대하기"
