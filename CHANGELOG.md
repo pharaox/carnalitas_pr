@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 0.6.1
+
+### Localization
+
+* Updated Korean translation by **@songkhla**.
+
 ## Version 0.6.0
 
 ### Compatibility
