@@ -1,340 +1,330 @@
 ﻿l_simp_chinese:
 
 # Contract
-cpr_laamp_1000_contract: "A Night's Diversion"
-cpr_laamp_1000_desc_title: "Wanderers of refined talents,"
-cpr_laamp_1000_desc: "[TaskContract.GetEmployer.GetTitleAsNameNoTooltip] of [TaskContract.GetEmployer.GetPrimaryTitle.GetNameNoTier] seeks an entertainer to provide private diversions. [TaskContract.GetEmployer.GetSheHe|U] has specific preferences based on [TaskContract.GetEmployer.GetHerHis] personal tastes. Discretion assured and generous compensation offered to those who can truly impress."
-cpr_laamp_1000_request: "This [task_contract|E] requires you to [travel|E] to a [ruler|E]'s residence and provide entertainment. You will choose from several options based on the employer's interests — music, poetry, dance, fortune-telling, illusions, or companionship. Your success will depend on your [diplomacy|E], [intrigue|E], [learning|E], or [prowess|E] skills. You may also assign a suitable [follower|E] to perform in your place."
-
+cpr_laamp_1000_contract: "一夜消遣"
+cpr_laamp_1000_desc_title: "诸位技艺精湛的流浪者们，"
+cpr_laamp_1000_desc: "[TaskContract.GetEmployer.GetTitleAsNameNoTooltip] of [TaskContract.GetEmployer.GetPrimaryTitle.GetNameNoTier]寻求一位艺人提供私人娱乐。[TaskContract.GetEmployer.GetSheHe|U]根据[TaskContract.GetEmployer.GetHerHis]个人品味有特定偏好。确保谨慎行事，并为真正能打动人心者提供丰厚报酬。"
+cpr_laamp_1000_request: "这份[task_contract|E]要求你[travel|E]前往一位[ruler|E]的居所并提供娱乐。你将根据雇主的兴趣从多个选项中选择——音乐、诗歌、舞蹈、占卜、幻术或陪伴。你的成功将取决于你的[diplomacy|E]、[intrigue|E]、[learning|E]或[prowess|E]技能。你也可以指派一位合适的[follower|E]代你表演。"
 # Initial Selection Event
 cpr_laamp_contract_schemes.1000.t: "$cpr_laamp_1000_contract$"
-cpr_laamp_contract_schemes.1000.desc: "[employer.GetTitledFirstName] welcomes me to [employer.GetHerHis] private chambers, a smile not quite reaching [employer.GetHerHis] eyes. The room is overly lit by candles, yet somehow remains cold.\n\n'My position affords me many things,' [employer.GetSheHe] says, swirling wine in a goblet. 'Power, wealth, respect... yet I find myself starved for novelty, for distraction from courtly matters.'\n\n[employer.GetSheHe|U] looks at me intently. 'I'm told you possess uncommon talents. I would have you entertain me — what do you offer?'"
-cpr_laamp_contract_schemes.1000.a: "I could perform music to ease your troubled mind."
-cpr_laamp_contract_schemes.1000.b: "Allow me to share poetry and tales from distant lands."
-cpr_laamp_contract_schemes.1000.c: "Perhaps a dance would lift your spirits?"
-cpr_laamp_contract_schemes.1000.d: "I offer companionship of a more... intimate nature."
-cpr_laamp_contract_schemes.1000.e: "I could read your fortune through the ancient art of astrology."
-cpr_laamp_contract_schemes.1000.f: "I know arts of illusion that will astonish and delight you."
-cpr_laamp_contract_schemes.1000.g: "You wish me to play the fool for your amusement? I think not."
+cpr_laamp_contract_schemes.1000.desc: "[employer.GetTitledFirstName]欢迎我进入[employer.GetHerHis]私人房间，笑容未达眼底。房间被蜡烛照得过亮，却莫名透着寒意。\n\n'我的地位带给我许多东西，'[employer.GetSheHe]摇晃着酒杯说，'权力、财富、尊重……但我发现自己渴望新奇，渴望从宫廷事务中分心。'\n\n[employer.GetSheHe|U]专注地看着我。'我听说你有非凡的才能。我想请你娱乐我——你能提供什么？'"
+cpr_laamp_contract_schemes.1000.a: "我可以演奏音乐来安抚您烦扰的心灵。"
+cpr_laamp_contract_schemes.1000.b: "请允许我分享来自遥远国度的诗歌和故事。"
+cpr_laamp_contract_schemes.1000.c: "也许一支舞能提振您的精神？"
+cpr_laamp_contract_schemes.1000.d: "我提供更……亲密的陪伴。"
+cpr_laamp_contract_schemes.1000.e: "我可以通过古老的占星术为您解读命运。"
+cpr_laamp_contract_schemes.1000.f: "我通晓幻术，能让您惊叹不已。"
+cpr_laamp_contract_schemes.1000.g: "您想让我扮演小丑供您取乐？恕难从命。"
 
 # Tooltips
-cpr_laamp_contract_schemes.1000.a.tt: "You will attempt to entertain [employer.GetTitledFirstName] with musical performance. Success depends primarily on your [diplomacy|E], but you may be able to use other approaches."
-cpr_laamp_contract_schemes.1000.b.tt: "You will recite poetry and tales for [employer.GetTitledFirstName]. Success depends primarily on your [diplomacy|E], though your [learning|E] may offer alternative approaches."
-cpr_laamp_contract_schemes.1000.c.tt: "You will perform dances to entertain [employer.GetTitledFirstName]. Success depends primarily on your [diplomacy|E], though your [prowess|E] might allow for an impressive warrior's dance."
-cpr_laamp_contract_schemes.1000.d.tt: "You will provide [employer.GetTitledFirstName] with intimate companionship. Success depends primarily on your [diplomacy|E], though your [intrigue|E] might allow you to extract secrets during vulnerable moments."
-cpr_laamp_contract_schemes.1000.e.tt: "You will read [employer.GetTitledFirstNamePossessive] fortune through astrology. Success depends primarily on your [learning|E], though your [intrigue|E] might allow for manipulation through 'divination'."
-cpr_laamp_contract_schemes.1000.f.tt: "You will perform illusions and tricks to amaze [employer.GetTitledFirstName]. Success depends primarily on your [intrigue|E], though your [learning|E] might offer a more scholarly approach to the art of deception."
-cpr_laamp_contract_schemes.1000.g.tt: "You decline the request for entertainment, judging that your talents would be wasted on this particular patron. Though this may damage relations with [employer.GetTitledFirstName], your dignity remains intact... along with whatever other assets you've chosen to preserve."
-
+cpr_laamp_contract_schemes.1000.a.tt: "你将尝试用音乐表演娱乐[employer.GetTitledFirstName]。成功主要取决于你的[diplomacy|E]，但你可以尝试其他方法。"
+cpr_laamp_contract_schemes.1000.b.tt: "你将为[employer.GetTitledFirstName]朗诵诗歌和故事。成功主要取决于你的[diplomacy|E]，但你的[learning|E]可能提供其他途径。"
+cpr_laamp_contract_schemes.1000.c.tt: "你将表演舞蹈娱乐[employer.GetTitledFirstName]。成功主要取决于你的[diplomacy|E]，但你的[prowess|E]可能让你展示一支令人印象深刻的战士之舞。"
+cpr_laamp_contract_schemes.1000.d.tt: "你将向[employer.GetTitledFirstName]提供亲密陪伴。成功主要取决于你的[diplomacy|E]，但你的[intrigue|E]可能让你在脆弱时刻套取秘密。"
+cpr_laamp_contract_schemes.1000.e.tt: "你将通过占星术解读[employer.GetTitledFirstNamePossessive]命运。成功主要取决于你的[learning|E]，但你的[intrigue|E]可能让你通过'预言'进行操纵。"
+cpr_laamp_contract_schemes.1000.f.tt: "你将表演幻术和戏法让[employer.GetTitledFirstName]惊叹。成功主要取决于你的[intrigue|E]，但你的[learning|E]可能提供更学术的欺骗艺术。"
+cpr_laamp_contract_schemes.1000.g.tt: "你拒绝了娱乐请求，认为自己的才能浪费在这位雇主身上。虽然这可能损害与[employer.GetTitledFirstName]的关系，但你的尊严得以保留……连同你选择保留的其他资产。"
 # 1. Music Performance Contract
-cpr_laamp_contract_schemes.1100.t: "$cpr_laamp_1000_contract$: A Melody for Weary Ears"
-cpr_laamp_contract_schemes.1100.desc: "[employer.GetTitledFirstName] nods with interest at my mention of musical talents. 'Music... yes, it has been too long since these chambers heard anything but plotting and petitioning.'\n\n[employer.GetSheHe|U] gestures toward an ornate lute resting on a stand in the corner. 'That instrument has sat silent since the last minstrel passed through. They say music soothes the troubled mind — and mine has troubles enough to drown a kingdom. Show me your skill, if you would. Let me forget, if only for an evening, the weight of my position.'"
-cpr_laamp_contract_schemes.1100.a: "I shall perform with all the skill at my disposal." # Diplomacy Challenge
-cpr_laamp_contract_schemes.1100.b: "I may not be a master musician, but I know what will truly please you." # Intrigue Challenge
-cpr_laamp_contract_schemes.1100.c: "I shall have my follower [follower.GetTitledFirstName] perform; [follower.GetSheHe] has a gift for music." # follower exists
-cpr_laamp_contract_schemes.1100.c.no_follower: "None of my followers possess the musical talent required for this task."
+cpr_laamp_contract_schemes.1100.t: "$cpr_laamp_1000_contract$：为疲惫的双耳奏响旋律"
+cpr_laamp_contract_schemes.1100.desc: "[employer.GetTitledFirstName]对我提到的音乐才能点头表示兴趣。'音乐……是的，这些房间太久没有听到除阴谋和请愿之外的声音了。'\n\n[employer.GetSheHe|U]指向角落支架上一把华丽的鲁特琴。'那把乐器自上次吟游诗人离开后就一直沉默。他们说音乐能安抚烦扰的心灵——而我的烦恼足以淹没一个王国。如果你愿意，展示你的技艺吧。让我暂时忘记肩上的重担，哪怕只有一个晚上。'"
+cpr_laamp_contract_schemes.1100.a: "我将倾尽所能进行表演。" # 外交挑战
+cpr_laamp_contract_schemes.1100.b: "我可能不是音乐大师，但我知道什么能真正取悦您。" # 密谋挑战
+cpr_laamp_contract_schemes.1100.c: "我将让我的追随者[follower.GetTitledFirstName]表演；[follower.GetSheHe]有音乐天赋。" # 存在追随者
+cpr_laamp_contract_schemes.1100.c.no_follower: "我没有具备所需音乐才能的追随者。"
 
 # Tooltips
-cpr_laamp_contract_schemes.1100.a.tt.success: "Your musical performance enchants [employer.GetTitledFirstName], bringing a rare moment of beauty to [employer.GetHerHis] world. Your reward will be substantial, and your reputation as an entertainer enhanced."
-cpr_laamp_contract_schemes.1100.a.tt.failure: "Your musical abilities prove inadequate, resulting in an awkward performance that [employer.GetTitledFirstName] politely endures. You will receive no payment, and this failure may damage your reputation."
-cpr_laamp_contract_schemes.1100.b.tt.success: "Though your musical skills are modest, your keen observation allows you to understand what [employer.GetTitledFirstName] truly desires. You'll not only receive payment but gain valuable insights that could prove useful in the future."
-cpr_laamp_contract_schemes.1100.b.tt.failure: "Your attempt to manipulate the situation backfires, as [employer.GetTitledFirstName] sees through your deception. You leave with neither payment nor dignity."
-cpr_laamp_contract_schemes.1100.c.tt.success: "Your follower's musical talent thoroughly impresses [employer.GetTitledFirstName], reflecting well on your judgment in companions. You receive generous payment and enhance both your reputations."
-cpr_laamp_contract_schemes.1100.c.tt.no_follower: "You lack an available [follower|E] with at least 18 [diplomacy|E] and 50 [trait_level_track_xp|E] in $trait_lifestyle_reveler$ to delegate to."
-
+cpr_laamp_contract_schemes.1100.a.tt.success: "你的音乐表演迷住了[employer.GetTitledFirstName]，为[employer.GetHerHis]世界带来了罕见的美妙时刻。你的报酬将很丰厚，你作为艺人的声誉也会提升。"
+cpr_laamp_contract_schemes.1100.a.tt.failure: "你的音乐能力不足，导致表演尴尬，[employer.GetTitledFirstName]礼貌地忍受着。你不会得到报酬，这次失败可能会损害你的声誉。"
+cpr_laamp_contract_schemes.1100.b.tt.success: "虽然你的音乐技巧一般，但敏锐的观察让你理解了[employer.GetTitledFirstName]真正的渴望。你不仅会得到报酬，还会获得对未来有用的宝贵见解。"
+cpr_laamp_contract_schemes.1100.b.tt.failure: "你操纵局面的尝试适得其反，[employer.GetTitledFirstName]看穿了你的欺骗。你既没有得到报酬，也失去了尊严。"
+cpr_laamp_contract_schemes.1100.c.tt.success: "你追随者的音乐才能深深打动了[employer.GetTitledFirstName]，反映了你选择同伴的眼光。你得到丰厚报酬，提升了双方的声誉。"
+cpr_laamp_contract_schemes.1100.c.tt.no_follower: "你缺少可用的[follower|E]，其[diplomacy|E]至少为18且$trait_lifestyle_reveler$的[trait_level_track_xp|E]达到50。"
 # Exceptional Success (Diplomacy)
-cpr_laamp_contract_schemes.1101.t: "$cpr_laamp_1000_contract$: Symphony of the Soul"
-cpr_laamp_contract_schemes.1101.desc: "The lute feels alive in my hands, an extension of my own voice as I coax melodies that drift through [employer.GetTitledFirstNamePossessive] chambers like ghosts of happier times. I begin with court favorites, then slowly transition to rarer tunes — ballads from [ROOT.Char.GetCulture.GetName] lands and haunting rhythms carried along trade routes from distant shores.\n\nI notice [employer.GetTitledFirstNamePossessive] fingers first tapping in time, then [employer.GetHerHis] lips moving silently with half-remembered lyrics. When I shift to a childhood lullaby common in these lands, I glimpse a moment of unguarded emotion cross [employer.GetHerHis] face.\n\nBy the time the final note fades, hanging in the air like morning mist, [employer.GetTitledFirstName] sits in contented silence, transformed by the experience."
-cpr_laamp_contract_schemes.1101.desc.outro: "\n\n'It has been too long since these walls heard anything but plotting and petitions,' [employer.GetSheHe] says finally, voice softer than before. 'You have given me a gift beyond mere entertainment — you have reminded me of beauty.'\n\n[employer.GetSheHe|U] presents me with a purse that jingles pleasingly with coin. 'Worth every denier, and then some.'"
-cpr_laamp_contract_schemes.1101.a: "The music speaks what words cannot."
+cpr_laamp_contract_schemes.1101.t: "$cpr_laamp_1000_contract$：灵魂交响曲"
+cpr_laamp_contract_schemes.1101.desc: "鲁特琴在我手中仿佛有了生命，如同我声音的延伸，我奏出的旋律如快乐时光的幽灵般飘荡在[employer.GetTitledFirstNamePossessive]房间里。我从宫廷喜爱的曲子开始，逐渐过渡到更罕见的旋律——来自[ROOT.Char.GetCulture.GetName]土地的民谣和遥远海岸贸易路线传来的迷人节奏。\n\n我注意到[employer.GetTitledFirstNamePossessive]手指先是跟着节奏轻敲，然后[employer.GetHerHis]嘴唇无声地跟着半记起的歌词动起来。当我切换到这片土地常见的童年摇篮曲时，我看到[employer.GetHerHis]脸上闪过一丝不加掩饰的情感。\n\n当最后一个音符如晨雾般在空中消散时，[employer.GetTitledFirstName]满足地静坐着，被这段经历改变了。"
+cpr_laamp_contract_schemes.1101.desc.outro: "\n\n'这些墙壁太久没有听到除阴谋和请愿之外的声音了，'[employer.GetSheHe]最终说道，声音比之前柔和。'你给我的不仅是娱乐——你让我想起了美。'\n\n[employer.GetSheHe|U]递给我一个钱袋，硬币发出悦耳的叮当声。'每一分钱都物有所值，甚至更多。'"
+cpr_laamp_contract_schemes.1101.a: "音乐表达了言语无法表达的东西。"
 
 # Success (Diplomacy)
-cpr_laamp_contract_schemes.1102.t: "$cpr_laamp_1000_contract$: Pleasing Melodies"
-cpr_laamp_contract_schemes.1102.desc: "Though I am no master, my fingers find the right notes more often than not. I play simple, pleasing melodies that gradually draw [employer.GetTitledFirstName] out of [employer.GetHerHis] melancholy.\n\nWhen I stumble over a particularly difficult passage, I cover it with a flourish and a smile. [employer.GetTitledFirstName] seems not to notice — or perhaps chooses not to comment — as [employer.GetSheHe] is carried away by the simple joy of music filling [employer.GetHerHis] chambers."
-cpr_laamp_contract_schemes.1102.desc.outro: "\n\n'That was... refreshing,' [employer.GetTitledFirstName] says as the final notes fade. 'It is good to be reminded of simple pleasures.' [employer.GetSheHe|U] signals for a servant who brings forward my payment — modest but fair for the entertainment provided."
-cpr_laamp_contract_schemes.1102.a: "Even imperfect music can lift the spirits."
+cpr_laamp_contract_schemes.1102.t: "$cpr_laamp_1000_contract$：悦耳旋律"
+cpr_laamp_contract_schemes.1102.desc: "虽然称不上大师，但我的手指总能找到正确的音符。我演奏简单悦耳的旋律，逐渐将[employer.GetTitledFirstName]从忧郁中引出。\n\n当我在特别困难的段落出错时，我用华丽的修饰和微笑掩饰。[employer.GetTitledFirstName]似乎没有注意到——或者选择不予置评——因为[employer.GetSheHe]已被音乐充满[employer.GetHerHis]房间的简单快乐所吸引。"
+cpr_laamp_contract_schemes.1102.desc.outro: "\n\n'真是...令人耳目一新，'最后一个音符消散时[employer.GetTitledFirstName]说道。'能想起简单的快乐真好。'[employer.GetSheHe|U]示意仆人送来报酬——对于提供的娱乐来说，不算丰厚但很公平。"
+cpr_laamp_contract_schemes.1102.a: "即使不完美的音乐也能振奋精神。"
 
 # Follower Success
-cpr_laamp_contract_schemes.1103.t: "$cpr_laamp_1000_contract$: A Master's Touch"
-cpr_laamp_contract_schemes.1103.desc: "I present [follower.GetTitledFirstName], who bows with practiced grace before taking up position with [follower.GetHerHis] instrument. What follows can only be described as enchantment through sound. Notes cascade like water, build like storm clouds, and dance like flame, all guided by [follower.GetFirstNamePossessive] masterful touch.\n\n[employer.GetTitledFirstName] sits transfixed, occasionally closing [employer.GetHerHis] eyes to better absorb the melody. By the performance's end, the hard lines of authority have softened on [employer.GetHerHis] face."
-cpr_laamp_contract_schemes.1103.desc.outro: "\n\n'Your [follower.GetTitledFirstName] has a rare gift,' [employer.GetTitledFirstName] acknowledges. 'To think such talent travels in your company!' [employer.GetSheHe|U] rewards us generously, clearly pleased with the arrangement."
-cpr_laamp_contract_schemes.1103.a: "True talent deserves recognition."
+cpr_laamp_contract_schemes.1103.t: "$cpr_laamp_1000_contract$：大师之触"
+cpr_laamp_contract_schemes.1103.desc: "我介绍[follower.GetTitledFirstName]出场，[follower.GetSheHe]优雅地鞠躬后拿起[follower.GetHerHis]乐器。接下来的演奏只能用声音的魔法来形容。音符如流水般倾泻，如暴风云般积聚，如火焰般舞动，全都在[follower.GetFirstNamePossessive]大师级的掌控中。\n\n[employer.GetTitledFirstName]入迷地坐着，偶尔闭上眼睛更好地感受旋律。表演结束时，权威的严厉线条从[employer.GetHerHis]脸上褪去。"
+cpr_laamp_contract_schemes.1103.desc.outro: "\n\n'你的[follower.GetTitledFirstName]有着罕见的天赋，'[employer.GetTitledFirstName]承认道。'想不到这样的才华竟在你的同伴中！'[employer.GetSheHe|U]慷慨地奖励我们，显然对这个安排非常满意。"
+cpr_laamp_contract_schemes.1103.a: "真正的才华值得认可。"
 
 # Success (Intrigue)
-cpr_laamp_contract_schemes.1104.t: "$cpr_laamp_1000_contract$: A Different Tune"
-cpr_laamp_contract_schemes.1104.desc: "I begin to play, but my true performance lies in my observation of [employer.GetTitledFirstName]. I notice how [employer.GetHerHis] eyes linger on certain objects, how [employer.GetHerHis] posture shifts when I mention certain topics between songs.\n\nGradually, I weave conversations into my performance, drawing out [employer.GetTitledFirstNamePossessive] interests and concerns. The music becomes secondary to the connection I'm establishing — one where [employer.GetSheHe] feels truly heard, perhaps for the first time in years.\n\nBy the time I set down the instrument, [employer.GetTitledFirstName] is speaking freely of matters I suspect are rarely shared, believing [employer.GetSheHe] has found a sympathetic ear rather than recognizing my careful extraction of valuable information."
-cpr_laamp_contract_schemes.1104.desc.outro: "\n\n'I had not expected such... understanding from a mere entertainer,' [employer.GetTitledFirstName] admits, seemingly unaware of how much [employer.GetSheHe] has revealed. 'You have a gift for more than music.' [employer.GetSheHe|U] pays me well, perhaps hoping for future conversations — unaware of the advantage I've gained through this seemingly simple performance."
-cpr_laamp_contract_schemes.1104.a: "Sometimes the most valuable notes are those left unplayed."
-
+cpr_laamp_contract_schemes.1104.t: "$cpr_laamp_1000_contract$：别样曲调"
+cpr_laamp_contract_schemes.1104.desc: "我开始演奏，但真正的表演在于我对[employer.GetTitledFirstName]的观察。我注意到[employer.GetHerHis]目光在某些物品上停留，当我在歌曲间提到某些话题时[employer.GetHerHis]姿势的变化。\n\n渐渐地，我将对话编织进表演中，引出[employer.GetTitledFirstNamePossessive]的兴趣和担忧。音乐变成了次要的，重点是我建立的这种联系——在这里[employer.GetSheHe]感到被真正倾听，可能是多年来的第一次。\n\n当我放下乐器时，[employer.GetTitledFirstName]自由地谈论着我怀疑很少分享的事情，相信[employer.GetSheHe]找到了知音，而没有意识到我精心套取了宝贵信息。"
+cpr_laamp_contract_schemes.1104.desc.outro: "\n\n'我没想到从一个普通艺人那里得到这样的...理解，'[employer.GetTitledFirstName]承认道，似乎没意识到[employer.GetSheHe]透露了多少。'你的天赋不止于音乐。'[employer.GetSheHe|U]慷慨支付，也许希望未来再谈——没意识到我通过这场看似简单的表演获得了优势。"
+cpr_laamp_contract_schemes.1104.a: "有时最有价值的音符是那些没有弹奏的。"
 # Failure (Diplomacy)
-cpr_laamp_contract_schemes.1105.t: "$cpr_laamp_1000_contract$: Discordant Notes"
-cpr_laamp_contract_schemes.1105.desc: "I had overestimated my musical abilities. What began as ambitious quickly devolved into embarrassment as my fingers fumbled over strings and my voice cracked on notes beyond my range.\n\nI tried to recover with simpler melodies, but by then [employer.GetTitledFirstName] had already begun exchanging pained glances with [employer.GetHerHis] attendants. When I accidentally snapped a string mid-performance, the sharp twang seemed to echo my failure throughout the chamber.\n\n'Perhaps that's... enough for tonight,' [employer.GetTitledFirstName] suggests diplomatically, though [employer.GetHerHis] grimace betrays [employer.GetHerHis] true feelings. 'I find I am more fatigued than I realized.'"
-cpr_laamp_contract_schemes.1105.desc.outro: "\n\nThere is no payment offered, only a swift dismissal and the burning shame of a performance best forgotten. As I depart, I overhear a courtier whisper, 'And to think we expected entertainment worthy of our [employer.GetTitleAsNameNoTooltip]!'"
-cpr_laamp_contract_schemes.1105.a: "Some talents are better left unclaimed."
+cpr_laamp_contract_schemes.1105.t: "$cpr_laamp_1000_contract$：不和谐音"
+cpr_laamp_contract_schemes.1105.desc: "我高估了自己的音乐能力。开始时雄心勃勃，很快就变成了尴尬，我的手指在琴弦上笨拙地移动，声音在超出我音域的音符上破裂。\n\n我尝试用更简单的旋律挽回，但那时[employer.GetTitledFirstName]已经开始与[employer.GetHerHis]侍从交换痛苦的眼神。当我在表演中不小心弄断一根琴弦时，刺耳的断裂声仿佛在整个房间里回荡着我的失败。\n\n'也许今晚就...到这里吧，'[employer.GetTitledFirstName]圆滑地建议，尽管[employer.GetHerHis]皱眉暴露了真实感受。'我发现我比想象中更疲惫。'"
+cpr_laamp_contract_schemes.1105.desc.outro: "\n\n没有报酬，只有迅速的遣散和最好被遗忘的表演带来的灼热羞耻。离开时，我听到一位朝臣低声说：'想想我们竟然期待能为我们的[employer.GetTitleAsNameNoTooltip]提供配得上的娱乐！'"
+cpr_laamp_contract_schemes.1105.a: "有些才能最好别声称拥有。"
 
 # Failure (Intrigue)
-cpr_laamp_contract_schemes.1106.t: "$cpr_laamp_1000_contract$: A Discord of Intentions"
-cpr_laamp_contract_schemes.1106.desc: "I begin to play, focusing more on observing [employer.GetTitledFirstName] than on the music itself. My fingers hit discordant notes as I search for vulnerabilities or secrets I might exploit.\n\nMy distraction becomes increasingly obvious as the melody falls apart. I attempt to cover the musical failures with clever conversation, but [employer.GetTitledFirstName]'s expression hardens with each probing question I interject between faltering notes.\n\n'I believe,' [employer.GetSheHe] finally states, raising a hand to silence my performance, 'that you are more interested in matters beyond your contract. Do you think me a fool to be so easily manipulated?'\n\nThe atmosphere in the chamber chills instantly. What I had intended as subtle information gathering has been perceived as invasive and disrespectful."
-cpr_laamp_contract_schemes.1106.desc.outro: "\n\n'You may leave now,' [employer.GetTitledFirstName] dismisses me coldly. 'I have no use for entertainers who seek to pry rather than perform.' Not only is payment withheld, but I leave having made an enemy who now watches me with heightened suspicion."
-cpr_laamp_contract_schemes.1106.a: "My subtlety needs considerable refinement."
+cpr_laamp_contract_schemes.1106.t: "$cpr_laamp_1000_contract$：意图不谐"
+cpr_laamp_contract_schemes.1106.desc: "我开始演奏，更专注于观察[employer.GetTitledFirstName]而非音乐本身。当我在寻找可利用的弱点或秘密时，我的手指弹出了不和谐的音符。\n\n随着旋律崩溃，我的分心越来越明显。我试图用聪明的对话掩盖音乐上的失败，但[employer.GetTitledFirstName]的表情随着我在断断续续的音符间插入的每个试探性问题而变得更加严厉。\n\n'我相信，'[employer.GetSheHe]最终抬手制止我的表演，'你对合约之外的事情更感兴趣。你以为我是这么容易被操纵的傻瓜吗？'\n\n房间里的气氛瞬间冰冷。我本想巧妙收集信息，却被认为是有失尊重地打探。"
+cpr_laamp_contract_schemes.1106.desc.outro: "\n\n'你现在可以走了，'[employer.GetTitledFirstName]冷冷地遣散我。'我对只想打探而非表演的艺人没有兴趣。'不仅没有报酬，我还在惹上一个现在用高度怀疑的目光看着我的敌人后离开了。"
+cpr_laamp_contract_schemes.1106.a: "我的巧妙手段需要大大改进。"
 
 # 2. Poetry Recitation Contract
-cpr_laamp_contract_schemes.1200.t: "$cpr_laamp_1000_contract$: Words to Stir the Soul"
-cpr_laamp_contract_schemes.1200.desc: "'Poetry...' [employer.GetTitledFirstName] considers thoughtfully. 'The court bards offer empty flatteries, but true poetry — that which speaks to the heart's condition — is rare in these halls.'\n\n[employer.GetSheHe|U] settles into [employer.GetHerHis] chair, swirling wine in a goblet. 'Bring me tales of distant lands, verses that stir the soul. Let your words paint pictures my eyes may never see, speak truths courtiers dare not utter. Show me your mastery of language, if you truly possess it.'"
-cpr_laamp_contract_schemes.1200.a: "I shall weave words to captivate your mind and heart." # Diplomacy Challenge
-cpr_laamp_contract_schemes.1200.b: "I shall craft verses that speak to your deepest desires." # Learning Challenge
-cpr_laamp_contract_schemes.1200.c: "I shall have my follower [follower.GetTitledFirstName] recite; [follower.GetSheHe] has studied the poetic arts." # follower exists
-cpr_laamp_contract_schemes.1200.c.no_follower: "I have no followers versed in the poetic arts who could serve in my place."
+cpr_laamp_contract_schemes.1200.t: "$cpr_laamp_1000_contract$：触动灵魂的诗句"
+cpr_laamp_contract_schemes.1200.desc: "'诗歌...'[employer.GetTitledFirstName]若有所思地说。'宫廷诗人只会空洞奉承，但真正的诗歌——那些直击心灵的诗句——在这些大厅里很罕见。'\n\n[employer.GetSheHe|U]在椅子上坐定，晃动着酒杯中的酒。'给我带来遥远国度的故事，能触动灵魂的诗句。让你的文字描绘我双眼可能永远看不到的画面，说出朝臣不敢说出的真相。如果你真有这份才能，就展示你对语言的掌握吧。'"
+cpr_laamp_contract_schemes.1200.a: "我将编织诗句，俘获您的心灵。" # 外交挑战
+cpr_laamp_contract_schemes.1200.b: "我将创作反映您内心渴望的诗句。" # 学识挑战
+cpr_laamp_contract_schemes.1200.c: "我将让我的追随者[follower.GetTitledFirstName]朗诵；[follower.GetSheHe]精通诗歌艺术。" # 存在追随者
+cpr_laamp_contract_schemes.1200.c.no_follower: "我没有精通诗歌艺术的追随者可以代劳。"
 
 # Tooltips
-cpr_laamp_contract_schemes.1200.a.tt.success: "Your verses captivate [employer.GetTitledFirstName], transporting [employer.GetHerHim] beyond the confines of [employer.GetHerHis] position. Your payment will be generous, and your reputation for artistry enhanced."
-cpr_laamp_contract_schemes.1200.a.tt.failure: "Your poetic efforts fall flat, boring or confusing [employer.GetTitledFirstName]. You will receive no payment, and your reputation as a wordsmith suffers."
-cpr_laamp_contract_schemes.1200.b.tt.success: "Your scholarly approach to poetry impresses [employer.GetTitledFirstName], who appreciates both beauty and intellectual depth. You receive payment and gain respect for your erudition."
-cpr_laamp_contract_schemes.1200.b.tt.failure: "Your academic approach overwhelms the artistry, turning what should be entertainment into tedious lecturing. [employer.GetTitledFirstName] dismisses you without payment, bored rather than impressed."
-cpr_laamp_contract_schemes.1200.c.tt.success: "Your follower's poetic mastery captivates [employer.GetTitledFirstName], reflecting well on your judgment in companions. You receive generous payment and enhance both your reputations."
-cpr_laamp_contract_schemes.1200.c.tt.no_follower: "You lack an available [follower|E] with at least 18 [diplomacy|E] and a $trait_lifestyle_poet$ trait to delegate to."
-
+cpr_laamp_contract_schemes.1200.a.tt.success: "你的诗句迷住了[employer.GetTitledFirstName]，将[employer.GetHerHim]带离[employer.GetHerHis]地位的束缚。你的报酬会很丰厚，你作为艺术家的声誉也会提升。"
+cpr_laamp_contract_schemes.1200.a.tt.failure: "你的诗歌尝试平淡无奇，让[employer.GetTitledFirstName]感到无聊或困惑。你不会得到报酬，你作为诗人的声誉也会受损。"
+cpr_laamp_contract_schemes.1200.b.tt.success: "你对诗歌的学术态度给[employer.GetTitledFirstName]留下深刻印象，[employer.GetSheHe]欣赏其中的美感和思想深度。你会得到报酬，并因博学获得尊重。"
+cpr_laamp_contract_schemes.1200.b.tt.failure: "你的学术方式压倒了艺术性，把本该是娱乐变成了乏味的说教。[employer.GetTitledFirstName]没有支付报酬就遣散了你，感到无聊而非印象深刻。"
+cpr_laamp_contract_schemes.1200.c.tt.success: "你追随者的诗歌才华迷住了[employer.GetTitledFirstName]，反映了你选择同伴的眼光。你会得到丰厚报酬，提升双方的声誉。"
+cpr_laamp_contract_schemes.1200.c.tt.no_follower: "你缺少可用的[follower|E]，其[diplomacy|E]至少为18且拥有$trait_lifestyle_poet$特质。"
 # Exceptional Success (Diplomacy)
-cpr_laamp_contract_schemes.1201.t: "$cpr_laamp_1000_contract$: Verses Like Spellcraft"
-cpr_laamp_contract_schemes.1201.desc: "I begin with verses of my own creation, carefully crafted to flatter without appearing obsequious. As [employer.GetTitledFirstName] relaxes, I transition to epic poems of heroes whose circumstances mirror [employer.GetHerHis] own struggles, subtly emphasizing their ultimate triumphs.\n\nMy voice rises and falls with practiced cadence, painting pictures with words alone. I sprinkle in philosophical musings from eastern sages, bawdy couplets that draw unexpected laughter, and tender sonnets that speak to the heart's quiet yearnings.\n\nBy the time I finish with a stirring ode to legacy and remembrance, [employer.GetTitledFirstName] leans forward, completely absorbed in the worlds I've conjured from thin air."
-cpr_laamp_contract_schemes.1201.desc.outro: "\n\n'In all my years,' [employer.GetTitledFirstName] says when the final verse ends, 'few have shown me worlds so vivid without leaving this chamber. You have a rare gift.'\n\n[employer.GetSheHe|U] signals to a servant who brings forward not just coin, but a small token of appreciation — a ring bearing [employer.GetHerHis] house symbol. 'That you might remember this evening as fondly as I shall.'"
-cpr_laamp_contract_schemes.1201.a: "Words, like seeds, may bloom in unexpected places."
+cpr_laamp_contract_schemes.1201.t: "$cpr_laamp_1000_contract$：如咒语般的诗句"
+cpr_laamp_contract_schemes.1201.desc: "我从自己创作的诗句开始，精心设计既奉承又不显得谄媚。随着[employer.GetTitledFirstName]放松下来，我转向史诗，诗中英雄的处境与[employer.GetHerHis]自己的挣扎相似，巧妙地强调他们最终的胜利。\n\n我的声音随着练习过的节奏起伏，仅用文字描绘画面。我穿插东方圣人的哲学沉思、引发意外笑声的粗俗对句，以及诉说心灵静谧渴望的温柔十四行诗。\n\n当我以一首关于遗产和记忆的激昂颂歌结束时，[employer.GetTitledFirstName]身体前倾，完全沉浸在我从稀薄空气中召唤出的世界里。"
+cpr_laamp_contract_schemes.1201.desc.outro: "\n\n'在我这些年里，'最后一句诗结束时[employer.GetTitledFirstName]说，'很少有人能不离开这个房间就向我展示如此生动的世界。你有罕见的天赋。'\n\n[employer.GetSheHe|U]示意仆人不仅送来金币，还有一件小礼物——一枚刻有[employer.GetHerHis]家族符号的戒指。'愿你能和我一样珍藏这个夜晚。'"
+cpr_laamp_contract_schemes.1201.a: "文字如种子，可能在意想不到的地方开花。"
 
 # Success (Diplomacy)
-cpr_laamp_contract_schemes.1202.t: "$cpr_laamp_1000_contract$: Tales Well Told"
-cpr_laamp_contract_schemes.1202.desc: "Though not all my rhymes flow perfectly, the stories I weave capture [employer.GetTitledFirstNamePossessive] imagination. I recite tales of valor and romance collected during my travels, adapting them slightly to better resonate with my audience.\n\nWhen I falter momentarily in remembering a particular verse, I improvise with convincing confidence. [employer.GetTitledFirstName] nods appreciatively at a clever turn of phrase, seemingly content with my modest talents."
-cpr_laamp_contract_schemes.1202.desc.outro: "\n\n'You have a gift for storytelling,' [employer.GetTitledFirstName] acknowledges when I conclude. 'It has been a pleasant diversion.' [employer.GetSheHe|U] provides fair payment for my efforts, clearly satisfied if not entirely transported by the experience."
-cpr_laamp_contract_schemes.1202.a: "Even simple words can paint a thousand pictures."
-
+cpr_laamp_contract_schemes.1202.t: "$cpr_laamp_1000_contract$：妙语连珠"
+cpr_laamp_contract_schemes.1202.desc: "尽管并非所有韵律都完美流畅，但我讲述的故事仍捕获了[employer.GetTitledFirstNamePossessive]的想象。我朗诵旅途中收集的英勇与浪漫传说，稍加改编以更契合听众。\n\n当我暂时忘记某段诗句时，我自信地即兴发挥。[employer.GetTitledFirstName]对一个巧妙的措辞赞赏地点头，似乎对我的普通才能感到满足。"
+cpr_laamp_contract_schemes.1202.desc.outro: "\n\n'你有讲故事的天赋，'当我结束时[employer.GetTitledFirstName]承认道。'这是个愉快的消遣。'[employer.GetSheHe|U]为我的努力提供了公平报酬，显然对这个体验虽不完全沉醉但很满意。"
+cpr_laamp_contract_schemes.1202.a: "简单的文字也能描绘万千图景。"
 # Follower Success
-cpr_laamp_contract_schemes.1203.t: "$cpr_laamp_1000_contract$: A Wordsmith's Craft"
-cpr_laamp_contract_schemes.1203.desc: "[follower.GetTitledFirstName] steps forward with the quiet confidence of one who has performed before royalty. As [follower.GetSheHe] begins to speak, the very air seems to still in reverence to [follower.GetHerHis] words.\n\nProse becomes music, and poetry becomes truth as [follower.GetFirstNameNoTooltip] weaves tales that transport [employer.GetTitledFirstName] far beyond the confines of [employer.GetHerHis] position. I watch with pride as my companion demonstrates the power of language wielded by a true master."
-cpr_laamp_contract_schemes.1203.desc.outro: "\n\n'Your [follower.GetTitledFirstName] possesses true artistry,' [employer.GetTitledFirstName] declares when the recitation concludes. 'You choose your companions wisely.' [employer.GetSheHe|U] rewards us generously, clearly moved by [follower.GetFirstNamePossessive] performance."
-cpr_laamp_contract_schemes.1203.a: "A master's words carry weight beyond their sound."
+cpr_laamp_contract_schemes.1203.t: "$cpr_laamp_1000_contract$：文字匠艺"
+cpr_laamp_contract_schemes.1203.desc: "[follower.GetTitledFirstName]带着曾在皇室面前表演过的从容自信走上前。当[follower.GetSheHe]开始朗诵时，空气似乎都静止以向[follower.GetHerHis]文字致敬。\n\n散文化作音乐，诗歌成为真理，[follower.GetFirstNameNoTooltip]讲述的故事将[employer.GetTitledFirstName]带离[employer.GetHerHis]地位的束缚。我骄傲地看着我的同伴展示真正大师驾驭语言的力量。"
+cpr_laamp_contract_schemes.1203.desc.outro: "\n\n'你的[follower.GetTitledFirstName]拥有真正的艺术性，'朗诵结束时[employer.GetTitledFirstName]宣布。'你选择同伴很有眼光。'[employer.GetSheHe|U]慷慨奖励我们，显然被[follower.GetFirstNamePossessive]的表演打动。"
+cpr_laamp_contract_schemes.1203.a: "大师的文字承载着超越声音的重量。"
 
 # Success (Learning)
-cpr_laamp_contract_schemes.1204.t: "$cpr_laamp_1000_contract$: Scholar's Verses"
-cpr_laamp_contract_schemes.1204.desc: "Rather than rely solely on entertainment value, I draw on my scholarly knowledge to present verses with historical and philosophical depth. I recite ancient poems in their original tongues before translating, explaining the cultural contexts that give them deeper meaning.\n\nI compare rhetorical techniques across traditions, noting how certain metaphors transcend cultural boundaries. [employer.GetTitledFirstName] engages intellectually, asking questions that reveal [employer.GetHerHis] own education — a side [employer.GetSheHe] perhaps rarely has opportunity to display.\n\nWhat begins as recitation evolves into scholarly discourse, with poetry as its foundation. [employer.GetTitledFirstName] seems to appreciate being treated as a mind worth engaging rather than merely an audience to be diverted."
-cpr_laamp_contract_schemes.1204.desc.outro: "\n\n'Most entertainers assume I desire only distraction,' [employer.GetTitledFirstName] confides as our session concludes. 'You recognized a hunger for substance as well as beauty.' [employer.GetSheHe|U] compensates me well, with a look that suggests [employer.GetSheHe] will remember this encounter differently from most."
-cpr_laamp_contract_schemes.1204.a: "True poetry enlightens as it entertains."
+cpr_laamp_contract_schemes.1204.t: "$cpr_laamp_1000_contract$：学者诗篇"
+cpr_laamp_contract_schemes.1204.desc: "我没有仅依赖娱乐价值，而是运用学术知识呈现具有历史和哲学深度的诗句。我用原始语言朗诵古诗后再翻译，解释赋予它们更深含义的文化背景。\n\n我比较不同传统的修辞技巧，指出某些隐喻如何超越文化界限。[employer.GetTitledFirstName]在智力层面参与，提出的问题展现了[employer.GetHerHis]自己的教育——这可能是[employer.GetSheHe]很少有机会展示的一面。\n\n朗诵逐渐演变成学术讨论，以诗歌为基础。[employer.GetTitledFirstName]似乎很欣赏被当作值得交流的智者而非只需消遣的观众。"
+cpr_laamp_contract_schemes.1204.desc.outro: "\n\n'多数艺人以为我只想要消遣，'我们结束时[employer.GetTitledFirstName]坦言。'你认识到我对实质和美的渴望。'[employer.GetSheHe|U]丰厚地补偿了我，眼神暗示[employer.GetSheHe]会以不同于大多数相遇的方式记住这次会面。"
+cpr_laamp_contract_schemes.1204.a: "真正的诗歌在娱乐的同时启迪心灵。"
 
 # Failure (Diplomacy)
-cpr_laamp_contract_schemes.1205.t: "$cpr_laamp_1000_contract$: Empty Verses"
-cpr_laamp_contract_schemes.1205.desc: "I had prepared what I thought were moving verses, but from the moment I began, I could sense [employer.GetTitledFirstNamePossessive] attention drifting. My carefully selected poems — perhaps too scholarly or too foreign for local tastes — fell flat in the space between us.\n\nWorse still, I found myself repeating sections I had already recited, my mind blanking at crucial moments. What should have been a captivating journey through words became an awkward trudge through increasingly confused narratives.\n\n[employer.GetTitledFirstName] attempted politeness at first, nodding at appropriate intervals, but eventually began glancing toward the door with undisguised longing."
-cpr_laamp_contract_schemes.1205.desc.outro: "\n\n'I believe we've had quite enough... culture for one evening,' [employer.GetSheHe] finally interrupts, making no attempt to hide a yawn. 'Court business calls early tomorrow.'\n\nNo coin exchanges hands, and it's clear that my name will not be mentioned favorably in this court's gossip."
-cpr_laamp_contract_schemes.1205.a: "Words failed me when I needed them most."
+cpr_laamp_contract_schemes.1205.t: "$cpr_laamp_1000_contract$：空洞诗句"
+cpr_laamp_contract_schemes.1205.desc: "我准备了自认为动人的诗句，但从一开始就能感觉到[employer.GetTitledFirstNamePossessive]的注意力在游离。我精心挑选的诗——或许太过学术或太异域而不合当地口味——在我们之间显得平淡无奇。\n\n更糟的是，我发现自己重复已经朗诵过的段落，在关键时刻大脑一片空白。本该是通过文字的迷人旅程变成了一段越来越混乱叙事的尴尬跋涉。\n\n[employer.GetTitledFirstName]起初试图保持礼貌，在适当的时候点头，但最终开始不加掩饰地渴望看向门口。"
+cpr_laamp_contract_schemes.1205.desc.outro: "\n\n'我想今晚我们已经受够了...文化熏陶，'[employer.GetSheHe]最终打断我，毫不掩饰地打了个哈欠。'明天一早还有宫廷事务。'\n\n没有金币易手，显然我的名字不会在宫廷闲谈中被 favorably 提及。"
+cpr_laamp_contract_schemes.1205.a: "在最需要时，文字辜负了我。"
 
 # Failure (Learning)
-cpr_laamp_contract_schemes.1206.t: "$cpr_laamp_1000_contract$: Scholarly Pretensions"
-cpr_laamp_contract_schemes.1206.desc: "I attempt to elevate my recitation with scholarly references and philosophical insights, hoping to impress [employer.GetTitledFirstName] with intellectual depth rather than mere artistic expression. My verses become weighted with citations of ancient texts and complex theological concepts.\n\nAs I expound on the metaphysical implications of a particularly obscure simile, I notice [employer.GetTitledFirstNamePossessive] attention wandering. What I intended as profound discourse has become tedious pedantry, the poetry buried beneath layers of academic posturing.\n\n'I believe,' [employer.GetSheHe] finally interrupts with thinly veiled impatience, 'that I requested entertainment, not a lecture. Perhaps you misunderstood the nature of our arrangement?'"
-cpr_laamp_contract_schemes.1206.desc.outro: "\n\n'That will be all for tonight,' [employer.GetTitledFirstName] dismisses me with a wave, barely concealing a yawn. 'Next time, I shall be more specific in requesting someone who understands the difference between recitation and dissertation.' I depart without payment, my scholarly approach having thoroughly failed to provide the diversion sought."
-cpr_laamp_contract_schemes.1206.a: "Knowledge without artistry is merely information."
+cpr_laamp_contract_schemes.1206.t: "$cpr_laamp_1000_contract$：学究做派"
+cpr_laamp_contract_schemes.1206.desc: "我试图用学术引用和哲学见解提升朗诵水平，希望用智力深度而非艺术表达打动[employer.GetTitledFirstName]。我的诗句因古代文本引用和复杂神学概念而变得沉重。\n\n当我详细阐述一个特别晦涩明喻的形而上学含义时，我注意到[employer.GetTitledFirstNamePossessive]的注意力在游移。我想要的深刻讨论变成了乏味的学究气，诗歌被层层学术姿态掩埋。\n\n'我相信，'[employer.GetSheHe]最终带着勉强掩饰的不耐烦打断我，'我要求的是娱乐而非讲座。也许你误解了我们约定的性质？'"
+cpr_laamp_contract_schemes.1206.desc.outro: "\n\n'今晚到此为止，'[employer.GetTitledFirstName]挥手遣散我，几乎掩饰不住哈欠。'下次我会更明确地要求一个懂得朗诵与论文区别的人。'我没有得到报酬就离开了，我的学术方式彻底未能提供所寻求的消遣。"
+cpr_laamp_contract_schemes.1206.a: "没有艺术的知识只是信息。"
 
 # 3. Dance Performance Contract
-cpr_laamp_contract_schemes.1300.t: "$cpr_laamp_1000_contract$: Movement and Grace"
-cpr_laamp_contract_schemes.1300.desc: "[employer.GetTitledFirstName] raises an eyebrow at my mention of dance. 'Now that is an offer rarely made by those of your profession,' [employer.GetSheHe] remarks, interest clearly piqued.\n\n'The court dances are so formal, so rigid with tradition,' [employer.GetSheHe] continues, signaling for music. 'Show me something different — movements from distant lands, perhaps, or styles too provocative for formal occasions. Let me see what the common folk or foreign courts enjoy when eyes of judgment are not upon them.'"
-cpr_laamp_contract_schemes.1300.a: "I shall dance with all the grace and skill I possess." # Diplomacy Challenge
-cpr_laamp_contract_schemes.1300.b: "I may surprise you with a martial dance few have witnessed." # Prowess Challenge
-cpr_laamp_contract_schemes.1300.c: "I shall have my follower [follower.GetTitledFirstName] perform; [follower.GetSheHe] is trained in many dance traditions." # follower exists
-cpr_laamp_contract_schemes.1300.c.no_follower: "None of my followers are skilled enough in dance to perform this service."
+cpr_laamp_contract_schemes.1300.t: "$cpr_laamp_1000_contract$：优雅舞姿"
+cpr_laamp_contract_schemes.1300.desc: "[employer.GetTitledFirstName]对我提到的舞蹈挑了挑眉。'这倒是你们这行少见的提议，'[employer.GetSheHe]评论道，明显被激起了兴趣。\n\n'宫廷舞蹈太正式，太拘泥传统，'[employer.GetSheHe]继续道，示意奏乐。'给我看点不一样的——或许是遥远国度的动作，或是正式场合太过挑逗的舞姿。让我看看平民或异国宫廷在没有评判目光时享受什么。'"
+cpr_laamp_contract_schemes.1300.a: "我将以全部的优雅和技巧起舞。" # 外交挑战
+cpr_laamp_contract_schemes.1300.b: "我可能会用少有人见过的战舞让您惊讶。" # 勇武挑战
+cpr_laamp_contract_schemes.1300.c: "我将让我的追随者[follower.GetTitledFirstName]表演；[follower.GetSheHe]受过多种舞蹈传统训练。" # 存在追随者
+cpr_laamp_contract_schemes.1300.c.no_follower: "我没有精通舞蹈的追随者能提供这项服务。"
 
 # Tooltips
-cpr_laamp_contract_schemes.1300.a.tt.success: "Your dance mesmerizes [employer.GetTitledFirstName], your movements speaking a language beyond words. Your reward will be substantial, and your grace remembered long after the performance ends."
-cpr_laamp_contract_schemes.1300.a.tt.failure: "Your dancing proves awkward and unimpressive, embarrassing both yourself and [employer.GetTitledFirstName]. You receive no payment and leave with your reputation diminished."
-cpr_laamp_contract_schemes.1300.b.tt.success: "Your warrior's dance demonstrates strength and precision that impresses [employer.GetTitledFirstName]. You receive payment and earn respect for showing the beauty in martial discipline."
-cpr_laamp_contract_schemes.1300.b.tt.failure: "Your attempt at a martial dance results in clumsy movements and nearly damaged property. [employer.GetTitledFirstName] dismisses you without payment, your physical prowess clearly better suited to the battlefield than the ballroom."
-cpr_laamp_contract_schemes.1300.c.tt.success: "Your follower's graceful movements thoroughly impress [employer.GetTitledFirstName], reflecting well on your judgment in companions. You receive generous payment and enhance both your reputations."
-cpr_laamp_contract_schemes.1300.c.tt.no_follower: "You lack an available [follower|E] with at least 18 [diplomacy|E] and 50 [trait_level_track_xp|E] in $trait_lifestyle_reveler$ to delegate to."
+cpr_laamp_contract_schemes.1300.a.tt.success: "你的舞姿迷住了[employer.GetTitledFirstName]，你的动作诉说着超越语言的表达。你的报酬会很丰厚，你的优雅将在表演结束后被长久铭记。"
+cpr_laamp_contract_schemes.1300.a.tt.failure: "你的舞蹈笨拙平庸，让你自己和[employer.GetTitledFirstName]都感到尴尬。你没有得到报酬，带着受损的声誉离开。"
+cpr_laamp_contract_schemes.1300.b.tt.success: "你的战舞展示了力量和精准，给[employer.GetTitledFirstName]留下深刻印象。你得到报酬并因展示武学纪律中的美感而获得尊重。"
+cpr_laamp_contract_schemes.1300.b.tt.failure: "你尝试的战舞导致笨拙的动作和几乎损坏的财物。[employer.GetTitledFirstName]没有支付报酬就遣散了你，你的身体显然更适合战场而非舞厅。"
+cpr_laamp_contract_schemes.1300.c.tt.success: "你追随者的优雅动作深深打动了[employer.GetTitledFirstName]，反映了你选择同伴的眼光。你会得到丰厚报酬，提升双方的声誉。"
+cpr_laamp_contract_schemes.1300.c.tt.no_follower: "你缺少可用的[follower|E]，其[diplomacy|E]至少为18且$trait_lifestyle_reveler$的[trait_level_track_xp|E]达到50。"
 
 # Exceptional Success (Diplomacy)
-cpr_laamp_contract_schemes.1301.t: "$cpr_laamp_1000_contract$: Body as Poetry"
-cpr_laamp_contract_schemes.1301.desc: "I request permission to rearrange the furniture slightly, creating space at the center of the chamber. [employer.GetTitledFirstName] watches with curiosity as I prepare, then signal for the musicians [employer.GetSheHe] has provided to begin.\n\nMy first movements are controlled and precise — the formal patterns favored in noble courts across the realm. But as [employer.GetTitledFirstNamePossessive] interest grows, I gradually incorporate elements from dances I've learned in my travels: the passionate spins of Iberian courts, the hypnotic hand gestures of eastern temples, the earthy vigor of common festivals.\n\nMy body speaks a language beyond words, telling stories of passion, loss, triumph, and devotion. I see [employer.GetTitledFirstNamePossessive] breath quicken at moments of tension, [employer.GetHerHis] smile widen during playful sequences."
-cpr_laamp_contract_schemes.1301.desc.outro: "\n\nWhen the final notes fade and the dance concludes, [employer.GetTitledFirstName] applauds with genuine enthusiasm — perhaps the first sincere emotion [employer.GetSheHe] has displayed since my arrival.\n\n'For a time, I forgot my station and all its burdens,' [employer.GetSheHe] admits, color high in [employer.GetHerHis] cheeks. 'A rare gift indeed.' [employer.GetSheHe|U] rewards me generously, the heavy purse a testament to how thoroughly [employer.GetSheHe] was transported by the performance."
-cpr_laamp_contract_schemes.1301.a: "The body remembers what the mind forgets."
+cpr_laamp_contract_schemes.1301.t: "$cpr_laamp_1000_contract$：身体诗篇"
+cpr_laamp_contract_schemes.1301.desc: "我请求允许稍微重新布置家具，在房间中央腾出空间。[employer.GetTitledFirstName]好奇地看着我准备，然后示意[employer.GetSheHe]提供的乐师开始演奏。\n\n我的起始动作克制而精准——是王国各地贵族宫廷青睐的正式模式。但随着[employer.GetTitledFirstNamePossessive]兴趣增长，我逐渐融入旅行中学到的元素：伊比利亚宫廷的热情旋转、东方寺庙的催眠手势、普通节日的质朴活力。\n\n我的身体诉说着超越语言的故事，讲述激情、失落、胜利和奉献。我看到[employer.GetTitledFirstNamePossessive]呼吸在紧张时刻加快，[employer.GetHerHis]笑容在俏皮段落绽放。"
+cpr_laamp_contract_schemes.1301.desc.outro: "\n\n当最后一个音符消散舞蹈结束时，[employer.GetTitledFirstName]真诚地鼓掌——可能是我到来后[employer.GetSheHe]表现出的第一个真实情感。\n\n'有一段时间，我忘记了自己的地位和所有负担，'[employer.GetSheHe]承认，脸颊泛红。'确实是难得的礼物。'[employer.GetSheHe|U]慷慨奖励我，沉甸甸的钱袋证明[employer.GetSheHe]完全被表演吸引。"
+cpr_laamp_contract_schemes.1301.a: "身体记得心灵遗忘的东西。"
 
 # Success (Diplomacy)
-cpr_laamp_contract_schemes.1302.t: "$cpr_laamp_1000_contract$: Rhythms of Life"
-cpr_laamp_contract_schemes.1302.desc: "Though I am no court performer, I move with enough grace to hold [employer.GetTitledFirstNamePossessive] attention. My steps follow the traditional patterns, occasionally embellished with flourishes I've observed in taverns and town squares during my travels.\n\nWhat I lack in technical precision, I make up for with enthusiasm and a willingness to occasionally make light of my own missteps. [employer.GetTitledFirstName] seems to appreciate the authenticity of my efforts, tapping [employer.GetHerHis] foot in time with the music."
-cpr_laamp_contract_schemes.1302.desc.outro: "\n\n'Refreshingly unpretentious,' [employer.GetTitledFirstName] comments when I finish, slightly out of breath. 'A welcome change from the calculated perfection of court dancers.' [employer.GetSheHe|U] provides fair payment, seemingly content with the modest entertainment."
-cpr_laamp_contract_schemes.1302.a: "Even imperfect dance can speak true."
+cpr_laamp_contract_schemes.1302.t: "$cpr_laamp_1000_contract$：生命韵律"
+cpr_laamp_contract_schemes.1302.desc: "虽然称不上宫廷舞者，但我的动作足够优雅以保持[employer.GetTitledFirstNamePossessive]的注意力。我的舞步遵循传统模式，偶尔加入旅途中在酒馆和市集观察到的华丽动作。\n\n技术精度上的不足，我用热情和偶尔拿自己的失误开玩笑的意愿来弥补。[employer.GetTitledFirstName]似乎欣赏我努力的真实性，[employer.GetHerHis]的脚跟着音乐节奏轻拍。"
+cpr_laamp_contract_schemes.1302.desc.outro: "\n\n'清新不做作，'我结束时[employer.GetTitledFirstName]评论道，微微气喘。'与宫廷舞者精心计算的完美相比是个可喜的变化。'[employer.GetSheHe|U]提供了公平报酬，似乎对这普通的娱乐感到满足。"
+cpr_laamp_contract_schemes.1302.a: "即使不完美的舞蹈也能诉说真实。"
 
 # Follower Success
-cpr_laamp_contract_schemes.1303.t: "$cpr_laamp_1000_contract$: Master of Movement"
-cpr_laamp_contract_schemes.1303.desc: "[follower.GetTitledFirstName] transforms the very space around [follower.GetHerHim] as [follower.GetSheHe] begins to dance. Each movement flows into the next with such natural grace that one forgets they are watching a performance rather than witnessing some elemental force of nature.\n\n[employer.GetTitledFirstName] watches with undisguised wonder as [follower.GetFirstNameNoTooltip] weaves patterns in the air, telling stories without words. Even the servants pause in their duties, momentarily entranced by the display."
-cpr_laamp_contract_schemes.1303.desc.outro: "\n\n'Your [follower.GetTitledFirstName] moves as though [follower.GetSheHe] were born to dance,' [employer.GetTitledFirstName] remarks, clearly impressed. 'I shall remember this performance for years to come.' [employer.GetSheHe|U] rewards us handsomely, appreciation evident in [employer.GetHerHis] generous payment."
-cpr_laamp_contract_schemes.1303.a: "True mastery makes difficult things appear effortless."
+cpr_laamp_contract_schemes.1303.t: "$cpr_laamp_1000_contract$：动作大师"
+cpr_laamp_contract_schemes.1303.desc: "[follower.GetTitledFirstName]一开始跳舞就改变了周围的空间。每个动作都自然流畅地衔接，让人忘记是在观看表演而非见证某种自然力量的展现。\n\n[employer.GetTitledFirstName]毫不掩饰惊奇地看着[follower.GetFirstNameNoTooltip]在空中编织图案，不用语言讲述故事。连仆人都停下工作，一时被这场表演迷住。"
+cpr_laamp_contract_schemes.1303.desc.outro: "\n\n'你的[follower.GetTitledFirstName]跳得像是天生就该跳舞，'[employer.GetTitledFirstName]赞叹道，显然印象深刻。'我会记住这场表演很多年。'[employer.GetSheHe|U]慷慨奖励我们，从[employer.GetHerHis]丰厚的报酬中明显看出欣赏之情。"
+cpr_laamp_contract_schemes.1303.a: "真正的精通让困难之事看起来轻而易举。"
 
 # Success (Prowess)
-cpr_laamp_contract_schemes.1304.t: "$cpr_laamp_1000_contract$: Warrior's Dance"
-cpr_laamp_contract_schemes.1304.desc: "I request space and a moment to prepare. Rather than the courtly dance [employer.GetTitledFirstName] likely expected, I begin a warrior's display from distant lands — part combat training, part ritual performance.\n\nMy movements demonstrate strength and control, each position flowing into the next with precision honed through martial discipline. What I perform is not merely entertainment but the deadly grace of combat transformed into art.\n\n[employer.GetTitledFirstName] watches with growing fascination, occasionally leaning forward when a particularly complex sequence unfolds. I can see [employer.GetSheHe] recognizes the martial foundation beneath the performance — and respects it."
-cpr_laamp_contract_schemes.1304.desc.outro: "\n\n'Remarkable,' [employer.GetTitledFirstName] observes when I finish, a sheen of exertion evident on my brow. 'Beauty and deadliness in equal measure. I had not considered how closely they might be allied.' [employer.GetSheHe|U] pays me well, with the respect one warrior shows another rather than mere appreciation for entertainment."
-cpr_laamp_contract_schemes.1304.a: "The dance of blades knows its own beauty."
+cpr_laamp_contract_schemes.1304.t: "$cpr_laamp_1000_contract$：战士之舞"
+cpr_laamp_contract_schemes.1304.desc: "我请求空间和时间准备。我没有跳[employer.GetTitledFirstName]可能期待的宫廷舞，而是开始表演来自遥远国度的战士展示——部分是战斗训练，部分是仪式表演。\n\n我的动作展示了力量和掌控，每个姿势都流畅地转入下一个，带着通过军事训练磨练出的精准。我表演的不只是娱乐，而是将致命的战斗优雅转化为艺术。\n\n[employer.GetTitledFirstName]越来越着迷地观看，在特别复杂的动作展开时偶尔前倾。我能看出[employer.GetSheHe]认出了表演背后的军事基础——并且尊重它。"
+cpr_laamp_contract_schemes.1304.desc.outro: "\n\n'了不起，'我结束时[employer.GetTitledFirstName]评价道，我的额头明显有汗珠。'美与致命性并存。我从没想过它们能如此紧密相连。'[employer.GetSheHe|U]丰厚地支付了我，带着一个战士对另一个战士的尊重，而不仅仅是对娱乐的欣赏。"
+cpr_laamp_contract_schemes.1304.a: "刀锋之舞自有其美感。"
 
 # Failure (Diplomacy)
-cpr_laamp_contract_schemes.1305.t: "$cpr_laamp_1000_contract$: Stumbling Steps"
-cpr_laamp_contract_schemes.1305.desc: "My confidence in my dancing abilities proved woefully misplaced. What should have been graceful movements resembled more the awkward flailing of a newborn foal, and my attempts at exotic flourishes only highlighted my lack of proper training.\n\nMatters worsened when I misjudged the space and sent a valuable vase crashing to the floor. [employer.GetTitledFirstName] winced visibly, [employer.GetHerHis] initial polite interest transforming into barely concealed mortification.\n\nBy the time I accidentally stepped on the hem of my own garment and stumbled forward, [employer.GetTitledFirstName] had raised a hand to halt the suffering of all present."
-cpr_laamp_contract_schemes.1305.desc.outro: "\n\n'I think we've seen quite enough,' [employer.GetSheHe] says, voice strained with forced courtesy. 'Perhaps your talents lie... elsewhere.'\n\nI am shown out without payment, the musicians exchanging knowing looks as I pass. This performance will not be securing me future contracts."
-cpr_laamp_contract_schemes.1305.a: "Some dances are best left to the imagination."
+cpr_laamp_contract_schemes.1305.t: "$cpr_laamp_1000_contract$：踉跄舞步"
+cpr_laamp_contract_schemes.1305.desc: "我对舞蹈能力的自信被证明大错特错。本该优雅的动作更像新生小马的笨拙挣扎，而我尝试的异域花招只凸显了我缺乏正规训练。\n\n当我对空间判断失误撞翻一个贵重花瓶时，情况变得更糟。[employer.GetTitledFirstName]明显瑟缩了一下，[employer.GetHerHis]最初的礼貌兴趣变成了几乎掩饰不住的惊恐。\n\n当我意外踩到自己衣服下摆向前绊倒时，[employer.GetTitledFirstName]抬手制止了在场所有人的痛苦。"
+cpr_laamp_contract_schemes.1305.desc.outro: "\n\n'我想我们已经看够了，'[employer.GetSheHe]说，声音因强装的礼貌而紧绷。'也许你的才能...在别处。'\n\n我没有得到报酬就被送走，经过乐师时他们交换着会意的眼神。这场表演不会为我赢得未来的合约。"
+cpr_laamp_contract_schemes.1305.a: "有些舞蹈最好留给想象。"
 
 # Failure (Prowess)
-cpr_laamp_contract_schemes.1306.t: "$cpr_laamp_1000_contract$: Warrior's Misstep"
-cpr_laamp_contract_schemes.1306.desc: "I clear space in the chamber, explaining that I will perform a warrior's dance from distant lands—a display of martial prowess transformed into art. [employer.GetTitledFirstName] watches with interest as I begin movements inspired by combat forms.\n\nMy confidence quickly exceeds my ability. What should be controlled power becomes awkward lunging; what should be fluid grace becomes stiff posturing. I attempt a particularly ambitious spinning leap, only to land heavily and painfully twist my ankle.\n\nTrying to maintain dignity, I continue limping through increasingly simplified movements while [employer.GetTitledFirstName] watches with a mixture of embarrassment and pity. When I nearly topple a priceless vase, [employer.GetSheHe] raises a hand."
-cpr_laamp_contract_schemes.1306.desc.outro: "\n\n'I think we've had quite enough... prowess display for one evening,' [employer.GetSheHe] says diplomatically. 'Perhaps you should rest that ankle.' I am dismissed without payment, my attempt to impress with physical prowess having resulted in nothing but bruised pride and body."
-cpr_laamp_contract_schemes.1306.a: "The battlefield and ballroom require different mastery."
+cpr_laamp_contract_schemes.1306.t: "$cpr_laamp_1000_contract$：战士失误"
+cpr_laamp_contract_schemes.1306.desc: "我在房间里清出空间，解释我将表演来自遥远国度的战士之舞——将武艺转化为艺术的展示。[employer.GetTitledFirstName]饶有兴趣地看着我开始受战斗形式启发的动作。\n\n我的自信很快超过了能力。该有的控制力变成了笨拙的突刺；该有的流畅优雅变成了僵硬的姿势。我尝试一个特别大胆的旋转跳跃，结果重重落地痛苦地扭伤了脚踝。\n\n试图保持尊严，我继续跛着脚跳越来越简化的动作，而[employer.GetTitledFirstName]带着尴尬和怜悯的混合表情看着。当我差点撞倒一个无价花瓶时，[employer.GetSheHe]抬起了手。"
+cpr_laamp_contract_schemes.1306.desc.outro: "\n\n'我想今晚我们已经看够了...武艺展示，'[employer.GetSheHe]圆滑地说。'也许你该休息一下脚踝。'我没有得到报酬就被遣散，试图用身体能力打动人的尝试只带来了受伤的自尊和身体。"
+cpr_laamp_contract_schemes.1306.a: "战场和舞厅需要不同的精通。"
 
 # 4. Intimate Companionship Contract
-cpr_laamp_contract_schemes.1400.t: "$cpr_laamp_1000_contract$: A Different Comfort"
-cpr_laamp_contract_schemes.1400.desc: "[employer.GetTitledFirstName] regards me with new interest at my suggestion of more intimate companionship. [employer.GetSheHe|U] dismisses the servants with a subtle gesture, waiting until the chamber door closes firmly behind them.\n\n'How perceptive of you,' [employer.GetSheHe] says, voice lowered. 'Those in my position rarely know genuine connection — every interaction clouded by power and politics. Perhaps you understand what I truly require: not merely physical release, but a space where, for a time, I might simply be [employer.GetFirstName] rather than [employer.GetTitledFirstNameNoTooltip].'"
-cpr_laamp_contract_schemes.1400.a: "I shall attend to your pleasure with all my skill." # Diplomacy Challenge
-cpr_laamp_contract_schemes.1400.b: "I sense what you truly desire beneath the surface." # Intrigue Challenge
-cpr_laamp_contract_schemes.1400.c: "I shall have my companion [follower.GetTitledFirstName] attend to you; [follower.GetSheHe] is most accomplished in these arts." # follower exists
-cpr_laamp_contract_schemes.1400.c.no_follower: "I have no companions skilled in the intimate arts who could attend to [employer.GetTitledFirstName]."
+cpr_laamp_contract_schemes.1400.t: "$cpr_laamp_1000_contract$：别样慰藉"
+cpr_laamp_contract_schemes.1400.desc: "[employer.GetTitledFirstName]对我提出的更亲密陪伴投以新的兴趣。[employer.GetSheHe|U]用一个微妙手势遣散仆人，等待房门在他们身后牢牢关上。\n\n'你很敏锐，'[employer.GetSheHe]压低声音说。'处在我这个位置的人很少体验真正的连接——每次互动都笼罩着权力和政治。也许你明白我真正需要什么：不只是身体释放，而是一个可以暂时做[employer.GetFirstName]而非[employer.GetTitledFirstNameNoTooltip]的空间。'"
+cpr_laamp_contract_schemes.1400.a: "我将用全部技巧照顾您的欢愉。" # 外交挑战
+cpr_laamp_contract_schemes.1400.b: "我能感知您表面之下的真实渴望。" # 密谋挑战
+cpr_laamp_contract_schemes.1400.c: "我将让我的同伴[follower.GetTitledFirstName]服侍您；[follower.GetSheHe]最精通此道。" # 存在追随者
+cpr_laamp_contract_schemes.1400.c.no_follower: "我没有精通亲密艺术的同伴能服侍[employer.GetTitledFirstName]。"
 
 # Tooltips
-cpr_laamp_contract_schemes.1400.a.tt.success: "Your attentiveness and genuine connection provide [employer.GetTitledFirstName] with rare respite from the isolation of authority. Your generous payment reflects the meaningful experience you've created."
-cpr_laamp_contract_schemes.1400.a.tt.failure: "Your attempts at intimacy fall flat, creating awkwardness rather than connection. [employer.GetTitledFirstName] dismisses you without payment, clearly disappointed."
-cpr_laamp_contract_schemes.1400.b.tt.success: "While providing companionship, you extract valuable information from [employer.GetTitledFirstName] during moments of vulnerability. You receive payment and gain secrets that may prove useful in future endeavors."
-cpr_laamp_contract_schemes.1400.b.tt.failure: "Your manipulation is transparent, and [employer.GetTitledFirstName] recognizes your attempts to extract information. You are dismissed without payment and may have made a powerful enemy aware of your methods."
-cpr_laamp_contract_schemes.1400.c.tt.success: "Your follower provides [employer.GetTitledFirstName] with exceptional companionship, reflecting well on your judgment. You receive generous payment and enhance both your reputations."
-cpr_laamp_contract_schemes.1400.c.tt.no_follower: "You lack an available [follower|E] with at least 18 [diplomacy|E] and 50 [trait_level_track_xp|E] in $trait_lifestyle_prostitute$ to delegate to."
+cpr_laamp_contract_schemes.1400.a.tt.success: "你的体贴和真实连接为[employer.GetTitledFirstName]提供了难得的从权威孤独中喘息的机会。丰厚的报酬反映了你创造的有意义的体验。"
+cpr_laamp_contract_schemes.1400.a.tt.failure: "你尝试的亲密关系未能建立连接反而造成尴尬。[employer.GetTitledFirstName]没有支付报酬就遣散了你，显然很失望。"
+cpr_laamp_contract_schemes.1400.b.tt.success: "在提供陪伴的同时，你在[employer.GetTitledFirstName]脆弱时刻套取了宝贵信息。你得到报酬并获得可能在将来有用的秘密。"
+cpr_laamp_contract_schemes.1400.b.tt.failure: "你的操纵太明显，[employer.GetTitledFirstName]认出了你套取信息的企图。你没有得到报酬就被遣散，可能还让一个强大的敌人意识到了你的手段。"
+cpr_laamp_contract_schemes.1400.c.tt.success: "你的追随者为[employer.GetTitledFirstName]提供了非凡陪伴，反映了你的判断力。你得到丰厚报酬，提升了双方声誉。"
+cpr_laamp_contract_schemes.1400.c.tt.no_follower: "你缺少可用的[follower|E]，其[diplomacy|E]至少为18且$trait_lifestyle_prostitute$的[trait_level_track_xp|E]达到50。"
 
 # Exceptional Success (Diplomacy)
-cpr_laamp_contract_schemes.1401.t: "$cpr_laamp_1000_contract$: Whispered Passions"
-cpr_laamp_contract_schemes.1401.desc: "The candles burn low as I guide [employer.GetTitledFirstName] through a journey of sensation and connection. I read [employer.GetHerHis] responses with practiced ease, knowing when to advance and when to withdraw, when to speak and when silence best serves the moment.\n\nThis is an art form like any other — one that requires attentiveness, skill, and genuine presence. I offer [employer.GetTitledFirstName] not merely physical release but a rare space where [employer.GetSheHe] need not be the ever-vigilant [employer.GetTitleAsNameNoTooltip] but simply a [employer.GetWomanMan] with desires and vulnerabilities.\n\nTime loses meaning in the soft shadows of [employer.GetHerHis] chambers, moments stretching and compressing like the cadence of our shared breaths."
-cpr_laamp_contract_schemes.1401.desc.outro: "\n\nAfterward, as we lie catching our breath, [employer.GetTitledFirstName] regards me with new eyes — not as a mere hired companion but as someone who has shared something authentic.\n\n'You understand what few do,' [employer.GetSheHe] says softly. 'The person beneath the title.'\n\nWhen morning comes, [employer.GetSheHe] presents me with payment that exceeds our agreement, along with a small token I suspect [employer.GetSheHe] had not initially intended to part with. Our eyes meet in silent understanding before I take my leave."
-cpr_laamp_contract_schemes.1401.a: "Some memories are best carried in silence."
+cpr_laamp_contract_schemes.1401.t: "$cpr_laamp_1000_contract$：低语激情"
+cpr_laamp_contract_schemes.1401.desc: "蜡烛渐暗，我引导[employer.GetTitledFirstName]经历一段感官与连接的旅程。我以熟练的技巧解读[employer.GetHerHis]反应，知道何时推进何时退后，何时说话何时沉默最适合此刻。\n\n这和其他艺术形式一样——需要专注、技巧和真诚陪伴。我给[employer.GetTitledFirstName]的不只是身体释放，而是一个难得的空间，在这里[employer.GetSheHe]不必做永远警觉的[employer.GetTitleAsNameNoTooltip]，而只是一个有欲望和脆弱的[employer.GetWomanMan]。\n\n时间在[employer.GetHerHis]房间的柔和阴影中失去意义，时刻随着我们共同的呼吸节奏延展压缩。"
+cpr_laamp_contract_schemes.1401.desc.outro: "\n\n事后，当我们躺着平复呼吸时，[employer.GetTitledFirstName]用新的目光看着我——不是看作一个雇佣的同伴，而是看作分享了真实体验的人。\n\n'你明白少数人才懂的事，'[employer.GetSheHe]轻声说。'头衔之下的人。'\n\n清晨来临，[employer.GetSheHe]给我的报酬超出了约定，还有一件我怀疑[employer.GetSheHe]最初没打算送出的小信物。我们的目光在无声的理解中相遇，然后我告辞了。"
+cpr_laamp_contract_schemes.1401.a: "有些回忆最好沉默珍藏。"
 
 # Success (Diplomacy)
-cpr_laamp_contract_schemes.1402.t: "$cpr_laamp_1000_contract$: Shared Warmth"
-cpr_laamp_contract_schemes.1402.desc: "I approach our encounter with sincerity rather than mere technique, finding my way through intuition and [employer.GetTitledFirstNamePossessive] reactions. What I may lack in artful sophistication, I make up for with genuine attention to [employer.GetHerHis] pleasure.\n\nOur connection, though brief, offers [employer.GetTitledFirstName] respite from the isolation of authority. In these private moments, the weight of [employer.GetHerHis] position seems to lift from [employer.GetHerHis] shoulders, if only temporarily."
-cpr_laamp_contract_schemes.1402.desc.outro: "\n\n'That was... exactly what I needed,' [employer.GetTitledFirstName] admits as we dress afterward. 'You have a gift for reading what remains unspoken.' [employer.GetSheHe|U] provides fair payment, with a warmth that suggests the transaction was satisfactory for both parties."
-cpr_laamp_contract_schemes.1402.a: "True pleasure requires presence, not just passion."
+cpr_laamp_contract_schemes.1402.t: "$cpr_laamp_1000_contract$：共享温存"
+cpr_laamp_contract_schemes.1402.desc: "我以真诚而非技巧对待这次相遇，通过直觉和[employer.GetTitledFirstNamePossessive]的反应找到方向。我可能在艺术精致度上有所欠缺，但我用对[employer.GetHerHis]愉悦的真切关注弥补了这点。\n\n我们短暂的连接为[employer.GetTitledFirstName]提供了从权威孤独中的喘息。在这些私密时刻，[employer.GetHerHis]地位的重担似乎从[employer.GetHerHis]肩上卸下，哪怕只是暂时的。"
+cpr_laamp_contract_schemes.1402.desc.outro: "\n\n'这正是...我需要的，'我们穿衣时[employer.GetTitledFirstName]承认。'你有读懂未言之语的天赋。'[employer.GetSheHe|U]提供了公平报酬，带着暗示这次交易令双方都满意的温暖。"
+cpr_laamp_contract_schemes.1402.a: "真正的欢愉需要陪伴而不仅是激情。"
 
 # Follower Success
-cpr_laamp_contract_schemes.1403.t: "$cpr_laamp_1000_contract$: Practiced Company"
-cpr_laamp_contract_schemes.1403.desc: "I present [follower.GetTitledFirstName], whose experience in the intimate arts far exceeds my own. [follower.GetSheHe|U] approaches [employer.GetTitledFirstName] with practiced grace, speaking softly as I discretely withdraw to give them privacy.\n\nFrom the occasional sounds that drift through the chamber door, it is clear that [follower.GetFirstNamePossessive] skills are being well received. I wait patiently, making arrangements to ensure we will not be disturbed during this delicate contract."
-cpr_laamp_contract_schemes.1403.desc.outro: "\n\nWhen I am finally summoned back, [employer.GetTitledFirstName] appears thoroughly satisfied, lounging with the relaxed demeanor of one whose tensions have been expertly relieved. 'Your [follower.GetTitledFirstName] has talents worth twice the agreed sum,' [employer.GetSheHe] remarks, gesturing toward a purse that indeed seems heavier than expected."
-cpr_laamp_contract_schemes.1403.a: "Some skills are best delegated to those who have mastered them."
+cpr_laamp_contract_schemes.1403.t: "$cpr_laamp_1000_contract$：老练陪伴"
+cpr_laamp_contract_schemes.1403.desc: "我介绍[follower.GetTitledFirstName]出场，[follower.GetSheHe]在亲密艺术上的经验远超于我。[follower.GetSheHe|U]以老练的优雅接近[employer.GetTitledFirstName]，轻声细语时我识趣地退开给他们隐私。\n\n从偶尔飘出房门的声响判断，[follower.GetFirstNamePossessive]的技艺得到了很好的接纳。我耐心等待，做好安排确保在这微妙合约期间不会被打扰。"
+cpr_laamp_contract_schemes.1403.desc.outro: "\n\n当我最终被召回时，[employer.GetTitledFirstName]显得心满意足，带着被专业缓解紧张后的放松姿态。'你的[follower.GetTitledFirstName]值得双倍约定酬金的才能，'[employer.GetSheHe]评价道，指向一个确实比预期更重的钱袋。"
+cpr_laamp_contract_schemes.1403.a: "有些技能最好委托给精通之人。"
 
 # Success (Intrigue)
-cpr_laamp_contract_schemes.1404.t: "$cpr_laamp_1000_contract$: Deeper Desires"
-cpr_laamp_contract_schemes.1404.desc: "Rather than approaching this as mere physical satisfaction, I carefully observe [employer.GetTitledFirstName], noting the subtle tells that reveal [employer.GetHerHis] deeper desires — not just for pleasure, but for understanding, for being truly seen.\n\nI weave a tapestry of selective truths and perceptive insights, creating the illusion of profound connection while gathering valuable information. [employer.GetTitledFirstName] reveals more than [employer.GetSheHe] intends between sighs of pleasure — vulnerabilities, fears, and ambitions typically hidden behind the mask of authority.\n\nBy the time our encounter concludes, I have learned secrets that could prove useful in future dealings, while [employer.GetTitledFirstName] believes [employer.GetSheHe] has found a rare soul who understands [employer.GetHerHis] burdens."
-cpr_laamp_contract_schemes.1404.desc.outro: "\n\n'I had not expected to find such... depth in a hired companion,' [employer.GetTitledFirstName] confesses, unaware of how thoroughly I have read and manipulated [employer.GetHerHis] needs. 'Perhaps we might arrange such meetings with greater regularity.' [employer.GetSheHe|U] pays generously, but the real value lies in the information and influence I have gained."
-cpr_laamp_contract_schemes.1404.a: "Bodies speak truths that lips would keep silent."
-
+cpr_laamp_contract_schemes.1404.t: "$cpr_laamp_1000_contract$：深层渴望"
+cpr_laamp_contract_schemes.1404.desc: "我没有把这当作单纯的肉体满足，而是仔细观察[employer.GetTitledFirstName]，注意那些揭示[employer.GetHerHis]深层渴望的微妙迹象——不只是对欢愉的渴望，还有对理解、对被真正看见的渴望。\n\n我编织选择性真相和敏锐洞察的挂毯，创造深刻连接的假象同时收集宝贵信息。[employer.GetTitledFirstName]在愉悦的叹息间透露的比[employer.GetSheHe]打算分享的更多——通常隐藏在权威面具后的脆弱、恐惧和野心。\n\n当我们的相遇结束时，我已了解到可能在将来往来中有用的秘密，而[employer.GetTitledFirstName]相信[employer.GetSheHe]找到了一个理解[employer.GetHerHis]负担的稀有灵魂。"
+cpr_laamp_contract_schemes.1404.desc.outro: "\n\n'我没想到在一个雇佣同伴身上找到这样的...深度，'[employer.GetTitledFirstName]承认，没意识到我多么彻底地解读和操纵了[employer.GetHerHis]需求。'也许我们可以更定期安排这样的会面。'[employer.GetSheHe|U]慷慨支付，但真正的价值在于我获得的信息和影响力。"
+cpr_laamp_contract_schemes.1404.a: "身体诉说着嘴所隐藏的真相。"
 # Failure (Diplomacy)
-cpr_laamp_contract_schemes.1405.t: "$cpr_laamp_1000_contract$: Cold Comfort"
-cpr_laamp_contract_schemes.1405.desc: "What I had imagined would be a night of passion instead became an exercise in awkwardness. My attempts at seduction fell flat, my touches too hesitant or too bold, never finding the right rhythm or pressure to please [employer.GetTitledFirstName].\n\nPerhaps it was nerves, or perhaps simply an incompatibility of temperaments, but the connection I sought to establish remained frustratingly out of reach. [employer.GetTitledFirstName] became increasingly withdrawn, eventually suggesting we bring the evening to a premature close.\n\n'This is not what I had in mind,' [employer.GetSheHe] says with poorly disguised disappointment. 'I think it best if we end this now.'"
-cpr_laamp_contract_schemes.1405.desc.trait_arrogant: "I approached our encounter with excessive confidence, certain that my charm alone would suffice. I spoke too much of my own prowess and listened too little to [employer.GetTitledFirstNamePossessive] responses, missing the signs of growing frustration.\n\nBy the time I realized my error, [employer.GetTitledFirstNamePossessive] patience had already worn through. [employer.GetSheHe|U] dismisses me with a coldness that cuts deeper than any blade."
-cpr_laamp_contract_schemes.1405.desc.outro: "\n\nI depart with neither payment nor dignity, [employer.GetTitledFirstNamePossessive] dismissal making it clear that my services were found severely wanting. This failure will not enhance my reputation as one who can fulfill delicate contracts."
-cpr_laamp_contract_schemes.1405.a: "Some nights are best forgotten by all involved."
+cpr_laamp_contract_schemes.1405.t: "$cpr_laamp_1000_contract$：冰冷慰藉"
+cpr_laamp_contract_schemes.1405.desc: "我设想中充满激情的夜晚变成了尴尬的演练。我的引诱尝试落空，我的触碰要么太犹豫要么太冒进，始终找不到让[employer.GetTitledFirstName]愉悦的正确节奏或力度。\n\n也许是紧张，或者只是性情不合，但我寻求建立的连接始终遥不可及。[employer.GetTitledFirstName]变得越来越疏远，最终建议我们提前结束这个夜晚。\n\n'这不是我想要的，'[employer.GetSheHe]难掩失望地说。'我想我们最好现在就结束。'"
+cpr_laamp_contract_schemes.1405.desc.trait_arrogant: "我带着过度自信对待这次相遇，确信仅凭我的魅力就足够了。我过多谈论自己的技巧而太少倾听[employer.GetTitledFirstNamePossessive]的反应，错过了不满渐增的信号。\n\n当我意识到错误时，[employer.GetTitledFirstNamePossessive]的耐心已经耗尽。[employer.GetSheHe|U]用比任何刀刃都锋利的冷漠遣散了我。"
+cpr_laamp_contract_schemes.1405.desc.outro: "\n\n我没有得到报酬和尊严就离开了，[employer.GetTitledFirstNamePossessive]的遣散清楚地表明我的服务严重不足。这次失败不会提升我作为能履行微妙合约之人的声誉。"
+cpr_laamp_contract_schemes.1405.a: "有些夜晚最好被所有参与者遗忘。"
 
 # Failure (Intrigue)
-cpr_laamp_contract_schemes.1406.t: "$cpr_laamp_1000_contract$: Cold Calculations"
-cpr_laamp_contract_schemes.1406.desc: "I approach our encounter calculating every touch and whisper, less focused on genuine connection than on what secrets I might extract in moments of vulnerability. As [employer.GetTitledFirstName] begins to relax, I introduce subtle questions between caresses, seeking weaknesses I might later exploit.\n\nBut [employer.GetTitledFirstName] has not reached [employer.GetHerHis] position by being easily manipulated. Midway through my performance, [employer.GetSheHe] suddenly stiffens, [employer.GetHerHis] eyes narrowing as [employer.GetSheHe] recognizes the pattern in my seemingly casual inquiries.\n\n'How interesting,' [employer.GetSheHe] says, voice suddenly cold as [employer.GetSheHe] moves away from my touch. 'You offer pleasure with one hand while picking my mind with the other. Did you truly believe I would not notice your true purpose?'"
-cpr_laamp_contract_schemes.1406.desc.outro: "\n\n'Get dressed and leave,' [employer.GetTitledFirstName] orders, all pretense of warmth vanished. 'And be grateful I do not have you thrown in the dungeons for such shameless treachery.' I depart hastily, having gained nothing but a dangerous enemy whose intimate knowledge now includes my methods of deception."
-cpr_laamp_contract_schemes.1406.a: "Some schemes should never mix with pleasure."
+cpr_laamp_contract_schemes.1406.t: "$cpr_laamp_1000_contract$：冰冷算计"
+cpr_laamp_contract_schemes.1406.desc: "我算计着每个触碰和低语对待这次相遇，较少关注真实连接而更多关注能在脆弱时刻套取什么秘密。当[employer.GetTitledFirstName]开始放松时，我在爱抚间插入微妙问题，寻找未来可能利用的弱点。\n\n但[employer.GetTitledFirstName]能到达[employer.GetHerHis]位置可不是因为容易被操纵。在我的表演中途，[employer.GetSheHe]突然僵硬，[employer.GetHerHis]眼睛眯起，[employer.GetSheHe]认出了我看似随意询问中的模式。\n\n'真有趣，'[employer.GetSheHe]说，突然冰冷的语气远离了我的触碰。'你一只手提供欢愉，另一只手挑拣我的思想。你真以为我不会注意到你真正的目的？'"
+cpr_laamp_contract_schemes.1406.desc.outro: "\n\n'穿好衣服离开，'[employer.GetTitledFirstName]命令道，所有温暖的伪装都消失了。'庆幸我没有因这等无耻背叛把你扔进地牢。'我匆忙离开，除了一个危险的敌人什么也没得到，而这个敌人对我的欺骗手段现在有了亲身体验。"
+cpr_laamp_contract_schemes.1406.a: "有些阴谋永远不该与欢愉混为一谈。"
 
 # 5. Astrology/Fortune Telling Contract
-cpr_laamp_contract_schemes.1500.t: "$cpr_laamp_1000_contract$: Celestial Whispers"
-cpr_laamp_contract_schemes.1500.desc: "[employer.GetTitledFirstName] raises an eyebrow at my mention of astrology. 'The stars and their secrets? How unexpected from one of your profession,' [employer.GetSheHe] remarks, but I detect genuine interest beneath the skepticism.\n\n'My court astrologer offers nothing but vague platitudes and favorable predictions,' [employer.GetSheHe] continues. 'I wonder if you might provide something more... substantial. Read my fortunes if you will, but spare me empty flattery. I would know what the heavens truly portend, be it fair or foul.'"
-cpr_laamp_contract_schemes.1500.a: "I shall reveal what the stars have written in your destiny." # Learning Challenge
-cpr_laamp_contract_schemes.1500.b: "The stars whisper what you wish to hear, and I shall listen carefully." # Intrigue Challenge
-cpr_laamp_contract_schemes.1500.c: "My follower [follower.GetTitledFirstName] is versed in celestial mysteries and will serve you well." # follower exists
-cpr_laamp_contract_schemes.1500.c.no_follower: "None of my followers possess the mystical knowledge required for this divination."
+cpr_laamp_contract_schemes.1500.t: "$cpr_laamp_1000_contract$：星语低喃"
+cpr_laamp_contract_schemes.1500.desc: "[employer.GetTitledFirstName]对我提到的占星术挑起眉毛。'星辰及其秘密？没想到你会提供这个，'[employer.GetSheHe]评价道，但我察觉到怀疑下的真实兴趣。\n\n'我的宫廷占星师只会提供模糊的陈词滥调和有利预言，'[employer.GetSheHe]继续道。'我想知道你是否能提供更...实质的东西。如果你愿意就读我的命运吧，但别给我空洞奉承。我想知道天堂真正预示什么，无论好坏。'"
+cpr_laamp_contract_schemes.1500.a: "我将揭示星辰在您命运中书写的内容。" # 学识挑战
+cpr_laamp_contract_schemes.1500.b: "星辰低语您想听的内容，而我会仔细聆听。" # 密谋挑战
+cpr_laamp_contract_schemes.1500.c: "我的追随者[follower.GetTitledFirstName]通晓星象奥秘，将很好地为您服务。" # 存在追随者
+cpr_laamp_contract_schemes.1500.c.no_follower: "我没有具备所需神秘知识的追随者能进行这项占卜。"
 
 # Tooltips
-cpr_laamp_contract_schemes.1500.a.tt.success: "Your astrological insights impress [employer.GetTitledFirstName] with their depth and apparent accuracy. You receive generous payment and enhance your reputation for mystical wisdom."
-cpr_laamp_contract_schemes.1500.a.tt.failure: "Your astrological knowledge proves insufficient, with obvious errors that [employer.GetTitledFirstName] quickly identifies. You receive no payment and lose credibility as a mystic."
-cpr_laamp_contract_schemes.1500.b.tt.success: "Using astrology as a pretense, you manipulate [employer.GetTitledFirstName] into revealing personal concerns and court secrets. You receive payment and valuable information while leaving [employer.GetHerHim] vulnerable to future influence."
-cpr_laamp_contract_schemes.1500.b.tt.failure: "Your attempt to extract information through false divination is exposed when you reveal knowledge the stars couldn't provide. [employer.GetTitledFirstName] dismisses you without payment, now alert to such manipulation tactics."
-cpr_laamp_contract_schemes.1500.c.tt.success: "Your follower's mystical insights impress [employer.GetTitledFirstName], reflecting well on your judgment in companions. You receive generous payment and enhance both your reputations."
-cpr_laamp_contract_schemes.1500.c.tt.no_follower: "You lack an available [follower|E] with at least 18 [learning|E] and 50 [trait_level_track_xp|E] in $trait_lifestyle_mystic$ to delegate to."
+cpr_laamp_contract_schemes.1500.a.tt.success: "你的占星洞察以其深度和表面准确性给[employer.GetTitledFirstName]留下深刻印象。你得到丰厚报酬并提升了你作为神秘智者的声誉。"
+cpr_laamp_contract_schemes.1500.a.tt.failure: "你的占星知识不足，有明显错误被[employer.GetTitledFirstName]迅速发现。你没有得到报酬，作为神秘学家的可信度也丧失了。"
+cpr_laamp_contract_schemes.1500.b.tt.success: "以占星为幌子，你操纵[employer.GetTitledFirstName]透露个人忧虑和宫廷秘密。你得到报酬和宝贵信息，同时让[employer.GetHerHim]在未来影响面前变得脆弱。"
+cpr_laamp_contract_schemes.1500.b.tt.failure: "当你透露星辰无法提供的知识时，你通过虚假占卜套取信息的企图暴露了。[employer.GetTitledFirstName]没有支付报酬就遣散了你，现在对这种操纵手段保持警惕。"
+cpr_laamp_contract_schemes.1500.c.tt.success: "你追随者的神秘洞察给[employer.GetTitledFirstName]留下深刻印象，反映了你选择同伴的判断力。你得到丰厚报酬并提升双方声誉。"
+cpr_laamp_contract_schemes.1500.c.tt.no_follower: "你缺少可用的[follower|E]，其[learning|E]至少为18且$trait_lifestyle_mystic$的[trait_level_track_xp|E]达到50。"
 
 # Exceptional Success (Learning)
-cpr_laamp_contract_schemes.1501.t: "$cpr_laamp_1000_contract$: Written in the Stars"
-cpr_laamp_contract_schemes.1501.desc: "I request a clear table and privacy, arranging my tools with practiced precision — star charts, ancient texts, and carefully chosen crystals that catch the candlelight. [employer.GetTitledFirstName] watches with growing curiosity as I create an atmosphere of scholarly mysticism.\n\nBeginning with genuine astronomical knowledge, I trace the celestial patterns present at [employer.GetHerHis] birth. My explanations weave together actual planetary movements with their purported influences, my voice shifting between academic lecturer and mystical guide as I reveal 'truths' written in the heavens.\n\nI note with satisfaction how [employer.GetTitledFirstName] leans forward when I speak of Mars in [employer.GetHerHis] house of ambition, or Venus casting favorable aspects on future endeavors. Each revelation is crafted to flatter without seeming transparent, to provide hope without promising impossibilities."
-cpr_laamp_contract_schemes.1501.desc.outro: "\n\n'Few approach the stars with such... clarity,' [employer.GetTitledFirstName] admits, clearly impressed by my presentation. 'You've given me much to consider beyond mere superstition.'\n\n[employer.GetSheHe|U] rewards me generously, confessing that the evening provided intellectual stimulation long absent from [employer.GetHerHis] court. As I depart, I notice [employer.GetSheHe] already examining the star chart I've left behind, perhaps finding comfort in the cosmic patterns I've revealed."
-cpr_laamp_contract_schemes.1501.a: "Knowledge, properly presented, can be the most seductive art of all."
+cpr_laamp_contract_schemes.1501.t: "$cpr_laamp_1000_contract$：星象书写"
+cpr_laamp_contract_schemes.1501.desc: "我要求一张干净的桌子和隐私，以熟练的精准布置工具——星图、古籍和精心挑选的在烛光下闪烁的水晶。[employer.GetTitledFirstName]看着我创造学术神秘主义氛围时兴趣渐增。\n\n从真实的占星知识开始，我追溯[employer.GetHerHis]出生时的天体模式。我的解释将实际行星运动与其所谓影响交织在一起，我的声音在学术讲师和神秘向导间切换，揭示天堂写下的'真相'。\n\n我满意地注意到当我说到火星在[employer.GetHerHis]野心宫位，或金星对未来事业投射有利相位时，[employer.GetTitledFirstName]身体前倾。每个启示都设计得奉承但不显得露骨，给予希望但不承诺不可能。"
+cpr_laamp_contract_schemes.1501.desc.outro: "\n\n'很少有人以这样的...清晰度看待星辰，'[employer.GetTitledFirstName]承认，显然被我的展示打动。'你给我的不仅是迷信，还有很多思考。'\n\n[employer.GetSheHe|U]慷慨奖励我，坦言这个夜晚提供了[employer.GetHerHis]宫廷长期缺乏的智力刺激。离开时，我注意到[employer.GetSheHe]已经在研究我留下的星图，也许在我揭示的宇宙模式中找到了安慰。"
+cpr_laamp_contract_schemes.1501.a: "恰当呈现的知识可以是最诱人的艺术。"
 
 # Success (Learning)
-cpr_laamp_contract_schemes.1502.t: "$cpr_laamp_1000_contract$: Celestial Patterns"
-cpr_laamp_contract_schemes.1502.desc: "I arrange my modest collection of astrological tools and begin to interpret the celestial signs relevant to [employer.GetTitledFirstName]. Though my knowledge has gaps, I compensate with confidence and careful observation of [employer.GetHerHis] reactions.\n\nWhen I speak of courage indicated by a strong solar influence, [employer.GetSheHe] sits straighter. When I mention challenges foreseen in the coming season, I notice a flicker of recognition. I adjust my reading accordingly, building a narrative that resonates with [employer.GetHerHis] experiences while maintaining an air of cosmic inevitability."
-cpr_laamp_contract_schemes.1502.desc.outro: "\n\n'Interesting,' [employer.GetTitledFirstName] comments when I conclude. 'Less flattery and more substance than I typically receive from such readings.' [employer.GetSheHe|U] provides fair payment, seemingly satisfied with the modest insights I've offered."
-cpr_laamp_contract_schemes.1502.a: "The stars speak to those who know how to listen."
+cpr_laamp_contract_schemes.1502.t: "$cpr_laamp_1000_contract$：星象轨迹"
+cpr_laamp_contract_schemes.1502.desc: "我布置好简单的占星工具，开始解读与[employer.GetTitledFirstName]相关的天象。虽然知识有欠缺，但我用自信和细心观察[employer.GetHerHis]反应来弥补。\n\n当我提到强烈的太阳影响预示勇气时，[employer.GetSheHe]坐得更直。当我提及下个季节预见挑战时，我注意到一丝认同的闪烁。我相应调整解读，构建一个与[employer.GetHerHis]经历共鸣同时保持宇宙必然性的叙述。"
+cpr_laamp_contract_schemes.1502.desc.outro: "\n\n'有意思，'我结束时[employer.GetTitledFirstName]评价道。'比我通常从这类解读中得到的奉承更有实质内容。'[employer.GetSheHe|U]提供了公平报酬，似乎对我提供的普通见解感到满意。"
+cpr_laamp_contract_schemes.1502.a: "星辰只对懂得聆听者说话。"
 
 # Follower Success
-cpr_laamp_contract_schemes.1503.t: "$cpr_laamp_1000_contract$: Cosmic Interpreter"
-cpr_laamp_contract_schemes.1503.desc: "I present [follower.GetTitledFirstName], whose knowledge of celestial matters far exceeds my own. With reverent precision, [follower.GetSheHe] arranges complex astronomical instruments and charts of [follower.GetHerHis] own design.\n\n[follower.GetFirstNamePossessive] explanation of the cosmic influences affecting [employer.GetTitledFirstName] weaves together mathematical precision and mystical insight in a way that clearly impresses our client. [employer.GetTitledFirstName] listens with growing fascination as [follower.GetFirstNameNoTooltip] reveals patterns and possibilities that even the court astrologer has never mentioned."
-cpr_laamp_contract_schemes.1503.desc.outro: "\n\n'Your [follower.GetTitledFirstName] possesses rare insight,' [employer.GetTitledFirstName] acknowledges when the reading concludes. 'The court astrologer could learn much from such techniques.' [employer.GetSheHe|U] rewards us handsomely, clearly impressed by the depth of knowledge displayed."
-cpr_laamp_contract_schemes.1503.a: "True wisdom recognizes patterns others cannot see."
+cpr_laamp_contract_schemes.1503.t: "$cpr_laamp_1000_contract$：星象解读者"
+cpr_laamp_contract_schemes.1503.desc: "我介绍[follower.GetTitledFirstName]出场，[follower.GetSheHe]在星象方面的知识远超于我。[follower.GetSheHe]带着虔诚的精确布置复杂的天文仪器和[follower.GetHerHis]自己设计的星图。\n\n[follower.GetFirstNamePossessive]对影响[employer.GetTitledFirstName]的宇宙力量的解释将数学精确与神秘洞察编织在一起，显然打动了我们的客户。[employer.GetTitledFirstName]带着渐增的着迷聆听[follower.GetFirstNameNoTooltip]揭示的模式和可能性，连宫廷占星师都未曾提及。"
+cpr_laamp_contract_schemes.1503.desc.outro: "\n\n'你的[follower.GetTitledFirstName]拥有罕见的洞见，'解读结束时[employer.GetTitledFirstName]承认。'宫廷占星师可以从这些技巧中学到很多。'[employer.GetSheHe|U]慷慨奖励我们，显然对展示的知识深度印象深刻。"
+cpr_laamp_contract_schemes.1503.a: "真正的智慧能看见他人无法发现的模式。"
 
 # Success (Intrigue)
-cpr_laamp_contract_schemes.1504.t: "$cpr_laamp_1000_contract$: Stars and Secrets"
-cpr_laamp_contract_schemes.1504.desc: "I set the scene with astrological tools and charts, but my true skill lies in reading [employer.GetTitledFirstName] rather than the stars. As I begin the reading, I carefully note [employer.GetHerHis] reactions to various topics, building a narrative that aligns with [employer.GetHerHis] hopes and fears.\n\nThrough careful questioning disguised as astrological inquiry, I extract information about court politics, personal ambitions, and private concerns. Each 'celestial revelation' I offer reinforces what [employer.GetTitledFirstName] already believes or desperately wants to hear.\n\nBy the session's end, [employer.GetTitledFirstName] has revealed far more than [employer.GetSheHe] realizes, while believing that the stars themselves have spoken directly to [employer.GetHerHis] circumstances."
-cpr_laamp_contract_schemes.1504.desc.outro: "\n\n'Remarkable how accurately you've read what lies ahead,' [employer.GetTitledFirstName] says, unaware that [employer.GetSheHe] provided most of the insights [employer.GetHerHim]self. 'The heavens speak clearly through you.' [employer.GetSheHe|U] pays generously for what [employer.GetSheHe] perceives as cosmic wisdom, while I depart with valuable information about court dynamics."
-cpr_laamp_contract_schemes.1504.a: "The greatest fortune-teller reads faces, not stars."
+cpr_laamp_contract_schemes.1504.t: "$cpr_laamp_1000_contract$：星辰与秘密"
+cpr_laamp_contract_schemes.1504.desc: "我用占星工具和星图布置场景，但我真正的技巧在于解读[employer.GetTitledFirstName]而非星辰。当我开始解读时，我仔细注意[employer.GetHerHis]对各种话题的反应，构建一个与[employer.GetHerHis]希望和恐惧一致的叙述。\n\n通过伪装成占星询问的谨慎提问，我套取关于宫廷政治、个人野心和私人忧虑的信息。我提供的每个'天启'都强化[employer.GetTitledFirstName]已经相信或迫切想听的内容。\n\n当环节结束时，[employer.GetTitledFirstName]透露的比[employer.GetSheHe]意识到的多得多，同时相信星辰本身直接对[employer.GetHerHis]处境说话了。"
+cpr_laamp_contract_schemes.1504.desc.outro: "\n\n'你准确解读未来走向的能力很了不起，'[employer.GetTitledFirstName]说，没意识到[employer.GetSheHe]自己提供了大部分见解。'天堂通过你清晰地说话。'[employer.GetSheHe|U]为[employer.GetSheHe]眼中的宇宙智慧慷慨支付，而我带着关于宫廷动态的宝贵信息离开。"
+cpr_laamp_contract_schemes.1504.a: "最伟大的占卜师解读的是面容而非星辰。"
 
 # Failure (Learning)
-cpr_laamp_contract_schemes.1505.t: "$cpr_laamp_1000_contract$: Celestial Embarrassment"
-cpr_laamp_contract_schemes.1505.desc: "My attempt at scholarly mysticism quickly unravels when [employer.GetTitledFirstName] asks a simple astronomical question I cannot answer. I try to redirect with vague pronouncements about cosmic influences, but it soon becomes clear that my knowledge has significant gaps.\n\nMatters worsen when I make a blatant error concerning the ruling house of [employer.GetTitledFirstNamePossessive] birth month — a mistake that draws raised eyebrows and exchanged glances among those present. My increasingly desperate attempts to recover only highlight my ignorance further.\n\n'I believe there has been some misunderstanding about your expertise,' [employer.GetTitledFirstName] says coolly, cutting short my faltering explanation of planetary influences."
-cpr_laamp_contract_schemes.1505.desc.outro: "\n\nThe evening concludes prematurely, my claims of celestial insight thoroughly discredited. Not only is payment withheld, but I depart knowing that tales of my fraudulent wisdom will likely spread through court circles, undermining future opportunities."
-cpr_laamp_contract_schemes.1505.a: "False knowledge is quickly exposed in educated company."
+cpr_laamp_contract_schemes.1505.t: "$cpr_laamp_1000_contract$：星象窘境"
+cpr_laamp_contract_schemes.1505.desc: "当[employer.GetTitledFirstName]问一个简单的天文问题我无法回答时，我尝试的学术神秘主义迅速瓦解。我试图用关于宇宙影响的模糊断言转移话题，但很快就暴露出我知识的重大缺陷。\n\n当我犯了一个关于[employer.GetTitledFirstNamePossessive]出生月份主宰星座的明显错误时，情况更糟——这个失误引起了在场者挑眉和交换眼神。我越来越绝望的挽回尝试只进一步凸显了我的无知。\n\n'我想对你的专业水平有些误解，'[employer.GetTitledFirstName]冷淡地说，打断我结结巴巴的行星影响解释。"
+cpr_laamp_contract_schemes.1505.desc.outro: "\n\n夜晚提前结束，我自称的星象洞察彻底失去信誉。不仅没有报酬，我还知道关于我欺诈性智慧的故事可能会在宫廷圈子里传播，破坏未来的机会。"
+cpr_laamp_contract_schemes.1505.a: "在博学之人面前，虚假知识很快会被揭穿。"
 
 # Failure (Intrigue)
-cpr_laamp_contract_schemes.1506.t: "$cpr_laamp_1000_contract$: Stars Misaligned"
-cpr_laamp_contract_schemes.1506.desc: "I set the scene with astrological tools and charts, but my focus is on extracting information rather than providing genuine insight. Each celestial interpretation I offer is carefully designed to prompt revelations about court politics and personal concerns.\n\nI push too far when I casually reference a detail about [employer.GetTitledFirstNamePossessive] family that the stars could not possibly have revealed. [employer.GetTitledFirstName] freezes mid-response, suddenly alert to my manipulation.\n\n'How curious,' [employer.GetSheHe] remarks, voice dangerously soft, 'that the stars would reveal such specific details—details I have shared with only my closest confidants. Perhaps your talents lie less in reading the heavens and more in gathering court gossip?'"
-cpr_laamp_contract_schemes.1506.desc.outro: "\n\n'This session is concluded,' [employer.GetTitledFirstName] declares, rising abruptly. 'In the future, remember that those who spy under false pretenses often find their own secrets exposed.' I am dismissed without payment, and worse, with the knowledge that my target is now alert to methods of manipulation that might have served me well in future endeavors."
-cpr_laamp_contract_schemes.1506.a: "Even the stars cannot hide poor deception."
+cpr_laamp_contract_schemes.1506.t: "$cpr_laamp_1000_contract$：星辰错位"
+cpr_laamp_contract_schemes.1506.desc: "我用占星工具和星图布置场景，但我的重点是套取信息而非提供真实洞见。我提供的每个星象解读都精心设计来引出关于宫廷政治和个人忧虑的启示。\n\n当我随意提到一个关于[employer.GetTitledFirstNamePossessive]家族的细节——星辰不可能揭示的细节时，我做得过火了。[employer.GetTitledFirstName]在回应中僵住，突然警觉到我的操纵。\n\n'多奇怪，'[employer.GetSheHe]评价道，声音危险地轻柔，'星辰会揭示如此具体的细节——我只与最亲近心腹分享的细节。也许你的才能不在于解读天堂，而在于收集宫廷流言？'"
+cpr_laamp_contract_schemes.1506.desc.outro: "\n\n'这次解读结束了，'[employer.GetTitledFirstName]突然起身宣布。'将来记住，在虚假伪装下窥探的人往往会发现自己的秘密被曝光。'我被遣散而没有得到报酬，更糟的是知道我的目标现在对我未来可能很有用的操纵手段保持警惕。"
+cpr_laamp_contract_schemes.1506.a: "即使星辰也无法掩盖拙劣的欺骗。"
 
 # 6. Illusion/Deception Contract
-cpr_laamp_contract_schemes.1600.t: "$cpr_laamp_1000_contract$: Mysteries and Marvels"
-cpr_laamp_contract_schemes.1600.desc: "[employer.GetTitledFirstName] perks up at my mention of illusions and deceptions. 'Now that is something different,' [employer.GetSheHe] says, a hint of childlike excitement breaking through [employer.GetHerHis] usual reserve.\n\n'Court entertainments grow so predictable — the same jugglers, the same tired tales. Show me something that will truly bewilder me, tricks that will leave me questioning my own eyes. I would experience that rare pleasure of genuine astonishment, if you can provide it.'"
-cpr_laamp_contract_schemes.1600.a: "I shall perform mysteries that will challenge your perception." # Intrigue Challenge
-cpr_laamp_contract_schemes.1600.b: "My tricks may seem simple, but their meaning runs deeper." # Learning Challenge
-cpr_laamp_contract_schemes.1600.c: "My follower [follower.GetTitledFirstName] is a master of illusion and will astonish you." # follower exists
-cpr_laamp_contract_schemes.1600.c.no_follower: "I have no followers skilled in the arts of illusion who could perform in my stead."
-
+cpr_laamp_contract_schemes.1600.t: "$cpr_laamp_1000_contract$：谜团与奇迹"
+cpr_laamp_contract_schemes.1600.desc: "[employer.GetTitledFirstName]对我提到的幻术和欺骗提起兴趣。'这才与众不同，'[employer.GetSheHe]说，孩子般的兴奋打破了[employer.GetHerHis]惯常的矜持。\n\n'宫廷娱乐变得如此可预测——同样的杂耍，同样的老套故事。给我看些真正让我困惑的东西，让我质疑自己双眼的把戏。如果做得到，我想体验真正惊讶的稀有乐趣。'"
+cpr_laamp_contract_schemes.1600.a: "我将表演挑战您感知的谜团。" # 密谋挑战
+cpr_laamp_contract_schemes.1600.b: "我的戏法看似简单，但内涵更深。" # 学识挑战
+cpr_laamp_contract_schemes.1600.c: "我的追随者[follower.GetTitledFirstName]是幻术大师，会让您惊叹。" # 存在追随者
+cpr_laamp_contract_schemes.1600.c.no_follower: "我没有精通幻术的追随者能代我表演。"
 # Tooltips
-cpr_laamp_contract_schemes.1600.a.tt.success: "Your illusions and deceptions thoroughly amaze [employer.GetTitledFirstName], creating an experience of genuine wonder. You receive generous payment and enhance your reputation for mysterious skills."
-cpr_laamp_contract_schemes.1600.a.tt.failure: "Your tricks fail at crucial moments, exposing the mundane methods behind your supposed magic. [employer.GetTitledFirstName] dismisses you without payment, your reputation as an illusionist tarnished."
-cpr_laamp_contract_schemes.1600.b.tt.success: "You frame your illusions within philosophical context, impressing [employer.GetTitledFirstName] with both spectacle and intellectual depth. You receive payment and gain respect for your scholarly approach to entertainment."
-cpr_laamp_contract_schemes.1600.b.tt.failure: "Your excessive explanations and philosophical digressions overwhelm the entertainment value of your modest tricks. [employer.GetTitledFirstName] dismisses you without payment, bored rather than amazed."
-cpr_laamp_contract_schemes.1600.c.tt.success: "Your follower's illusions amaze [employer.GetTitledFirstName], reflecting well on your judgment in companions. You receive generous payment and enhance both your reputations."
-cpr_laamp_contract_schemes.1600.c.tt.no_follower: "You lack an available [follower|E] with at least 18 [intrigue|E] and 50 [trait_level_track_xp|E] in $trait_track_trickster$ to delegate to."
+cpr_laamp_contract_schemes.1600.a.tt.success: "你的幻术和欺骗彻底惊艳了[employer.GetTitledFirstName]，创造了真实的惊奇体验。你得到丰厚报酬并提升了你神秘技能的声誉。"
+cpr_laamp_contract_schemes.1600.a.tt.failure: "你的戏法在关键时刻失败，暴露了你所谓魔法背后的平凡方法。[employer.GetTitledFirstName]没有支付报酬就遣散了你，你作为幻术师的声誉受损。"
+cpr_laamp_contract_schemes.1600.b.tt.success: "你将幻术置于哲学语境中，以奇观和思想深度打动[employer.GetTitledFirstName]。你得到报酬并因对娱乐的学术态度获得尊重。"
+cpr_laamp_contract_schemes.1600.b.tt.failure: "你过度的解释和哲学题外话压倒了你普通戏法的娱乐价值。[employer.GetTitledFirstName]没有支付报酬就遣散了你，感到无聊而非惊奇。"
+cpr_laamp_contract_schemes.1600.c.tt.success: "你追随者的幻术惊艳了[employer.GetTitledFirstName]，反映了你选择同伴的判断力。你得到丰厚报酬并提升双方声誉。"
+cpr_laamp_contract_schemes.1600.c.tt.no_follower: "你缺少可用的[follower|E]，其[intrigue|E]至少为18且$trait_track_trickster$的[trait_level_track_xp|E]达到50。"
 
 # Exceptional Success (Intrigue)
-cpr_laamp_contract_schemes.1601.t: "$cpr_laamp_1000_contract$: Sleight of Hand, Sleight of Mind"
-cpr_laamp_contract_schemes.1601.desc: "I request that [employer.GetTitledFirstName] gather a few trusted courtiers — an audience enhances the experience I plan to provide. Once they've assembled, I begin with simple deceptions: coins that vanish and reappear, cards that seemingly read thoughts, tokens that transpose impossibly between closed hands.\n\nBut mere tricks are just the foundation. As the evening progresses, I elevate my performance to the realm of elegant deception. I reveal secrets about guests that I couldn't possibly know — details gleaned from careful observation and subtle manipulation of conversation before the performance began.\n\nI stage predictions that come true before their eyes, having engineered their fulfillment through misdirection and psychological manipulation. With each revelation, [employer.GetTitledFirstNamePossessive] eyes widen, first with suspicion, then with delight at being masterfully deceived."
-cpr_laamp_contract_schemes.1601.desc.outro: "\n\n'Remarkable,' [employer.GetTitledFirstName] declares as my performance concludes. 'I shall be puzzling over your methods for weeks to come.'\n\n[employer.GetSheHe|U] rewards me handsomely, the generous payment reflecting both enjoyment of the entertainment and perhaps a touch of wariness at my demonstrated talents for deception. I have made quite an impression — one that might prove valuable beyond this single evening."
-cpr_laamp_contract_schemes.1601.a: "The greatest illusion is making them believe they've seen through your deceptions."
+cpr_laamp_contract_schemes.1601.t: "$cpr_laamp_1000_contract$：手法戏法，心智戏法"
+cpr_laamp_contract_schemes.1601.desc: "我要求[employer.GetTitledFirstName]召集几位心腹朝臣——观众能增强我计划提供的体验。他们集合后，我从简单欺骗开始：消失又重现的硬币，看似读心的纸牌，不可能地在闭合手掌间交换的令牌。\n\n但单纯戏法只是基础。随着夜晚推进，我将表演提升到优雅欺骗的境界。我揭示关于宾客我无从得知的事情——表演前通过仔细观察和巧妙操纵谈话收集的细节。\n\n我安排在他们眼前实现的预言，通过误导和心理操纵精心设计其实现。每个揭示都让[employer.GetTitledFirstNamePossessive]眼睛睁大，先是怀疑，然后因被大师级欺骗而喜悦。"
+cpr_laamp_contract_schemes.1601.desc.outro: "\n\n'了不起，'我的表演结束时[employer.GetTitledFirstName]宣布。'我会在未来几周一直琢磨你的方法。'\n\n[employer.GetSheHe|U]慷慨奖励我，丰厚报酬既反映了对娱乐的享受，或许也对我展示的欺骗才能有一丝警惕。我留下了深刻印象——可能超越这个单一夜晚的价值。"
+cpr_laamp_contract_schemes.1601.a: "最伟大的幻术是让他们相信看穿了你的骗局。"
 
 # Success (Intrigue)
-cpr_laamp_contract_schemes.1602.t: "$cpr_laamp_1000_contract$: Tricks and Marvels"
-cpr_laamp_contract_schemes.1602.desc: "I present a series of illusions and minor deceptions that, while not flawless, still manage to bewilder and entertain [employer.GetTitledFirstName] and the small audience [employer.GetSheHe] has gathered. What I lack in technical perfection, I compensate for with theatrical flair.\n\nWhen a trick nearly fails, I incorporate the mistake into the performance, convincing all present that the apparent error was itself part of a larger deception. [employer.GetTitledFirstName] applauds my recovery, perhaps more impressed by my quick thinking than [employer.GetSheHe] would have been by flawless execution."
-cpr_laamp_contract_schemes.1602.desc.outro: "\n\n'Most entertaining,' [employer.GetTitledFirstName] pronounces when my final illusion concludes. 'A welcome diversion from the predictable amusements of court.' [employer.GetSheHe|U] provides fair payment, clearly satisfied with the evening's entertainment."
-cpr_laamp_contract_schemes.1602.a: "Perception is easily guided by expectation."
+cpr_laamp_contract_schemes.1602.t: "$cpr_laamp_1000_contract$：戏法与奇观"
+cpr_laamp_contract_schemes.1602.desc: "我呈现了一系列虽不完美但仍能迷惑和娱乐[employer.GetTitledFirstName]及其召集的小型观众的幻术和小把戏。技术上的不足，我用戏剧性的天赋来弥补。\n\n当一个戏法几乎失败时，我将失误融入表演，让在场所有人都相信这个明显的错误本身就是一个更大骗局的一部分。[employer.GetTitledFirstName]为我的急智鼓掌，或许比完美执行更让[employer.GetSheHe]印象深刻。"
+cpr_laamp_contract_schemes.1602.desc.outro: "\n\n'非常有趣，'我的最后一个幻术结束时[employer.GetTitledFirstName]评价道。'比起宫廷里那些可预见的消遣，这是个可喜的变化。'[employer.GetSheHe|U]提供了公平报酬，显然对这个夜晚的娱乐感到满意。"
+cpr_laamp_contract_schemes.1602.a: "预期很容易引导感知。"
 
 # Follower Success
-cpr_laamp_contract_schemes.1603.t: "$cpr_laamp_1000_contract$: Master of Deception"
-cpr_laamp_contract_schemes.1603.desc: "I present [follower.GetTitledFirstName], whose skills in illusion and deception far surpass my own. With elegant precision and captivating presence, [follower.GetSheHe] performs feats that seem to defy the very laws of nature.\n\nObjects appear and vanish, thoughts are seemingly plucked from minds, predictions materialize with impossible accuracy. [employer.GetTitledFirstName] watches with childlike wonder as [follower.GetFirstNameNoTooltip] transforms the mundane chamber into a place where the impossible becomes reality, if only for an evening."
-cpr_laamp_contract_schemes.1603.desc.outro: "\n\n'Extraordinary,' [employer.GetTitledFirstName] breathes when the final illusion concludes. 'Your [follower.GetTitledFirstName] possesses talents that border on the supernatural.' [employer.GetSheHe|U] rewards us generously, clearly spellbound by the performance [employer.GetSheHe] has witnessed."
-cpr_laamp_contract_schemes.1603.a: "True mastery makes the impossible seem inevitable."
-
+cpr_laamp_contract_schemes.1603.t: "$cpr_laamp_1000_contract$：骗术大师"
+cpr_laamp_contract_schemes.1603.desc: "我介绍[follower.GetTitledFirstName]出场，[follower.GetSheHe]在幻术和欺骗上的技巧远超于我。带着优雅的精准和迷人的风采，[follower.GetSheHe]表演着似乎违背自然法则的技艺。\n\n物体凭空出现又消失，思想似乎从脑海中抽出，预言以不可能的准确性实现。[employer.GetTitledFirstName]带着孩子般的惊奇看着[follower.GetFirstNameNoTooltip]将平凡的厅堂变成不可能成为现实的地方，哪怕仅此一晚。"
+cpr_laamp_contract_schemes.1603.desc.outro: "\n\n'不可思议，'最后一个幻术结束时[employer.GetTitledFirstName]惊叹道。'你的[follower.GetTitledFirstName]拥有近乎超自然的天赋。'[employer.GetSheHe|U]慷慨奖励我们，显然被[employer.GetSheHe]目睹的表演所震撼。"
+cpr_laamp_contract_schemes.1603.a: "真正的精通让不可能看起来理所当然。"
 # Success (Learning)
-cpr_laamp_contract_schemes.1604.t: "$cpr_laamp_1000_contract$: Philosophical Deceptions"
-cpr_laamp_contract_schemes.1604.desc: "Rather than focus solely on spectacle, I present my illusions as demonstrations of philosophical principles — how easily perception can be misled, how firmly we trust our senses despite their fallibility.\n\nBetween tricks, I offer insights from ancient scholars on the nature of reality and perception, transforming simple deceptions into explorations of deeper truths. [employer.GetTitledFirstName] engages not merely as an audience to be amazed but as a mind to be stimulated.\n\nBy framing each illusion within a context of intellectual inquiry, I elevate what could have been mere entertainment into a scholarly journey that flatters [employer.GetTitledFirstNamePossessive] intelligence while still providing the wonder [employer.GetSheHe] sought."
-cpr_laamp_contract_schemes.1604.desc.outro: "\n\n'You've given me not just amusement but food for thought,' [employer.GetTitledFirstName] acknowledges when the performance ends. 'A rare combination indeed.' [employer.GetSheHe|U] compensates me well, with a respect that suggests [employer.GetSheHe] values the intellectual framework as much as the illusions themselves."
-cpr_laamp_contract_schemes.1604.a: "The greatest deception is not what fools the eyes, but what challenges the mind."
-
+cpr_laamp_contract_schemes.1604.t: "$cpr_laamp_1000_contract$：哲学骗局"
+cpr_laamp_contract_schemes.1604.desc: "我没有只专注于奇观，而是将我的幻术呈现为哲学原理的演示——感知如何容易被误导，我们如何盲目信任自己并不可靠的感官。\n\n在戏法之间，我提供古代学者关于现实和感知本质的见解，将简单的欺骗变成对更深层真理的探索。[employer.GetTitledFirstName]不仅是作为等待惊叹的观众，更是作为被激发思考的智者参与其中。\n\n通过将每个幻术置于学术探究的框架内，我将本可能只是娱乐的内容提升为一次学术之旅，既恭维了[employer.GetTitledFirstNamePossessive]的智慧，又提供了[employer.GetSheHe]寻求的惊奇。"
+cpr_laamp_contract_schemes.1604.desc.outro: "\n\n'你给我的不仅是娱乐还有思考的食粮，'表演结束时[employer.GetTitledFirstName]承认。'确实罕见的组合。'[employer.GetSheHe|U]丰厚地补偿了我，带着暗示[employer.GetSheHe]既重视智力框架又重视幻术本身的尊重。"
+cpr_laamp_contract_schemes.1604.a: "最伟大的欺骗不是愚弄双眼，而是挑战思维。"
 # Failure (Intrigue)
-cpr_laamp_contract_schemes.1605.t: "$cpr_laamp_1000_contract$: The Trick Revealed"
-cpr_laamp_contract_schemes.1605.desc: "My performance begins well enough, with simple illusions drawing appropriate gasps from [employer.GetTitledFirstName] and the assembled courtiers. Emboldened by this early success, I attempt a more complex deception — one requiring careful preparation and timing.\n\nDisaster strikes when a hidden mechanism fails at the crucial moment, exposing the mundane method behind my supposed magic. A courtier points and laughs, others soon joining in as my performance collapses into embarrassment.\n\nWorse still, in my flustered state, I accidentally reveal another prepared trick, making it painfully obvious that what I presented as mysterious insight was merely careful preparation and theatrical contrivance."
-cpr_laamp_contract_schemes.1605.desc.outro: "\n\n'I think we've seen enough of these... parlor tricks,' [employer.GetTitledFirstName] says, making no attempt to hide [employer.GetHerHis] disappointment. 'Perhaps next time I shall hire a child's birthday performer instead.'\n\nI am dismissed without payment, my reputation for clever deception thoroughly undermined by very real failure."
-cpr_laamp_contract_schemes.1605.a: "An illusionist exposed is merely a fool with props."
+cpr_laamp_contract_schemes.1605.t: "$cpr_laamp_1000_contract$：戏法穿帮"
+cpr_laamp_contract_schemes.1605.desc: "我的表演开始时还算顺利，简单的幻术从[employer.GetTitledFirstName]和聚集的朝臣那里引出了适当的惊叹。被早期的成功鼓舞，我尝试了一个需要精心准备和精确时机的更复杂骗局。\n\n灾难在关键时刻降临，一个隐藏的机关失灵，暴露了我所谓魔法背后的平凡方法。一个朝臣指着大笑，其他人很快加入，我的表演在嘲笑中崩溃。\n\n更糟的是，在我慌乱的状态下，我不小心暴露了另一个准备好的戏法，痛苦地表明我呈现的神秘洞察只是精心准备和戏剧性做作。"
+cpr_laamp_contract_schemes.1605.desc.outro: "\n\n'我想我们已经看够了这些...客厅把戏，'[employer.GetTitledFirstName]说，毫不掩饰[employer.GetHerHis]失望。'下次也许我该雇个儿童生日派对的表演者。'\n\n我被遣散没有得到报酬，我聪明骗子的声誉被非常真实的失败彻底破坏。"
+cpr_laamp_contract_schemes.1605.a: "被揭穿的幻术师只是个拿着道具的傻瓜。"
 
 # Failure (Learning)
-cpr_laamp_contract_schemes.1606.t: "$cpr_laamp_1000_contract$: Philosopher's Folly"
-cpr_laamp_contract_schemes.1606.desc: "Rather than focus on spectacle, I attempt to frame my modest illusions as demonstrations of profound philosophical principles. Between simple tricks, I launch into elaborate explanations about perception, reality, and the fallibility of human senses.\n\nMy scholarly digressions grow increasingly lengthy while my actual illusions remain rudimentary. [employer.GetTitledFirstName] shifts impatiently as what should be an entertaining display becomes an impromptu lecture on epistemology.\n\n'Yes, yes,' [employer.GetSheHe] finally interrupts my discourse on how a vanishing coin represents the transience of material wealth, 'most fascinating. But I had rather hoped to be amazed, not educated. Can you perhaps perform an illusion without explaining it to death?'"
-cpr_laamp_contract_schemes.1606.desc.outro: "\n\n'I believe we've had enough philosophy for one evening,' [employer.GetTitledFirstName] concludes when I begin yet another theoretical explanation. 'Next time I desire a lecture, I shall visit the monastery.' I am dismissed without payment, having thoroughly failed to understand that entertainment requires wonder, not merely intellectual understanding."
-cpr_laamp_contract_schemes.1606.a: "Some mysteries are better left unexplained."
+cpr_laamp_contract_schemes.1606.t: "$cpr_laamp_1000_contract$：哲学家的愚蠢"
+cpr_laamp_contract_schemes.1606.desc: "我没有专注于奇观，而是试图将我普通的幻术包装成深刻哲学原理的演示。在简单戏法之间，我展开关于感知、现实和人类感官不可靠性的冗长解释。\n\n我的学术题外话越来越长，而实际的幻术仍然很初级。[employer.GetTitledFirstName]不耐烦地变换姿势，本该是娱乐展示变成了认识论的即兴演讲。\n\n'是，是，'当我论述一枚消失的硬币如何代表物质财富的短暂时，[employer.GetSheHe]终于打断我，'非常迷人。但我更希望被惊艳，而不是受教育。你能不能表演个幻术而不把它解释到死？'"
+cpr_laamp_contract_schemes.1606.desc.outro: "\n\n'我想今晚我们已经听够了哲学，'[employer.GetTitledFirstName]在我又开始另一个理论解释时总结道。'下次我想听讲座时，会去修道院。'我被遣散没有得到报酬，彻底没能理解娱乐需要的是惊奇，而不仅是智力理解。"
+cpr_laamp_contract_schemes.1606.a: "有些谜团最好保持未解。"

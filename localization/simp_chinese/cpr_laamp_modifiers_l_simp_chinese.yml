@@ -1,13 +1,13 @@
 ﻿l_simp_chinese:
 
-cpr_laamp_1000_success_employer_modifier: "Entertained by Skillful Performance"
-cpr_laamp_1000_success_employer_modifier_desc: "This character has been moved by a performance of remarkable quality, bringing temporary respite from the burdens of rule and enhancing their diplomatic presence."
+cpr_laamp_1000_success_employer_modifier: "技艺精湛的演出令人愉悦"
+cpr_laamp_1000_success_employer_modifier_desc: "该角色被一场质量非凡的演出所打动，暂时缓解了统治的重担，并增强了他们的外交风采。"
 
-cpr_laamp_1000_failure_employer_modifier: "Subjected to Painful Performance"
-cpr_laamp_1000_failure_employer_modifier_desc: "This character has recently endured an entertainment of questionable quality, leaving them more irritable and less composed in diplomatic matters."
+cpr_laamp_1000_failure_employer_modifier: "遭受糟糕演出的折磨"
+cpr_laamp_1000_failure_employer_modifier_desc: "该角色最近经历了一场质量堪忧的娱乐活动，导致他们在外交事务中更加易怒且缺乏从容。"
 
-cpr_laamp_1000_deception_success_employer_modifier: "Unwittingly Manipulated"
-cpr_laamp_1000_deception_success_employer_modifier_desc: "This character has been subtly manipulated through entertainment, believing themselves to have experienced something genuine while actually revealing vulnerabilities and secrets. Their judgment is compromised without their knowledge."
+cpr_laamp_1000_deception_success_employer_modifier: "被无意操控"
+cpr_laamp_1000_deception_success_employer_modifier_desc: "该角色通过娱乐活动被巧妙操控，自以为体验了真实的情感，实则暴露了弱点和秘密。他们的判断力在不知不觉中受到了影响。"
 
-cpr_laamp_1000_deception_failure_employer_modifier: "Heightened Suspicion"
-cpr_laamp_1000_deception_failure_employer_modifier_desc: "Having detected an attempt at manipulation disguised as entertainment, this character has become more vigilant and suspicious, making them harder to deceive but also more stressed and paranoid."
+cpr_laamp_1000_deception_failure_employer_modifier: "疑心加重"
+cpr_laamp_1000_deception_failure_employer_modifier_desc: "察觉到以娱乐为幌子的操控企图后，该角色变得更加警惕和多疑，这使得他们更难被欺骗，但也更加紧张和偏执。"

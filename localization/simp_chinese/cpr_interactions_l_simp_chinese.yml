@@ -1,22 +1,22 @@
 ﻿l_simp_chinese:
- cpr_find_prostitutes_interaction: "Interact with Prostitute"
- cpr_find_prostitutes_interaction_desc: "Find a working prostitute to have sex with or invite to court"
+cpr_find_prostitutes_interaction: "与娼妓互动"
+cpr_find_prostitutes_interaction_desc: "寻找一名娼妓发生关系或邀请至宫廷"
 
- recipient_secondary_cpr_find_prostitutes_interaction: "Prostitute"
+recipient_secondary_cpr_find_prostitutes_interaction: "娼妓"
 
- cpr_sex_option: "$carn_sex_interaction$"
- cpr_sex_option_desc: "Open #EMP $carn_sex_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]"
- cpr_invite_to_court_option: "Invite to Court"
- cpr_invite_to_court_option_desc: "Open #EMP $invite_to_court_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]"
- cpr_invite_as_guest_option: "$travl_invite_as_guest_interaction$"
- cpr_invite_as_guest_option_desc: "Open #EMP $travl_invite_as_guest_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]"
+cpr_sex_option: "$carn_sex_interaction$"
+cpr_sex_option_desc: "为[secondary_recipient.GetShortUINameNoTooltip]打开#EMP $carn_sex_interaction$# "
+cpr_invite_to_court_option: "邀请至宫廷"
+cpr_invite_to_court_option_desc: "为[secondary_recipient.GetShortUINameNoTooltip]打开#EMP $invite_to_court_interaction$#！"
+cpr_invite_as_guest_option: "$travl_invite_as_guest_interaction$"
+cpr_invite_as_guest_option_desc: "为[secondary_recipient.GetShortUINameNoTooltip]打开#EMP $travl_invite_as_guest_interaction$#！"
 
- cpr_sex_interaction_not_valid_tt: "$carn_sex_interaction$ is not valid for [secondary_recipient.GetShortUINameNoTooltip] at the moment."
- cpr_invite_to_court_interaction_not_accepted_tt: "$invite_to_court_interaction$ is not valid for [secondary_recipient.GetShortUINameNoTooltip] or they will not accept it at the moment."
- cpr_invite_as_guest_interaction_not_accepted_tt: "$travl_invite_as_guest_interaction$ is not valid for [secondary_recipient.GetShortUINameNoTooltip] or will not accept it at the moment."
+cpr_sex_interaction_not_valid_tt: "$carn_sex_interaction$当前对[secondary_recipient.GetShortUINameNoTooltip]无效。"
+cpr_invite_to_court_interaction_not_accepted_tt: "$invite_to_court_interaction$当前对[secondary_recipient.GetShortUINameNoTooltip]无效或他们不会接受。"
+cpr_invite_as_guest_interaction_not_accepted_tt: "$travl_invite_as_guest_interaction$当前对[secondary_recipient.GetShortUINameNoTooltip]无效或不会接受。"
 
- cpr_sex_interaction_warning_tt: "#X Opens #EMP $carn_sex_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]#!"
- cpr_invite_to_court_interaction_warning_tt: "#X Opens #EMP $invite_to_court_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]#!"
- cpr_invite_as_guest_interaction_warning_tt: "#X Opens #EMP $travl_invite_as_guest_interaction$#! for [secondary_recipient.GetShortUINameNoTooltip]#!"
+cpr_sex_interaction_warning_tt: "#X 为[secondary_recipient.GetShortUINameNoTooltip]打开#EMP $carn_sex_interaction$#！"
+cpr_invite_to_court_interaction_warning_tt: "#X 为[secondary_recipient.GetShortUINameNoTooltip]打开#EMP $invite_to_court_interaction$#！"
+cpr_invite_as_guest_interaction_warning_tt: "#X 为[secondary_recipient.GetShortUINameNoTooltip]打开#EMP $travl_invite_as_guest_interaction$#！"
 
- travl_invite_as_guest_interaction: "Invite as Guest"
+travl_invite_as_guest_interaction: "邀请为宾客"
