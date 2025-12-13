@@ -57,7 +57,7 @@ If you still want to try using CPR with a conversion mod, be prepared that some 
 
 ## Localization
 
-This mod is currently available in English, Chinese (translated by [@Dark_Crow](https://www.loverslab.com/profile/10396935-dark_crow/)), Korean (translated by [@Xelren](https://www.loverslab.com/profile/4890252-xelren/)), French (translated by [@FonWasH](https://www.loverslab.com/profile/4673452-fonwash/)), and Polish (translated by **@Avinus**). For other languages, it uses the original English text as a placeholder.
+This mod is currently available in English, Chinese (translated by [@Dark_Crow](https://www.loverslab.com/profile/10396935-dark_crow/) and **@jengus**), Korean (translated by [@Xelren](https://www.loverslab.com/profile/4890252-xelren/)), French (translated by [@FonWasH](https://www.loverslab.com/profile/4673452-fonwash/)), and Polish (translated by **@Avinus**). For other languages, it uses the original English text as a placeholder.
 
 ## Links
 

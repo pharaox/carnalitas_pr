@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 0.6.2
+
+### Localization
+
+* Updated Chinese translation by **@jengus**.
+
 ## Version 0.6.1
 
 ### Localization
