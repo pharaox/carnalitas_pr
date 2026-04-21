@@ -416,7 +416,7 @@ carn_prostitution_random_events.0011 = {
 				OR = {
 					AND = {
 						is_married = yes
-						trait_is_shunned_or_criminal_in_my_or_lieges_faith_trigger = { TRAIT = adulterer GENDER_CHARACTER = root }
+						trait_is_shunned_or_criminal_in_my_or_lieges_faith_trigger = { TRAIT = trait:adulterer GENDER_CHARACTER = root }
 					}
 					relation_with_character_is_sodomy_in_my_or_lieges_faith_trigger = { CHARACTER = root }
 				}

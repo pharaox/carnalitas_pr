@@ -4,7 +4,7 @@
 
 A comprehensive rework of the Carnalitas prostitution system aiming at improved balance and better integration with other aspects of the game. Now also complemented by a "Carnalitas Historical Prostitution Doctrines" mod that enables such doctrines for all faiths.
 
-The latest version is compatible with CK3 1.18.x and Carnalitas 2.12. If you are still on CK3 1.17.x, download [version 0.5.0](https://github.com/pharaox/carnalitas_pr/releases/download/0.5.0/carnalitas_prostitution_reimagined-0.5.0.zip) instead, and use it with Carnalitas 2.11.
+The latest version is compatible with CK3 1.19.x and Carnalitas 2.16. If you are still on CK3 1.18.x, download [version 0.6.2](https://github.com/pharaox/carnalitas_pr/releases/download/0.6.2/carnalitas_prostitution_reimagined-0.6.2.zip) instead, and use it with Carnalitas 2.15.
 
 ## Overview
 
@@ -147,11 +147,11 @@ Besides the above, there are a few other vanilla events that involve prostitutes
 Besides the ways already described, additional prostitutes are spawned every year in major locations, such as capitals and holy sites. Every such location tends to have at least one working prostitute at any given moment. Existing prostitutes may decide to move to such a location, if not already in one. The exact criteria is as follows:
 
 | Development | Other Conditions |
-|---:|:---|
+| ---: | :--- |
 | >= 50 | Always |
 | >= 20 | Capital of at least a duchy, or holy site of a faith with at least 20 counties |
 | >= 10 | Capital of at least a kingdom, or holy site of a faith with at least 50 counties |
-|  < 10 | Never |
+| < 10 | Never |
 
 ### Finding and Interacting with Working Prostitutes
 
@@ -211,7 +211,7 @@ The above events are changed in this mod in the following way:
 The chances for contracting STD in various situations after changes by this mod are as follows:
 
 | Situation | Affects | Total | Lover's Pox | Great Pox |
-|:---|:---|---:|---:|---:|
+| :--- | :--- | ---: | ---: | ---: |
 | Stress-coping events for *Rakish* characters | Clients | 12% | 10% | 2% |
 | Contract STD prostitution event (~5% chance every year) | Prostitutes | 100% | 80% | 20% |
 | Newly created prostitute characters | Prostitutes | 6% | 5% | 1% |
