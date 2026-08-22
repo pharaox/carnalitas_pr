@@ -1,6 +1,6 @@
 ﻿l_french:
  cpr_find_prostitutes_interaction: "Interagir avec une prostituée"
- cpr_find_prostitutes_interaction_desc: "Trouver une prostituée en activité pour avoir des relations sexuelles ou l'inviter à votre cour"
+ cpr_find_prostitutes_interaction_desc: "Trouver une prostituée en activité pour avoir des relations sexuelles ou l’inviter à votre cour"
 
  recipient_secondary_cpr_find_prostitutes_interaction: "Prostituée"
 
@@ -11,12 +11,12 @@
  cpr_invite_as_guest_option: "$travl_invite_as_guest_interaction$"
  cpr_invite_as_guest_option_desc: "Ouvrir #EMP $travl_invite_as_guest_interaction$#! pour [secondary_recipient.GetShortUINameNoTooltip]"
 
- cpr_sex_interaction_not_valid_tt: "$carn_sex_interaction$ n'est pas possible pour [secondary_recipient.GetShortUINameNoTooltip] pour le moment."
- cpr_invite_to_court_interaction_not_accepted_tt: "$invite_to_court_interaction$ n'est pas possible pour [secondary_recipient.GetShortUINameNoTooltip] ou elle/il ne l'acceptera pas pour l'instant."
- cpr_invite_as_guest_interaction_not_accepted_tt: "$travl_invite_as_guest_interaction$ n'est pas possible pour [secondary_recipient.GetShortUINameNoTooltip] ou ne sera pas accepté pour l'instant."
+ cpr_sex_interaction_not_valid_tt: "$carn_sex_interaction$ n’est pas possible pour [secondary_recipient.GetShortUINameNoTooltip] pour le moment."
+ cpr_invite_to_court_interaction_not_accepted_tt: "$invite_to_court_interaction$ n’est pas possible pour [secondary_recipient.GetShortUINameNoTooltip] ou [secondary_recipient.GetSheHe] ne l’acceptera pas pour l’instant."
+ cpr_invite_as_guest_interaction_not_accepted_tt: "$travl_invite_as_guest_interaction$ n’est pas possible pour [secondary_recipient.GetShortUINameNoTooltip] ou ne sera pas accepté pour l’instant."
 
  cpr_sex_interaction_warning_tt: "#X Ouvre #EMP $carn_sex_interaction$#! pour [secondary_recipient.GetShortUINameNoTooltip]#!"
  cpr_invite_to_court_interaction_warning_tt: "#X Ouvre #EMP $invite_to_court_interaction$#! pour [secondary_recipient.GetShortUINameNoTooltip]#!"
  cpr_invite_as_guest_interaction_warning_tt: "#X Ouvre #EMP $travl_invite_as_guest_interaction$#! pour [secondary_recipient.GetShortUINameNoTooltip]#!"
 
- travl_invite_as_guest_interaction: "Inviter comme invité(e)"
+ travl_invite_as_guest_interaction: "Inviter comme [Select_CString(recipient.IsFemale, 'invitée', 'invité')]"
