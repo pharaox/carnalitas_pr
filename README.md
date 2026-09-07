@@ -6,6 +6,8 @@ A comprehensive rework of the Carnalitas prostitution system aiming at improved 
 
 The latest version is compatible with CK3 1.19.x and Carnalitas 2.16. If you are still on CK3 1.18.x, download [version 0.6.2](https://github.com/pharaox/carnalitas_pr/releases/download/0.6.2/carnalitas_prostitution_reimagined-0.6.2.zip) instead, and use it with Carnalitas 2.15.
 
+**Check out my new mod [Pyrates](https://steamcommunity.com/sharedfiles/filedetails/?id=3797518189) - take landless adventure to the seas with new buildings, contracts, and events.**
+
 ## Overview
 
 [Carnalitas](https://www.loverslab.com/files/file/14207-carnalitas-unified-sex-mod-framework-for-ck3/) adds a prostitution system to CK3, enabling the player to play as a prostitute, or to force their slaves into prostitution. This is a great idea and the basics are certainly solid, but as with the slavery system, there are certain aspects that could be improved. In particular:
@@ -29,7 +31,7 @@ With this mod:
 * *Make Love* **prostitution prices** scale more gradually with the *Prostitute* trait XP, and so does **stress loss**.
 * Having sex with a prostitute may result in **secrets being learned** by either of the partners.
 
-This mods also adds new prostitution-related interactions and events:
+This mod also adds new prostitution-related interactions and events:
 
 * Players can use the **Interact with Prostitute** interaction to easily find working prostitutes and interact with them.
 * Landless adventurer characters can get the **A Night's Diversion** task contract to entertain a ruler.
@@ -71,6 +73,7 @@ If you like this mod, you may also consider my other mods:
 * [Search & Trade Artifacts](https://steamcommunity.com/sharedfiles/filedetails/?id=2962238514), search for artifacts, buy them from other characters, and sell them to other characters.
 * [Travelers](https://steamcommunity.com/sharedfiles/filedetails/?id=3082182371), characters always travel to their home when it changes instead of teleporting.
 * [Active Courtiers](https://steamcommunity.com/sharedfiles/filedetails/?id=3157170996), courtiers search for spouses themselves for less micromanagement, stronger AI, and immersion.
+* [Pyrates](https://steamcommunity.com/sharedfiles/filedetails/?id=3797518189), take landless adventure to the seas with new buildings, contracts, and events.
 
 Thumbnail Source: [*An Algerian Prostitute* by Frederick Arthur Bridgman](https://www.meisterdrucke.uk/fine-art-prints/Frederick-Arthur-Bridgman/842422/An-Algerian-Prostitute.html)
 
@@ -159,7 +162,7 @@ Since *Working as a Prostitute* is a modifier rather than a trait, finding worki
 
 ### Entertaining Rulers as a Landless Adventurer
 
-With this mod, landless adventurer player characters can get the new *A Night's Diversion* task contract. It requires you to travel to a ruler's residence and provide entertainment. You can then choose from several options based on the employer's interests — music, poetry, dance, fortune-telling, illusions, or companionship (sex). The success may depend on your *Diplomacy*, *Intrigue*, *Learning*, or *Prowess* skills. You may also assign a suitable follower to perform in your place.
+With this mod, landless adventurer player characters can get the new *A Night's Diversion* task contract. It requires you to travel to a ruler's residence and provide entertainment. You can then choose from several options based on the employer's interests: music, poetry, dance, fortune-telling, illusions, or companionship (sex). The success may depend on your *Diplomacy*, *Intrigue*, *Learning*, or *Prowess* skills. You may also assign a suitable follower to perform in your place.
 
 While this contract is not limited to prostitutes, characters with the *Prostitute* trait get a bonus to the probability of getting it. Since this is a *Diplomacy* contract, it is also more likely with *Explorers* camp purpose.
 
@@ -224,7 +227,7 @@ The chances for contracting STD in various situations after changes by this mod 
 
 The price for having sex with a prostitute via the Carnalitas *Make Love* interaction scales more gradually with the *Prostitute* trait XP, and the stress loss scales similarly. Having sex with a "masterful" prostitute (100 XP) is twice as expensive, and loses twice the amount of stress, compared with having sex with a "novice" prostitute (0 XP).
 
-Having sex with prostitutes in stress-coping and other events costs a fixed amount of gold and confers fixed benefits. The actual amount depends on the monthly income, with 15 as minimum.
+Having sex with prostitutes in stress-coping and other events costs a fixed amount of gold and confers fixed benefits. The actual amount depends on the monthly income, with 15 as the minimum.
 
 #### Learning Secrets
 
