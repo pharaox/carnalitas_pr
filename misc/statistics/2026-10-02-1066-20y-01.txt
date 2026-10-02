@@ -1,0 +1,73 @@
+CK3: 1.20.0.3, mod: 0.8.0
+
+Character started working as prostitute: 788
+- after_creation: 689
+- yearly_pulse: 39
+- decision: 4
+- interaction: 56
+Character stopped working as prostitute: 323
+- on_marriage: 7
+- on_concubinage: 0
+- on_join_court: 151
+- on_imprison: 9
+- on_title_gain: 3
+- on_slave_owner_removed: 5
+- yearly_pulse: 140
+- decision: 0
+- interaction: 8
+
+Character had sex with prostitute: 302
+Prostitute had sex with character: 229
+Prostitute got pregnant: 32
+Character learned a secret: 62
+
+Prostitute got STD: 99
+- lovers_pox: 65
+- great_pox: 17
+- early_great_pox: 17
+
+Stress Coping: Wanton Ways event fired: 14
+Stress Coping: The Price of Passion event fired: 0
+Stress Coping: Consequences event scheduled: 25
+Stress Coping: Consequences event fired: 21
+
+Improved Skills event fired: 530
+Rivals Slander You event fired: 420
+Priests Condemn You event fired: 333
+Got STD event fired: 47
+Client Tips High event fired: 693
+An Alluring Proposition setup event fired: 623
+An Alluring Proposition event fired: 526
+- option a: 228
+- option b: 219
+- option c: 79
+
+Earnings from Slave Prostitution event fired: 197
+
+Using cpr_rakish_brothel_night_effect: 203
+- from_stress_loss_decision: 14
+Using vanilla_rakish_brothel_night_effect: 73
+- from_stress_loss_decision: 1
+
+Creating prostitute: 689
+- spawn: 494
+- generic: 141
+- chariot_race_4030: 54
+- tour_travel_3007: 0
+- tour_travel_3140: 0
+Removing prostitute: 54
+- chariot_race_4030: 54
+Moving prostitute: 154
+
+Character can no longer work as prostitute: 264
+Character decided to start working as prostitute: 39
+Character decided to stop working as prostitute: 52
+Character was forced to start working as prostitute: 56
+Character was forced to stop working as prostitute: 8
+
+Moonlight as a Prostitute decision made: 4
+Stop Moonlighting as a Prostitute decision made: 0
+
+Start Prostitution interaction accepted: 56
+Stop Prostitution interaction accepted: 8
+
