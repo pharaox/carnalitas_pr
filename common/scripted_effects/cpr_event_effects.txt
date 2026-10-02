@@ -115,6 +115,7 @@ cpr_create_prostitute_effect = {
 		dynasty = none
 		culture = $LOCATION$.culture
 		faith = $LOCATION$.faith
+		rite = $LOCATION$.rite
 		save_temporary_scope_as = new_character
 	}
 }

@@ -7,8 +7,11 @@ carn_force_stop_prostitution_interaction = {
 	common_interaction = yes
 	icon = cpr_prostitution
 
-	is_shown = {
+	is_available = {
 		NOT = { has_game_rule = carn_slavery_content_disabled }
+	}
+
+	is_shown = {
 		scope:actor = {
 			has_relation_slave = scope:recipient
 		}
@@ -67,10 +70,6 @@ carn_force_stop_prostitution_interaction = {
 		kingdom = 24
 		empire = 24
 		hegemony = 24
-	}
-
-	ai_potential = {
-		always = yes
 	}
 
 	ai_will_do = {

@@ -4,7 +4,7 @@
 
 A comprehensive rework of the Carnalitas prostitution system aiming at improved balance and better integration with other aspects of the game. Now also complemented by a "Carnalitas Historical Prostitution Doctrines" mod that enables such doctrines for all faiths.
 
-The latest version is compatible with CK3 1.19.x and Carnalitas 2.16. If you are still on CK3 1.18.x, download [version 0.6.2](https://github.com/pharaox/carnalitas_pr/releases/download/0.6.2/carnalitas_prostitution_reimagined-0.6.2.zip) instead, and use it with Carnalitas 2.15.
+The latest version is compatible with CK3 1.20.x and Carnalitas 2.17. If you are still on CK3 1.19.x, download [version 0.7.0](https://github.com/pharaox/carnalitas_pr/releases/download/0.7.0/carnalitas_prostitution_reimagined-0.7.0.zip) instead, and use it with Carnalitas 2.16.
 
 **Check out my new mod [Pyrates](https://steamcommunity.com/sharedfiles/filedetails/?id=3797518189) - take landless adventure to the seas with new buildings, contracts, and events.**
 

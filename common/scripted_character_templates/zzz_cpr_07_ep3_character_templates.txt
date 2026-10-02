@@ -22,6 +22,7 @@
 	random_traits = yes
 	culture = root.culture
 	faith = root.faith
+	rite = root.rite
 	intrigue = {
 		min_template_decent_skill
 		max_template_decent_skill

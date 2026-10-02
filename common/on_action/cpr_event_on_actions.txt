@@ -156,7 +156,7 @@ cpr_on_slave_owner_removed = {
 # TODO
 # on_hostage_taken
 # on_guest_arrived_from_pool
-# on_character_faith_change
+# on_rite_change
 # on_character_culture_change
 # on_birthday
 # on_contract_disease

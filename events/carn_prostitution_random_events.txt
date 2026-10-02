@@ -397,7 +397,7 @@ carn_prostitution_random_events.0011 = {
 			modifier = disappointed_opinion
 			opinion = -10
 		}
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			lustful = minor_stress_impact_gain
 		}
 
@@ -416,9 +416,9 @@ carn_prostitution_random_events.0011 = {
 				OR = {
 					AND = {
 						is_married = yes
-						trait_is_shunned_or_criminal_in_my_or_lieges_faith_trigger = { TRAIT = trait:adulterer GENDER_CHARACTER = root }
+						trait_is_shunned_or_criminal_in_my_or_lieges_rite_trigger = { TRAIT = trait:adulterer GENDER_CHARACTER = root }
 					}
-					relation_with_character_is_sodomy_in_my_or_lieges_faith_trigger = { CHARACTER = root }
+					relation_with_character_is_sodomy_in_my_or_lieges_rite_trigger = { CHARACTER = root }
 				}
 			}
 		}

@@ -9,6 +9,7 @@
 	dynasty = none
 	random_traits = yes
 	faith = this.faith
+	rite = this.rite
 	culture = this.culture
 	diplomacy = {
 		min_template_decent_skill

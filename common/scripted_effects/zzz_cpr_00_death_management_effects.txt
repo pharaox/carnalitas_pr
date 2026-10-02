@@ -1,7 +1,10 @@
 ﻿silent_disappearance_effect = {
 	hidden_effect = {
 		if = {
-			limit = { is_alive = yes }
+			limit = {
+				is_alive = yes
+				is_ruler = no
+			}
 
 			# CPR Track disappearance of prostitutes from chariot_race.3040
 			if = {

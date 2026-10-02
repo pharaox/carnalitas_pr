@@ -180,7 +180,7 @@ cpr_laamp_contract_schemes.1000 = {
 							add = 10
 						}
 						modifier = {
-							has_trait = scholar
+							has_trait = erudite
 							add = 10
 						}
 						save_temporary_scope_value_as = { name = option value = flag:astrology }
@@ -593,7 +593,7 @@ scripted_effect cpr_laamp_contract_schemes_1000_critical_success_effect = {
 			years = 2
 		}
 	}
-	stress_impact = {
+	stress_and_fulfillment_impact = {
 		humble = minor_stress_impact_gain
 		arrogant = minor_stress_impact_loss
 	}
@@ -641,7 +641,7 @@ scripted_effect cpr_laamp_contract_schemes_1000_deception_success_effect = {
 			years = 2
 		}
 	}
-	stress_impact = {
+	stress_and_fulfillment_impact = {
 		just = minor_stress_impact_gain
 		deceitful = minor_stress_impact_loss
 	}
@@ -661,7 +661,7 @@ scripted_effect cpr_laamp_contract_schemes_1000_standard_failure_effect = {
 			years = 1
 		}
 	}
-	stress_impact = {
+	stress_and_fulfillment_impact = {
 		base = miniscule_stress_impact_gain
 		humble = minor_stress_impact_loss
 		arrogant = minor_stress_impact_gain
@@ -679,7 +679,7 @@ scripted_effect cpr_laamp_contract_schemes_1000_deception_failure_effect = {
 			years = 2
 		}
 	}
-	stress_impact = {
+	stress_and_fulfillment_impact = {
 		base = miniscule_stress_impact_gain
 		just = minor_stress_impact_loss
 		deceitful = minor_stress_impact_gain

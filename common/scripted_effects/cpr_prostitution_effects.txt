@@ -204,7 +204,7 @@ cpr_force_start_prostitution_effect = {
 	}
 
 	# Stress impact
-	stress_impact = {
+	stress_and_fulfillment_impact = {
 		generous = minor_stress_impact_gain
 		compassionate = miniscule_stress_impact_gain
 		greedy = minor_stress_impact_loss
@@ -213,7 +213,7 @@ cpr_force_start_prostitution_effect = {
 	}
 	if = {
 		limit = { carn_accepts_prostitution_trigger = no }
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			zealous = minor_stress_impact_gain
 			cynical = minor_stress_impact_loss
 		}
@@ -250,7 +250,7 @@ cpr_force_stop_prostitution_effect = {
 	}
 
 	# Stress impact
-	stress_impact = {
+	stress_and_fulfillment_impact = {
 		greedy = minor_stress_impact_gain
 		sadistic = miniscule_stress_impact_gain
 		callous = miniscule_stress_impact_gain
@@ -259,7 +259,7 @@ cpr_force_stop_prostitution_effect = {
 	}
 	if = {
 		limit = { carn_accepts_prostitution_trigger = no }
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			cynical = minor_stress_impact_gain
 			zealous = minor_stress_impact_loss
 		}
@@ -286,7 +286,7 @@ cpr_force_stop_prostitution_effect = {
 cpr_family_or_dynasty_stress_impact_effect = {
 	if = {
 		limit = { is_parent_of = $CHARACTER$ }
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			base = major_stress_impact_$TYPE$
 			compassionate = medium_stress_impact_$TYPE$
 			sadistic = medium_stress_impact_$NOT_TYPE$
@@ -300,7 +300,7 @@ cpr_family_or_dynasty_stress_impact_effect = {
 				is_spouse_of = $CHARACTER$
 			}
 		}
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			base = medium_stress_impact_$TYPE$
 			compassionate = minor_stress_impact_$TYPE$
 			sadistic = minor_stress_impact_$NOT_TYPE$
@@ -309,7 +309,7 @@ cpr_family_or_dynasty_stress_impact_effect = {
 	}
 	else_if = {
 		limit = { is_extended_family_of = $CHARACTER$ }
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			base = minor_stress_impact_$TYPE$
 			compassionate = miniscule_stress_impact_$TYPE$
 			sadistic = miniscule_stress_impact_$NOT_TYPE$
@@ -326,7 +326,7 @@ cpr_friend_or_lover_stress_impact_effect = {
 				has_relation_soulmate = $CHARACTER$
 			}
 		}
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			base = major_stress_impact_$TYPE$
 			compassionate = medium_stress_impact_$TYPE$
 			sadistic = medium_stress_impact_$NOT_TYPE$
@@ -340,7 +340,7 @@ cpr_friend_or_lover_stress_impact_effect = {
 				has_relation_lover = $CHARACTER$
 			}
 		}
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			base = medium_stress_impact_$TYPE$
 			compassionate = minor_stress_impact_$TYPE$
 			sadistic = minor_stress_impact_$NOT_TYPE$
@@ -352,7 +352,7 @@ cpr_friend_or_lover_stress_impact_effect = {
 cpr_rival_stress_impact_effect = {
 	if = {
 		limit = { has_relation_nemesis = $CHARACTER$ }
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			base = major_stress_impact_$TYPE$
 			vengeful = medium_stress_impact_$TYPE$
 			forgiving = medium_stress_impact_$NOT_TYPE$
@@ -360,7 +360,7 @@ cpr_rival_stress_impact_effect = {
 	}
 	else_if = {
 		limit = { has_relation_rival = $CHARACTER$ }
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			base = medium_stress_impact_$TYPE$
 			vengeful = minor_stress_impact_$TYPE$
 			forgiving = minor_stress_impact_$NOT_TYPE$

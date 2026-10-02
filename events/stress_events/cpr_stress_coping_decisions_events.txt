@@ -355,7 +355,7 @@ cpr_stress_trait_coping_decisions.2004 = {
 		scope:baby = {
 			if = {
 				limit = {
-					faith = { has_doctrine = doctrine_bastardry_none }
+					rite = { rite_has_doctrine = doctrine_bastardry_none }
 				}
 				add_trait = wild_oat
 			}
@@ -418,7 +418,7 @@ cpr_stress_trait_coping_decisions.2004 = {
 
 		add_legitimacy = major_legitimacy_loss
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			base = minor_stress_impact_gain
 			callous = medium_stress_impact_gain
 			paranoid = medium_stress_impact_gain
@@ -476,7 +476,7 @@ cpr_stress_trait_coping_decisions.2004 = {
 			}
 		}
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			callous = minor_stress_impact_gain
 			paranoid = minor_stress_impact_gain
 			arrogant = minor_stress_impact_gain
@@ -489,7 +489,7 @@ cpr_stress_trait_coping_decisions.2004 = {
 	option = { # Reject child and mother
 		name = stress_trait_coping_decisions.2004.c
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			base = medium_stress_impact_gain
 			callous = minor_stress_impact_loss
 			compassionate = medium_stress_impact_gain
