@@ -1,14 +1,14 @@
 ﻿l_french:
- carn_cannot_have_max_number_of_slave_prostitutes: "Impossible d'avoir plus de [EmptyScope.ScriptValue('carn_max_slave_prostitutes_per_owner')|0] esclaves travaillant comme prostituées"
+ carn_cannot_have_max_number_of_slave_prostitutes: "Impossible d’avoir plus de [EmptyScope.ScriptValue('carn_max_slave_prostitutes_per_owner')|0] esclaves travaillant comme prostituées"
 
- carn_not_effective_age_under_value_cutoff: "L'âge n'est pas inférieur à $VALUE|0$"
+ carn_not_effective_age_under_value_cutoff: "L’âge n’est pas inférieur à $VALUE|0$"
 
  carn_i_can_have_sex_trigger: "Vous pouvez avoir des relations sexuelles"
  carn_not_i_can_have_sex_trigger: "Vous ne pouvez pas avoir de relations sexuelles"
  carn_they_can_have_sex_trigger: "[CHARACTER.GetShortUIName|U] peut avoir des relations sexuelles"
  carn_not_they_can_have_sex_trigger: "[CHARACTER.GetShortUIName|U] ne peut pas avoir de relations sexuelles"
  carn_can_have_sex_trigger: "Peut avoir des relations sexuelles"
- carn_not_can_have_sex_trigger: "Impossible d'avoir des relations sexuelles"
+ carn_not_can_have_sex_trigger: "Impossible d’avoir des relations sexuelles"
 
  carn_i_accepts_prostitution_trigger: "La prostitution est acceptée par votre foi ou votre culture"
  carn_not_i_accepts_prostitution_trigger: "La prostitution est #bold not#! acceptée par votre foi ou votre culture"

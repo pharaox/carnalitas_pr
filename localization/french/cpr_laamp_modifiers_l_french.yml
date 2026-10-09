@@ -3,11 +3,11 @@
 cpr_laamp_1000_success_employer_modifier: "Ému par une performance remarquable"
 cpr_laamp_1000_success_employer_modifier_desc: "Ce personnage a été touché par une prestation de grande qualité, lui apportant un répit temporaire face aux charges du pouvoir et renforçant sa prestance diplomatique."
 
-cpr_laamp_1000_failure_employer_modifier: "Spectateur d'une performance pénible"
-cpr_laamp_1000_failure_employer_modifier_desc: "Ce personnage a récemment assisté à un divertissement de qualité douteuse, ce qui l'a rendu plus irritable et moins posé dans ses relations diplomatiques."
+cpr_laamp_1000_failure_employer_modifier: "Spectateur d’une performance pénible"
+cpr_laamp_1000_failure_employer_modifier_desc: "Ce personnage a récemment assisté à un divertissement de qualité douteuse, ce qui l’a rendu plus irritable et moins posé dans ses relations diplomatiques."
 
 cpr_laamp_1000_deception_success_employer_modifier: "Manipulé à son insu"
-cpr_laamp_1000_deception_success_employer_modifier_desc: "Ce personnage a été subtilement manipulé sous couvert d'un divertissement, croyant vivre une expérience sincère tout en dévoilant failles et secrets. Son jugement en ressort altéré — sans qu'il s'en rende compte."
+cpr_laamp_1000_deception_success_employer_modifier_desc: "Ce personnage a été subtilement manipulé sous couvert d’un divertissement, croyant vivre une expérience sincère tout en dévoilant failles et secrets. Son jugement en ressort altéré — sans qu’il s’en rende compte."
 
 cpr_laamp_1000_deception_failure_employer_modifier: "Méfiance accrue"
 cpr_laamp_1000_deception_failure_employer_modifier_desc: "Ayant perçu une tentative de manipulation déguisée en spectacle, ce personnage est devenu plus vigilant et soupçonneux. Il sera plus difficile à tromper, mais aussi plus stressé et paranoïaque."

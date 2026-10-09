@@ -1,0 +1,103 @@
+﻿l_french:
+ cpr_debug_prefix: "[GetCurrentDate.GetStringShort]: [THIS.Char.GetFullNameNoTooltip] ([THIS.Char.GetID])"
+ cpr_debug_prefix_2: "[GetCurrentDate.GetStringShort]: [THIS.Char.GetFullNameNoTooltip] ([THIS.Char.GetID], [Select_CString(THIS.Char.IsFemale, 'femme', 'homme')])"
+
+ # Yearly
+ cpr_debug_msg_spawning_prostitutes: "[GetCurrentDate.GetStringShort]: Génération de prostituées"
+
+ # Prostitution
+ cpr_debug_msg_character_started_working_as_prostitute: "$cpr_debug_prefix_2$: Le personnage a commencé à travailler comme prostituée, cpr_event : [THIS.Var('cpr_event').GetFlagName]"
+ cpr_debug_msg_character_stopped_working_as_prostitute: "$cpr_debug_prefix_2$: Le personnage a cessé de travailler comme prostituée, cpr_event : [THIS.Var('cpr_event').GetFlagName]"
+
+ # Sex
+ cpr_debug_msg_character_had_sex_with_prostitute: "$cpr_debug_prefix_2$: Le personnage a eu des relations sexuelles avec une prostituée, carn_sex_partner : [THIS.Var('carn_sex_partner').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_partner').Char.GetID], [Select_CString(THIS.Var('carn_sex_partner').Char.IsFemale, 'femme', 'homme')])"
+ cpr_debug_msg_prostitute_had_sex_with_character: "$cpr_debug_prefix_2$: La prostituée a eu des relations sexuelles avec le personnage, carn_sex_partner : [THIS.Var('carn_sex_partner').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_partner').Char.GetID], [Select_CString(THIS.Var('carn_sex_partner').Char.IsFemale, 'femme', 'homme')])"
+ cpr_debug_msg_prostitute_got_pregnant: "$cpr_debug_prefix_2$: La prostituée est tombée enceinte, père : [THIS.Var('father').Char.GetFullNameNoTooltip] ([THIS.Var('father').Char.GetID]), carn_pregnancy_chance : [THIS.Var('carn_pregnancy_chance').GetValue]"
+
+ cpr_debug_msg_character_learned_secret: "$cpr_debug_prefix_2$: Le personnage a appris un secret, secret : [THIS.Var('learned_secret').Secret.GetName] de [THIS.Var('learned_secret').Secret.GetOwner.GetFullNameNoTooltip] ([THIS.Var('learned_secret').Secret.GetOwner.GetID])"
+
+ # Health
+ cpr_debug_msg_prostitute_got_std: "$cpr_debug_prefix_2$: La prostituée a contracté une MST, disease_type : [THIS.Var('disease_type').GetFlagName]"
+
+ # Stress coping events
+ cpr_debug_msg_stress_trait_coping_decisions_2001_fired: "$cpr_debug_prefix_2$: Événement $stress_trait_coping_decisions.2001.t$ déclenché"
+ cpr_debug_msg_stress_trait_coping_decisions_2002_fired: "$cpr_debug_prefix_2$: Événement $stress_trait_coping_decisions.2002.t$ déclenché"
+
+ cpr_debug_msg_stress_trait_coping_decisions_2004_scheduled: "$cpr_debug_prefix_2$: Événement $stress_trait_coping_decisions.2004.t$ programmé"
+ cpr_debug_msg_stress_trait_coping_decisions_2004_fired: "$cpr_debug_prefix_2$: Événement $stress_trait_coping_decisions.2004.t$ déclenché"
+
+ # Carnalitas events
+ cpr_debug_msg_prostitution_random_events_0001_fired: "$cpr_debug_prefix_2$: Événement $carn_prostitution_random_events.0001.notification$ déclenché, trait_xp : [THIS.Var('trait_xp').GetValue]"
+ cpr_debug_msg_prostitution_random_events_0002_fired: "$cpr_debug_prefix_2$: Événement $carn_prostitution_random_events.0002.notification$ déclenché"
+ cpr_debug_msg_prostitution_random_events_0003_fired: "$cpr_debug_prefix_2$: Événement Les prêtres vous condamnent déclenché"
+ cpr_debug_msg_prostitution_random_events_0004_fired: "$cpr_debug_prefix_2$: Événement MST contractée déclenché"
+ cpr_debug_msg_prostitution_random_events_0005_fired: "$cpr_debug_prefix_2$: Événement $carn_prostitution_random_events.0005.notification$ déclenché"
+ cpr_debug_msg_prostitution_random_events_0010_fired: "$cpr_debug_prefix_2$: Événement de préparation $carn_prostitution_random_events.0011.t$ déclenché"
+ cpr_debug_msg_prostitution_random_events_0011_fired: "$cpr_debug_prefix_2$: Événement $carn_prostitution_random_events.0011.t$ déclenché, client : [THIS.Var('client').Char.GetFullNameNoTooltip] ([THIS.Var('client').Char.GetID])"
+ cpr_debug_msg_prostitution_random_events_0011_option_a_chosen: "$cpr_debug_prefix_2$: Option a de $carn_prostitution_random_events.0011.t$ choisie"
+ cpr_debug_msg_prostitution_random_events_0011_option_b_chosen: "$cpr_debug_prefix_2$: Option b de $carn_prostitution_random_events.0011.t$ choisie"
+ cpr_debug_msg_prostitution_random_events_0011_option_c_chosen: "$cpr_debug_prefix_2$: Option c de $carn_prostitution_random_events.0011.t$ choisie"
+
+ cpr_debug_msg_slave_prostitution_0001_fired: "$cpr_debug_prefix_2$: Événement $carn_slave_prostitution.0001.t$ déclenché, total_income : [THIS.Var('total_income').GetValue], total_piety_loss : [THIS.Var('total_piety_loss').GetValue]"
+
+ # Effects
+ cpr_debug_msg_using_cpr_rakish_brothel_night_effect: "$cpr_debug_prefix_2$: Utilisation de cpr_rakish_brothel_night_effect, from_stress_loss_decision : [Select_CString(THIS.Var('from_stress_loss_decision').IsSet, 'oui', 'non')]"
+ cpr_debug_msg_using_vanilla_rakish_brothel_night_effect: "$cpr_debug_prefix_2$: Utilisation de vanilla_rakish_brothel_night_effect, from_stress_loss_decision : [Select_CString(THIS.Var('from_stress_loss_decision').IsSet, 'oui', 'non')]"
+
+ # Character creation and removal
+ cpr_debug_msg_creating_prostitute: "$cpr_debug_prefix_2$: Création d’une prostituée, origin : [THIS.Var('cpr_origin').GetFlagName]"
+ cpr_debug_msg_removing_prostitute: "$cpr_debug_prefix_2$: Suppression d’une prostituée, origin : [THIS.Var('cpr_origin').GetFlagName]"
+
+ # Moving characters
+ cpr_debug_msg_moving_prostitute: "$cpr_debug_prefix_2$: Déplacement d’une prostituée, origin : [THIS.Var('origin').Province.GetNameNoTooltip], destination : [THIS.Var('destination').Province.GetNameNoTooltip]"
+
+ # Starting and stopping working as prostitute
+ cpr_debug_msg_can_no_longer_work_as_prostitute: "$cpr_debug_prefix_2$: Le personnage ne peut plus travailler comme prostituée"
+ cpr_debug_msg_decided_to_start_working_as_prostitute: "$cpr_debug_prefix_2$: Le personnage a décidé de commencer à travailler comme prostituée, work_as_prostitute_ai_willingness : [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
+ cpr_debug_msg_decided_to_stop_working_as_prostitute: "$cpr_debug_prefix_2$: Le personnage a décidé de cesser de travailler comme prostituée, work_as_prostitute_ai_willingness : [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
+ cpr_debug_msg_forced_to_start_working_as_prostitute: "$cpr_debug_prefix_2$: Le personnage a été forcé à commencer à travailler comme prostituée, cpr_forced_by_owner : [THIS.Var('cpr_forced_by_owner').Char.GetFullNameNoTooltip] ([THIS.Var('cpr_forced_by_owner').Char.GetID])"
+ cpr_debug_msg_forced_to_stop_working_as_prostitute: "$cpr_debug_prefix_2$: Le personnage a été forcé à cesser de travailler comme prostituée, cpr_forced_by_owner : [THIS.Var('cpr_forced_by_owner').Char.GetFullNameNoTooltip] ([THIS.Var('cpr_forced_by_owner').Char.GetID])"
+
+ # Contract creation
+ cpr_debug_msg_task_contract_created: "$cpr_debug_prefix$: Contrat créé, contract : [THIS.Var('cpr_task_contract').TaskContract.GetNameNoTooltip]"
+
+ # Carnalitas decisions
+ cpr_debug_msg_work_as_prostitute_decision_made: "$cpr_debug_prefix_2$: Décision $carn_work_as_prostitute_decision$ prise, work_as_prostitute_ai_willingness : [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
+ cpr_debug_msg_stop_work_as_prostitute_decision_made: "$cpr_debug_prefix_2$: Décision $carn_stop_work_as_prostitute_decision$ prise, work_as_prostitute_ai_willingness : [THIS.Var('work_as_prostitute_ai_willingness').GetValue]"
+
+ # Carnalitas interactions
+ cpr_debug_msg_force_start_prostitution_interaction_accepted: "$cpr_debug_prefix_2$: Interaction $carn_force_start_prostitution_interaction$ acceptée, force_prostitution_ai_willingness : [THIS.Var('force_prostitution_ai_willingness').GetValue]"
+ cpr_debug_msg_force_stop_prostitution_interaction_accepted: "$cpr_debug_prefix_2$: Interaction $carn_force_stop_prostitution_interaction$ acceptée, force_prostitution_ai_willingness : [THIS.Var('force_prostitution_ai_willingness').GetValue]"
+
+ # Tooltips
+ cpr_debug_work_as_prostitute_ai_willingness_tooltip: "Volonté de l’IA de travailler comme prostituée : [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('cpr_work_as_prostitute_ai_willingness_value')]\n[GuiScope.SetRoot(GetPlayer.MakeScope).GetScriptValueDesc('cpr_work_as_prostitute_ai_willingness_value')]\n"
+ cpr_debug_force_prostitution_ai_willingness_tooltip: "Volonté de l’IA de forcer la prostitution : [GuiScope.SetRoot(actor.MakeScope).AddScope('actor', actor.MakeScope).AddScope('recipient', recipient.MakeScope).ScriptValue('cpr_force_prostitution_ai_willingness_value')]\n[GuiScope.SetRoot(actor.MakeScope).AddScope('actor', actor.MakeScope).AddScope('recipient', recipient.MakeScope).GetScriptValueDesc('cpr_force_prostitution_ai_willingness_value')]"
+
+ # Value descriptions
+ cpr_debug_value_base_desc: "Base"
+ cpr_debug_value_prostitution_crime: "La prostitution est un crime"
+ cpr_debug_value_opinion_desc: "Opinion"
+ cpr_debug_value_greed_desc: "Avidité"
+ cpr_debug_value_compassion_desc: "Compassion"
+ cpr_debug_value_honor_desc: "Honneur"
+ cpr_debug_value_zeal_desc: "Zèle"
+ cpr_debug_value_sociability_desc: "Sociabilité"
+ cpr_debug_value_family_dynasty_desc: "Famille / Dynastie"
+ cpr_debug_value_friend_lover_desc: "Ami / Amant"
+ cpr_debug_value_rival_desc: "Rival"
+ cpr_debug_value_employed_desc: "Employé"
+ cpr_debug_value_trait_xp_desc: "XP de trait"
+ cpr_debug_value_diplomacy_desc: "Diplomatie"
+ cpr_debug_value_intrigue_desc: "Intrigue"
+ cpr_debug_value_attraction_desc: "Attirance"
+ cpr_debug_value_lustful_desc: "Lubrique"
+ cpr_debug_value_chaste_desc: "Chaste"
+ cpr_debug_value_rakish_desc: "Débauché"
+ cpr_debug_value_deviant_desc: "Déviant"
+ cpr_debug_value_age_desc: "Âge"
+ cpr_debug_value_health_desc: "Santé"
+ cpr_debug_value_highborn_desc: "Bien né"
+ cpr_debug_value_married_desc: "Marié"
+ cpr_debug_value_concubine_desc: "Concubine"
+ cpr_debug_value_children_desc: "Enfants"
+ cpr_debug_value_ruler_desc: "Souverain"
