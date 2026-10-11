@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 0.8.1
+
+### Changes
+
+* The *A Night's Diversion* contract is now offered less often, and no longer by shy, paranoid, or cynical employers.
+
 ## Version 0.8.0
 
 ### Compatibility
