@@ -44,14 +44,6 @@ cpr_laamp_1000 = {
 					limit = { has_trait = greedy }
 					add = task_contract_weight_malus_employer_has_associated_traits_value
 				}
-				if = {
-					limit = { has_trait = shy }
-					add = task_contract_weight_malus_employer_has_associated_traits_value
-				}
-				if = {
-					limit = { has_trait = paranoid }
-					add = task_contract_weight_malus_employer_has_associated_traits_value
-				}
 				# Restrictions.
 				min = task_contract_weight_employer_associated_traits_min_value
 				max = task_contract_weight_employer_associated_traits_max_value
@@ -73,7 +65,7 @@ cpr_laamp_1000 = {
 		valid_laamp_sensible_start_trigger = yes
 		rule_out_dramatic_laamp_employers_trigger = yes
 		# Specific flavour triggers.
-		#laamp_task_contract_employer_not_antisocial_trigger = yes
+		laamp_task_contract_employer_not_antisocial_trigger = yes
 	}
 	valid_to_accept = {
 		# Standard triggers.

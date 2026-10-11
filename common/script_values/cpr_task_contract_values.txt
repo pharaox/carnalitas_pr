@@ -20,7 +20,7 @@ cpr_laamp_contracts_weight_up_traits_value = {
 	value = 0
 	if = {
 		limit = { has_trait = lifestyle_reveler }
-		add = 100
+		add = 50
 	}
 	if = {
 		limit = { has_trait = lifestyle_poet }
@@ -28,14 +28,10 @@ cpr_laamp_contracts_weight_up_traits_value = {
 	}
 	if = {
 		limit = { has_trait = lifestyle_prostitute }
-		add = 200
+		add = 100
 	}
 	if = {
 		limit = { has_trait = lifestyle_mystic }
-		add = 50
-	}
-	if = {
-		limit = { has_trait = gallowsbait }
 		add = 50
 	}
 }
