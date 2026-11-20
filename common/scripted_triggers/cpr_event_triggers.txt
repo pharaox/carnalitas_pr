@@ -4,12 +4,13 @@
 
 	# Has the minimum development level, a relevant building, a major capital, or a major holy site
 	OR = {
-		county ?= { development_level >= 10 }
+		county ?= { prosperity_level >= 10 }
 
-		has_building_or_higher = common_tradeport_01
-		has_building_or_higher = caravanserai_01
-		has_building_or_higher = market_villages_01
-		has_special_building = yes
+		province_has_district = market_district
+		province_has_district = port_district
+		has_building_or_higher = caravanserai_1
+		has_building_or_higher = traders_meet_1
+		has_special_district = yes
 
 		cpr_province_is_capital_trigger = { TIER = tier_duchy }
 		cpr_province_is_holy_site_trigger = { FOLLOWERS = 20 }
@@ -21,13 +22,13 @@ cpr_province_is_major_location_trigger = {
 	has_holding = yes
 	trigger_if = {
 		limit = {
-			county = { development_level >= 50 }
+			county = { prosperity_level >= 50 }
 		}
 		always = yes
 	}
 	trigger_else_if = {
 		limit = {
-			county = { development_level >= 20 }
+			county = { prosperity_level >= 20 }
 		}
 		OR = {
 			cpr_province_is_capital_trigger = { TIER = tier_duchy }
@@ -36,7 +37,7 @@ cpr_province_is_major_location_trigger = {
 	}
 	trigger_else_if = {
 		limit = {
-			county = { development_level >= 10 }
+			county = { prosperity_level >= 10 }
 		}
 		OR = {
 			cpr_province_is_capital_trigger = { TIER = tier_kingdom }

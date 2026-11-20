@@ -170,13 +170,18 @@ cpr_in_diplo_range_trigger = {
 	NOT = { this = $PARTY$ }
 	trigger_if = {
 		limit = {
-			$PARTY$ = { is_landless_adventurer = yes }
+			$PARTY$ = {
+				OR = {
+					is_landless_adventurer = yes
+					has_government = merchant_government
+				}
+			}
 		}
 		save_temporary_scope_as = character1
-		#Has to be used instead of diplo range checks in laamp to landed interactions
-		ep3_laamp_diplo_range_trigger = {
+		#Has to be used instead of diplo range checks in laamp or merchant to landed interactions
+		exceptional_diplo_range_trigger = {
+			CHARACTER = $PARTY$
 			TARGET = scope:character1
-			LAAMP = $PARTY$
 		}
 	}
 	trigger_else = {

@@ -1,13 +1,13 @@
 ﻿cpr_num_prostitutes_value = {
 	if = {
 		limit = {
-			county ?= { development_level >= 50 }
+			county ?= { prosperity_level >= 50 }
 		}
 		value = 3
 	}
 	else_if = {
 		limit = {
-			county ?= { development_level >= 20 }
+			county ?= { prosperity_level >= 20 }
 		}
 		value = 2
 	}
